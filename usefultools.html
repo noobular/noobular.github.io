@@ -28,14 +28,6 @@
 					margin-top: 75px;
 				}
 
-			.col-sm-4{
-				background-color: #999999;
-				-webkit-border-radius: 10px 10px 10px 10px;
-				border-radius: 10px 10px 10px 10px;
-				padding: 5px 5px 5px 5px;
-				margin: 0px 5px 5px 0px;
-			}
-
 			.panel-body{
 				height: 150px;
 			}
@@ -52,9 +44,29 @@
 				position: fixed;
 				bottom:5px;
 			}
-
+				body{
+					background-image: url('resources/images/background.jpg');
+					background-repeat: no-repeat;
+					width: 100%
+					height:auto;
+					background-attachment: fixed;
+				}
+			#toppage{
+				margin-top: 75px;
+			}
 
 		</style>
+
+			<script> 
+
+	  			function OpenWebpage(){
+		  				$("#ToolLinks").click(function(){
+							window.open($(this).attr('href'));
+							win.focus()
+						});
+	  			}
+
+  			</script>
 	</head>
 
 
@@ -92,53 +104,82 @@
 	  </div>
 	</footer>
 
+<div id="toppage" class="container">
 
-
-<div id="WholeToolGrid" class="container">
-	<div  class="row">
-	<!-- Visual Studio -->
-		<div class="panel-group col-sm-4">				
-			<div class="panel panel-default">
-				<div class="panel-heading"><img src="resources/images/visualstudioicon.png" alt="VSIcon" height="32" width="32"> Visual Studio 2015 Community</div>
-		    		<div class="panel-body">
-		  				<p>Visual studio is a powerful tool, It's great for C# and .Net along with Basic.</p>
-						
-					</div>
-					<div class="container"><button id="WebsiteButtons" href="https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx" type="button" role="button" class="btn btn-secondary btn-block fixed-bottom">Website</button> </div>
-									
-			</div>
-		</div>	
-	<!-- ////////////// -->
-			
-	<!--  Sublime Text 3 -->
-		<div class="panel-group col-sm-4">				
-			<div class="panel panel-default">
-				<div class="panel-heading"><img src="resources/images/SublimeTextLogo.png" alt="sublimelogo" height="32" width="32"> Sublime Text 3</div>
-		    		<div class="panel-body">
-		  				<p>This is a text editor which has an automated programming assistance feature to increase productivity to yourself or your employees.</p>
-						<button id="WebsiteButtons" href="https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx" type="button" role="button" class="btn btn-secondary btn-block">Website</button>
-					</div>
-									
-			</div>
-		</div>	
-	<!-- ////////////// -->
-
-	<!--  Sublime Text 3 -->
-		<div class="panel-group col-sm-4">				
-			<div class="panel panel-default">
-				<div class="panel-heading"><img src="resources/images/unrealengine4logo.png" alt="unrealogo" height="32" width="32"> Unreal Engine 4</div>
-		    		<div class="panel-body">
-		  				<p>This game development engine is wonderful for throwing ideas together quickly with their visual programming "Blueprint" system.</p>
-						<button id="WebsiteButtons" href="https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx" type="button" role="button" class="btn btn-secondary btn-block">Website</button>
-					</div>
-									
-			</div>
-		</div>	
 	<!-- ////////////// -->
 
 
+		<div class="container col-sm-4">
+			<div class="panel panel-default">
 
+				<div class="panel-heading"> 
+				<!-- PROGRAM ICON -->
+				<img src="resources/images/unrealengine4logo.png" alt="unrealogo" height="32" width="32"> 
+				<!-- PROGRAM NAME --> 
+				Unreal Engine 4
+				</div>
 
-	</div>
-</div>
+	 			 <div class="panel-body">
+	 			 <!-- DESCRIPTION -->
+	 			 This game development engine is wonderful for throwing ideas together quickly with their visual programming "Blueprint" system.
+
+	 			 </div>
+
+	  			<div class="panel-footer"> 
+	  			<!-- LINK -->
+	  				<button href="https://www.unrealengine.com/" id="ToolLinks" class="btn btn-primary btn-md btn-block" onclick="OpenWebpage();"> Website </button>
+	  			</div>
+
+			</div>
+		</div>
+
+		<div class="container col-sm-4">
+			<div class="panel panel-default">
+
+				<div class="panel-heading"> 
+				<!-- PROGRAM ICON -->
+				<img src="resources/images/SublimeTextLogo.png" alt="sublimelogo" height="32" width="32">
+				<!-- PROGRAM NAME --> 
+				Sublime Text 3
+				</div>
+
+	 			 <div class="panel-body">
+	 			 <!-- DESCRIPTION -->
+	 			 This is a text editor which has an automated programming assistance feature to increase productivity to yourself or your employees.
+
+	 			 </div>
+
+	  			<div class="panel-footer"> 
+	  			<!-- LINK -->
+	  				<button href="https://www.sublimetext.com/3" id="ToolLinks" class="btn btn-primary btn-md btn-block" onclick="OpenWebpage();"> Website </button>
+	  			</div>
+
+			</div>
+		</div>
+
+		<div class="container col-sm-4">
+			<div  class="panel panel-default">
+
+				<div class="panel-heading"> 
+				<!-- PROGRAM ICON -->
+				<img src="resources/images/visualstudioicon.png" alt="VSIcon" height="32" width="32"> 
+				<!-- PROGRAM NAME --> 
+				Visual Studio Community 2015
+				</div>
+
+	 			 <div class="panel-body">
+	 			 <!-- DESCRIPTION -->
+	 			 Visual studio is a powerful tool, It's great for C# and .Net along with Basic.
+
+	 			 </div>
+
+	  			<div class="panel-footer"> 
+	  			<!-- LINK -->
+	  				<button href="www.visualstudio.com/vs/community/" id="ToolLinks" class="btn btn-primary btn-md btn-block" onclick="OpenWebpage();"> Website </button>
+	  			</div>
+
+			</div>
+		</div>
+</div> <!-- End of Top row-->
+
 </body>
