@@ -8,7 +8,8 @@
 			<!-- Optional theme -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-			<link rel="stylesheet" href="https://noobularkid.github.io/resources/glyphs/style.css">
+			<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
@@ -31,9 +32,15 @@
 					width: 100%
 					height:auto;
 					background-attachment: fixed;
+					font-family: 'Baloo Chettan', cursive;
 				}
 				.panel-body{
 					height: 200px;
+
+				}
+
+				i {
+				    font-size: 42px;
 				}
 
 			</style>
@@ -85,19 +92,27 @@
 		<div class="container col-sm-4">
 
 			<div id="toppage" class="panel panel-default">
-				<div class="panel-heading"><b> Programming Resume  <i class="bitIcon-cpp"></i></b></div>
+				<div class="panel-heading">
+					<b> Programming Resume</b> 
+				</div>
 
 	 			 <div class="panel-body">
 
+
+
 	 			 <h4><b>What is the best way to get other people my resume?</b></h3>
-	 			 <p>The obvious answer, given by a programmer is going to be a website! <br> So that's what I did and that's what you're looking at!.</p>
+	 			 <p>The obvious answer, given by a programmer is going to be a website! <br> So that's what I did and that's what you're looking at!</p>
 
 	 			 </div>
 
 	  			<div class="panel-footer"> 
-
-	  				<button href="https://github.com/noobularkid/noobularkid.github.io" id="GithubLinks" class="btn btn-primary btn-md" onclick="OpenWebpage();"> Github Repository</button>
-
+	  			<!-- Programming Glyphs -->
+					<i class="devicon-css3-plain-wordmark"></i>
+					<i class="devicon-html5-plain-wordmark colored"></i>
+					<i class="devicon-javascript-plain"></i>
+					<i class="devicon-bootstrap-plain-wordmark colored"></i>
+	  			<br>
+	  				<button href="https://github.com/noobularkid/noobularkid.github.io" id="GithubLinks" class="btn btn-primary btn-md btn-block" onclick="OpenWebpage();"> Github Repository</button>
 
 	  			</div>
 
@@ -106,18 +121,20 @@
 
 		<div class="container col-sm-4">
 			<div id="toppage" class="panel panel-default">
-				<div class="panel-heading"> Scrap.tf Raffle Enterer </div>
+				<div class="panel-heading"> <b>Scrap.tf Raffle Enterer</b> </div>
 
 	 			 <div class="panel-body">
 
-	 			 <h4>What is the quickest way to enter many raffles?</h4>
+	 			 <h4><b>What is the quickest way to enter many raffles?</b></h4>
 	 			 <p>My answer was a Userscript to automate the entering of raffles so I could open them in new tabs and middle click going down the avaliable raffles.</p>
 
 	 			 </div>
 
 	  			<div class="panel-footer"> 
-
-	  				<button href="https://github.com/noobularkid/Scrap.TF-Raffle-Enterer" id="GithubLinks" class="btn btn-primary btn-md" onclick="OpenWebpage();"> Github Repository</button>
+	  			<!-- Programming Glyphs -->
+					<i class="devicon-javascript-plain"></i>
+	  			<br>
+	  				<button href="https://github.com/noobularkid/Scrap.TF-Raffle-Enterer" id="GithubLinks" class="btn btn-primary btn-md btn-block" onclick="OpenWebpage();"> Github Repository</button>
 
 
 	  			</div>
@@ -126,6 +143,6 @@
 		</div>
 
 </div>
-		</body>
 
+</body>
 </html>
