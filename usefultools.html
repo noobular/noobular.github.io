@@ -8,8 +8,10 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-			<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
-			
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 		<!-- Latest compiled and minified JavaScript -->
@@ -24,6 +26,10 @@
 			   #WholeToolGrid{
 			      margin-top: 235px;
 			   }
+
+				.panel-body{	
+					height: 250px;   /* CHANGE BACK TO 200 WHEN DONE*/
+				}
 			}
 
 				#WholeToolGrid{
@@ -31,7 +37,7 @@
 				}
 
 			.panel-body{
-				height: 150px;
+				height: 200px;  /* CHANGE TO 150 WHEN DONE*/
 			}
 
 			#WebsiteButtons{
@@ -57,6 +63,7 @@
 			#toppage{
 				margin-top: 75px;
 			}
+				i {font-size: 42px;}
 
 		</style>
 
@@ -184,5 +191,34 @@
 			</div>
 		</div>
 </div> <!-- End of Top row-->
+<div class="container">
+	<div class="container col-sm-4">
 
+			<div id="toppage" class="panel panel-default">
+				<div class="panel-heading">
+					<b> Programming Resume</b> 
+				</div>
+
+	 			 <div class="panel-body">
+
+
+
+	 			 <h4><b>What is the best way to get other people my resume?</b></h3>
+	 			 <p>The obvious answer, given by a programmer is going to be a website! <br> So that's what I did and that's what you're looking at!</p>
+
+	 			 </div>
+
+	  			<div class="panel-footer"> 
+	  			<!-- Programming Glyphs -->
+					<i class="devicon-css3-plain-wordmark"></i>
+					<i class="devicon-html5-plain-wordmark colored"></i>
+					<i class="devicon-javascript-plain"></i>
+					<i class="devicon-bootstrap-plain-wordmark colored"></i>
+	  			<br>
+	  				<button href="https://github.com/noobularkid/noobularkid.github.io" id="GithubLinks" class="btn btn-primary btn-md btn-block" onclick="OpenWebpage();"> Github Repository</button>
+
+	  			</div>
+
+			</div>
+		</div>
 </body>
