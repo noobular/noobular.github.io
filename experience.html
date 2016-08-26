@@ -23,9 +23,16 @@
 			<script type="text/javascript" src="live.js"></script>
 
 			<style>
+
+				@media only screen and (max-width: 480px){
+					.panel-body{height: 250px;}
+				}
+
 				#toppage{
 					margin-top: 75px;
+					background: rgba(255, 255, 255, 0.2);
 				}
+
 				body{
 					background-image: url('resources/images/background.jpg');
 					background-repeat: no-repeat;
@@ -34,14 +41,16 @@
 					background-attachment: fixed;
 					font-family: 'Baloo Chettan', cursive;
 				}
+
 				.panel-body{
 					height: 200px;
-
 				}
 
-				i {
-				    font-size: 42px;
-				}
+				.panel{background: rgba(255, 255, 255, 0.2);}
+				.panel-heading{background: rgba(255, 255, 255, 0.2);}
+				.panel-footer{background: rgba(255, 255, 255, 0.2);}
+
+				i {font-size: 42px;}
 
 			</style>
 
@@ -141,8 +150,6 @@
 
 			</div>
 		</div>
-
-</div>
 
 </body>
 </html>
