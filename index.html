@@ -1,132 +1,114 @@
 <!DOCTYPE html>
-<HTML>
-	<head>
-
-			<meta charset="utf-8">
-	 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-			<!-- Latest compiled and minified CSS -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-			<!-- Optional theme -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-			<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
-
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-			<!-- Latest compiled and minified JavaScript -->
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-			<!-- Live.js being included -->
-			<script type="text/javascript" src="live.js"></script>
+<html>
+<head>
+	<title>Portfolio</title>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
 
-			<style>
-			    .affix {
-			      top: 0;
-			      width: 100%;
-			  }
-			  	#jumbotronmain {
-			  		margin-top: 50px;
-			  		border-top: 2px solid;
-			  		border-bottom: 2px solid;
-			  		border-color: white;
-			  		background: rgba(255, 255, 255, 0.2);
+	<style>
+		.panelbase{
+			height: 250px;
+		}
+		.affix {
+		    top: 0;
+		    width: 100%;
+		}
+	</style>
+</head>
+<body>
 
-			  	}
-				.panel-body{
-					height: 250px;
-					
-				}
-				.panel-default{
-					background: rgba(255, 255, 255, 0.2);
-				}
-				body{
-					font-family: 'Baloo Chettan', cursive;
-					background-image: url('resources/images/background.jpg');
-					background-repeat: no-repeat;
-					width: 100%
-					height:auto;
-					background-attachment: fixed;
-				}
-
-			</style>
+<nav class="navbar navbar-default" data-spy="affix" data-offset-top="1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">James' Coding Portfolio</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Basic Information</a></li>
+      <li><a href="project_pastexperience.html">Projects / Past Experience</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
 
-	</head>
-
-	<body>
-
-
-
-		<!-- Navigation bar -->
-		<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="197">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavigationBar">
-				    	<span class="icon-bar"></span>
-				    	<span class="icon-bar"></span>
-				    	<span class="icon-bar"></span>
-				    </button>
-
-				    <span class="navbar-brand">
-				    	<a href="https://noobularkid.github.io">Programming Resume</a>
-				    </span> 
-		    </div>
-
-		    <div class="collapse navbar-collapse" id="NavigationBar">
-			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="https://noobularkid.github.io/"><span class="glyphicon glyphicon-hourglass"></span> History</a></li>
-			      <li><a href="https://noobularkid.github.io/usefultools.html"><span class="glyphicon glyphicon-wrench"></span> Helpful Tools</a></li>
-			      <li><a href="https://noobularkid.github.io/experience.html"><span class="glyphicon glyphicon-tasks"></span> Experience</a></li>
-			      <li><a href="https://noobularkid.github.io/contact.html"><span class="glyphicon glyphicon-phone-alt"></span> Contact</a></li> 
-			    </ul>
-			</div>
-
-		  </div>
-		</nav>
-
-
-	<!-- Main Header ! -->
-	<div id="jumbotronmain" class="jumbotron text-center">
-		<h1>Welcome to an experience.</h1>
-	  	<p>Programming Experience 2008 - Now </p> 
-	</div>
-
-	<!--  Multi Colum information! -->
-	<div class="container">
- 		<div class="row">
-
-	 		<div class="col-sm-4">
-		 		<div class="panel panel-default">
-			 		<div class="panel-body">
-				      <h3>Visual Studio 2010-2015 Community</h3>
-				      <p>Visual studio is a powerful tool I've used for many years making simple webbrowsers, Programming tools for items within games to automatically create the code for them, MySQL tools to edit data within a database and monitor changes and more.</p>
-		    		</div>
-	    		</div>
-	    	</div>
-
-	   			<div class="col-sm-4">
-	   				 <div class="panel panel-default">
-			 			<div class="panel-body">
-					        <h3>Sublime Text 3</h3>
-					        <p>This is a text editor which has an automated programming assistance feature to increase productivity to yourself or your employees.</p>
-		    			</div>
-	    			</div>
-	    		</div>
-
-	   			<div class="col-sm-4">
-	   				 <div class="panel panel-default">
-			 			<div class="panel-body">
-					      <h3>Unreal engine 4</h3>
-					      <p>This game development engine is wonderful for throwing ideas together quickly with their visual programming "Blueprint" system.</p>
-		    			</div>
-	    			</div>
-	    		</div>
-
-	 	 </div>
+<div class="container">
+	<div class="jumbotron">
+	  <h1>Welcome!</h1>
+	  <p>This is a display of my projects and experience of many programming languages through many different manners, like classes or personal hobby programs.</p>
 	</div>
 </div>
-	</body>
-</HTML>
+
+<div class="container col-sm-3 " style="text-align: center;">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3>Human Statistics</h3>
+		</div>
+
+		<div class="panel-body panelbase">
+
+			<p><b>
+				<h4>Current Lifetime : <span class="label label-success" style="float:right;"> 18 Years</span></h3>
+				<div class="progress" style="background-color: #555f68;">
+				  <div class="progress-bar progress-bar-info active" role="progressbar"
+				  aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" style="width:18%">
+				    18/100ish?
+				  </div>
+				</div>
+				<h4>Current Education *US* : <span class="label label-success" style="float:right;"> Senior / Highschool</span></h3>
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="container col-sm-6">
+	<div class="panel panel-info">
+		<div class="panel-heading"  style="text-align: center;">
+			<h3>Basic Info</h3>
+		</div>
+
+		<div class="panel-body panelbase">
+		
+
+		</div>
+	</div>
+</div>
+
+<div class="container col-sm-3">
+	<div class="panel panel-info">
+		<div class="panel-heading" style="text-align: center;">
+			<h3>Experience</h3>
+		</div>
+		<div class="panel-body " style="text-align: left;">
+			<h4>HTML 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>		 	<i class="devicon-html5-plain-wordmark" style="float:right;"></i></h3>
+			<h4>JavaScript 	<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="devicon-javascript-plain" style="float:right;"></i></h3>
+			<h4>MySQL 		<span class="label label-success" style="float:right;"> 		8 / 10 </span>			<i class="devicon-mysql-plain" style="float:right;"></i></h3>
+			<h4>PHP 		<span class="label label-success" style="float:right;"> 		8 / 10 </span>			<i class="devicon-php-plain" style="float:right;"></i></h3>
+			<h4>JQuery 		<span class="label label-warning" style="float:right;">			6 / 10 </span>			<i class="devicon-jquery-plain" style="float:right;"></i> </h3>	
+			<h4>(VB) Basic	<span class="label label-warning" style="float:right;">			4 / 10 </span></h3>	
+			<h4>Lua 		<span class="label label-warning" style="float:right;">			4 / 10 </span></h3>	
+			<h4>Python 		<span class="label label-danger" style="float:right;">			3 / 10 </span>			<i class="devicon-python-plain" style="float:right;"></i></h3>	
+			<h4>C#			<span class="label label-danger" style="float:right;">			2 / 10 </span>			<i class="devicon-csharp-plain" style="float:right;"></i></h3>	
+			<h4>C++			<span class="label label-danger" style="float:right;">			1 / 10 </span>			<i class="devicon-cplusplus-plain" style="float:right;"></i></h3>	
+			<h4>NodeJS		<span class="label label-danger" style="float:right;">			1 / 10 </span>			<i class="devicon-nodejs-plain" style="float:right;"></i></h3>	
+			<h4>Java 		<span class="label label-danger" style="float:right;">			0 / 10 </span>			<i class="devicon-java-plain" style="float:right;"></i></h3>	
+			<h4>C 			<span class="label label-danger" style="float:right;">			0 / 10 </span>			<i class="devicon-c-plain" style="float:right;"></i></h3>	
+
+				<div class="panel panel-info" style="margin-bottom: 0px;">
+					<div class="panel-heading">
+					If a language is 0/10 I've never tried it, but is a commonly used language, that I'd like to learn relatively soon.
+					</div>
+				</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+
+</html>
