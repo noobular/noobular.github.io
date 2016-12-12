@@ -10,6 +10,18 @@
 	<meta name='viewport' content='width=400'>
 
 	<style>
+	@media only screen and (max-width: 768px){
+		body > .container{
+			width:100%;
+		}
+
+		.col-sm-3{
+			width:100%;
+		}
+		.col-sm-4{
+			width:100%;
+		}
+	}
 		.panelbase{
 			height: 250px;
 		}
@@ -21,9 +33,7 @@
 		.panelbodyh{
 			
 		}
-		@media only screen and (max-device-width: 480px) {
-		
-		}
+
 	</style>
 </head>
 <body>
@@ -71,7 +81,7 @@ Panel Template
  <strong><i class="fa fa-bar-chart" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; This column is all self grading.</strong>
 </div>
 
-	<div class="container col-sm-12">
+	<div id="panel_container" class="container col-sm-12">
 			<div class="panel panel-info">
 				<div class="panel-heading" style="text-align: center;">
 					<h3> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>Languages</h3>
@@ -100,7 +110,7 @@ Panel Template
 			</div>
 		</div>
 
-	<div class="container col-sm-12">
+	<div id="panel_container" class="container col-sm-12">
 			<div class="panel panel-info">
 				<div class="panel-heading" style="text-align: center;">
 					<h3> <i class="fa fa-building" aria-hidden="true" style="float: left;"></i>Frameworks</h3>
@@ -119,7 +129,7 @@ Panel Template
 			</div>
 		</div>
 
-	<div class="container col-sm-12">
+	<div id="panel_container" class="container col-sm-12">
 		<div class="panel panel-info">
 			<div class="panel-heading" style="text-align: center; ">
 				<h3> <i class="fa fa-desktop" aria-hidden="true" style="float: left;" ></i> Operating System Experience</h3>
@@ -145,7 +155,7 @@ Panel Template
 		</div>
 	</div>
 
-	<div class="container col-sm-12">
+	<div id="panel_container" class="container col-sm-12">
 		<div class="panel panel-info">
 			<div class="panel-heading" style="text-align: center;">
 				<h3> <i class="fa fa-gavel" aria-hidden="true" style="float: left;"></i> Different Tool Experience</h3>
@@ -193,10 +203,10 @@ Panel Template
 </div>
 
 -->
-<div class="container col-sm-9">
-<div class="alert alert-info col-sm-12">
- <strong> <i class="fa fa-pencil-square-o" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Classes on programming I've taken.</strong>
-</div>
+<div id="panel_container"  class="container col-sm-9">
+	<div class="alert alert-info col-sm-12">
+	 <strong> <i class="fa fa-pencil-square-o" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Classes on programming I've taken.</strong>
+	</div>
 	<div class="container col-sm-4">
 		<div class="panel panel-info">
 			<div class="panel-heading" style="text-align: center;">
@@ -219,11 +229,11 @@ Panel Template
 		</div>
 	</div>
 <div class="row"></div>
+
 <div class="alert alert-info col-sm-12">
  <strong> <i class="fa fa-folder-open" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;These are the projects I've worked on (that I still have the files too)</strong>
 </div>
 
-	
 <div class="container col-sm-4">
 	<div class="panel panel-info">
 		<div class="panel-heading" style="text-align: center;">
@@ -246,137 +256,6 @@ Panel Template
 	</div>
 </div>
 
-<div class="container col-sm-4">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-html5" aria-hidden="true" style="float: left;"></i>Coding Portfolio Site</h4>
-		</div>
-		<div class="panel-body panelbodyh" style="text-align: left;">
-
-				<p>Generally I'll have something here that explains what it's used for but there really is no need, But I digress It's a website for a resume/portfolio to show companies/other developers what I've so far Accomplished to possibly get hired or do some Co-op work.</p>
-
-
-				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading">
-					Additional Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!-- These add spaces &nbsp; -->
-
-					<br>
-					<a href="index.html"><button type="button" class="btn btn-default"> Website </button></a>
-					</div>
-				</div>
-		</div>
-	</div>
-</div>
-
-<div class="container col-sm-4">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-html5" aria-hidden="true" style="float: left;"></i>Coding Portfolio Site</h4>
-		</div>
-		<div class="panel-body panelbodyh" style="text-align: left;">
-
-				<p>Generally I'll have something here that explains what it's used for but there really is no need, But I digress It's a website for a resume/portfolio to show companies/other developers what I've so far Accomplished to possibly get hired or do some Co-op work.</p>
-
-
-				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading">
-					Additional Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!-- These add spaces &nbsp; -->
-
-					<br>
-					<a href="index.html"><button type="button" class="btn btn-default"> Website </button></a>
-					</div>
-				</div>
-		</div>
-	</div>
-</div>
-
-<div class="container col-sm-4">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-html5" aria-hidden="true" style="float: left;"></i>Coding Portfolio Site</h4>
-		</div>
-		<div class="panel-body panelbodyh" style="text-align: left;">
-
-				<p>Generally I'll have something here that explains what it's used for but there really is no need, But I digress It's a website for a resume/portfolio to show companies/other developers what I've so far Accomplished to possibly get hired or do some Co-op work.</p>
-
-
-				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading">
-					Additional Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!-- These add spaces &nbsp; -->
-
-					<br>
-					<a href="index.html"><button type="button" class="btn btn-default"> Website </button></a>
-					</div>
-				</div>
-		</div>
-	</div>
-</div>
-
-<div class="container col-sm-4">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-html5" aria-hidden="true" style="float: left;"></i>Coding Portfolio Site</h4>
-		</div>
-		<div class="panel-body panelbodyh" style="text-align: left;">
-
-				<p>Generally I'll have something here that explains what it's used for but there really is no need, But I digress It's a website for a resume/portfolio to show companies/other developers what I've so far Accomplished to possibly get hired or do some Co-op work.</p>
-
-
-				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading">
-					Additional Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!-- These add spaces &nbsp; -->
-
-					<br>
-					<a href="index.html"><button type="button" class="btn btn-default"> Website </button></a>
-					</div>
-				</div>
-		</div>
-	</div>
-</div>
-
-<div class="container col-sm-4">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-html5" aria-hidden="true" style="float: left;"></i>Coding Portfolio Site</h4>
-		</div>
-		<div class="panel-body panelbodyh" style="text-align: left;">
-
-				<p>Generally I'll have something here that explains what it's used for but there really is no need, But I digress It's a website for a resume/portfolio to show companies/other developers what I've so far Accomplished to possibly get hired or do some Co-op work.</p>
-
-
-				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading">
-					Additional Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!-- These add spaces &nbsp; -->
-
-					<br>
-					<a href="index.html"><button type="button" class="btn btn-default"> Website </button></a>
-					</div>
-				</div>
-		</div>
-	</div>
-</div>
-
-<div class="container col-sm-4">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-html5" aria-hidden="true" style="float: left;"></i>Coding Portfolio Site</h4>
-		</div>
-		<div class="panel-body panelbodyh" style="text-align: left;">
-
-				<p>Generally I'll have something here that explains what it's used for but there really is no need, But I digress It's a website for a resume/portfolio to show companies/other developers what I've so far Accomplished to possibly get hired or do some Co-op work.</p>
-
-
-				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading">
-					Additional Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!-- These add spaces &nbsp; -->
-
-					<br>
-					<a href="index.html"><button type="button" class="btn btn-default"> Website </button></a>
-					</div>
-				</div>
-		</div>
-	</div>
-</div>
 </body>
 
 </html>
