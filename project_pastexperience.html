@@ -34,6 +34,13 @@
 			
 		}
 
+		.projectpanel{
+			height:250px;
+		}
+
+		.projectfooter{
+			height: 150px;
+		}
 	</style>
 </head>
 <body>
@@ -215,8 +222,7 @@ Panel Template
 			<div class="panel-body panelbodyh" style="text-align: left;">
 
 					<p>This is a class on Gamedesign, It goes over the basics to learning JavaScript entirely along with HTML, and then dives into the newest version of gamemaker and you learn the drag and drop system and in the future of the class, GML</p>
-
-
+			</div>
 					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
 						<div class="panel-heading">
 						Additional Info: <br>  &nbsp; &nbsp; &nbsp;<!-- These add spaces &nbsp; -->
@@ -225,7 +231,6 @@ Panel Template
 						<a target="_blank" href="http://www.wwcsd.net/schools/high-schools/william-d-ford-career-technical-center/"><button type="button" class="btn btn-default"> Website </button></a>
 						</div>
 					</div>
-			</div>
 		</div>
 	</div>
 <div class="row"></div>
@@ -239,23 +244,50 @@ Panel Template
 		<div class="panel-heading" style="text-align: center;">
 			<h4> <i class="fa fa-html5" aria-hidden="true" style="float: left;"></i>Coding Portfolio Site</h4>
 		</div>
-		<div class="panel-body panelbodyh" style="text-align: left;">
+		<div class="panel-body projectpanel" style="text-align: left;">
 
 				<p>Generally I'll have something here that explains what it's used for but there really is no need, But I digress It's a website for a resume/portfolio to show companies/other developers what I've so far Accomplished to possibly get hired or do some Co-op work.</p>
-
-
+		</div>
 				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading">
+					<div class="panel-heading projectfooter">
 					Additional Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!-- These add spaces &nbsp; -->
 
 					<br>
-					<a href="index.html"><button type="button" class="btn btn-default"> Website </button></a>
+					<a href="index.html"><button type="button" class="btn btn-default pull-down"> Website </button></a>
 					</div>
 				</div>
-		</div>
 	</div>
 </div>
 
-</body>
 
+<div class="container col-sm-4">
+	<div class="panel panel-info">
+		<div class="panel-heading" style="text-align: center;">
+			<h4> <i class="fa fa-clipboard" aria-hidden="true" style="float:left;"></i></i>Pastebin Post</h4>
+		</div>
+		<div class="panel-body projectpanel" style="text-align: left;">
+
+				<p>This is just random assorted things, Mostly Lua for ComputerCraft (A Minecraft Modification) But there are some AutoIT scripts.</p>
+
+		</div>
+
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading projectfooter">
+					Additional Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!-- These add spaces &nbsp; -->
+
+					<br>
+					<a href="index.html" class="pull-down"><button href="index.html" type="button" class="btn btn-default"> Website </button></a>
+					</div>
+				</div>
+	</div>
+</div>
+
+
+<script>
+$('.pull-down').each(function() {
+  var $this=$(this);
+	$this.css('margin-top', $this.parent().height()-$this.height())
+});
+</script>
+</body>
 </html>
