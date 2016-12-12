@@ -2,10 +2,10 @@
 <html>
 <head>
 	<title>Portfolio</title>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link href="https://bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
 	<meta name='viewport' content='width=400'>
 
@@ -49,7 +49,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default" data-spy="affix" data-offset-top="1">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="index.html">James' Coding Portfolio</a>
@@ -69,6 +69,7 @@
 	  <p> This is showing what things revolving around programming I've done in the past and also me grading myself on certain tools, operating systems, and languages.</p>
 	</div>
 </div>
+
 
 <!--
 Panel Template
@@ -261,6 +262,8 @@ Panel Template
 						
 					</div>
 					<a href="index.html"><button type="button" class="btn btn-default"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
+
 					<i style="font-size:24px; float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-html5" aria-hidden="true"></i>
 					<i style="font-size:24px; float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-css3" aria-hidden="true"></i>
 				</div>
@@ -283,17 +286,30 @@ Panel Template
 				<br>
 				</div>
 				<a href="http://pastebin.com/u/Noobular" target="_blank"><button type="button" class="btn btn-default"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
+				
 				<i class="fa fa-question-circle" aria-hidden="true" style="float:right; font-size: 24px; padding-top:4px; padding-right:4px;"></i>
 			</div>
 	</div>
 </div>
 
+<div id="fmtf" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">FleaMarket.TF Screenshots </h4>
+      </div>
+      <div class="modal-body">
+        <img src="https://unsplash.it/555/540"></img>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-<script>
-$('.pull-down').each(function() {
-  var $this=$(this);
-	$this.css('margin-top', $this.parent().height()-$this.height())
-});
-</script>
 </body>
 </html>
