@@ -45,6 +45,22 @@
 		.btn{
 			color: #5bc0de;
 		}
+		.clr1{
+			background-color: #434f5b;
+			margin: 2px;
+			margin-left:0px;
+			margin-right:0px;
+		}
+		.clr2{
+			background-color: #434f5b;
+			margin: 2px;
+			margin-left:0px;
+			margin-right:0px;
+		}
+
+		a:hover{
+			background-color: #434f5b;
+		}
 	</style>
 </head>
 <body>
@@ -273,81 +289,91 @@ Panel Template
 
 <div class="row"></div>
 
-<div class="alert alert-info col-sm-12">
- <strong> <i class="fa fa-folder-open" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;These are the projects I've worked on (that I still have the files too)</strong>
-</div>
+<a data-toggle="collapse" href="#projects">
+	<div class="alert alert-info col-sm-12">
+	 <strong> <i class="fa fa-folder-open" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;These are the projects I've worked on (that I still have the files too)</strong>
+	</div>
+</a>
+<div id="projects" class="collapse">
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-globe" aria-hidden="true" style="float: left;"></i>Coding Portfolio Site</h4>
+			</div>
+			<div class="panel-body projectpanel" style="text-align: left;">
 
-<div class="container col-sm-4">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-globe" aria-hidden="true" style="float: left;"></i>Coding Portfolio Site</h4>
-		</div>
-		<div class="panel-body projectpanel" style="text-align: left;">
+					<p> <div class="well well-sm clr1">
+						Increased the amount of people able to see my resume. <br>
+						</div>
+						<div class="well well-sm clr2">
+						Created a page in itself, to show some of my ability with HTML and CSS but also the Bootstrap Framework.
+						</div>
+					</p>
+			</div>
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading projectfooter">
+						<b style="font-size:18px;">Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:right;font-size:22px;"></i> <br> <!-- These add spaces &nbsp; -->
+							
+						</div>
+						<a href="index.html"><button type="button" class="btn btn-default"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
 
-				<p>Generally I'll have something here that explains what it's used for but there really is no need, But I digress It's a website for a resume/portfolio to show companies/other developers what I've so far Accomplished to possibly get hired or do some Co-op work.</p>
+						<i style="font-size:24px; float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-html5" aria-hidden="true"></i>
+						<i style="font-size:24px; float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-css3" aria-hidden="true"></i>
+					</div>
 		</div>
-				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+	</div>
+
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-clipboard" aria-hidden="true" style="float:left;"></i></i>Pastebin Post</h4>
+			</div>
+			<div class="panel-body projectpanel" style="text-align: left;">
+					<p>This is just random assorted things, Mostly Lua for ComputerCraft (A Minecraft Modification) But there are some AutoIT scripts.</p>
+			</div>
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
 					<div class="panel-heading projectfooter">
 					<b style="font-size:18px;">Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:right;font-size:22px;"></i> <br> <!-- These add spaces &nbsp; -->
-						
+
+					<br>
 					</div>
-					<a href="index.html"><button type="button" class="btn btn-default"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+					<a href="http://pastebin.com/u/Noobular" target="_blank"><button type="button" class="btn btn-default"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
 					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
-
-					<i style="font-size:24px; float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-html5" aria-hidden="true"></i>
-					<i style="font-size:24px; float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-css3" aria-hidden="true"></i>
+					
+					<i class="fa fa-question-circle" aria-hidden="true" style="float:right; font-size: 24px; padding-top:4px; padding-right:4px;"></i>
 				</div>
+		</div>
 	</div>
-</div>
 
 
-<div class="container col-sm-4">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-clipboard" aria-hidden="true" style="float:left;"></i></i>Pastebin Post</h4>
-		</div>
-		<div class="panel-body projectpanel" style="text-align: left;">
-				<p>This is just random assorted things, Mostly Lua for ComputerCraft (A Minecraft Modification) But there are some AutoIT scripts.</p>
-		</div>
-			<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
-				<div class="panel-heading projectfooter">
-				<b style="font-size:18px;">Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:right;font-size:22px;"></i> <br> <!-- These add spaces &nbsp; -->
-
-				<br>
-				</div>
-				<a href="http://pastebin.com/u/Noobular" target="_blank"><button type="button" class="btn btn-default"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
-				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
-				
-				<i class="fa fa-question-circle" aria-hidden="true" style="float:right; font-size: 24px; padding-top:4px; padding-right:4px;"></i>
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Mini Text Adventure Game</h4>
 			</div>
-	</div>
-</div>
-
-
-<div class="container col-sm-4">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Mini Text Adventure Game</h4>
-		</div>
-		<div class="panel-body projectpanel" style="text-align: left;">
-				<p>This is a Mini Text Adventure Game (MTAG) That I had worked on for roughly a week or two on and off.</p>
-		</div>
-			<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
-				<div class="panel-heading projectfooter">
-				<b style="font-size:18px;">Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:right;font-size:22px;"></i> <br> <!-- These add spaces &nbsp; -->
-					This was a required assignment for the Game Design and Programming class.
-				<br>
-				</div>
-				<a ><button type="button" class="btn btn-default" onclick="alert('This is currently not in my possession, Give me a day or two...')"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
-				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
-				
-				<i class=" devicon-jquery-plain" aria-hidden="true" style="float:right; font-size: 24px; padding-top:4px; padding-right:4px;"></i>
-				<i class=" devicon-javascript-plain" aria-hidden="true" style="float:right; font-size: 24px; padding-top:6px; padding-right:4px;"></i>
-				<i class="fa fa-html5" aria-hidden="true" style="float:right; font-size: 24px; padding-top:4px; padding-right:4px;"></i>
+			<div class="panel-body projectpanel" style="text-align: left;">
+					<p>This is a Mini Text Adventure Game (MTAG) That allowed me to increase my skill in taking userinput and having a smarter use for it.</p>
 			</div>
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading projectfooter">
+					<b style="font-size:18px;">Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:right;font-size:22px;"></i> <br> <!-- These add spaces &nbsp; -->
+						This was a required assignment for the Game Design and Programming class.
+					<br>
+					</div>
+					<a ><button type="button" class="btn btn-default" onclick="alert('This is currently not in my possession, Give me a day or two...')"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
+					
+					<i class=" devicon-jquery-plain" aria-hidden="true" style="float:right; font-size: 24px; padding-top:4px; padding-right:4px;"></i>
+					<i class=" devicon-javascript-plain" aria-hidden="true" style="float:right; font-size: 24px; padding-top:6px; padding-right:4px;"></i>
+					<i class="fa fa-html5" aria-hidden="true" style="float:right; font-size: 24px; padding-top:4px; padding-right:4px;"></i>
+				</div>
+		</div>
 	</div>
-</div>
 
+
+</div> <!-- end of project collpase -->
 
 <div id="fmtf" class="modal fade" role="dialog">
   <div class="modal-dialog">
