@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inventory</title>
+
+	<!-- BOOTSTRAP / JQUERY -->
+	<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- ================== -->
+
+
+	<style>
+
+		.basepanel{
+			height:480px;
+			margin:15px; 
+			padding: 0px;
+		}
+
+		.statwell{
+			margin:10px;
+		}
+
+		.Item{
+			margin:5px;
+			padding: 5px;
+			text-align: left;
+			border-width:3px;
+			font-weight:bold;
+
+		}
+
+		.Common{
+			border-color: #afafaf;
+			background-color:#c9cccb;
+		}
+
+		.Uncommon{
+			border-color: green;
+			background-color:#4fe820;
+		}
+
+		.Rare{
+			border-color: #0f22fc;
+			background-color: #3f4fff;
+		}
+
+		.Epic{
+			border-color: purple;
+			background-color: #a442f4;
+		}
+
+		.Legendary{
+			border-color: #ea7107;
+			background-color: orange;
+		}
+
+
+
+	</style>
+	<script>
+
+
+		/* Additional Information [Comments section]
+		=============================================
+		
+		Author: 
+			James Byrnes
+
+		Last Update: 
+			11/30/16
+
+		Current Progress:
+			Work In Progress
+
+		Description / Goal:
+			Create a text-based Adventure game with Shop(s), an Inventory system, and a character system of some sort.
+
+		Version:
+			1.0
+		*/
+
+		//  Variables
+		//================================
+
+		var plyName = prompt("What's your characters name?");
+		while(plyName===""){
+			var plyName = prompt("What's your characters name?");
+		}
+		// Dialog/Story Related
+		//================================
+		var dialog_intro = "Welcome " + plyName + ", You've started your adventure for gold and glory in this marvelous world, You can start off by typing 'help' to learn how to play! "
+
+		// Help Related
+		//================================
+		var help_intro = "<b> Possible Action Commands... </b> <br> 'help movement' <br> 'help goto' <br> 'help attack' <br>"
+		var help_movement = "<b>Movement controls</b> <br> <b>'north'</b>, <b>'south'</b>, <b>'east'</b>, <b>'west'</b> <br> Moving specific directions doesn't do anything special you will randomly stumble apon everything, I'm too lazy to add some kind of saving previous location variables ex: location/description/items/enemies/mobs ect. .";
+		var help_goto = "<b> Possible Action Commands... </b> <br> 'goto shop' This will take you to a shop to buy items with your gold! <br> 'goto mob' will take you to something to kill, for gold and possibly loot! <br>"
+		var help_attack = "<b>'attack'</b> <br> Usage: Type 'attack' to attack a monster based on your damage, random * damage + 5";
+
+		// Inventory Related
+		//================================
+		var inv = [];
+		var invRarities = [];
+		var invValue = [];
+		var invIndex = [];
+
+		// Equipped Related
+		//================================
+		var equipped = [];
+		var equippedRarities = [];
+		var equippedValue = [];
+
+		// Shop Related
+		//================================
+		var shopInv = [];
+		var shopRarities = [];
+		var shopValue = [];
+		var shopIndex = [];
+		var shopnames = ["Blacksmith"];
+		var shopOpen = false;
+
+		// Battle Related
+		//================================
+		var inbattle = false;
+		var mobname = "";
+		var moblevel;
+		var mobhealth;
+		var mobexperience;
+		var mobLowExp = 250;
+
+
+
+
+		// Character Stats/Info
+		//================================
+		var playerstats = [];
+			//base settings to start the player off with.
+			playerstats["Base_Health"]   	= 100
+			playerstats["Base_Mana"] 		= 100
+			playerstats["Base_Strength"] 	= 10  
+			playerstats["Base_Wisdom"]   	= 5   
+			playerstats["Base_Damage"]   	= 5  
+
+			//current time set stats
+			playerstats["Health"]   	= 0
+			playerstats["Mana"] 		= 0
+			playerstats["Strength"] 	= 0 
+			playerstats["Wisdom"]   	= 0   
+			playerstats["Damage"]   	= 0  
+
+			//bonus (Gained from items/buffs)
+			playerstats["Bonus_Health"]   	= 0
+			playerstats["Bonus_Mana"] 		= 0
+			playerstats["Bonus_Strength"] 	= 0  
+			playerstats["Bonus_Wisdom"]   	= 0  
+			playerstats["Bonus_Damage"]   	= 0  
+
+			//misc stats
+			playerstats["Level"] 		= 1
+			playerstats["Experience"] 	= 0
+			playerstats["Location"]	  	= "Tran-vania"
+			playerstats["MaxEXP"] 		= playerstats["Level"] * Math.ceil(Math.pow(60,1.8) - 60);
+			playerstats["Moves"]		= 0;
+
+			playerstats["Cash"] = 5000;
+
+
+		var equipinfo = [];
+			equipinfo["hat"];
+			equipinfo["boots"];
+			equipinfo["chest"];
+			equipinfo["legs"];
+			equipinfo["shoulder"];
+
+		
+		// Quest Related
+		//================================
+		var questName = [];
+		var questDesc = [];
+		var questBool = [];
+
+
+		// Item Types/ Randomization
+		//================================
+		var RandRarity = ["Common","Uncommon","Rare","Epic","Legendary"];
+		var RandArmorType = ["Hat","Vest","Chaps","Shoulder Pads","Cowboy Boots"];
+		var RandConsumableType = []
+
+		// Mob Randomization
+		//================================
+		var MobAdjective = ["Large","Phat","Mean","Angry","Small","Short","Tiny","Massive","Quiet","Sneaky"];
+		var MobName = ["Doge","Cat","Human","Horse","Bear","Rattle Snake", "Reese","Brandon"];
+
+
+		//=============================
+		//=============================
+		//  Functions
+		//=============================
+		//=============================
+
+		//=============================
+		//=============================
+		// Developer Related Functions
+		//=============================
+		//=============================
+
+		function CompleteQuest(name){
+			console.log("CompleteQuest ran for '" + name + "'");
+			questBool[name] = true;
+			CheckQuest();
+		}
+		function InstaKillMob(){
+			if(inbattle === true){
+				mobhealth = -1;
+				AttackMob();
+			}				
+		}
+
+		function AddGold(){
+			gold = parseInt(prompt("How much gold do you want to add to the current total gold?"));
+			playerstats["Cash"] += gold;
+			DisplayGold();
+		}
+
+		function resetinventory(){
+			$("#itemdisplay").empty();
+			inv = [];
+			invRarities = [];
+			invValue = [];
+			playerstats["Cash"] = 100;
+			DisplayGold();
+		}
+
+		function AddItemToShop(){
+			var iname = prompt("Item Name...");
+			var irarity = prompt("Item Rarity...");
+			var ivalue = prompt("Item Value...");
+
+			shopInv.push(iname);
+			shopRarities.push(irarity);
+			shopValue.push(ivalue);
+
+			DisplayShopItems()
+		}
+
+		function AddItem(rarity,name,value){
+			if(name === undefined){
+				var iname = prompt("Item Name...");
+				var irarity = prompt("Item Rarity...");
+				var ivalue = prompt("Item Value...");
+				inv.push(iname);
+				invValue.push(irarity);
+				invRarities.push(ivalue);
+			}else{
+				inv.push(name);
+				invValue.push(value);
+				invRarities.push(rarity);
+			}
+			DisplayOwnedItems();
+		}
+
+
+
+		//=============================
+		//=============================
+		// Display Functions
+		//=============================
+		//=============================
+
+		function DisplayBase(){
+			document.getElementById("charname").innerHTML = plyName;
+			document.getElementById("gameheader").innerHTML = "<b> Main Game </b> <span style='float:right;' class='badge'> Moves: "+playerstats["Moves"]+"</span>"
+		}
+
+		function DisplayGold(){
+			var invheader = "<b> Inventory </b> <span style='float:right' class='badge'> $"+ playerstats["Cash"] +"</span>"
+			$("#invHeading").empty();
+			var invhead = document.getElementById("invHeading").innerHTML = invheader;
+		}
+		function DisplayEquippedItems(){
+			console.log("I'm attemping to run!")
+			var EquipLength = equipped.length;
+			$("#equipdisplay").empty();
+			for(i=0;i<EquipLength;i++){
+					var panel = document.createElement("div");
+					panel.className = "well Item col-sm-12 " + equippedRarities[i];
+					panel.innerHTML = equippedRarities[i] + " " + equipped[i]
+					$(panel).attr("data-toggle","tooltip");
+					$(panel).attr("title","Value: " + equippedValue[i]);
+
+					var button = document.createElement("button")
+					button.className = "btn-xs btn dropdown-toggle";
+					$(button).attr("data-toggle","dropdown");
+					button.innerHTML = "Options... <span class='caret'></span>"
+					button.id = "EQUIPPEDitem"+i
+					button.type = "button"
+
+					var dropdown = document.createElement("div");
+					dropdown.className = "dropdown";
+					dropdown.style = "float: right; background-color:gray;"
+					dropdown.appendChild(button);
+
+					var ul = document.createElement("ul");
+					ul.className = "dropdown-menu dropdown-menu-right";
+					ul.role = "menu";
+					$(ul).attr("aria-labelledby","EQUIPPEDitem"+i);
+					ul.innerHTML = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='UNEquipItem(" + i + ")'>Unequip Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+					dropdown.appendChild(ul);
+
+					panel.appendChild(dropdown);
+
+					var body = document.getElementById("equipdisplay").appendChild(panel);
+			}
+		}
+		function DisplayOwnedItems(){
+			console.log("I'm attemping to run!")
+			var invLength = inv.length;
+			$("#itemdisplay").empty();
+			for(i=0;i<invLength;i++){
+					var panel = document.createElement("div");
+					panel.className = "well Item col-sm-12 " + invRarities[i];
+					panel.innerHTML = invRarities[i] + " " + inv[i]
+					$(panel).attr("data-toggle","tooltip");
+					$(panel).attr("title","Value: " + invValue[i]);
+
+
+
+					var button = document.createElement("button")
+					button.className = "btn-xs btn dropdown-toggle";
+					$(button).attr("data-toggle","dropdown");
+					button.innerHTML = "Options... <span class='caret'></span>"
+					button.id = "INVENTORYitem"+i
+					button.type = "button"
+
+
+					var dropdown = document.createElement("div");
+					dropdown.className = "dropdown";
+					dropdown.style = "float: right; background-color:gray;"
+					dropdown.appendChild(button);
+
+					var ul = document.createElement("ul");
+					ul.className = "dropdown-menu dropdown-menu-right";
+					ul.role = "menu";
+					$(ul).attr("aria-labelledby","INVENTORYitem"+i);
+					ul.innerHTML = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='EquipItem("+ i +")'>Equip Item</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+					dropdown.appendChild(ul);
+
+
+
+
+					panel.appendChild(dropdown);
+
+					var body = document.getElementById("itemdisplay").appendChild(panel);
+			}
+		}
+		function RemoveUserItem(index){
+			AppendDialog("You've deleted a(n) "+invRarities[index] + " " + inv[index]);
+			inv.splice(index, 1);
+			invRarities.splice(index, 1);
+			invValue.splice(index, 1);
+			DisplayOwnedItems();
+		}
+
+		function SellUserItem(index){
+			AppendDialog("You've sold a(n) "+invRarities[index] + " " + inv[index] + " for $"+invValue[index]);
+			playerstats["Cash"] += Math.floor(invValue[index]/2);
+			inv.splice(index, 1);
+			invRarities.splice(index, 1);
+			invValue.splice(index, 1);
+			DisplayGold();
+			DisplayOwnedItems();
+		}
+
+		function CreateStatWell(name,value){
+			var stat = document.createElement("div")
+
+			stat.className = "well well-sm statwell";
+			stat.innerHTML = name + " : " + value;
+			if(name == "Experience"){
+				stat.innerHTML = name + " : " + " ( " + value + " / " + playerstats["MaxEXP"] + " )";
+			}
+			var chart = document.getElementById("CharacterStats").appendChild(stat);
+		}
+
+		function DisplayCharacterData(){
+			$("#CharacterStats").empty();
+			CreateStatWell("Location",playerstats["Location"])
+			CreateStatWell("Level",playerstats["Level"])
+			CreateStatWell("Experience",playerstats["Experience"])
+			CreateStatWell("Health",playerstats["Health"])
+			CreateStatWell("Mana",playerstats["Mana"])
+			CreateStatWell("Strength",playerstats["Strength"])
+			CreateStatWell("Wisdom",playerstats["Wisdom"])
+			CreateStatWell("Damage",playerstats["Damage"])
+		}
+
+		function DisplayShop(){
+			if(document.getElementById("shop")){
+				$("#shop").remove();
+				shopInv = [];
+				shopRarities = [];
+				shopValue = [];
+				console.log("Removing shop panel...")
+
+			}else{
+				
+				console.log("Creating shop panel...");
+			}
+			shopOpen = true;
+			var shoppanel = document.createElement("div");
+			shoppanel.id = "shop"
+			shoppanel.className = "panel panel-primary col-sm-3 basepanel";
+
+			var heading = document.createElement("div")
+			heading.innerHTML = shopnames[0] + "'s shop";
+			heading.className = "panel-heading panel-primary"
+			shoppanel.appendChild(heading);
+
+			var body = document.createElement("div");
+			body.className = "panel-body pre-scrollable"
+			body.style = "min-height:436px;"
+			body.id = "shopdisplay";
+			shoppanel.appendChild(body);
+
+			document.body.appendChild(shoppanel);
+			GenerateShopItems(10);
+		}
+
+		function AppendDialog(dialog,type){
+			var well = document.createElement("div");
+			well.className = "well";
+			well.innerHTML = dialog;
+
+			switch(type){
+				case "danger":
+					well.style = "background-color:#ff6666;";
+					break;
+				case "help":
+					well.style = "background-color:#ffff99;";
+					break;
+				case "success":
+					well.style = "background-color:#99ff33;";
+					break;
+				case "move":
+					well.style = "background-color:#76a9fc;";
+					break;
+
+				case "info":
+					well.style = "background-color:#f4cb42;"
+				break;
+				default: break;
+			}
+
+			document.getElementById("game").appendChild(well)
+		}
+
+		//=============================
+		//=============================
+		// Shop Related Functions
+		//=============================
+		//=============================
+		function GenerateShopItems(amount){
+			for(i=0;i<amount+1;i++){
+				CreateRandomShopItem();
+			}
+			DisplayShopItems();
+		}
+
+		function CreateRandomShopItem(){
+			var RarityNum = Math.floor(Math.random()*RandRarity.length)
+			var TypeNum = Math.floor(Math.random()*RandArmorType.length)
+
+			shopInv.push(RandArmorType[TypeNum]);
+			shopRarities.push(RandRarity[RarityNum]);
+			if(RarityNum===0){
+				RarityNum = 1
+			}
+			var RandomVal = Math.floor(Math.random()*1000*RarityNum+25);
+			shopValue.push(RandomVal);
+		}
+
+		function DisplayShopItems(){
+			console.log("Starting Shop Item Display loop...")
+			$("#shopdisplay").empty();
+			for(i=0;i<shopInv.length;i++){
+				
+				sItemName = shopInv[i];
+				sItemValue = shopValue[i];
+				console.log("Attempting to Generate item panel for..." + sItemName)
+
+				var panel = document.createElement("div");
+				panel.className = "well Item col-sm-12 " + shopRarities[i];
+				panel.innerHTML = shopRarities[i] + " " + shopInv[i] + "<br>" + "$"+shopValue[i];
+				panel.id = "item"+i
+			
+				var button = document.createElement("button")
+				button.className = "btn-xs btn";
+				button.id = "itemBTN"+i
+				button.style = "float: right; background-color:gray;"
+				button.innerHTML = "Buy Item"
+
+				$(button).attr("onclick","BuyItem('"+ sItemName+"','"+ shopRarities[i]+"',"+sItemValue+"); RemoveShopItem("+i+","+sItemValue+")");
+
+				panel.appendChild(button);
+
+				var body = document.getElementById("shopdisplay").appendChild(panel);
+			}
+		}
+		function RemoveShopItem(index,price){
+			if(playerstats["Cash"] >= price){
+				shopInv.splice(index, 1);
+				shopRarities.splice(index, 1);
+				shopValue.splice(index, 1);
+				DisplayShopItems();
+			}
+		}
+		function BuyItem(name,rarity,worth){
+
+			if(playerstats["Cash"] >= worth){
+				inv.push(name);
+				invValue.push(worth);
+				invRarities.push(rarity);
+				playerstats["Cash"] -= worth;
+				AppendDialog("You've bought a " + name + " at a price of $" + worth);
+				DisplayOwnedItems();
+				DisplayGold();
+			}
+			
+		}
+
+	//=============================
+	//=============================
+	// Game Related Functions
+	//=============================
+	//=============================
+
+	function Location(Location){
+		playerstats["Location"] = Location
+		AppendDialog("You've moved to the " + Location,"move");
+		DisplayCharacterData();
+	}
+
+	function LevelUP(){
+		while(playerstats["Experience"] >= playerstats["MaxEXP"]){
+			playerstats["Level"] ++;
+			playerstats["Experience"] -= playerstats["MaxEXP"];
+			playerstats["MaxEXP"] = playerstats["Level"] * Math.ceil(Math.pow(60,1.8) - 60);
+			AppendDialog("You've leveled up to level "+playerstats["Level"],"success");
+		}
+		UpdateCharacterStats();
+	}
+
+	function TakeInput(){
+		var input = document.getElementById("input").value.toLowerCase().trim();
+		var damage;
+		if(inbattle === true){
+			switch(input){
+				case "attack":
+						AttackMob()
+				break;
+				case "goto mob":
+					document.getElementById("input").value = "";
+					break;
+				default:
+					AppendDialog("You're in battle! <br> You can either attack or run away.")
+				break;
+			}
+		}else{
+				switch(input){
+					case "attack":
+						document.getElementById("input").value = "";
+						break;
+					case "help":
+						AppendDialog(help_intro,"help");
+					break;
+
+					case "help movement":
+						AppendDialog(help_movement,"help");
+						break;
+
+					case "help goto":
+						AppendDialog(help_goto,"help");
+						break;
+
+					case "help attack":
+						AppendDialog(help_attack,"help")
+						break;
+					case "north":
+
+						AppendDialog("You've moved north!");
+						move();
+						break;
+					case "east":
+						move();
+						AppendDialog("You've moved east!");
+						break;
+					case "south":
+						move();	
+						AppendDialog("You've moved south!");
+						break;
+
+					case "west":
+						move();
+						AppendDialog("You've moved west!");
+						break;
+
+					case "goto shop":
+						Location("Shop");
+						move();
+						DisplayShop();
+						break;
+					case "goto mob":
+				 		Location("Wilderness");
+						move();
+						if(playerstats["Moves"] <= 1){
+							console.log("Tried to spawn a Murderer... for some reason.")
+							GenerateMob("Murderer");
+						}else{
+							GenerateMob();
+						}
+
+						break
+					default: 
+						console.log("Improper input, Please try again!")	
+					}
+				}
+
+	}
+
+		//=============================
+		//=============================
+		// Game World Functions
+		//=============================
+		//=============================
+
+		function AddQuest(Name,Description){
+			questName.push(Name);
+			questDesc.push(Description);
+			questBool[Name] = false;
+			AppendDialog("<b>Quest Added!</b> <br>   " + Name + " <br>" + Description,"success");
+		}
+
+		function UpdateCharacterStats(){
+			playerstats["MaxHealth"] 		= playerstats["Base_Health"] * playerstats["Level"] + playerstats["Bonus_Health"];
+			console.log(playerstats["Health"]);
+			playerstats["Mana"] 		= playerstats["Base_Mana"]     * playerstats["Level"] + playerstats["Bonus_Mana"];
+			playerstats["Strength"] 	= playerstats["Base_Strength"] * playerstats["Level"] + playerstats["Bonus_Strength"];
+			playerstats["Wisdom"]   	= playerstats["Base_Wisdom"]   * playerstats["Level"] + playerstats["Bonus_Wisdom"];
+			playerstats["Damage"]   	= playerstats["Base_Damage"]   * playerstats["Level"] + playerstats["Bonus_Damage"];
+			DisplayCharacterData();
+		}
+
+		function EquipItem(index){
+			AppendDialog("You've equipped a(n) "+invRarities[index] + " " + inv[index]);
+			equipped.push(inv[index]);
+			equippedRarities.push(invRarities[index]);
+			equippedValue.push(invValue[index]);
+
+			inv.splice(index, 1);
+			invRarities.splice(index, 1);
+			invValue.splice(index, 1);
+
+			console.log(equipped)
+			DisplayOwnedItems();
+			DisplayEquippedItems();
+			UpdateCharacterStats();
+		}
+
+		function UNEquipItem(index){
+			AppendDialog("You've unequipped a(n) "+equippedRarities[index] + " " + equipped[index]);
+			inv.push(equipped[index]);
+			invRarities.push(equippedRarities[index]);
+			invValue.push(equippedValue[index]);
+
+			equipped.splice(index, 1);
+			equippedRarities.splice(index, 1);
+			equippedValue.splice(index, 1);
+
+
+			console.log(equipped)
+			DisplayOwnedItems();
+			DisplayEquippedItems();
+			UpdateCharacterStats();
+		}
+
+		function CheckLocation(){
+			if(playerstats["Location"] == "Shop"){
+
+			}else{
+				$("#shop").remove();
+			}
+		}
+
+		function move(){
+				playerstats["Moves"] ++;
+				CheckLocation();
+				DisplayBase();	
+		}
+
+		function AttackMob(){
+			UpdateCharacterStats();
+			if(inbattle === true){
+				console.log("Attempting to attack..")
+				damage = Math.floor(Math.random()*playerstats["Damage"]+5)
+				if(mobhealth <= 0 ){
+					MobKilled();
+				}else{
+					mobhealth -= damage;
+					if(mobhealth<= 0){
+						MobKilled();
+
+					}else{	
+						AppendDialog("You've damaged " + mobname + " for " + damage + " damage, Health Remaining : " + mobhealth,"Danger");
+						PlayerDamaged();
+					}
+				}
+			}
+		}
+		function PlayerDamaged(){
+			if(playerstats["Health"]>0){
+				damage = Math.floor(Math.random()*moblevel+5)
+				playerstats["Health"] -= damage;
+				DisplayCharacterData();
+			}else{
+				PlayerDeath();
+			}
+			if(playerstats["Health"] <= 0){
+				PlayerDeath();
+			}
+		}
+
+		function PlayerDeath(){
+			playerstats["Health"] = playerstats["MaxHealth"];
+			Location("Tran-vania");
+			AppendDialog("You have died and returned to the " + playerstats["Location"]);
+			inbattle = false;
+		}
+
+		function MobKilled(){
+			AppendDialog("You've killed a "+mobname+"<br> You've gained " + mobexperience + " Experience.","success");
+			playerstats["Experience"] += mobexperience;
+			LevelUP();
+			inbattle = false;
+			AddItem("Common","Bottle o' Whiskey",25);
+			switch(mobname){
+				case "Murderer":
+					CompleteQuest("The Murderer");
+					break;
+			}
+			CheckQuest();
+			DisplayCharacterData();
+			UpdateCharacterStats();
+			document.getElementById("input").value = "";
+		}
+
+		function CheckQuest(){
+			for(index=0;index<questBool.length;index++){
+				switch(questBool[questName[index]]){
+					case true:
+						AppendDialog("<b> Quest Completed </b> <br> " + questName[index])
+						questBool[index] = undefined;
+						break;
+					case false:
+						break;
+					default: 
+						break;
+				}
+			}
+		}
+
+		function GenerateMob(name){
+			inbattle = true;
+			if(name === undefined){
+				mobname = MobName[Math.floor(Math.random()*MobName.length)];
+				mobadj = MobAdjective[Math.floor(Math.random()*MobAdjective.length)]
+				moblevel = Math.floor(Math.random()*playerstats["Level"]+2);
+				mobhealth = Math.floor(Math.random()*100+1);
+				mobexperience = Math.floor(Math.random()*playerstats["Level"]*moblevel+mobLowExp);
+				mobcash = Math.floor(Math.random()*playerstats["Level"]*moblevel+mobLowExp + 163);
+			}else{
+				mobname = name
+				mobadj = MobAdjective[Math.floor(Math.random()*MobAdjective.length)]
+				moblevel =  Math.floor(Math.random()*playerstats["Level"]+2);
+				mobhealth = Math.floor(Math.random()*100+1);
+				mobexperience = Math.floor(Math.random()*playerstats["Level"]*moblevel+mobLowExp);
+				mobcash = Math.floor(Math.random()*playerstats["Level"]*moblevel+mobLowExp + 163);
+			}
+			AppendDialog("<b>You've encountered</b> <br>" + mobadj + " " + mobname + "<br> Level: " +  moblevel + "<br> Health: " + mobhealth ,"danger");
+		}
+
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
+
+		function StartingFunctions(){
+			UpdateCharacterStats();
+			DisplayBase();
+			DisplayGold();
+			DisplayOwnedItems();
+			DisplayCharacterData();
+			DisplayShopItems();
+			AppendDialog(dialog_intro);
+			AddQuest("The Murderer", "There's a 'mob' in the wilderness blocking your path to the shop, He's a wanted criminal, go take him down and head to the shop! <br> <b> Hint: 'goto mob' </b>");
+
+		}
+	</script>
+</head>
+<body style="background-color:gray;">
+
+<div style="margin:15px; padding: 0px;" class="panel panel-primary col-sm-11">
+	<div class="panel-heading">
+	<b> Developer Control Panel </b>
+	</div>
+	<div class="panel-body">
+		<button onclick="resetinventory()" class="btn btn-primary btn-xs">Reset inventory</button>
+		<button onclick="AddItemToShop()" class="btn btn-primary btn-xs">Add Shop Item</button>
+		<button	onclick="AddGold()" class="btn btn-primary btn-xs">Add Gold</button>
+		<button	onclick="DisplayShop() AppendDialog('You\'ve moved to the shop!','move')" class="btn btn-primary btn-xs">Display New Shop</button>
+		<button	onclick="InstaKillMob()" class="btn btn-primary btn-xs">Insta-Kill Mob</button>
+	</div>
+</div>
+
+<div class="row"></div>
+
+
+<div style="margin:15px; padding: 0px;" class="panel panel-primary col-sm-3 basepanel">
+	<div id="charname" class="panel-heading panel-primary">
+	</div>
+
+	<div id="CharacterStats" class="panel-body">
+	</div>
+</div>
+
+<div class="panel panel-primary col-sm-3 basepanel" >
+	<div id="invHeading" class="panel-heading">
+	</div>
+
+	<div id="itemdisplay"  style="min-height:200px; max-height:200px;" class="panel-body pre-scrollable">
+	</div>
+
+	<div id="equiphead" class="panel-heading">
+	<b> Equipped Items </b>
+	</div>
+	<div id="equipdisplay"  style="min-height:196px; max-height:196px;" class="panel-body pre-scrollable">
+	</div>
+</div>
+
+
+<div class="panel panel-primary col-sm-5 basepanel" >
+	<div id="gameheader" class="panel-heading">
+	
+	</div>
+
+	<div id="game"  class="panel-body pre-scrollable" style="min-height:390px;">	
+	</div>
+
+ <div style="margin:5px;" class="input-group" id="inputgroup">
+    <input type="text" class="form-control" id="input" placeholder="Enter your action!" onclick="TakeInput()">
+    <div class="input-group-btn">
+      <button class="btn btn-primary" id="inputbtn" type="button" onclick="TakeInput()">
+      	Enter..
+      </button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+<script>
+	// MAIN FUNCTIONS?
+	//======================
+	StartingFunctions()
+
+	$("#input").keyup(function(event){
+	    if(event.keyCode == 13){
+	        $("#input").click();
+	    }
+	});
+	playerstats["Health"] = playerstats["MaxHealth"]
+</script>
+</html>
