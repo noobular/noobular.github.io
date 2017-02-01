@@ -265,6 +265,7 @@
 				invValue.push(value);
 				invRarities.push(rarity);
 			}
+			AppendDialog("Item Obtained: " + name + " ... Worth: " + value);
 			DisplayOwnedItems();
 		}
 
@@ -587,6 +588,7 @@
 					case "mine":
 						if(playerstats["Location"] == "The Mine"){
 							AddItem("Legendary", "Iron Ore", 10);
+
 						}
 
 						break;
