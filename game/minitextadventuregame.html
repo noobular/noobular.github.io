@@ -265,7 +265,7 @@
 				invValue.push(value);
 				invRarities.push(rarity);
 			}
-			AppendDialog("Item Obtained: " + name + " ... Worth: " + value);
+			AppendDialog("Item Obtained: " + name + " ... Worth: " + value, "item");
 			DisplayOwnedItems();
 		}
 
@@ -445,6 +445,10 @@
 				case "dialog":
 					well.style = "background-color:#5bc0de;  color:#2b3e50;";
 					break;
+				case "item":
+					well.style = "background-color:#f95e11;  color:#2b3e50;";
+					break;
+				
 				case "danger":
 					well.style = "background-color:#ff6666;  color:#2b3e50;";
 					break;
