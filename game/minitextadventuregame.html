@@ -575,6 +575,10 @@
 					case "attack":
 						document.getElementById("input").value = "";
 						break;
+					case "mine":
+						if(playerstats["Location"] == "The Mine"){
+							AppendDialog("TESTING MINING");
+						}
 					case "help":
 						AppendDialog(help_intro,"help");
 					break;
@@ -625,6 +629,10 @@
 						}
 
 						break
+					case "goto mine":
+						Location("The Mine");
+						move();
+						break;
 					default: 
 						console.log("Improper input, Please try again!")	
 					}
