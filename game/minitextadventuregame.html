@@ -6,7 +6,7 @@
 	<!-- BOOTSTRAP / JQUERY -->
 	<!-- Latest compiled and minified CSS -->
 
-<link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+<link rel="stylesheet" href="http://bootswatch.com/superhero/bootstrap.min.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -572,6 +572,8 @@
 			}
 		}else{
 				switch(input){
+					// ACTIONS
+					///////////////
 					case "attack":
 						document.getElementById("input").value = "";
 						break;
@@ -579,6 +581,11 @@
 						if(playerstats["Location"] == "The Mine"){
 							AppendDialog("TESTING MINING");
 						}
+
+						break;
+
+					// DIALOG
+					///////////////
 					case "help":
 						AppendDialog(help_intro,"help");
 					break;
@@ -594,6 +601,9 @@
 					case "help attack":
 						AppendDialog(help_attack,"help")
 						break;
+
+					// MOVEMENT
+					//////////////////
 					case "north":
 
 						AppendDialog("You've moved north!");
