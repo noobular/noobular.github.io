@@ -441,6 +441,9 @@
 			well.innerHTML = dialog;
 
 			switch(type){
+				case "dialog":
+					well.style = "background-color:#5bc0de;  color:#2b3e50;";
+					break;
 				case "danger":
 					well.style = "background-color:#ff6666;  color:#2b3e50;";
 					break;
@@ -826,7 +829,7 @@
 			DisplayOwnedItems();
 			DisplayCharacterData();
 			DisplayShopItems();
-			AppendDialog(dialog_intro,"help");
+			AppendDialog(dialog_intro,"dialog");
 			AddQuest("The Murderer", "There's a 'mob' in the wilderness blocking your path to the shop, He's a wanted criminal, go take him down and head to the shop! <br> <b> Hint: 'goto mob' </b>");
 
 		}
