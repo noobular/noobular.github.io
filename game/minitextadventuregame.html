@@ -81,7 +81,7 @@
 			James Byrnes
 
 		Last Update: 
-			11/30/16
+			2/2/17
 
 		Current Progress:
 			Work In Progress
@@ -91,6 +91,16 @@
 
 		Version:
 			1.0
+
+
+
+
+
+		DEVLEOPER NOTES:
+			Locations:
+				- Tran-vania
+				- The Mine
+				- Forrest
 		*/
 
 		//  Variables
@@ -117,6 +127,7 @@
 		var invRarities = [];
 		var invValue = [];
 		var invIndex = [];
+		var invTypeOf = [];
 
 		// Equipped Related
 		//================================
@@ -129,6 +140,7 @@
 		var shopInv = [];
 		var shopRarities = [];
 		var shopValue = [];
+		var shopTypeOf = [];
 		var shopIndex = [];
 		var shopnames = ["Blacksmith"];
 		var shopOpen = false;
@@ -197,7 +209,7 @@
 		// Item Types/ Randomization
 		//================================
 		var RandRarity = ["Common","Uncommon","Rare","Epic","Legendary"];
-		var RandArmorType = ["Hat","Vest","Chaps","Shoulder Pads","Cowboy Boots"];
+		var RandomType = [["Axe","Knife"],["Hat","Vest","Chaps","Shoulder Pads","Cowboy Boots"]];
 		var RandConsumableType = []
 
 		// Mob Randomization
@@ -257,18 +269,21 @@
 			DisplayShopItems()
 		}
 
-		function AddItem(rarity,name,value){
+		function AddItem(rarity,name,value,TypeOf){
 			if(name === undefined){
 				var iname = prompt("Item Name...");
 				var irarity = prompt("Item Rarity...");
 				var ivalue = prompt("Item Value...");
+				var iTypeOf = prompt("Item Type...");
 				inv.push(iname);
 				invValue.push(irarity);
 				invRarities.push(ivalue);
+				invTypeOf.push(iTypeOf)
 			}else{
 				inv.push(name);
 				invValue.push(value);
 				invRarities.push(rarity);
+				invTypeOf.push(TypeOf);
 			}
 			AppendDialog("Item Obtained: " + name + " ... Worth: " + value, "item");
 			DisplayOwnedItems();
@@ -315,6 +330,7 @@
 					dropdown.style = "float: right; background-color:gray;"
 					dropdown.appendChild(button);
 
+
 					var ul = document.createElement("ul");
 					ul.className = "dropdown-menu dropdown-menu-right";
 					ul.role = "menu";
@@ -330,6 +346,7 @@
 		function DisplayOwnedItems(){
 			console.log("I'm attemping to run!")
 			var invLength = inv.length;
+			var dropdowntxt = "";
 			$("#itemdisplay").empty();
 			for(i=0;i<invLength;i++){
 					var panel = document.createElement("div");
@@ -354,11 +371,25 @@
 					dropdown.style = "float: right; background-color:gray;"
 					dropdown.appendChild(button);
 
+					switch(invTypeOf[i]){
+						case "Weapon":
+							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='EquipItem("+ i +")'>Equip Item</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+							break;
+						case "Armor":
+							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='EquipItem("+ i +")'>Equip Item</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+							break;
+						case "Consumable":
+							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='ConsumeUserItem("+i+")'>Consume</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+							break;
+						default:
+							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+					}
+
 					var ul = document.createElement("ul");
 					ul.className = "dropdown-menu dropdown-menu-right";
 					ul.role = "menu";
 					$(ul).attr("aria-labelledby","INVENTORYitem"+i);
-					ul.innerHTML = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='EquipItem("+ i +")'>Equip Item</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+					ul.innerHTML = dropdowntxt;
 					dropdown.appendChild(ul);
 
 
@@ -375,6 +406,17 @@
 			invRarities.splice(index, 1);
 			invValue.splice(index, 1);
 			DisplayOwnedItems();
+		}
+
+		function ConsumeUserItem(index){
+			AppendDialog("<b>+25 Health</b> <br>You've consumed a "+invRarities[index] + " " + inv[index] + " and feel better...","success");
+			inv.splice(index, 1);
+			invRarities.splice(index, 1);
+			invValue.splice(index, 1);
+			invTypeOf.splice(index,1);
+			DisplayOwnedItems();
+			playerstats["Health"] += 25;
+			DisplayCharacterData();
 		}
 
 		function SellUserItem(index){
@@ -491,11 +533,19 @@
 		}
 
 		function CreateRandomShopItem(){
-			var RarityNum = Math.floor(Math.random()*RandRarity.length)
-			var TypeNum = Math.floor(Math.random()*RandArmorType.length)
+			var RarityNum = Math.floor(Math.random()*RandRarity.length); // Picks random rarity
+			var pickednum = Math.floor(Math.random()*RandomType.length); // Picks the type it will try and grab a random item from
+			var TypeNum = RandomType[pickednum][Math.floor(Math.random()*RandomType[pickednum].length)]
+			if(pickednum == 0){
+				var typeOf = "'Weapon'"
+			}else{
+				var typeOf = "'Armor'"
+			};
 
-			shopInv.push(RandArmorType[TypeNum]);
+			shopInv.push(TypeNum);
 			shopRarities.push(RandRarity[RarityNum]);
+			shopTypeOf.push(typeOf);
+
 			if(RarityNum===0){
 				RarityNum = 1
 			}
@@ -523,7 +573,7 @@
 				button.style = "float: right; background-color:gray;"
 				button.innerHTML = "Buy Item"
 
-				$(button).attr("onclick","BuyItem('"+ sItemName+"','"+ shopRarities[i]+"',"+sItemValue+"); RemoveShopItem("+i+","+sItemValue+")");
+				$(button).attr("onclick","BuyItem('"+ sItemName+"','"+ shopRarities[i]+"',"+sItemValue+","+shopTypeOf[i]+");" + "RemoveShopItem("+i+","+sItemValue+")");
 
 				panel.appendChild(button);
 
@@ -538,12 +588,13 @@
 				DisplayShopItems();
 			}
 		}
-		function BuyItem(name,rarity,worth){
+		function BuyItem(name,rarity,worth,typeOf){
 
 			if(playerstats["Cash"] >= worth){
 				inv.push(name);
 				invValue.push(worth);
 				invRarities.push(rarity);
+				invTypeOf.push(typeOf);
 				playerstats["Cash"] -= worth;
 				AppendDialog("You've bought a " + name + " at a price of $" + worth);
 				DisplayOwnedItems();
@@ -572,6 +623,10 @@
 			AppendDialog("You've leveled up to level "+playerstats["Level"],"success");
 		}
 		UpdateCharacterStats();
+	}
+
+	function Consume(){
+
 	}
 
 	function TakeInput(){
@@ -784,7 +839,7 @@
 			playerstats["Experience"] += mobexperience;
 			LevelUP();
 			inbattle = false;
-			AddItem("Common","Bottle o' Whiskey",25);
+			AddItem("Common","Bottle o' Whiskey",25,"Consumable");
 			switch(mobname){
 				case "Murderer":
 					CompleteQuest("The Murderer");
@@ -864,7 +919,7 @@
 	</div>
 </div>
 
-<div class="col-sm-3">
+<div class="col-sm-3" style="padding:0px;">
 	<div  class="panel panel-info basepanel">
 		<div id="charname" class="panel-heading panel-info">
 		</div>
@@ -874,7 +929,7 @@
 	</div>
 </div>	
 
-<div class="col-sm-3">
+<div class="col-sm-3" style="padding:0px;">
 	<div class="panel panel-info basepanel" >
 		<div id="invHeading" class="panel-heading">
 		</div>
@@ -889,7 +944,7 @@
 		</div>
 	</div>
 </div>
-<div class="col-sm-6">
+<div class="col-sm-6" style="padding:0px;">
 	<div class="panel panel-info basepanel" >
 		<div id="gameheader" class="panel-heading">
 		
