@@ -106,7 +106,7 @@
 
 		//  Variables
 		//================================
-
+		alert("Last Update: 2/2/2017");
 		var plyName = prompt("What's your characters name?");
 		while(plyName===""){
 			var plyName = prompt("What's your characters name?");
@@ -286,7 +286,7 @@
 				invRarities.push(rarity);
 				invTypeOf.push(TypeOf);
 			}
-			AppendDialog("Item Obtained: " + name + " ... Worth: " + value, "item");
+			AppendDialog("<b>Item Obtained!<br>" + name + "<br></b>Worth: <b>" + value + "</b>", "item");
 			DisplayOwnedItems();
 		}
 
@@ -659,6 +659,10 @@
 						}
 
 						break;
+					case "chop wood":
+						if(playerstats["Location"] == "The Forrest"){
+							AddItem("Material", "Log",25,"Material");
+						}
 
 					// DIALOG
 					///////////////
@@ -698,7 +702,10 @@
 						move();
 						AppendDialog("You've moved west!");
 						break;
-
+					case "goto forrest":
+						Location("The Forrest");
+						move();
+						break;
 					case "goto shop":
 						Location("Shop");
 						move();
