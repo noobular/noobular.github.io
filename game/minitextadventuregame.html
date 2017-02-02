@@ -63,6 +63,11 @@
 			background-color: orange;
 		}
 
+		.Material{
+			border-color:#7d6447;
+			background-color:#d1a877;
+		}
+
 
 
 	</style>
@@ -279,7 +284,7 @@
 
 		function DisplayBase(){
 			document.getElementById("charname").innerHTML = plyName;
-			document.getElementById("gameheader").innerHTML = "<b> Main Game </b> <span style='float:right;' class='badge'> Moves: "+playerstats["Moves"]+"</span>"
+			document.getElementById("gameheader").innerHTML = "<b> Main Game </b> <span style='float:right;' class='badge'> Total Moves: "+playerstats["Moves"]+"</span>"
 		}
 
 		function DisplayGold(){
@@ -329,6 +334,7 @@
 			for(i=0;i<invLength;i++){
 					var panel = document.createElement("div");
 					panel.className = "well Item col-sm-12 " + invRarities[i];
+					panel.style = "color:black;";
 					panel.innerHTML = invRarities[i] + " " + inv[i]
 					$(panel).attr("data-toggle","tooltip");
 					$(panel).attr("title","Value: " + invValue[i]);
@@ -385,6 +391,7 @@
 			var stat = document.createElement("div")
 
 			stat.className = "well well-sm statwell";
+			stat.style = "background-color:#5bc0de;";
 			stat.innerHTML = name + " : " + value;
 			if(name == "Experience"){
 				stat.innerHTML = name + " : " + " ( " + value + " / " + playerstats["MaxEXP"] + " )";
@@ -591,7 +598,7 @@
 						break;
 					case "mine":
 						if(playerstats["Location"] == "The Mine"){
-							AddItem("Legendary", "Iron Ore", 10);
+							AddItem("Material", "Iron Ore", 10);
 
 						}
 
@@ -746,7 +753,7 @@
 						MobKilled();
 
 					}else{	
-						AppendDialog("You've damaged " + mobname + " for " + damage + " damage, Health Remaining : " + mobhealth,"Danger");
+						AppendDialog("You've damaged " + mobname + " for " + damage + " damage, Health Remaining : " + mobhealth,"danger");
 						PlayerDamaged();
 					}
 				}
@@ -842,65 +849,66 @@
 	</script>
 </head>
 <body style="background-color:#263748;">
-
-<div style="margin:15px; padding: 0px;" class="panel panel-danger col-sm-11">
-	<div class="panel-heading">
-	<b> Developer Control Panel </b>
-	</div>
-	<div class="panel-body">
-		<button onclick="resetinventory()" class="btn btn-danger btn-xs">Reset inventory</button>
-		<button onclick="AddItemToShop()" class="btn btn-danger btn-xs">Add Shop Item</button>
-		<button	onclick="AddGold()" class="btn btn-danger btn-xs">Add Gold</button>
-		<button	onclick="DisplayShop() AppendDialog('You\'ve moved to the shop!','move')" class="btn btn-danger btn-xs">Display New Shop</button>
-		<button	onclick="InstaKillMob()" class="btn btn-danger btn-xs">Insta-Kill Mob</button>
-	</div>
-</div>
-
-<div class="row"></div>
-
-
-<div style="margin:15px; padding: 0px;" class="panel panel-info col-sm-3 basepanel">
-	<div id="charname" class="panel-heading panel-info">
-	</div>
-
-	<div id="CharacterStats" class="panel-body">
+<div class="col-sm-12" style="margin-top:10px;">
+	<div style="" class="panel panel-danger">
+		<div class="panel-heading">
+		<b> Developer Control Panel </b>
+		</div>
+		<div class="panel-body">
+			<button onclick="resetinventory()" class="btn btn-danger btn-xs">Reset inventory</button>
+			<button onclick="AddItemToShop()" class="btn btn-danger btn-xs">Add Shop Item</button>
+			<button	onclick="AddGold()" class="btn btn-danger btn-xs">Add Gold</button>
+			<button	onclick="DisplayShop() AppendDialog('You\'ve moved to the shop!','move')" class="btn btn-danger btn-xs">Display New Shop</button>
+			<button	onclick="InstaKillMob()" class="btn btn-danger btn-xs">Insta-Kill Mob</button>
+		</div>
 	</div>
 </div>
 
-<div class="panel panel-info col-sm-3 basepanel" >
-	<div id="invHeading" class="panel-heading">
-	</div>
+<div class="col-sm-3">
+	<div  class="panel panel-info basepanel">
+		<div id="charname" class="panel-heading panel-info">
+		</div>
 
-	<div id="itemdisplay"  style="min-height:200px; max-height:200px;" class="panel-body pre-scrollable">
+		<div id="CharacterStats" class="panel-body">
+		</div>
 	</div>
+</div>	
 
-	<div id="equiphead" class="panel-heading">
-	<b> Equipped Items </b>
+<div class="col-sm-3">
+	<div class="panel panel-info basepanel" >
+		<div id="invHeading" class="panel-heading">
+		</div>
+
+		<div id="itemdisplay"  style="min-height:200px; max-height:200px;" class="panel-body pre-scrollable">
+		</div>
+
+		<div id="equiphead" class="panel-heading">
+		<b> Equipped Items </b>
+		</div>
+		<div id="equipdisplay"  style="min-height:196px; max-height:196px;" class="panel-body pre-scrollable">
+		</div>
 	</div>
-	<div id="equipdisplay"  style="min-height:196px; max-height:196px;" class="panel-body pre-scrollable">
+</div>
+<div class="col-sm-6">
+	<div class="panel panel-info basepanel" >
+		<div id="gameheader" class="panel-heading">
+		
+		</div>
+
+		<div id="game"  class="panel-body pre-scrollable" style="min-height:390px;">	
+		</div>
+
+	 <div style="margin:5px;" class="input-group" id="inputgroup">
+	    <input type="text" class="form-control" id="input" placeholder="Enter your action!" onclick="TakeInput()">
+	    <div class="input-group-btn">
+	      <button class="btn btn-info" id="inputbtn" type="button" onclick="TakeInput()">
+	      	Enter..
+	      </button>
+	    </div>
+	  </div>
 	</div>
 </div>
 
-
-<div class="panel panel-info col-sm-5 basepanel" >
-	<div id="gameheader" class="panel-heading">
-	
-	</div>
-
-	<div id="game"  class="panel-body pre-scrollable" style="min-height:390px;">	
-	</div>
-
- <div style="margin:5px;" class="input-group" id="inputgroup">
-    <input type="text" class="form-control" id="input" placeholder="Enter your action!" onclick="TakeInput()">
-    <div class="input-group-btn">
-      <button class="btn btn-info" id="inputbtn" type="button" onclick="TakeInput()">
-      	Enter..
-      </button>
-    </div>
-  </div>
-</div>
-
-</div>
 
 </body>
 <script>
