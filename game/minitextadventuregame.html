@@ -10,6 +10,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover.css"></script>
 	<!-- ================== -->
 
 
@@ -209,7 +210,7 @@
 		// Item Types/ Randomization
 		//================================
 		var RandRarity = ["Common","Uncommon","Rare","Epic","Legendary"];
-		var RandomType = [["Axe","Knife"],["Hat","Vest","Chaps","Shoulder Pads","Cowboy Boots"]];
+		var RandomType = [["Axe","Knife","Battle-Axe","Longsword","Saber","Dagger","Long Staff","Short Staff","Long Bow","Short Bow","Crossbow"],["Heavy Full-Helmet","Heavy Plate Gauntlets","Heavy Plate Chestplate","Heavy Plate Legs","Heavy Plate Shoulders","Heavy Boots","Light Helmet","Light Chain Gauntlets","Light Chainmail Legs","Light Chainmail Chestpiece","Light Plate Shoulders","Light Boots"]];
 		var RandConsumableType = []
 
 		// Mob Randomization
@@ -910,11 +911,11 @@
 		<b> Developer Control Panel </b>
 		</div>
 		<div class="panel-body">
-			<button onclick="resetinventory()" class="btn btn-danger btn-xs">Reset inventory</button>
-			<button onclick="AddItemToShop()" class="btn btn-danger btn-xs">Add Shop Item</button>
-			<button	onclick="AddGold()" class="btn btn-danger btn-xs">Add Gold</button>
-			<button	onclick="DisplayShop() AppendDialog('You\'ve moved to the shop!','move')" class="btn btn-danger btn-xs">Display New Shop</button>
-			<button	onclick="InstaKillMob()" class="btn btn-danger btn-xs">Insta-Kill Mob</button>
+			<button onclick="resetinventory()" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;">Reset inventory</button>
+			<button onclick="AddItemToShop()" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;" >Add Shop Item</button>
+			<button	onclick="AddGold()" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;" >Add Gold</button>
+			<button	onclick="DisplayShop() AppendDialog('You\'ve moved to the shop!','move')" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;">Display New Shop</button>
+			<button	onclick="InstaKillMob()" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;">Insta-Kill Mob</button>
 		</div>
 	</div>
 </div>
