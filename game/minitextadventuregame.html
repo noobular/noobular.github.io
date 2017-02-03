@@ -303,12 +303,11 @@
 		//=============================
 
 		function DisplayBase(){
-			document.getElementById("charname").innerHTML = plyName;
-			document.getElementById("gameheader").innerHTML = "<b> Main Game </b> <span style='float:right;' class='badge'> Total Moves: "+playerstats["Moves"]+"</span>"
+			document.getElementById("gameheader").innerHTML = "<b> Main Game </b> <span style='float:right; color:black; font-weight:bold;' class='badge'> Total Moves: "+playerstats["Moves"]+"</span>"
 		}
 
 		function DisplayGold(){
-			var invheader = "<b> Inventory </b> <span style='float:right' class='badge'> $"+ playerstats["Cash"] +"</span>"
+			var invheader = '<li><a class="hvr-back-pulse" data-toggle="tab" href="#CharacterStats">Stats</a></li> <li><a class="hvr-back-pulse"  data-toggle="tab" href="#inventorypanel" onclick="DisplayOwnedItems()">Inventory</a></li> <li><a class="hvr-back-pulse"  data-toggle="tab" href="#equipdisplay" onclick="DisplayEquippedItems()">Equiped</a></li> <span style="float:right; background-color:white; margin-top:14px; margin-right:5px; color:black; font-weight:bold;" class="badge"><b> Gold: '+playerstats["Cash"]+'</b> </span>';
 			$("#invHeading").empty();
 			var invhead = document.getElementById("invHeading").innerHTML = invheader;
 		}
@@ -466,14 +465,15 @@
 
 		function DisplayCharacterData(){
 			$("#CharacterStats").empty();
-			CreateStatWell("Location",playerstats["Location"])
-			CreateStatWell("Level",playerstats["Level"])
-			CreateStatWell("Experience",playerstats["Experience"])
-			CreateStatWell("Health",playerstats["Health"])
-			CreateStatWell("Mana",playerstats["Mana"])
-			CreateStatWell("Strength",playerstats["Strength"])
-			CreateStatWell("Wisdom",playerstats["Wisdom"])
-			CreateStatWell("Damage",playerstats["Damage"])
+			CreateStatWell("Name: ",plyName);
+			CreateStatWell("Location",playerstats["Location"]);
+			CreateStatWell("Level",playerstats["Level"]);
+			CreateStatWell("Experience",playerstats["Experience"]);
+			CreateStatWell("Health",playerstats["Health"]);
+			CreateStatWell("Mana",playerstats["Mana"]);
+			CreateStatWell("Strength",playerstats["Strength"]);
+			CreateStatWell("Wisdom",playerstats["Wisdom"]);
+			CreateStatWell("Damage",playerstats["Damage"]);
 		}
 
 		function DisplayShop(){
@@ -492,11 +492,11 @@
 
 			var panel = document.createElement("div");
 			panel.className = "col-sm-3";
-			panel.style = "padding:0px; color:black;"
+			panel.style = "padding-left:5px;padding-right:5px;color:black;"
 
 			var shoppanel = document.createElement("div");
 			shoppanel.id = "shop"
-			shoppanel.className = "panel panel-info basepanel";
+			shoppanel.className = "panel panel-info";
 			panel.appendChild(shoppanel);
 
 			var heading = document.createElement("div")
@@ -506,7 +506,7 @@
 
 			var body = document.createElement("div");
 			body.className = "panel-body pre-scrollable"
-			body.style = "min-height:436px;"
+			body.style = "min-height:480px;"
 			body.id = "shopdisplay";
 			shoppanel.appendChild(body);
 
@@ -957,51 +957,53 @@
 	</div>
 </div>
 
-<div class="col-sm-3" style="padding:0px;">
-	<div  class="panel panel-info basepanel">
-		<div id="charname" class="panel-heading panel-info">
-		</div>
+<div class="col-sm-3" style="padding:0px; padding-left:5px;">
+	<div class="panel panel-primary" style="min-height: 470px; padding:5px;">
+		<ul class="nav nav-tabs" id="invHeading">
+		  <li><a class="hvr-back-pulse" data-toggle="tab" href="#CharacterStats">Stats</a></li>
+		  <li><a class="hvr-back-pulse"  data-toggle="tab" href="#inventorypanel" onclick="DisplayOwnedItems()">Inventory</a></li>
+		  <li><a class="hvr-back-pulse"  data-toggle="tab" href="#equippedpanel" onclick="DisplayEquippedItems()">Equipped</a></li>
+		</ul>
 
-		<div id="CharacterStats" class="panel-body">
-		</div>
-	</div>
-</div>	
+		<div class="tab-content">
+		  <div id="CharacterStats" class="tab-pane fade in active">
 
-<div class="col-sm-3" style="padding:0px;">
-	<div class="panel panel-info basepanel" >
-		<div id="invHeading" class="panel-heading">
-		</div>
+		  </div>
+		  <div id="inventorypanel" class="tab-pane fade">
+		  	<div id="itemdisplay"  style="max-height:450px; min-height:450px;" class="panel-body pre-scrollable">
 
-		<div id="itemdisplay"  style="min-height:200px; max-height:200px;" class="panel-body pre-scrollable">
-		</div>
+			</div>
+		  </div>
 
-		<div id="equiphead" class="panel-heading">
-		<b> Equipped Items </b>
-		</div>
-		<div id="equipdisplay"  style="min-height:196px; max-height:196px;" class="panel-body pre-scrollable">
+		  <div id="equippedpanel" class="tab-pane fade">
+		  	<div id="equipdisplay"  style="max-height:450px; min-height:450px;" class="panel-body pre-scrollable">
+
+			</div>
+		  </div>
 		</div>
 	</div>
 </div>
+
 <div class="col-sm-6" style="padding:0px;">
-	<div class="panel panel-info basepanel" >
+	<div class="panel panel-info" style="margin-left:10px; margin-right:10px;">
 		<div id="gameheader" class="panel-heading">
 		
 		</div>
 
-		<div id="game"  class="panel-body pre-scrollable" style="min-height:390px;">	
+		<div id="game"  class="panel-body pre-scrollable" style="min-height:441px;">	
 		</div>
 
-	 <div style="margin:5px;" class="input-group" id="inputgroup">
+	 <div class="input-group" id="inputgroup">
 	    <input type="text" class="form-control" id="input" placeholder="Enter your action!" onclick="TakeInput()">
 	    <div class="input-group-btn">
 	      <button class="btn btn-info" id="inputbtn" type="button" onclick="TakeInput()">
 	      	Enter..
 	      </button>
 	    </div>
-	  </div>
+	 </div>
+
 	</div>
 </div>
-
 
 </body>
 <script>
