@@ -6,9 +6,8 @@
 	<!-- BOOTSTRAP / JQUERY -->
 	<!-- Latest compiled and minified CSS -->
 
-<link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover.css"></script>
 	<!-- ================== -->
@@ -135,6 +134,7 @@
 		var equipped = [];
 		var equippedRarities = [];
 		var equippedValue = [];
+		var equippedTypeOf = [];
 
 		// Shop Related
 		//================================
@@ -303,7 +303,7 @@
 		//=============================
 
 		function DisplayBase(){
-			document.getElementById("gameheader").innerHTML = "<b> Main Game </b> <span style='float:right; color:black; font-weight:bold;' class='badge'> Total Moves: "+playerstats["Moves"]+"</span>"
+			document.getElementById("gameheader").innerHTML = "<span style=' background-color:white; color:black; margin-top:20px; margin-left:10px; font-weight:bold;' class='badge'> Total Moves: "+playerstats["Moves"]+"</span>"
 		}
 
 		function DisplayGold(){
@@ -640,6 +640,23 @@
 	//=============================
 	//=============================
 
+	function SaveData(){
+		// Character Stats
+		localStorage.setItem("plyName",plyName);
+		localStorage.setItem("Level",playerstats["Level"]);
+		localStorage.setItem("level",playerstats["Level"]);
+		localStorage.setItem("level",playerstats["Level"]);
+		localStorage.setItem("level",playerstats["Level"]);
+		localStorage.setItem("level",playerstats["Level"]);
+
+		//Inventory
+		localStorage.setItem("inv",inv);
+		localStorage.setItem("invValue",invValue);
+		localStorage.setItem("invRarities",invRarities);
+		localStorage.setItem("invTypeOf",invTypeOf);
+
+	}
+
 	function Location(Location){
 		playerstats["Location"] = Location
 		AppendDialog("You've moved to the " + Location,"move");
@@ -791,10 +808,12 @@
 			equipped.push(inv[index]);
 			equippedRarities.push(invRarities[index]);
 			equippedValue.push(invValue[index]);
+			equippedTypeOf.push(invTypeOf[index]);
 
 			inv.splice(index, 1);
 			invRarities.splice(index, 1);
 			invValue.splice(index, 1);
+			invTypeOf.splice(index,1);
 
 			console.log(equipped)
 			DisplayOwnedItems();
@@ -877,7 +896,19 @@
 			playerstats["Experience"] += mobexperience;
 			LevelUP();
 			inbattle = false;
-			AddItem("Common","Bottle o' Whiskey",25,"Consumable");
+
+			var RarityNum = Math.floor(Math.random()*RandRarity.length); // Picks random rarity
+			var pickednum = Math.floor(Math.random()*RandomType.length); // Picks the type it will try and grab a random item from
+			var TypeNum = RandomType[pickednum][Math.floor(Math.random()*RandomType[pickednum].length)]
+			if(pickednum == 0){
+				var typeOf = "Weapon"
+			}else{
+				var typeOf = "Armor"
+			};
+
+			console.log(RandRarity[RarityNum] + "  " + TypeNum + "  " + 25 + "  " + typeOf)
+			AddItem(RandRarity[RarityNum],TypeNum,25,typeOf);
+
 			switch(mobname){
 				case "Murderer":
 					CompleteQuest("The Murderer");
@@ -962,35 +993,37 @@
 		<ul class="nav nav-tabs" id="invHeading">
 		  <li><a class="hvr-back-pulse" data-toggle="tab" href="#CharacterStats">Stats</a></li>
 		  <li><a class="hvr-back-pulse"  data-toggle="tab" href="#inventorypanel" onclick="DisplayOwnedItems()">Inventory</a></li>
-		  <li><a class="hvr-back-pulse"  data-toggle="tab" href="#equippedpanel" onclick="DisplayEquippedItems()">Equipped</a></li>
+		  <li><a class="hvr-back-pulse"  data-toggle="tab" href="#equippanel" onclick="DisplayEquippedItems()">Equipped</a></li>
 		</ul>
 
 		<div class="tab-content">
 		  <div id="CharacterStats" class="tab-pane fade in active">
 
 		  </div>
+
 		  <div id="inventorypanel" class="tab-pane fade">
-		  	<div id="itemdisplay"  style="max-height:450px; min-height:450px;" class="panel-body pre-scrollable">
+		  	<div id="itemdisplay"  style="max-height:468px; min-height:469px;" class="panel-body pre-scrollable">
 
 			</div>
 		  </div>
 
-		  <div id="equippedpanel" class="tab-pane fade">
-		  	<div id="equipdisplay"  style="max-height:450px; min-height:450px;" class="panel-body pre-scrollable">
+		  <div id="equippanel" class="tab-pane fade">
+			  <div id="equipdisplay"  style="max-height:468px; min-height:469px;" class="panel-body pre-scrollable">
 
 			</div>
 		  </div>
+
 		</div>
 	</div>
 </div>
 
 <div class="col-sm-6" style="padding:0px;">
 	<div class="panel panel-info" style="margin-left:10px; margin-right:10px;">
-		<div id="gameheader" class="panel-heading">
+		<div id="gameheader" style="height:58px;">
 		
 		</div>
 
-		<div id="game"  class="panel-body pre-scrollable" style="min-height:441px;">	
+		<div id="game"  class="panel-body pre-scrollable" style="min-height:425px; max-height:425px;">	
 		</div>
 
 	 <div class="input-group" id="inputgroup">
