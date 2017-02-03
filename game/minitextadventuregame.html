@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Inventory</title>
+	<title>Some Adventure Game...</title>
 
 	<!-- BOOTSTRAP / JQUERY -->
 	<!-- Latest compiled and minified CSS -->
@@ -218,6 +218,10 @@
 		var MobAdjective = ["Large","Phat","Mean","Angry","Small","Short","Tiny","Massive","Quiet","Sneaky"];
 		var MobName = ["Doge","Cat","Human","Horse","Bear","Rattle Snake", "Reese","Brandon"];
 
+		// MISC.
+		//================================
+		var half = "half";
+		var full = "full";
 
 		//=============================
 		//=============================
@@ -336,7 +340,7 @@
 					ul.className = "dropdown-menu dropdown-menu-right";
 					ul.role = "menu";
 					$(ul).attr("aria-labelledby","EQUIPPEDitem"+i);
-					ul.innerHTML = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='UNEquipItem(" + i + ")'>Unequip Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+					ul.innerHTML = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='UNEquipItem(" + i + ")'>Unequip Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ","+half+")'>Sell Item</a></li>";
 					dropdown.appendChild(ul);
 
 					panel.appendChild(dropdown);
@@ -374,16 +378,16 @@
 
 					switch(invTypeOf[i]){
 						case "Weapon":
-							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='EquipItem("+ i +")'>Equip Item</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='EquipItem("+ i +")'>Equip Item</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ","+half+")'>Sell Item</a></li>";
 							break;
 						case "Armor":
-							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='EquipItem("+ i +")'>Equip Item</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='EquipItem("+ i +")'>Equip Item</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ","+half+")'>Sell Item</a></li>";
 							break;
 						case "Consumable":
-							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='ConsumeUserItem("+i+")'>Consume</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='ConsumeUserItem("+i+")'>Consume</a></li> <li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ","+half+")'>Sell Item</a></li>";
 							break;
 						default:
-							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ")'>Sell Item</a></li>";
+							dropdowntxt = "<li role='presentation'><a role='menuitem' tabindex='-1' onclick='RemoveUserItem(" + i + ")'>Delete Item</a></li><li role='presentation'><a role='menuitem' tabindex='-1' onclick='SellUserItem(" + i + ","+half+")'>Sell Item</a></li>";
 					}
 
 					var ul = document.createElement("ul");
@@ -420,14 +424,32 @@
 			DisplayCharacterData();
 		}
 
-		function SellUserItem(index){
-			AppendDialog("You've sold a(n) "+invRarities[index] + " " + inv[index] + " for $"+invValue[index]);
-			playerstats["Cash"] += Math.floor(invValue[index]/2);
+		function SellUserItem(index,amt){
+			// amt
+			// true = Full Value
+			// false = Half Value
+			switch(amt){
+				case "full":
+					playerstats["Cash"] += invValue[index];
+					amt = invValue[index]; 
+					break;
+				case "half":
+					playerstats["Cash"] += Math.floor(invValue[index]/2);
+					amt = Math.floor(invValue[index]/2);
+					break;
+				default:
+					playerstats["Cash"] += invValue[index];
+					amt = invValue[index]; 
+					break;
+			}
+			AppendDialog("You've sold a(n) "+invRarities[index] + " " + inv[index] + " for $"+amt);
 			inv.splice(index, 1);
 			invRarities.splice(index, 1);
 			invValue.splice(index, 1);
+			invTypeOf.splice(index,1);
 			DisplayGold();
 			DisplayOwnedItems();
+			
 		}
 
 		function CreateStatWell(name,value){
@@ -467,13 +489,19 @@
 				console.log("Creating shop panel...");
 			}
 			shopOpen = true;
+
+			var panel = document.createElement("div");
+			panel.className = "col-sm-3";
+			panel.style = "padding:0px; color:black;"
+
 			var shoppanel = document.createElement("div");
 			shoppanel.id = "shop"
-			shoppanel.className = "panel panel-primary col-sm-3 basepanel";
+			shoppanel.className = "panel panel-info basepanel";
+			panel.appendChild(shoppanel);
 
 			var heading = document.createElement("div")
 			heading.innerHTML = shopnames[0] + "'s shop";
-			heading.className = "panel-heading panel-primary"
+			heading.className = "panel-heading panel-info"
 			shoppanel.appendChild(heading);
 
 			var body = document.createElement("div");
@@ -482,7 +510,9 @@
 			body.id = "shopdisplay";
 			shoppanel.appendChild(body);
 
-			document.body.appendChild(shoppanel);
+			document.body.appendChild(panel);
+
+
 			GenerateShopItems(10);
 		}
 
