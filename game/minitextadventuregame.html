@@ -112,7 +112,7 @@
 		}
 		// Dialog/Story Related
 		//================================
-		var dialog_intro = "Welcome " + plyName + ", You've started your adventure for gold and glory in this marvelous world, You can start off by typing 'help' to learn how to play! "
+		var dialog_intro = "Welcome " + plyName + ", You've started your adventure for gold and glory in this marvelous world and town of Britannia, You can start off by typing 'help' to learn how to play! "
 
 		// Help Related
 		//================================
@@ -215,8 +215,8 @@
 
 		// Mob Randomization
 		//================================
-		var MobAdjective = ["Large","Phat","Mean","Angry","Small","Short","Tiny","Massive","Quiet","Sneaky"];
-		var MobName = ["Doge","Cat","Human","Horse","Bear","Rattle Snake", "Reese","Brandon"];
+		var MobAdjective = ["Large","Obese","Mean","Angry","Small","Short","Tiny","Massive","Quiet","Sneaky"];
+		var MobName = ["Doge","Cat","Human","Horse","Bear","Rattle Snake", "Reese","Brandon","Dragon","Wyvern","Cusidhe","Spider"];
 
 		// MISC.
 		//================================
@@ -701,7 +701,26 @@
 						break;
 					case "mine":
 						if(playerstats["Location"] == "The Mine"){
-							AddItem("Material", "Iron Ore", 10);
+							var ore = Math.floor(Math.random() * 5);
+							switch(ore){
+								case 0:
+									AddItem("Material","Iron Ore",25,"Material");
+									break;
+								case 1:
+									AddItem("Material","Copper Ore",25,"Material");
+									break;
+								case 2:
+									AddItem("Material","Gold Ore",25,"Material");
+									break;
+								case 3:
+									AddItem("Material","Mithril Ore",25,"Material");
+									break;
+								case 4:
+									AddItem("Material","Rune Ore",25,"Material");
+									break;
+								default:
+								AppendDialog("You've recieved nothing, you're weak!");
+							}
 
 						}
 
