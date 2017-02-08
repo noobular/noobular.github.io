@@ -81,10 +81,31 @@
 			James Byrnes
 
 		Last Update: 
-			2/2/17
+			2/8/17
 
-		Current Progress:
-			Work In Progress
+		Story:
+			Spawn in town of _
+			There’s a murderer on the loose, go get them and head to new town
+			Arrive in new town which is the main town of the game
+			Battle dragons or something large….
+			Become the king some how
+			Profit from the townspeople
+
+		3+ Features:
+			Inventory
+			Shops
+			Mining
+			Wood Cutting
+			Crafting(Maybe)
+			Attacking/Defending
+
+		Platform:
+			JavaScript
+
+		3+ Links to resources:
+			http://www.w3schools.com/
+			http://www.stackoverflow.com/
+			https://www.codecademy.com/
 
 		Description / Goal:
 			Create a text-based Adventure game with Shop(s), an Inventory system, and a character system of some sort.
@@ -116,11 +137,11 @@
 
 		// Help Related
 		//================================
-		var help_intro = "<b> Possible Action Commands... </b> <br> 'help movement' <br> 'help goto' <br> 'help attack' <br>"
+		var help_intro = "<b> Possible Action Commands... </b> <br> <i><b>'help movement' <br> 'help goto' <br> 'help attack' <br> 'help gathering' </i></b>"
 		var help_movement = "<b>Movement controls</b> <br> <b>'north'</b>, <b>'south'</b>, <b>'east'</b>, <b>'west'</b> <br> Moving specific directions doesn't do anything special you will randomly stumble apon everything, I'm too lazy to add some kind of saving previous location variables ex: location/description/items/enemies/mobs ect. .";
-		var help_goto = "<b> Possible Action Commands... </b> <br> 'goto shop' This will take you to a shop to buy items with your gold! <br> 'goto mob' will take you to something to kill, for gold and possibly loot! <br>"
+		var help_goto = "<b> Possible Action Commands... </b> <br> 'goto shop' This will take you to a shop to buy items with your gold! <br> 'goto mob' will take you to something to kill, for gold and possibly loot! <br> 'goto mine' this command will place you at the local mine for you to start mining for precious resources <br> 'goto forrest' will place you into the forrest for you to start chopping for wood and other easily gatherable resources <br>"
 		var help_attack = "<b>'attack'</b> <br> Usage: Type 'attack' to attack a monster based on your damage, random * damage + 5";
-
+		var help_gathering = "<i><b> 'mine' <br> 'chop wood'</i></b> <br>These both serve in their prospective areas to gather their resources, ore for mining and wood for chopping wood."
 		// Inventory Related
 		//================================
 		var inv = [];
@@ -736,8 +757,28 @@
 						break;
 					case "chop wood":
 						if(playerstats["Location"] == "The Forrest"){
-							AddItem("Material", "Log",25,"Material");
+							var wood = Math.floor(Math.random() * 5);
+							switch(wood){
+								case 0:
+									AddItem("Material","Oak Log",25,"Material");
+									break;
+								case 1:
+									AddItem("Material","Willow Log",25,"Material");
+									break;
+								case 2:
+									AddItem("Material","Pine Log",25,"Material");
+									break;
+								case 3:
+									AddItem("Material","Birch Log",25,"Material");
+									break;
+								case 4:
+									AddItem("Material","Sticks",25,"Material");
+									break;
+								default:
+								AppendDialog("You've recieved nothing, you're weak!");
+							}
 						}
+						break;
 
 					// DIALOG
 					///////////////
@@ -755,6 +796,9 @@
 
 					case "help attack":
 						AppendDialog(help_attack,"help")
+						break;
+					case "help gathering":
+						AppendDialog(help_gathering,"help");
 						break;
 
 					// MOVEMENT
