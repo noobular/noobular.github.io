@@ -98,7 +98,7 @@
 
 		DEVLEOPER NOTES:
 			Locations:
-				- Tran-vania
+				- Vardona
 				- The Mine
 				- Forrest
 		*/
@@ -185,7 +185,7 @@
 			//misc stats
 			playerstats["Level"] 		= 1
 			playerstats["Experience"] 	= 0
-			playerstats["Location"]	  	= "Tran-vania"
+			playerstats["Location"]	  	= "Vardona"
 			playerstats["MaxEXP"] 		= playerstats["Level"] * Math.ceil(Math.pow(60,1.8) - 60);
 			playerstats["Moves"]		= 0;
 
@@ -203,8 +203,17 @@
 		// Quest Related
 		//================================
 		var questName = [];
+		questName[0] = "The Murderer";
+		questName[1] = "Murderous Dragons";
+
+
 		var questDesc = [];
+		questDesc[0] = "There's someone slaughtering anyone trying to progress to the next town, can you.. deal with them?";
+		questDesc[1] = "The dragons on the wilderness are also killing people ... you can deal with that.";
+		
 		var questBool = [];
+		questBool[0] = false;		
+		questBool[1] = false;		
 
 
 		// Item Types/ Randomization
@@ -235,11 +244,15 @@
 		//=============================
 		//=============================
 
-		function CompleteQuest(name){
-			console.log("CompleteQuest ran for '" + name + "'");
-			questBool[name] = true;
-			CheckQuest();
+		function CompleteQuest(id,xp,money){
+			console.log("CompleteQuest ran for '" + questName[id] + "'");
+			questBool[id] = true;
+			AppendDialog("<b> QUEST COMPLETED! </b><br> <i>"+ questName[id] + "</i> <br> You've Gained " + xp + " Experience and "+money+" Gold" ,"success");
+			playerstats["Experience"] += xp;
+			playerstats["Cash"] += money;
+			DisplayGold();
 		}
+
 		function InstaKillMob(){
 			if(inbattle === true){
 				mobhealth = -1;
@@ -673,10 +686,6 @@
 		UpdateCharacterStats();
 	}
 
-	function Consume(){
-
-	}
-
 	function TakeInput(){
 		var input = document.getElementById("input").value.toLowerCase().trim();
 		var damage;
@@ -784,7 +793,12 @@
 							console.log("Tried to spawn a Murderer... for some reason.")
 							GenerateMob("Murderer");
 						}else{
-							GenerateMob();
+							if(playerstats["Moves"] >= 2 && questBool[0] === true){
+								GenerateMob("Dragon");
+								
+							}else{
+								GenerateMob();
+							}
 						}
 
 						break
@@ -805,11 +819,8 @@
 		//=============================
 		//=============================
 
-		function AddQuest(Name,Description){
-			questName.push(Name);
-			questDesc.push(Description);
-			questBool[Name] = false;
-			AppendDialog("<b>Quest Added!</b> <br>   " + Name + " <br>" + Description,"success");
+		function ShowQuest(id){
+			AppendDialog("<b>Quest Added!</b> <br>   " + questName[id] + " <br>" + questDesc[id],"success");
 		}
 
 		function UpdateCharacterStats(){
@@ -905,7 +916,7 @@
 
 		function PlayerDeath(){
 			playerstats["Health"] = playerstats["MaxHealth"];
-			Location("Tran-vania");
+			Location("Vardona");
 			AppendDialog("You have died and returned to the " + playerstats["Location"]);
 			inbattle = false;
 		}
@@ -930,28 +941,19 @@
 
 			switch(mobname){
 				case "Murderer":
-					CompleteQuest("The Murderer");
+					CompleteQuest(0,100,420);
+					Location("Britannia");
+					AppendDialog("You've arrived in the mysterious place of Britannia, You should go attack dragons for some reason... a quest... or something.", "dialog");
+					ShowQuest(1);
+					break;
+				case "Dragon":
+					CompleteQuest(1,500,1000);
+					Location("Britannia");
 					break;
 			}
-			CheckQuest();
 			DisplayCharacterData();
 			UpdateCharacterStats();
 			document.getElementById("input").value = "";
-		}
-
-		function CheckQuest(){
-			for(index=0;index<questBool.length;index++){
-				switch(questBool[questName[index]]){
-					case true:
-						AppendDialog("<b> Quest Completed </b> <br> " + questName[index])
-						questBool[index] = undefined;
-						break;
-					case false:
-						break;
-					default: 
-						break;
-				}
-			}
 		}
 
 		function GenerateMob(name){
@@ -986,7 +988,7 @@
 			DisplayCharacterData();
 			DisplayShopItems();
 			AppendDialog(dialog_intro,"dialog");
-			AddQuest("The Murderer", "There's a 'mob' in the wilderness blocking your path to the shop, He's a wanted criminal, go take him down and head to the shop! <br> <b> Hint: 'goto mob' </b>");
+			ShowQuest(0);
 
 		}
 	</script>
