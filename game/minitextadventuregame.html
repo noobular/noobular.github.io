@@ -105,7 +105,7 @@
 
 		//  Variables
 		//================================
-		alert("Last Update: 2/2/2017");
+		alert("Last Update: 2/8/2017");
 		var plyName = prompt("What's your characters name?");
 		while(plyName===""){
 			var plyName = prompt("What's your characters name?");
@@ -189,7 +189,7 @@
 			playerstats["MaxEXP"] 		= playerstats["Level"] * Math.ceil(Math.pow(60,1.8) - 60);
 			playerstats["Moves"]		= 0;
 
-			playerstats["Cash"] = 5000;
+			playerstats["Cash"] = 100;
 
 
 		var equipinfo = [];
@@ -793,7 +793,7 @@
 							console.log("Tried to spawn a Murderer... for some reason.")
 							GenerateMob("Murderer");
 						}else{
-							if(playerstats["Moves"] >= 2 && questBool[0] === true){
+							if(playerstats["Moves"] >= 2 && questBool[0] === true && questBool[1] === false){
 								GenerateMob("Dragon");
 								
 							}else{
@@ -1003,7 +1003,7 @@
 			<button onclick="resetinventory()" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;">Reset inventory</button>
 			<button onclick="AddItemToShop()" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;" >Add Shop Item</button>
 			<button	onclick="AddGold()" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;" >Add Gold</button>
-			<button	onclick="DisplayShop() AppendDialog('You\'ve moved to the shop!','move')" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;">Display New Shop</button>
+			<button	onclick="Location('Shop'); DisplayShop(); AppendDialog('You\'ve moved to the shop!','move')" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;">Display New Shop</button>
 			<button	onclick="InstaKillMob()" class="btn btn-danger btn-xs hvr-pulse" style="margin-right:5px;">Insta-Kill Mob</button>
 		</div>
 	</div>
