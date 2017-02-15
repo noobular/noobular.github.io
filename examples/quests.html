@@ -76,9 +76,10 @@
       <a style="background-color:#4e5d6c;" class="navbar-brand hvr-bounce-to-right" href="index.html">James' Coding Portfolio</a>
     </div>
     <ul class="nav navbar-nav">
-      <li>				  <a href="index.html" 				       style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-address-book" aria-hidden="true"></i> Basic Information</a></li>
-      <li class="active"> <a href="project_pastexperience.html"    style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-files-o" aria-hidden="true"></i> Projects / Past Experience</a></li>
-      <li>				  <a href="contact.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Contact</a></li>
+      <li>				  <a href="../index.html" 				       style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-address-book" aria-hidden="true"></i> Basic Information</a></li>
+      <li> <a href="../project_pastexperience.html"    			   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-files-o" aria-hidden="true"></i> Projects / Past Experience</a></li>
+      <li class="active"><a href="examples.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Examples</a></li>
+      <li>				  <a href="../contact.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -107,14 +108,14 @@ Panel Template
 </div>
 
 -->
-<div class="col-sm-3">
-	<div class="col-sm-12">
+
+	<div class="col-sm-3">
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<i class="fa fa-star" aria-hidden="true"></i> 1. Creating Variables
 			</div>
 
-			<div class="panel-body">
+			<div class="panel-body" style="height:120px;">
 					First off you need to create the variables to use to store information about the quests you're going to have the player attempt to complete.
 			</div>
 
@@ -124,13 +125,13 @@ Panel Template
 		</div>
 	</div>
 
-	<div class="col-sm-12">
+	<div class="col-sm-3">
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<i class="fa fa-star" aria-hidden="true"></i> 2. Displaying your quest to the player
 			</div>
 
-			<div class="panel-body">
+			<div class="panel-body" style="height:120px;">
 					This can be done in many different ways but I prefered to display them as everything else was displayed, in the text box.
 			</div>
 
@@ -140,13 +141,13 @@ Panel Template
 		</div>
 	</div>
 
-	<div class="col-sm-12">
+	<div class="col-sm-3">
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<i class="fa fa-star" aria-hidden="true"></i> 3. Know when the quest is completed
 			</div>
 
-			<div class="panel-body">
+			<div class="panel-body" style="height:120px;">
 					Since all of my quest are killing based, I used the MobKilled() method, so it will check when a monster is killed what it's base name is (without an adjective) and if it matches it will set if the quest is finished to true.
 			</div>
 
@@ -156,23 +157,21 @@ Panel Template
 		</div>
 	</div>
 
-	<div class="col-sm-12">
+	<div class="col-sm-3">
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<i class="fa fa-star" aria-hidden="true"></i> 4. Reward the player on completion
 			</div>
 
-			<div class="panel-body">
+			<div class="panel-body" style="height:120px;">
 					Once you have set the Questbool to true, how do you give the player the rewards?
 			</div>
 
 			<div class="panel-footer">
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#quest3"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#quest4"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
 			</div>
 		</div>
 	</div>
-
-</div>
 
 
 
@@ -225,6 +224,24 @@ Panel Template
       </div>
       <div class="modal-body">
      	<img style="margin:0px; padding:0px; margin-bottom: 10px; text-align: center;" src="images/quest3.png">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="quest4" class="modal fade" role="dialog">
+  <div class="modal-dialog" style="width: 1100px;">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Step 4. Rewarding the player </h4>
+      </div>
+      <div class="modal-body">
+     	<img style="margin:0px; padding:0px; margin-bottom: 10px; text-align: center;" src="images/quest4.png">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
