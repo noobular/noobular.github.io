@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<link href="https://bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
+	<meta name='viewport' content='width=400'>
+
+	<style>
+	@media only screen and (max-width: 768px){
+		body > .container{
+			width:100%;
+		}
+
+		.col-sm-3{
+			width:100%;
+		}
+		.col-sm-4{
+			width:100%;
+		}
+
+		.btn{
+			width:100%;
+		}
+	}
+		.panelbase{
+			height: 250px;
+		}
+		.affix {
+		    top: 0;
+		    width: 100%;
+		}
+
+		.panelbodyh{
+			
+		}
+
+		.projectpanel{
+			height:200px;
+		}
+
+		.projectfooter{
+			height: 125px;
+		}
+
+		.btn{
+			color: #5bc0de;
+		}
+		.clr1{
+			background-color: #434f5b;
+			margin: 2px;
+			margin-left:0px;
+			margin-right:0px;
+		}
+		.clr2{
+			background-color: #31b0d5;
+			margin: 2px;
+			margin-left:0px;
+			margin-right:0px;
+		}
+
+
+		
+
+	</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a style="background-color:#4e5d6c;" class="navbar-brand hvr-bounce-to-right" href="index.html">James' Coding Portfolio</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li> 				  <a href="index.html"    style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-files-o" aria-hidden="true"></i> Projects / Past Experience</a></li>
+      <li class="active"> <a href="indepthprogramming.html"        style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-files-o" aria-hidden="true"></i> Indepth with Languages</a></li>
+      <li>				  <a href="examples.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Examples</a></li>
+      <li>				  <a href="contact.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Contact</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+	<div class="alert alert-danger alert-dismissible">
+	  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	 	<b>Warning: This site is currently under construction, There may be placeholders or broken links!</b>
+	</div>
+</div>
+
+<div class="container">
+	<div class="jumbotron">
+	  <h1>Projects / Past Experience</h1>
+	  <p> This is showing what things revolving around programming I've done in the past and also me grading myself on certain tools, operating systems, and languages.</p>
+	</div>
+</div>
+
+
+<!--
+Panel Template
+=================
+
+<div class="container col-sm-3">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+
+		</div>
+
+		<div class="panel-body">
+
+		</div>
+	</div>
+</div>
+
+-->
+<div class="container col-sm-3">
+<div class="alert alert-info col-sm-12">
+ <strong><i class="fa fa-bar-chart" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; This column is all self grading.</strong>
+</div>
+
+	<div id="panel_container" class="container col-sm-12">
+			<div class="panel panel-info">
+				<div class="panel-heading" style="text-align: center;">
+					<h3> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>Languages</h3>
+				</div>
+				<div class="panel-body panelbodyh" style="text-align: left;">
+					<h4>HTML 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>		 	<i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></h4>
+					<h4>JavaScript 	<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="devicon-javascript-plain" style="float:right;">&nbsp;</i></h4>
+					<h4>MySQL 		<span class="label label-success" style="float:right;"> 		8 / 10 </span>			<i class="devicon-mysql-plain" style="float:right;">&nbsp;</i></h4>
+					<h4>PHP 		<span class="label label-success" style="float:right;"> 		8 / 10 </span>			<i class="devicon-php-plain" style="float:right;">&nbsp;</i></h4>
+					<h4>C#			<span class="label label-danger" style="float:right;">			8 / 10 </span>			<i class="devicon-csharp-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>JQuery 		<span class="label label-warning" style="float:right;">			8 / 10 </span>			<i class="devicon-jquery-plain" style="float:right;">&nbsp;</i> </h4>	
+					<h4>(VB) Basic	<span class="label label-warning" style="float:right;">			4 / 10 </span></h4>	
+					<h4>Lua 		<span class="label label-warning" style="float:right;">			4 / 10 </span></h4>	
+					<h4>Python 		<span class="label label-danger" style="float:right;">			3 / 10 </span>			<i class="devicon-python-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>C++			<span class="label label-danger" style="float:right;">			1 / 10 </span>			<i class="devicon-cplusplus-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>NodeJS		<span class="label label-danger" style="float:right;">			1 / 10 </span>			<i class="devicon-nodejs-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>Java 		<span class="label label-danger" style="float:right;">			0 / 10 </span>			<i class="devicon-java-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>C 			<span class="label label-danger" style="float:right;">			0 / 10 </span>			<i class="devicon-c-plain" style="float:right;">&nbsp;</i></h4>	
+
+						<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+							<div class="panel-heading">
+							If a language is 0/10 I've never tried it, but is a commonly used language, that I'd like to learn relatively soon.
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+	<div id="panel_container" class="container col-sm-12">
+			<div class="panel panel-info">
+				<div class="panel-heading" style="text-align: center;">
+					<h3> <i class="fa fa-code-fork" aria-hidden="true" style="float: left;"></i>Frameworks</h3>
+				</div>
+				<div class="panel-body panelbodyh" style="text-align: left;">
+					<h4>Bootstrap 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>		 	<i class="devicon-bootstrap-plain" style="float:right;"><i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></i> </h4>
+					<h4>FontAwesome 	<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="fa fa-font-awesome" aria-hidden="true" style="float:right;"> <i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></h4></i>
+					<h4>Devicon 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></h4>
+
+						<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+							<div class="panel-heading">
+							 These are just Additions to the language icon next to the framework.
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+	<div id="panel_container" class="container col-sm-12">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h3> <i class="fa fa-gavel" aria-hidden="true" style="float: left;"></i> Different Tool Experience</h3>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left;">
+				<h4>Sublime Text 3	<span class="label label-success" style="float:right;">				8 / 10 </span>				<i class="fa fa-file-text" aria-hidden="true" style="float:right;">&nbsp;</i></h4>
+				<h4>Github			<span class="label label-success" style="float:right;">				8 / 10 </span>				<i class="fa fa-github" style="float:right;">&nbsp;</i></h4>	
+				<h4>Photoshop		<span class="label label-success" style="float:right;">				7 / 10 </span>				<i class="fa fa-picture-o" style="float:right;">&nbsp;</i></h4>	
+				<h4>WAMP	  		<span class="label label-success" style="float:right;">				7 / 10 </span>				<i class="fa fa-server" aria-hidden="true" style="float:right;">&nbsp;</i></h4>	
+				<h4>Chrome			<span class="label label-success" style="float:right;">				8 / 10 </span>				<i class="fa fa-chrome" aria-hidden="true" style="float:right;">&nbsp;</i></h4>	
+				<h4>GIMP			<span class="label label-warning" style="float:right;">				5 / 10 </span>				<i class="devicon-gimp-plain" style="float:right;">&nbsp;</i></h4>	
+					
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						These are different things I use to create other things, and my rating on myself relate to the developer/creation side of them. <br>
+						<b> FYI: Anything used is all local (including servers)</b>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	
+</div>
+
+
+<!--
+
+<div class="container col-sm-3">
+	<div class="panel panel-info">
+		<div class="panel-heading" style="text-align: center;">
+			<h4> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>  /// </h4>
+		</div>
+		<div class="panel-body panelbodyh" style="text-align: left;">
+
+				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading">
+					Basic Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+					</div>
+				</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+-->
+<div id="panel_container"  class="container col-sm-9">
+	<div class="alert alert-info col-sm-12">
+	 <strong> <i class="fa fa-briefcase" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Languages Indepth</strong>
+	</div>
+	
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>HTML</h4>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left; height:275px;">
+
+					<div class="well well-sm clr1">
+						
+						<b>Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							HTML on it's own isn't much, but tagged in with CSS and other Frameworks it can create truely beautiful websites and games. <br>
+							I've personally used it on this portfolio website and all other business related sites i've created.
+					</div>
+
+
+			</div>
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
+							<div class="well well-sm clr2" style="padding:8px;">
+							<br>
+							<br>
+							<br>
+							<br>
+							</div>
+						</div>
+						<a target="_blank" href="project_pastexperience.html"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> Past Projects </b> </button></a>
+					</div>
+		</div>
+	</div>
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>JavaScript</h4>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left; height:275px;">
+
+					<div class="well well-sm clr1">
+						
+						<b>Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							JavaScript is a beautiful language that runs within your web browser allowing more sophisticated logic within your website. <br>
+							I've used JavaScript within my Mini Text Adventure Game to allow more functionality and smarter functionality compared to no functionality other then moving pages.
+					</div>
+
+
+			</div>
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
+							<div class="well well-sm clr2" style="padding:8px;">
+							 <a href="http://www.screencast.com/t/uqNlTE1kd" target="_blank" style="color:#546575;"> JavaScript Comments Video</a> <br>
+							 <a href="http://www.screencast.com/t/iN43KsmHkv" target="_blank" style="color:#546575;"> JavaScript Code Challenge Video</a> <br>
+							 <br>
+							<br>
+							</div>
+						</div>
+						<a target="_blank" href="project_pastexperience.html"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> Past Projects </b> </button></a>
+					</div>
+		</div>
+	</div>
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>GameMakerLanguage</h4>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left; height:275px;">
+
+					<div class="well well-sm clr1">
+						
+						<b>Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							GameMakerLanguage or GML is very similar to how JavaScript works in terms of syntax which allows new programmers to ease into using it for the start of designing games. <br>
+							I've used GML in the creation of some of my personal games like "Garbage" and "Drunken Puppy Rescue - Winter Ops" within gamemaker 8.1 to create many things and functionality like healthbars rotating objects that will allow for a more realistic feel to the player.
+					</div>
+
+
+			</div>
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
+							<div class="well well-sm clr2" style="padding:8px;">
+							<a href="http://www.screencast.com/t/Nx83iB6gkXj2" target="_blank" style="color:#546575;"> GML Collisions Video</a> <br>
+							<a href="http://www.screencast.com/t/khwHPtF4" target="_blank" style="color:#546575;"> GML Movement Video</a> <br>
+							<a href="http://www.screencast.com/t/eeMOov6F" target="_blank" style="color:#546575;"> GML Parenting Video</a> <br>
+							<a href="http://www.screencast.com/t/LkbJAGBx" target="_blank" style="color:#546575;"> GML Sprite Animation Video</a>
+
+							<br>
+							</div>
+						</div>
+						<a target="_blank" href="project_pastexperience.html"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> Past Projects </b> </button></a>
+						<button class="btn btn-default" data-toggle="modal" data-target="#GMSkills" style="font-weight:bold;">Skills Explanation</button>
+					</div>
+		</div>
+	</div>
+
+<div id="GMSkills" class="modal fade" role="dialog">
+  <div class="modal-dialog" style="width: 1130px;">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Game Maker Skills Explanation </h4>
+      </div>
+      <div class="modal-body">
+	      <div class="container col-sm-12">
+	      	<div class="container col-sm-6">
+	      	<b> Sprite Animation </b> <br>
+	      	Animating sprites is achieved by
+	      	</div>
+	      	<div class="container col-sm-6">
+
+	      	</div>
+	      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

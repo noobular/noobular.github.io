@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>Portfolio</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
 	<link href="https://bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
 	<meta name='viewport' content='width=400'>
+
 	<style>
 	@media only screen and (max-width: 768px){
 		body > .container{
@@ -21,31 +22,66 @@
 		.col-sm-4{
 			width:100%;
 		}
+
+		.btn{
+			width:100%;
+		}
 	}
-
-
+		.panelbase{
+			height: 250px;
+		}
 		.affix {
 		    top: 0;
 		    width: 100%;
 		}
+
+		.panelbodyh{
+			
+		}
+
+		.projectpanel{
+			height:200px;
+		}
+
+		.projectfooter{
+			height: 125px;
+		}
+
+		.btn{
+			color: #5bc0de;
+		}
+		.clr1{
+			background-color: #434f5b;
+			margin: 2px;
+			margin-left:0px;
+			margin-right:0px;
+		}
+		.clr2{
+			background-color: #31b0d5;
+			margin: 2px;
+			margin-left:0px;
+			margin-right:0px;
+		}
+
+
+		
+
 	</style>
 </head>
 <body>
 
-<nav class="navbar navbar-default" data-spy="affix" data-offset-top="1">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand hvr-bounce-to-right" href="index.html" style="background-color:#4e5d6c;">James' Coding Portfolio</a>
-      <button style="border:0px;" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars" aria-hidden="true"></i></button>
+      <a style="background-color:#4e5d6c;" class="navbar-brand hvr-bounce-to-right" href="index.html">James' Coding Portfolio</a>
     </div>
-    <div class="navbar-collapse collapse">
-	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="index.html" style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-address-book" aria-hidden="true"></i> Basic Information</a></li>
-	      <li ><a href="project_pastexperience.html" style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-files-o" aria-hidden="true"></i> Projects / Past Experience</a></li>
-	      <li><a href="examples.html" style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Examples</a></li>
-	      <li><a href="contact.html" style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Contact</a></li>
-	    </ul>
-	</div>
+    <ul class="nav navbar-nav">
+      <li class="active"> <a href="index.html"    style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-files-o" aria-hidden="true"></i> Projects / Past Experience</a></li>
+      <li> 				  <a href="indepthprogramming.html"    	   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-files-o" aria-hidden="true"></i> Indepth with Languages</a></li>
+      <li>				  <a href="examples.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Examples</a></li>
+      <li>				  <a href="contact.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Contact</a></li>
+
+    </ul>
   </div>
 </nav>
 
@@ -58,49 +94,507 @@
 
 <div class="container">
 	<div class="jumbotron">
-	  <h1>Welcome!</h1>
-	  <p>This is a display of my projects and experience of many programming languages through many different manners, like classes or personal hobby programs.</p>
+	  <h1>Projects / Past Experience</h1>
+	  <p> This is showing what things revolving around programming I've done in the past and also me grading myself on certain tools, operating systems, and languages.</p>
 	</div>
 </div>
 
-<div class="container col-sm-3" style="text-align: center;">
-	<div class="panel panel-info">
-		<div class="panel-heading">
-			<h3>Human Statistics</h3>
-		</div>
 
-		<div class="panel-body panelbase" style="text-align: left;">
-
-			<p><b>
-				<h4><i class="fa fa-clock-o" aria-hidden="true"></i>  Current Lifetime : <span class="label label-success" style="float:right;"> 18 Years</span></h3>
-				<div class="progress" style="background-color: #555f68;">
-				  <div class="progress-bar progress-bar-info active" role="progressbar"
-				  aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" style="width:18%">
-				    18/100ish?
-				  </div>
-				</div>
-				<h4><i class="fa fa-birthday-cake" aria-hidden="true"></i>  Birthday : <span class="label label-success" style="float:right;">November 24, 1998</span></h4>
-				<h4><i class="fa fa-graduation-cap" aria-hidden="true"></i>  Current Education *US* : <span class="label label-success" style="float:right;"> Senior / Highschool</span></h3>
-				<h4><i class="fa fa-futbol-o" aria-hidden="true"></i>  Hobbies : <span class="label label-success" style="float:right;"> Longboarding / Gaming</span></h3>
-			</p>
-		</div>
-	</div>
-</div>
+<!--
+Panel Template
+=================
 
 <div class="container col-sm-3">
 	<div class="panel panel-info">
-		<div class="panel-heading"  style="text-align: center;">
-			<h3>Basic Info</h3>
+		<div class="panel-heading">
+
 		</div>
 
-		<div class="panel-body panelbase">
-			I'm 18 and currently a senior in highschool, I enjoy longboarding, programming, and gaming.&nbsp;&nbsp;
-			I'd like to go to Eastern Michigan University and graduate with a degree in Computer Science.
+		<div class="panel-body">
 
 		</div>
 	</div>
 </div>
 
-</body>
+-->
+<div class="container col-sm-3">
+<div class="alert alert-info col-sm-12">
+ <strong><i class="fa fa-bar-chart" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; This column is all self grading.</strong>
+</div>
 
+	<div id="panel_container" class="container col-sm-12">
+			<div class="panel panel-info">
+				<div class="panel-heading" style="text-align: center;">
+					<h3> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>Languages</h3>
+				</div>
+				<div class="panel-body panelbodyh" style="text-align: left;">
+					<h4>HTML 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>		 	<i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></h4>
+					<h4>JavaScript 	<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="devicon-javascript-plain" style="float:right;">&nbsp;</i></h4>
+					<h4>MySQL 		<span class="label label-success" style="float:right;"> 		8 / 10 </span>			<i class="devicon-mysql-plain" style="float:right;">&nbsp;</i></h4>
+					<h4>PHP 		<span class="label label-success" style="float:right;"> 		8 / 10 </span>			<i class="devicon-php-plain" style="float:right;">&nbsp;</i></h4>
+					<h4>C#			<span class="label label-danger" style="float:right;">			8 / 10 </span>			<i class="devicon-csharp-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>JQuery 		<span class="label label-warning" style="float:right;">			8 / 10 </span>			<i class="devicon-jquery-plain" style="float:right;">&nbsp;</i> </h4>	
+					<h4>(VB) Basic	<span class="label label-warning" style="float:right;">			4 / 10 </span></h4>	
+					<h4>Lua 		<span class="label label-warning" style="float:right;">			4 / 10 </span></h4>	
+					<h4>Python 		<span class="label label-danger" style="float:right;">			3 / 10 </span>			<i class="devicon-python-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>C++			<span class="label label-danger" style="float:right;">			1 / 10 </span>			<i class="devicon-cplusplus-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>NodeJS		<span class="label label-danger" style="float:right;">			1 / 10 </span>			<i class="devicon-nodejs-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>Java 		<span class="label label-danger" style="float:right;">			0 / 10 </span>			<i class="devicon-java-plain" style="float:right;">&nbsp;</i></h4>	
+					<h4>C 			<span class="label label-danger" style="float:right;">			0 / 10 </span>			<i class="devicon-c-plain" style="float:right;">&nbsp;</i></h4>	
+
+						<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+							<div class="panel-heading">
+							If a language is 0/10 I've never tried it, but is a commonly used language, that I'd like to learn relatively soon.
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+	<div id="panel_container" class="container col-sm-12">
+			<div class="panel panel-info">
+				<div class="panel-heading" style="text-align: center;">
+					<h3> <i class="fa fa-code-fork" aria-hidden="true" style="float: left;"></i>Frameworks</h3>
+				</div>
+				<div class="panel-body panelbodyh" style="text-align: left;">
+					<h4>Bootstrap 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>		 	<i class="devicon-bootstrap-plain" style="float:right;"><i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></i> </h4>
+					<h4>FontAwesome 	<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="fa fa-font-awesome" aria-hidden="true" style="float:right;"> <i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></h4></i>
+					<h4>Devicon 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></h4>
+
+						<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+							<div class="panel-heading">
+							 These are just Additions to the language icon next to the framework.
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+	<div id="panel_container" class="container col-sm-12">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center; ">
+				<h3> <i class="fa fa-desktop" aria-hidden="true" style="float: left;" ></i> Operating System Experience</h3>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left;">
+				<h4>DOS				<span class="label label-danger" style="float:right;">				0 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
+				<h4>Windows 3.0		<span class="label label-danger" style="float:right;">				0 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
+				<h4>Windows 3.1		<span class="label label-danger" style="float:right;">				0 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
+				<h4>Windows XP 		<span class="label label-success" style="float:right;">				9 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
+				<h4>Windows Vista 	<span class="label label-danger" style="float:right;">				0 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
+				<h4>Windows 7 		<span class="label label-success" style="float:right;"> 			9 / 10 </span>		 		<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>
+				<h4>Windows 8(.1)	<span class="label label-success" style="float:right;"> 			9 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>
+				<h4>Windows 10 		<span class="label label-success" style="float:right;"> 			9 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>
+				<h4>Ubuntu GNOME	<span class="label label-success" style="float:right;"> 			7 / 10 </span>				<i class="devicon-ubuntu-plain-wordmark" style="float:right;">&nbsp;</i></h4>
+				<h4>Ubuntu 			<span class="label label-success" style="float:right;">				7 / 10 </span>				<i class="devicon-ubuntu-plain-wordmark" style="float:right;">&nbsp;</i> </h4>	
+
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						If a Operating system is 0 / 10 I've got a copy of it but I've never used it.
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="panel_container" class="container col-sm-12">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h3> <i class="fa fa-gavel" aria-hidden="true" style="float: left;"></i> Different Tool Experience</h3>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left;">
+				<h4>Sublime Text 3	<span class="label label-success" style="float:right;">				8 / 10 </span>				<i class="fa fa-file-text" aria-hidden="true" style="float:right;">&nbsp;</i></h4>
+				<h4>Github			<span class="label label-success" style="float:right;">				8 / 10 </span>				<i class="fa fa-github" style="float:right;">&nbsp;</i></h4>	
+				<h4>Photoshop		<span class="label label-success" style="float:right;">				7 / 10 </span>				<i class="fa fa-picture-o" style="float:right;">&nbsp;</i></h4>	
+				<h4>WAMP	  		<span class="label label-success" style="float:right;">				7 / 10 </span>				<i class="fa fa-server" aria-hidden="true" style="float:right;">&nbsp;</i></h4>	
+				<h4>Chrome			<span class="label label-success" style="float:right;">				8 / 10 </span>				<i class="fa fa-chrome" aria-hidden="true" style="float:right;">&nbsp;</i></h4>	
+				<h4>GIMP			<span class="label label-warning" style="float:right;">				5 / 10 </span>				<i class="devicon-gimp-plain" style="float:right;">&nbsp;</i></h4>	
+					
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						These are different things I use to create other things, and my rating on myself relate to the developer/creation side of them. <br>
+						<b> FYI: Anything used is all local (including servers)</b>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	
+</div>
+
+
+<!--
+
+<div class="container col-sm-3">
+	<div class="panel panel-info">
+		<div class="panel-heading" style="text-align: center;">
+			<h4> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>  /// </h4>
+		</div>
+		<div class="panel-body panelbodyh" style="text-align: left;">
+
+				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading">
+					Basic Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+					</div>
+				</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+-->
+<div id="panel_container"  class="container col-sm-9">
+	<div class="alert alert-info col-sm-12">
+	 <strong> <i class="fa fa-briefcase" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Work Experience, Everything Included.</strong>
+	</div>
+	
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-user-o" aria-hidden="true" style="float: left;"></i>The Henry Ford, Green Field Village</h4>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left;">
+						
+					<div class="well well-sm clr1">
+						<i class="fa fa-user-md" aria-hidden="true" style="float:right; font-size:30px;">&nbsp;</i>
+						<b>Position:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Historical Presenter
+					</div>
+
+					<div class="well well-sm clr1">
+						<i class="fa fa-user-plus" aria-hidden="true" style="float:right; font-size:28px;"></i> 						
+						<b>Basic Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							Increased leadership skills. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							Increased social speaking abilities. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							Ability to remember historical data of the farm.<br><br>
+					</div>
+
+
+			</div>
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
+							<div class="well well-sm clr2" style="padding:8px;">
+								January 2016 - June 2016 [ 6 Months ]
+							</div>
+						</div>
+						<a target="_blank" href="https://www.thehenryford.org/"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> The Henry Ford Website </b> </button></a>
+					</div>
+		</div>
+	</div>
+
+	<div class="alert alert-info col-sm-12">
+	 <strong> <i class="fa fa-pencil-square-o" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Programming Classes</strong>
+	</div>
+
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-html5" aria-hidden="true" style="float: left;"></i>Game Design and Programming (Year 1)</h4>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left;">
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> Proves to teach students the ability to create and think freely using HTML, CSS, JavaScript, and later in the class GameMakerLanguage.<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> Gives students experience with HTML, CSS, JavaScript, and GML.
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-comments-o" aria-hidden="true"></i> Teaches you how to work together as a team, in a development setting.<br>
+					</div>
+			</div>
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
+							<div class="well well-sm clr2" style="padding:8px;">
+								Highschool Class, Held at WDF Career Tech Center in Wayne Michigan.
+							</div>
+						</div>
+						<a target="_blank" href="http://www.wwcsd.net/schools/high-schools/william-d-ford-career-technical-center/courses/"><button type="button" class="btn btn-default  hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> WWCSD Info </b> </button></a>
+						<a href="#gdap" data-toggle="modal"><button class="btn btn-default  hvr-bounce-to-right"><i class="fa fa-plus-circle" aria-hidden="true"></i> <b>Class Description</b></button></a>
+					</div>
+		</div>
+	</div>
+
+	<div class="alert alert-info col-sm-12">
+	 <strong> <i class="fa fa-briefcase" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Internships</strong>
+	</div>
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-user-o" aria-hidden="true" style="float: left;"></i>General Electric (GEDEX)</h4>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left;">
+						
+					<div class="well well-sm clr1">
+						<i class="fa fa-user-md" aria-hidden="true" style="float:right; font-size:30px;">&nbsp;</i>
+						<b>Goal:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Think of a problem and solve it with an arduino.
+					</div>
+
+					<div class="well well-sm clr1">
+						<i class="fa fa-user-plus" aria-hidden="true" style="float:right; font-size:28px;"></i> 						
+						<b>Basic Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							Increased leadership skills. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							Increased social speaking abilities. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							Used Agile Scrum to increase productivity. <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+							Used C Language to program an arduino. <br>
+					</div>
+
+
+			</div>
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
+							<div class="well well-sm clr2" style="padding:8px;">
+								April 17 / 18, 2017 [ 2 Days ]
+							</div>
+						</div>
+						<a target="_blank" href="https://www.ge.com/"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> General Electrics Website </b> </button></a>
+					</div>
+		</div>
+	</div>
+
+	<div class="alert alert-info col-sm-12">
+	 <strong> <i class="fa fa-briefcase" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Hackathons Attended</strong>
+	</div>
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-user-o" aria-hidden="true" style="float: left;"></i>GE Hackathon</h4>
+			</div>
+			<div class="panel-body panelbodyh" style="text-align: left;">
+						
+					<div class="well well-sm clr1">
+						<i class="fa fa-user-md" aria-hidden="true" style="float:right; font-size:30px;">&nbsp;</i>
+						<b>Type:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Think of a problem and solve it with an arduino.
+					</div>
+
+					<div class="well well-sm clr1">
+						<i class="fa fa-user-plus" aria-hidden="true" style="float:right; font-size:28px;"></i> 						
+						<b>Basic Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+							Use C Language to solve a problem that you create, using an arduino Circuit Playground. <br>
+
+							Created a Temperature Sensing window opener, for your vehicle so your pets or child won't die of a heat stroke. <br>
+							It opens your window with variable temperature starting from 28C upwards of 32C and you can change it with the onboard button.
+					</div>
+
+
+			</div>
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading">
+						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
+							<div class="well well-sm clr2" style="padding:8px;">
+								Place Taken: 1st
+								Time frame: April 17 / 18, 2017 [ Roughly 6-8 hours between the two days of work time. ]
+							</div>
+						</div>
+						<a target="_blank" href="https://www.ge.com/"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> General Electrics Website </b> </button></a>
+					</div>
+		</div>
+	</div>
+<!-- Projects!!!!! -->
+
+<div class="row"></div>
+	<div class="alert alert-info col-sm-12">
+	 <strong> <i class="fa fa-folder-open" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;These are the projects I've worked on (that I still have the files too)</strong>
+	</div>
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-globe" aria-hidden="true" style="float: left;"></i>Programming Portfolio Site</h4>
+			</div>
+			<div class="panel-body projectpanel" style="text-align: left;">
+
+						<div class="well well-sm clr1">
+						<i class="fa fa-plus-square-o" aria-hidden="true"></i> Increased viewership.
+						</div>
+						<div class="well well-sm clr1">
+						<i class="fa fa-desktop" aria-hidden="true"></i> Visually shown some experience with HTML, CSS, and bootstrap.
+						</div>
+						<div class="well well-sm clr1">
+						<i class="fa fa-handshake-o" aria-hidden="true"></i> Potentially created partnerships / business deals.
+						</div>
+			</div>
+					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
+						<div class="panel-heading projectfooter">
+						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
+						<i style="font-size:20px;  float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-html5" aria-hidden="true"></i>
+						<i style="font-size:20px;  float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-css3" aria-hidden="true"></i>
+
+						<br> <!-- These add spaces &nbsp; -->
+							
+						</div>
+						<a href="index.html"><button type="button" class="btn btn-default  hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+						<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
+
+
+					</div>
+		</div>
+	</div>
+
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-clipboard" aria-hidden="true" style="float:left;"></i></i>Pastebin Post</h4>
+			</div>
+			<div class="panel-body projectpanel" style="text-align: left;">
+					<div class="well well-sm clr1">
+						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Challenged myself to create new things.<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> Shows another technique to possibly increase productivity within a team. <br>
+					</div>
+			</div>
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading projectfooter">
+					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <!-- These add spaces &nbsp; -->
+					
+					<i class="fa fa-question-circle" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
+
+					<br>
+					</div>
+					<a href="http://pastebin.com/u/Noobular" target="_blank"><button type="button" class="btn btn-default  hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
+
+				</div>
+		</div>
+	</div>
+
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Mini Text Adventure Game</h4>
+			</div>
+			<div class="panel-body projectpanel" style="text-align: left;">
+					<div class="well well-sm clr1">
+						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Created a new experience for me, creating a web browser based game.<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> It made me think creatively in ways to take user input, versus a normal text adventure game.<br>
+					</div>
+			</div>
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading projectfooter">
+					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
+					
+					<i class=" devicon-jquery-plain" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
+					<i class=" devicon-javascript-plain" aria-hidden="true" style="float:right; font-size: 18px; padding-top:6px; padding-right:4px;"></i>
+					<i class="fa fa-html5" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
+
+					<br> <!-- These add spaces &nbsp; -->
+
+						<div class="well clr2" style="padding:8px;">
+							*Class Requirement: Game Design and Programming 
+						</div>
+					</div>
+					<a href="game/minitextadventuregame.html"><button type="button" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
+					<a href="http://www.screencast.com/t/hTD2Olt8F" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Demo Video</b> </button></a>
+				</div>
+		</div>
+	</div>
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-terminal" aria-hidden="true" style="float:left;"></i> HTML File Creator</h4>
+			</div>
+			<div class="panel-body projectpanel" style="text-align: left;">
+					<div class="well well-sm clr1">
+						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Allowed me to have a purpose for C# in a project.<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> It allowed me to created a new faster way to create new pages, without needing to look for the framework CDNs.<br>
+					</div>
+			</div>
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading projectfooter">
+					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  
+					<i class="devicon-csharp-plain" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
+					<br> <!-- These add spaces &nbsp; -->
+
+						<div class="well clr2" style="padding:8px;">
+							Created in roughly 2-3 hours. <br>
+							!!! DOESNT UPDATE CDN LINKS !!!<br>
+							Bootstrap Designs created by Bootswatch.com
+						</div>
+					</div>
+
+					<a><button type="button" class="btn btn-default  hvr-bounce-to-right"  onclick="alert('You cannot download this yet.')"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#HTMLFileCreator"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
+					
+				</div>
+		</div>
+	</div>
+
+<div id="fmtf" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">FleaMarket.TF Screenshots </h4>
+      </div>
+      <div class="modal-body">
+        <img src="https://unsplash.it/555/540"></img>
+        	<div class="alert alert-danger alert-dismissible">
+			 	<b>Warning: Placeholder</b>
+			</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="HTMLFileCreator" class="modal fade" role="dialog">
+  <div class="modal-dialog" style="width: 1130px;">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">HTML File Creator Screenshots </h4>
+      </div>
+      <div class="modal-body">
+      	<img style="margin:0px; padding:0px; margin-bottom: 10px;" src="img\htmlfilecreator\blank.png">
+      	<img style="margin:0px; padding:0px;"  src="img\htmlfilecreator\filled.png">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="gdap" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Game Design and Programming *Year 1*</h4>
+      </div>
+      <div class="modal-body">
+      <p>
+        Game Design and Programming is a class held at WDF Career Tech Center in the Wayne/Westland school district, which teaches students JavaScript, HTML, CSS, and GML(GameMakerLanguage) over the course of a year.
+       </p>
+        	<div class="alert alert-danger alert-dismissible">
+			 	<b>Warning: Placeholder</b>
+			</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info btn-block" style="color:white;" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
