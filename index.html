@@ -27,6 +27,43 @@
 			width:100%;
 		}
 	}
+		.scrollbar
+		{
+			margin-left: 30px;
+			float: left;
+			height: 300px;
+			width: 65px;
+			background: #434f5b;
+			overflow-y: scroll;
+			margin-bottom: 25px;
+
+		}
+
+		#style-1::-webkit-scrollbar-track
+		{
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			border-radius: 0px;
+			background-color: #4c5863;
+		}
+
+		#style-1::-webkit-scrollbar 
+		{
+			width: 12px;
+			background-color: #4c5863;
+		}
+
+		#style-1::-webkit-scrollbar-thumb
+		{
+			border-radius: 0px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+			background-color: #4c5863;
+		}
+
+
+		.btn:focus {
+		  outline: none;
+		}
+
 		.panelbase{
 			height: 250px;
 		}
@@ -410,7 +447,7 @@ Panel Template
 			<div class="panel-heading" style="text-align: center;">
 				<h4> <i class="fa fa-globe" aria-hidden="true" style="float: left;"></i>Programming Portfolio Site</h4>
 			</div>
-			<div class="panel-body projectpanel" style="text-align: left;">
+			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
 
 						<div class="well well-sm clr1">
 						<i class="fa fa-plus-square-o" aria-hidden="true"></i> Increased viewership.
@@ -432,8 +469,8 @@ Panel Template
 							
 						</div>
 						<a href="index.html"><button type="button" class="btn btn-default  hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
-						<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
-
+						
+						<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#portfolio"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
 
 					</div>
 		</div>
@@ -445,7 +482,7 @@ Panel Template
 			<div class="panel-heading" style="text-align: center;">
 				<h4> <i class="fa fa-clipboard" aria-hidden="true" style="float:left;"></i></i>Pastebin Post</h4>
 			</div>
-			<div class="panel-body projectpanel" style="text-align: left;">
+			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
 					<div class="well well-sm clr1">
 						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Challenged myself to create new things.<br>
 					</div>
@@ -462,53 +499,20 @@ Panel Template
 					<br>
 					</div>
 					<a href="http://pastebin.com/u/Noobular" target="_blank"><button type="button" class="btn btn-default  hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
-
-				</div>
-		</div>
-	</div>
-
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Mini Text Adventure Game</h4>
-			</div>
-			<div class="panel-body projectpanel" style="text-align: left;">
-					<div class="well well-sm clr1">
-						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Created a new experience for me, creating a web browser based game.<br>
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> It made me think creatively in ways to take user input, versus a normal text adventure game.<br>
-					</div>
-			</div>
-				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading projectfooter">
-					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
 					
-					<i class=" devicon-jquery-plain" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
-					<i class=" devicon-javascript-plain" aria-hidden="true" style="float:right; font-size: 18px; padding-top:6px; padding-right:4px;"></i>
-					<i class="fa fa-html5" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#pastebin"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
 
-					<br> <!-- These add spaces &nbsp; -->
-
-						<div class="well clr2" style="padding:8px;">
-							*Class Requirement: Game Design and Programming 
-						</div>
-					</div>
-					<a href="game/minitextadventuregame.html"><button type="button" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#fmtf"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
-					<a href="http://www.screencast.com/t/hTD2Olt8F" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Demo Video</b> </button></a>
 				</div>
 		</div>
 	</div>
+
 
 	<div class="container col-sm-4">
 		<div class="panel panel-info">
 			<div class="panel-heading" style="text-align: center;">
 				<h4> <i class="fa fa-terminal" aria-hidden="true" style="float:left;"></i> HTML File Creator</h4>
 			</div>
-			<div class="panel-body projectpanel" style="text-align: left;">
+			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
 					<div class="well well-sm clr1">
 						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Allowed me to have a purpose for C# in a project.<br>
 					</div>
@@ -530,19 +534,188 @@ Panel Template
 					</div>
 
 					<a><button type="button" class="btn btn-default  hvr-bounce-to-right"  onclick="alert('You cannot download this yet.')"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#HTMLFileCreator"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Screenshots</b> </button>
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#HTMLFileCreator"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
+					
 					
 				</div>
 		</div>
 	</div>
 
-<div id="fmtf" class="modal fade" role="dialog">
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Mini Text Adventure Game</h4>
+			</div>
+			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
+					<div class="well well-sm clr1">
+						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Created a new experience for me, creating a web browser based game.<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> It made me think creatively in ways to take user input, versus a normal text adventure game.<br>
+					</div>
+			</div>
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading projectfooter">
+					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
+					
+					<i class=" devicon-jquery-plain" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
+					<i class=" devicon-javascript-plain" aria-hidden="true" style="float:right; font-size: 18px; padding-top:6px; padding-right:4px;"></i>
+					<i class="fa fa-html5" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
+
+					<br> <!-- These add spaces &nbsp; -->
+
+						<div class="well clr2" style="padding:8px;">
+							*Class Requirement: Game Design and Programming 
+						</div>
+
+						<div class="well clr2" style="padding:8px;">
+							The playable version, is the website link below.
+						</div>
+					</div>
+					<a href="game/minitextadventuregame.html"><button type="button" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+					
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#textadventure"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
+					
+				</div>
+		</div>
+	</div>
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Garbage</h4>
+			</div>
+			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
+					<div class="well well-sm clr1">
+						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Gave me a new experience, for the first time working with a team on the same game.<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> It made me think creatively in ways to take user input, versus a normal text adventure game.<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of people.<br>
+					</div>
+			</div>
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading projectfooter">
+					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
+					
+					<!-- Language Icons would go here, no icon for GML-->
+
+					<br> <!-- These add spaces &nbsp; -->
+
+						<div class="well clr2" style="padding:8px;">
+							*Class Requirement: Game Design and Programming 
+						</div>
+					</div>
+					
+					
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#garbage"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
+				</div>
+		</div>
+	</div>
+
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Drunken Puppy Rescue - Winter Ops</h4>
+			</div>
+			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> It made me think creatively in ways to create shooting mechanics<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of absent people.<br>
+					</div>
+			</div>
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading projectfooter">
+					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
+					
+					<!-- Language Icons would go here, no icon for GML-->
+
+					<br> <!-- These add spaces &nbsp; -->
+
+						<div class="well clr2" style="padding:8px;">
+							*Class Requirement: Game Design and Programming 
+						</div>
+					</div>
+					
+					
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#puppyrescue"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
+				</div>
+		</div>
+	</div>
+
+
+	<div class="container col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading" style="text-align: center;">
+				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Zool</h4>
+			</div>
+			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
+					<div class="well well-sm clr1">
+						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Gave me a new experience, for the first time working with a team on the same game.<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> It made me think creatively in ways to take user input, versus a normal text adventure game.<br>
+					</div>
+					<div class="well well-sm clr1">
+						<i class="fa fa-users" aria-hidden="true"></i> It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of people.<br>
+					</div>
+			</div>
+				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
+					<div class="panel-heading projectfooter">
+					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
+					
+					<!-- Language Icons would go here, no icon for GML-->
+
+					<br> <!-- These add spaces &nbsp; -->
+
+						<div class="well clr2" style="padding:8px;">
+							*Class Requirement: Game Design and Programming 
+						</div>
+					</div>
+					<a href="game/minitextadventuregame.html"><button type="button" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
+					
+					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#zool"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
+
+					
+				</div>
+		</div>
+	</div>
+
+<div id="portfolio" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">FleaMarket.TF Screenshots </h4>
+        <h4 class="modal-title"> Personal Programming Portfolio </h4>
+      </div>
+      <div class="modal-body"><br>
+        <div class="container col-sm-12">
+        	<b> Purpose : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		The purpose of the portfolio was to get my skills and past experience out to possible employers.
+        	</p>
+        	
+        </div><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="pastebin" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Pastebin Paste</h4>
       </div>
       <div class="modal-body">
         <img src="https://unsplash.it/555/540"></img>
@@ -556,6 +729,156 @@ Panel Template
     </div>
   </div>
 </div>
+
+<div id="textadventure" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"> Mini Text Adventure Game </h4>
+      </div>
+      <div class="modal-body"><br>
+        <div class="container col-sm-12">
+        	<b> Purpose : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		To create a game using JavaScript to further my skills.
+        	</p>
+
+        	<b> Description : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		Text adventure game, using HTML / CSS / JavaScript / JQuery where you can level up, attack different creatures, obtain randomized items and gold, travel, and finally complete quest.
+        	</p><br>
+        	<a href="http://www.screencast.com/t/hTD2Olt8F" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Demo Video</b> </button></a>
+        </div><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="garbage" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Game Named Garbage</h4>
+      </div>
+      <div class="modal-body">
+		<div class="container col-sm-12">
+        	<b> Purpose : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		To compete for creating the best game within a class of 30+ in groups comprised of a max of 3 people, given roughly 3 hours to complete the game.
+        	</p>
+
+        	<b> Description : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		"Garbage" is a game where you're in a lab and you've some mistakes in your calculations and you created infinitely spawning creatures that are... ever so sadly trying to kill you, It's your job to clean your mess up and destroy them by throwing an infinite number of potions that will kill them.
+        	</p><br>
+        	<a href="https://drive.google.com/file/d/0B7wwjLll6Ak7R3hKa3Mtem82S0k/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
+        </div><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="puppyrescue" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Drunken Puppy Rescue - Winter Ops</h4>
+      </div>
+      <div class="modal-body">
+		<div class="container col-sm-12">
+        	<b> Purpose : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		Create a fun game in a roughly 3 hour contest with 10+ Groups creating games.
+        	</p>
+
+        	<b> Description : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		You've got to collect puppies, while angry men chase you trying to steal your alcohol, but you can also beat them with your alcohol to collect more without being damaged.
+        	</p><br>
+        	<a href="https://drive.google.com/file/d/0B_D41pP-lSKPYjhhbW5OOE1ZV0k/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
+        </div><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="zool" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Zool</h4>
+      </div>
+      <div class="modal-body">
+		<div class="container col-sm-12">
+        	<b> Purpose : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		To compete for creating the best game within a class of 30+ in groups comprised of a max of 3 people, given roughly 3 hours to complete the game.
+        	</p>
+
+        	<b> Description : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		"Garbage" is a game where you're in a lab and you've some mistakes in your calculations and you created infinitely spawning creatures that are... ever so sadly trying to kill you, It's your job to clean your mess up and destroy them by throwing an infinite number of potions that will kill them.
+        	</p><br>
+        	<a href="https://drive.google.com/file/d/0B_D41pP-lSKPR2JVV2ZjVVpwZms/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download </b> </button></a>
+        </div><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="fmtf" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Game Named Garbage</h4>
+      </div>
+      <div class="modal-body">
+		<div class="container col-sm-12">
+        	<b> Purpose : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		To compete for creating the best game within a class of 30+ in groups comprised of a max of 3 people, given roughly 3 hours to complete the game.
+        	</p>
+
+        	<b> Description : </b> <br>
+        	<p style="margin:15px; margin-top:0px;">
+        		"Garbage" is a game where you're in a lab and you've some mistakes in your calculations and you created infinitely spawning creatures that are... ever so sadly trying to kill you, It's your job to clean your mess up and destroy them by throwing an infinite number of potions that will kill them.
+        	</p><br>
+        	<a href="http://www.screencast.com/t/hTD2Olt8F" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Demo Video</b> </button></a>
+        </div><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div id="HTMLFileCreator" class="modal fade" role="dialog">
   <div class="modal-dialog" style="width: 1130px;">
