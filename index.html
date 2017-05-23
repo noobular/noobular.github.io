@@ -100,8 +100,12 @@
 			margin-right:0px;
 		}
 
-
-		
+		a{
+			border:0px;
+		}
+		button{
+			border:0px;
+		}
 
 	</style>
 </head>
@@ -135,6 +139,8 @@
 	<div class="jumbotron">
 	  <h1>Projects / Past Experience</h1>
 	  <p> This is showing what things revolving around programming I've done in the past and also me grading myself on certain tools, operating systems, and languages.</p>
+	  <a href="img/resume/resume.pdf" target="_blank"><button type="button" class="btn btn-default  hvr-bounce-to-right" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i> <b>&nbsp;Resume PDF</b> </button></a>
+	  <button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#resume" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-image-o" aria-hidden="true"></i> <b>&nbsp;Resume Picture</b> </button>
 	</div>
 </div>
 
@@ -951,5 +957,27 @@ Panel Template
   </div>
 </div>
 
+
+<div id="resume" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content " style="width:665px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Resume</h4>
+      </div>
+      <div class="modal-body">
+      <p>
+        Last Updated: <br>
+        &nbsp;&nbsp;&nbsp; 5/23/17
+       </p>
+        	<img src="img/resume/resume.png">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info btn-block" style="color:white;" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
