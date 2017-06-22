@@ -8,6 +8,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<meta name='viewport' content='width=400'>
 
 	<style>
@@ -68,11 +69,112 @@
 		}
 
 
-		
+	.parallax { 
+	    /* The image used */
+	    background-image: url("img/background.jpg");
 
+	    /* Set a specific height */
+	    height: 500px; 
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	
 	</style>
+
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Gameplay', 3],
+  ['Shooting', 5],
+  ['Puppy Collection System', 3],
+  ['Enemies', 1]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+  	'title':"What's the best feature you encountered?", 
+  	'width':400, 
+  	'height':300,
+  	'is3D': true,
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+  chart.draw(data, options);
+}
+</script>
+
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Yeah', 10],
+  ['Nah',2]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+  	'title':"Was the game good or bad?",
+  	'width':400, 
+  	'height':300,
+  	'is3D': true,
+  };
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('chart3'));
+  chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['1', 0],
+  ['2',0],
+  ['3', 2],
+  ['4', 7],
+  ['5', 3]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+  	'title':"Was the game good or bad?", 
+  	'width':400, 
+  	'height':300,
+  	'is3D': true,
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('chart2'));
+  chart.draw(data, options);
+}
+</script>
+
+
 </head>
-<body>
+<body class="parallax">
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -90,12 +192,14 @@
   </div>
 </nav>
 
+<!--
 <div class="container">
 	<div class="alert alert-danger alert-dismissible">
 	  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 	 	<b>Warning: This site is currently under construction, There may be placeholders or broken links!</b>
 	</div>
 </div>
+-->
 
 <div class="container">
 	<div class="jumbotron">
@@ -254,7 +358,7 @@ Panel Template
 							<br>
 							</div>
 						</div>
-						<a target="_blank" href="project_pastexperience.html"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> Past Projects </b> </button></a>
+						<a target="_blank" href="index.html"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> Past Projects </b> </button></a>
 						<button class="btn btn-default" data-toggle="modal" data-target="#Feedback" style="font-weight:bold;">Further Explanation</button>
 					</div>
 		</div>
@@ -285,7 +389,7 @@ Panel Template
 							<br>
 							</div>
 						</div>
-						<a target="_blank" href="project_pastexperience.html"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> Past Projects </b> </button></a>
+						<a target="_blank" href="index.html"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> Past Projects </b> </button></a>
 						<button class="btn btn-default" data-toggle="modal" data-target="#Copyright" style="font-weight:bold;">Further Explanation</button>
 					</div>
 		</div>
@@ -446,22 +550,33 @@ Panel Template
 	      <b> Graphs and charts.</b> <br>
 	      <p style="margin:15px; margin-top:5px;">
 	      <br>
-	    	<img src="img/feedback/bestfeature.png"><br><br>
-	    	<b> "What's the best feature you encountered?" </b><br>
+	      <div id="chart1" align="center" ></div><br>
+	    
+			<div class="panel panel-info">
+				<div class="panel-heading" style="text-align: center;">
+					This is helpful to me because it allows me to figure out what specifically needs the LEAST amount of work and what needs the most... in this real world example the enemies needed a lot more work to entrigue the player and then shooting needs the least.
+				</div>
+			</div>
+
+	    	<div id="chart2" align="center"  style="color:#2b3e50"></div>
+	    	<br>
+
+			<div class="panel panel-info">
+				<div class="panel-heading" style="text-align: center;">
+					This is a good thing for knowing if the basic premise of gameplay is a good idea to do, like if you should continue development or scrap it and come up with a new idea.
+				</div>
+			</div>
+
+	    	<div class="" align="center" id="chart3"></div>
 	    	
-	    	&nbsp; &nbsp; &nbsp; This is helpful to me because it allows me to figure out what specifically needs the LEAST amount of work and what needs the most... in this real world example the enemies needed a lot more work to entrigue the player and then shooting needs the least.
+	    	<br>
+
+			<div class="panel panel-info">
+				<div class="panel-heading" style="text-align: center;">
+					 This follows the same premise as the last one, if the game was good or bad to see if I should continue development or scrap the game entirely.
+				</div>
+			</div>
 	    	
-	    	<br><br>
-	    	<img src="img/feedback/goodbad.png"><br><br>
-	    	<b> "Was the game good or bad? (5 being the best)" </b><br>
-	    	
-	    	&nbsp; &nbsp; &nbsp; This is a good thing for knowing if the basic premise of gameplay is a good idea to do, like if you should continue development or scrap it and come up with a new idea.
-	    	
-	    	<br><br>
-	    	<img src="img/feedback/good.png"><br><br>
-	    	<b> "Was the game good?" </b><br>
-	    	
-	    	&nbsp; &nbsp; &nbsp; This follows the same premise as the last one, if the game was good or bad to see if I should continue development or scrap the game entirely.
 
 	      </p>
 

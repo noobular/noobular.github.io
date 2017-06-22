@@ -69,12 +69,23 @@
 		}
 
 
-		
+	.parallax { 
+	    /* The image used */
+	    background-image: url("img/background.jpg");
 
+	    /* Set a specific height */
+	    height: 500px; 
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	
 	</style>
 </head>
-<body>
-
+<body class="parallax">
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">

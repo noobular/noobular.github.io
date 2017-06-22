@@ -68,11 +68,23 @@
 		}
 
 
-		
+	.parallax { 
+	    /* The image used */
+	    background-image: url("img/background.jpg");
 
+	    /* Set a specific height */
+	    height: 500px; 
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	
 	</style>
 </head>
-<body>
+<body class="parallax">
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -90,12 +102,14 @@
   </div>
 </nav>
 
+<!--
 <div class="container">
 	<div class="alert alert-danger alert-dismissible">
 	  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 	 	<b>Warning: This site is currently under construction, There may be placeholders or broken links!</b>
 	</div>
 </div>
+-->
 
 <div class="container">
 	<div class="jumbotron">
