@@ -138,11 +138,50 @@
 	    background-size: cover;
 	}
 
+
+	.parallax2 { 
+	    /* The image used */
+	    background-image: url("img/background2.jpg");
+
+	    /* Set a specific height */
+	    height: 1000px; 
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	.nocolor{
+		background-color:none;
+	}
+	.affix{
+		position: fixed;
+		top:0;
+		width: 100%;
+	}
+
 	</style>
 </head>
-<body class="parallax">
 
-<nav class="navbar navbar-default">
+<div class="parallax2">
+
+	<div class="container" style="padding-top:250px; ">
+		<div class="jumbotron">
+		  <h1>Projects / Past Experience</h1>
+		  <p> This is showing what things revolving around programming I've done in the past and also me grading myself on certain tools, operating systems, and languages.</p>
+		  <a href="img/resume/resume.pdf" target="_blank"><button type="button" class="btn btn-default  hvr-bounce-to-right" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i> <b>&nbsp;Resume PDF</b> </button></a>
+		  <button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#resume" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-image-o" aria-hidden="true"></i> <b>&nbsp;Resume Picture</b> </button>
+		</div>
+	</div>
+
+</div>
+
+<body class="parallax" >
+
+
+<nav class="navbar navbar-default " data-spy="affix" data-offset-top="1005" >
   <div class="container-fluid">
     <div class="navbar-header">
       <a style="background-color:#4e5d6c;" class="navbar-brand hvr-bounce-to-right" href="index.html">James' Coding Portfolio</a>
@@ -159,6 +198,7 @@
   </div>
 </nav>
 
+
 <!--
 <div class="container">
 	<div class="alert alert-danger alert-dismissible">
@@ -167,15 +207,6 @@
 	</div>
 </div>
 -->
-<div class="container">
-	<div class="jumbotron">
-	  <h1>Projects / Past Experience</h1>
-	  <p> This is showing what things revolving around programming I've done in the past and also me grading myself on certain tools, operating systems, and languages.</p>
-	  <a href="img/resume/resume.pdf" target="_blank"><button type="button" class="btn btn-default  hvr-bounce-to-right" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i> <b>&nbsp;Resume PDF</b> </button></a>
-	  <button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#resume" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-image-o" aria-hidden="true"></i> <b>&nbsp;Resume Picture</b> </button>
-	</div>
-</div>
-
 
 <!--
 Panel Template
