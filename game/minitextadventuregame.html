@@ -359,7 +359,7 @@
 		}
 
 		function DisplayGold(){
-			var invheader = '<li><a class="hvr-back-pulse" data-toggle="tab" href="#CharacterStats">Stats</a></li> <li><a class="hvr-back-pulse"  data-toggle="tab" href="#inventorypanel" onclick="DisplayOwnedItems()">Inventory</a></li> <li><a class="hvr-back-pulse"  data-toggle="tab" href="#equippanel" onclick="DisplayEquippedItems()">Equiped</a></li> <span style="float:right; background-color:white; margin-top:14px; margin-right:5px; color:black; font-weight:bold;" class="badge"><b> Gold: '+playerstats["Cash"]+'</b> </span>';
+			var invheader = '<li><a class="hvr-back-pulse" data-toggle="tab" href="#CharacterStats">Stats</a></li> <li><a class="hvr-back-pulse"  data-toggle="tab" href="#inventorypanel" onclick="DisplayOwnedItems()">Inventory</a></li> <li><a class="hvr-back-pulse"  data-toggle="tab" href="#equippanel" onclick="DisplayEquippedItems()">Equipped</a></li> <span style="float:right; background-color:white; margin-top:14px; margin-right:5px; color:black; font-weight:bold;" class="badge"><b> Gold: '+playerstats["Cash"]+'</b> </span>';
 			$("#invHeading").empty();
 			var invhead = document.getElementById("invHeading").innerHTML = invheader;
 		}
