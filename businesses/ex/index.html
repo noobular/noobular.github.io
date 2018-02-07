@@ -31,6 +31,9 @@
     .col-sm-4{
       width:100%;
     }
+    .sidenav{
+      margin-top: 80px;
+    }
   }
   body{
     font-family: 'Source Code Pro', monospace;
@@ -84,11 +87,11 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary " data-spy="affix" data-offset-top="0">
-  <a class="navbar-brand" onclick="openNav()" href="#">&#9776;</a>
-  <a class="navbar-brand" href="#">TestMarket.CS</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" onclick="openNav()" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <a class="navbar-brand" onclick="openNav()" href="#">&#9776;</a>
+  <a class="navbar-brand" href="#">TestMarket.CS</a>
 
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
