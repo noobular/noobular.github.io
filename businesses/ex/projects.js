@@ -19,7 +19,7 @@
 var projects = [
 	{
 		"title": "Garry's Mod Addons",
-		"language": "LUA",
+		"language": "Lua",
 		"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
 		"img1":"",
 		"img2":"",
@@ -32,7 +32,7 @@ var projects = [
 	},
 	{
 		"title": "Portfolio",
-		"language": "LUA",
+		"language": "HTML",
 		"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
 		"img1":"",
 		"img2":"",
@@ -45,7 +45,7 @@ var projects = [
 	},
 	{
 		"title": "Printer Hoppers",
-		"language": "LUA",
+		"language": "Lua",
 		"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
 		"img1":"",
 		"img2":"",
@@ -58,7 +58,7 @@ var projects = [
 	},
 	{
 		"title": "Web page generator",
-		"language": "LUA",
+		"language": "C#",
 		"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
 		"img1":"",
 		"img2":"",
@@ -71,21 +71,38 @@ var projects = [
 	},
 ]
 
-
-
-function GenerateProjects(){
+function GenerateProjects(language){
 	$(projects).each(function(index){
-		console.log(projects[index].title)
-		console.log(projects[index].language)
-		console.log(projects[index].description)
-		//console.log(projects[index].img1)
-		//console.log(projects[index].img2)
-		//console.log(projects[index].img3)
-		console.log(projects[index].skill1)
-		console.log(projects[index].skill2)
-		console.log(projects[index].skill3)
-		console.log(projects[index].github)
-		console.log(projects[index].other)
+		if (language !== "any"){
+			if(language == projects[index].language){
+				console.log(projects[index].title)
+				console.log(projects[index].language)
+				console.log(projects[index].description)
+				//console.log(projects[index].img1)
+				//console.log(projects[index].img2)
+				//console.log(projects[index].img3)
+				console.log(projects[index].skill1)
+				console.log(projects[index].skill2)
+				console.log(projects[index].skill3)
+				console.log(projects[index].github)
+				console.log(projects[index].other)
+			}
+
+		}else{
+			console.log("ANY HAS BEEN SELECTED.")
+			console.log(projects[index].title)
+			console.log(projects[index].language)
+			console.log(projects[index].description)
+			//console.log(projects[index].img1)
+			//console.log(projects[index].img2)
+			//console.log(projects[index].img3)
+			console.log(projects[index].skill1)
+			console.log(projects[index].skill2)
+			console.log(projects[index].skill3)
+			console.log(projects[index].github)
+			console.log(projects[index].other)
+		}
+		
 	});
 
 }
@@ -95,5 +112,5 @@ function CreateProjectCard(title,language,description,img1,img2,img3,skill1,skil
 
 }
 
-
-GenerateProjects();
+currentSearch = document.getElementById("langsearch").innerHTML
+GenerateProjects("HTML");
