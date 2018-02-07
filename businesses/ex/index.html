@@ -9,38 +9,13 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
-  <script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  @media only screen and (max-width: 768px){
-    body{
-      width:100%;
-    }
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
+<script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .col-sm-3{
-      width:100%;
-    }
-    .col-sm-2{
-      width:100%;
-    }
-    .col-sm-8{
-      width:100%;
-    }
-    .col-sm-4{
-      width:100%;
-    }
+<style>
 
-  .sidenav {
-    padding-top: 15px;
-    margin-top: 75px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-
-  }
   body{
     font-family: 'Roboto', sans-serif;
   }
@@ -49,66 +24,110 @@
     border-radius: 0px;
   }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #2196F3;
-    overflow-x: hidden;
-    transition: .5s;
-    padding-top: 30px;
-    margin-top: 75px;
-}
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #2196F3;
+      overflow-x: hidden;
+      transition: .5s;
+      padding-top: 30px;
+      margin-top: 75px;
+  }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    display: block;
-    transition: 0.3s;
-}
+  .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+  }
 
-.sidenav a:hover {
-    color: #d6d6d6;
-}
+  .sidenav a:hover {
+      color: #d6d6d6;
+  }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 16px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+  .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 16px;
+      font-size: 36px;
+      margin-left: 50px;
+  }
 
-/* The navigation bar */
-.navbar {
-    z-index: 998;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-}
+  /* The navigation bar */
+  .navbar {
+      z-index: 998;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed; /* Set the navbar to fixed position */
+      top: 0; /* Position the navbar at the top of the page */
+      width: 100%; /* Full width */
+  }
 
-/* Links inside the navbar */
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    text-decoration: none;
-    
-}
+  /* Links inside the navbar */
+  .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      text-decoration: none;
+      
+  }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px; margin-top: 75px;}
-  .sidenav a {font-size: 18px;}
-}
-  </style>
+  .content{
+    margin-top:95px
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px; 
+      margin-top: 75px;
+    }
+    .sidenav a {font-size: 18px;}
+  }
+
+  @media only screen and (max-width: 768px){
+      body{
+        width:100%;
+      }
+
+      .col-sm-3{
+        width:100%;
+      }
+      .col-sm-2{
+        width:100%;
+      }
+      .col-sm-8{
+        width:100%;
+      }
+      .col-sm-4{
+        width:100%;
+      }
+
+      .sidenav {
+        margin-top: 50px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
+
+      .navbar{
+        padding-top:15px;
+        height:50px;
+      }
+
+      .content{
+        margin-top:60px
+      }
+  
+  }
+
+</style>
 </head>
 <body>
 
@@ -145,7 +164,7 @@
   <a href="#">Help</a>
 </div>
 
-<div class="container col-sm-12" style="margin-top:95px">
+<div class="container col-sm-12 content">
 
   <div style="margin-bottom:10px;">
     <div class="card">
