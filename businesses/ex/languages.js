@@ -13,14 +13,15 @@ var languages = [
 	"HTML"
 ]
 
-var language=[];
+var element=[];
 
 function createSections(){
 	$(languages).each(function(index){
-		language[index] = document.createElement("a")
-		language[index].href = "#"
-		language[index].innerHTML = languages[index]
-		document.getElementById("style-6").appendChild(language[index])
+		element[index] = document.createElement("a")
+		element[index].href = "#"
+		element[index].innerHTML = languages[index]
+		element[index].setAttribute("onclick","GenerateProjects('"+languages[index]+"')")
+		document.getElementById("style-6").appendChild(element[index])
 	});
 }
 
