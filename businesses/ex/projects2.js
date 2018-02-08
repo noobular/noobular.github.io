@@ -157,7 +157,7 @@ function GenerateProjects(language){
 		document.getElementById("projectlist").appendChild(cont)
 	}
 
-	document.getElementById("category").innerHTML = "<u>" +  language + "</u>"
+	document.getElementById("category").innerHTML = "<u>" +  language + " Projects</u>" 
 
 }
 
