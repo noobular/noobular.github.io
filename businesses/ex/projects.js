@@ -101,8 +101,6 @@ function GenerateProjects(language){
 					CreateProjectCard(index,projects[index].title,projects[index].language,projects[index].description,projects[index].img1,projects[index].img2,projects[index].img3,projects[index].skill1,projects[index].skill2,projects[index].skill3,projects[index].github,projects[index].other,projects[index].date)
 				}
 			}
-
-			
 		}
 	});
 
