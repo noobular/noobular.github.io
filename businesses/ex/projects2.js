@@ -234,8 +234,9 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 	$(carouselcontrolnext).attr("href","#"+carouselid)
 	$(carouselcontrolprev).attr("href","#"+carouselid)
 	$(githube).attr("href",github)
+	$(githube).attr("target","_blank")
 	$(othere).attr("href",other)
-
+	$(othere).attr("target","_blank")
 
 	// Embeding Elements
 	cardbody.appendChild(cardtitle)

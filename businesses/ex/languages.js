@@ -43,6 +43,7 @@ function createSections(language){
 			elementa[index].href = "#"
 			elementa[index].innerHTML = languages[index]
 			elementa[index].setAttribute("onclick","GenerateProjects('"+languages[index]+"')")
+			elementa[index].style ="font-size:18px;"
 			element[index].appendChild(elementa[index]);
 
 			document.getElementById("languagelist").appendChild(element[index])
