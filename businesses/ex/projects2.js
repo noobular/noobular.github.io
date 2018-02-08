@@ -221,7 +221,7 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 
 	cardheader.innerHTML = title
 	cardtitle.innerHTML = "Tags"
-	cardsubtitle.innerHTML = role.join(", ") + "<br>" + languages.join(", ")
+	cardsubtitle.innerHTML = languages.join(", ") + "<br>" + role.join(", ")
 	cardtext.innerHTML = description
 	githube.innerHTML = "Github Link"
 	othere.innerHTML = "Something Else..."
