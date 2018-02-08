@@ -15,7 +15,7 @@
 		"other":"",
 	},
 */
-
+var count;
 var projects = [
 	{
 		"title": "Garry's Mod Addons",
@@ -81,7 +81,8 @@ var projects = [
 
 function GenerateProjects(language){
 	if(language !== "All"){
-		$("#test").empty()
+		$("#projectlist").empty()
+		console.log($('#projectlist'))
 	}else{
 		$(projects).each(function(index){
 			CreateProjectCard(index,projects[index].title,projects[index].language,projects[index].description,projects[index].img1,projects[index].img2,projects[index].img3,projects[index].skill1,projects[index].skill2,projects[index].skill3,projects[index].github,projects[index].other,projects[index].date)
@@ -104,6 +105,19 @@ function GenerateProjects(language){
 		}
 	});
 
+	if(document.getElementById("projectlist").innerHTML == ""){
+		console.log("InnerHTML = '' ")
+		cont = document.createElement("div")
+		$(cont).addClass("container col-12")
+
+		alert = document.createElement("div");
+		$(alert).addClass("alert alert-dismissible alert-info");
+		alert.style = "text-align:center; font-size:36px; font-weight:bold; "
+		alert.innerHTML = "No projects were found..."
+
+		cont.appendChild(alert)
+		document.getElementById("projectlist").appendChild(cont)
+	}
 }
 
 function CreateProjectCard(index,title,language,description,img1,img2,img3,skill1,skill2,skill3,github,other,date){
@@ -240,7 +254,8 @@ function CreateProjectCard(index,title,language,description,img1,img2,img3,skill
 		card.appendChild(cardbody3)
 		card.appendChild(cardfooter)
 
-	document.getElementById("test").appendChild(container)
+	document.getElementById("projectlist").appendChild(container)
+	count++;
 }
 
 currentSearch = document.getElementById("langsearch").innerHTML
