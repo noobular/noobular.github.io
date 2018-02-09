@@ -179,7 +179,7 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 				cardfooter = document.createElement("div") 
 
 	// Element Class Change
-	$(container).addClass("col-3")
+	$(container).addClass("col-12 ; col-sm-12 ; col-md-3")
 	$(card).addClass("card mb-3")
 	$(cardheader).addClass("card-header")
 	$(cardbody).addClass("card-body")
