@@ -4,11 +4,12 @@
 	{
 		"title": "",
 		"languages": [""],
-		"role":"",
+		"role":[""],
 		"description":"",
-		
+		"images":[],
+		"skills":[],
 		"github":"",
-		"other":"",
+		"other":["",""],       // [0] = name shown; [1] = link; 
 	},
 */
 var count;
@@ -21,7 +22,7 @@ var projects = [
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills":["More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
 		"github":"https://github.com/noobularkid/-NA-Simfphys-Megapack",
-		"other":"#",
+		"other":["",""],
 		"date":"February 7, 2018"
 	},
 	{
@@ -31,8 +32,8 @@ var projects = [
 		"description":"Basic Description",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills":["Increased Viewership"," Potentially created partnerships / business deals."," Potentially created partnerships / business deals."],
-		"github":"https://github.com/noobularkid/-NA-Simfphys-Megapack",
-		"other":"#",
+		"github":"https://github.com/noobularkid/noobularkid.github.io",
+		"other":["",""],
 		"date":"February 7, 2018"
 	},
 	{
@@ -42,8 +43,8 @@ var projects = [
 		"description":"description",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills": ["Challenged myself to create new things","Shows another technique to possibly increase productivity within a team.","Another place to post scripts."],
-		"github":"https://github.com/noobularkid",
-		"other":"#",
+		"github":"",
+		"other":["Pastebin","https://pastebin.com/u/Noobular"],
 		"date":"February 7, 2018"
 	},
 	{
@@ -53,8 +54,8 @@ var projects = [
 		"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills": ["The ability to create structured files in the programming language \"LUA\". ","More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
-		"github":"https://github.com/noobularkid/",
-		"other":"#",
+		"github":"",
+		"other":["",""],
 		"date":"February 7, 2018"
 	},
 	{
@@ -65,7 +66,7 @@ var projects = [
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills": ["Created a new experience for me, creating a web browser based game.","It made me think creatively in ways to take user input, versus a normal text adventure game."],
 		"github":"",
-		"other":"",
+		"other":["",""],
 		"date":"February 7, 2018"
 	},
 	{
@@ -76,7 +77,7 @@ var projects = [
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills": [],
 		"github":"",
-		"other":"",
+		"other":["",""],
 		"date":"February 7, 2018"
 	},
 	{
@@ -87,7 +88,7 @@ var projects = [
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills": [],
 		"github":"",
-		"other":"",
+		"other":["",""],
 		"date":"February 7, 2018"
 	},
 	{
@@ -98,7 +99,7 @@ var projects = [
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills": [],
 		"github":"",
-		"other":"",
+		"other":["",""],
 		"date":"February 7, 2018"
 	},
 	{
@@ -109,7 +110,7 @@ var projects = [
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills": [],
 		"github":"",
-		"other":"",
+		"other":["",""],
 		"date":"February 7, 2018"
 	}
 ]
@@ -186,8 +187,6 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 				cardtext = document.createElement("p")
 				listcontainer = document.createElement("ul")
 				cardbody3 = document.createElement("div")
-				githube = document.createElement("a")
-				othere = document.createElement("a")
 				cardfooter = document.createElement("div") 
 
 	// Element Class Change
@@ -206,8 +205,6 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 	$(cardbody2).addClass("card-body")
 	$(cardtext).addClass("card-text")
 	$(listcontainer).addClass("list-group list-group-flush")
-	$(githube).addClass("card-link")
-	$(othere).addClass("card-link")
 	$(cardbody3).addClass("card-body")
 	$(cardfooter).addClass("card-footer text-muted")
 
@@ -223,8 +220,6 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 	cardtitle.innerHTML = "Tags"
 	cardsubtitle.innerHTML = languages.join(", ") + "<br>" + role.join(", ")
 	cardtext.innerHTML = description
-	githube.innerHTML = "Github Link"
-	othere.innerHTML = "Something Else..."
 	cardfooter.innerHTML = date
 
 	// Attribute Changes
@@ -233,10 +228,8 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 	$(carouselcontrolprev).attr("data-slide","prev")
 	$(carouselcontrolnext).attr("href","#"+carouselid)
 	$(carouselcontrolprev).attr("href","#"+carouselid)
-	$(githube).attr("href",github)
-	$(githube).attr("target","_blank")
-	$(othere).attr("href",other)
-	$(othere).attr("target","_blank")
+
+
 
 	// Embeding Elements
 	cardbody.appendChild(cardtitle)
@@ -249,9 +242,24 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 	carousel.appendChild(carouselcontrolnext)
 
 	cardbody2.appendChild(cardtext)
+	if (github !== ""){
+		githube = document.createElement("a")
+		$(githube).addClass("card-link")
+		githube.innerHTML = "Github Link"
+		$(githube).attr("href",github)
+		$(githube).attr("target","_blank")
+		cardbody3.appendChild(githube)
 
-	cardbody3.appendChild(githube)
-	cardbody3.appendChild(othere)
+	}
+
+	if(other[0] !== ""){
+		othere = document.createElement("a")
+		$(othere).addClass("card-link")
+		othere.innerHTML = other[0]
+		$(othere).attr("href",other[1])
+		$(othere).attr("target","_blank")
+		cardbody3.appendChild(othere)
+	}
 
 	// Automated Element Creation
 		//Carousel Item / Image element Creation

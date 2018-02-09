@@ -182,7 +182,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary " data-spy="affix" data-offset-top="0">
-  <a class="navbar-brand" onclick="openNav()">&#9776;</a>
+  <a class="navbar-brand" id="menutoggle" data-toggle="tooltip" data-placement="bottom" title="Click Me!" data-original-title="Click Me!" aria-describedby="tooltip221152" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Click Me!" aria-describedby="tooltip221152" onclick="openNav()">&#9776;</a>
   <a class="navbar-brand" href="#">James' Portfolio</a>
 
   <div class="collapse navbar-collapse">
@@ -249,7 +249,8 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-
+$('[data-toggle="tooltip"]').tooltip(); 
+$('#menutoggle').tooltip('show')
 </script>
 <script src="projects2.js"></script>
 <script src="languages.js"></script>
