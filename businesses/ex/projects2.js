@@ -16,25 +16,25 @@ var count;
 var projects = [
 	{
 		"title": "Garry's Mod Addons",
-		"languages": ["Lua", "HTML"],
+		"languages": ["Lua"],
 		"role":["Game Development","Software Development"],
 		"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills":["More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
 		"github":"https://github.com/noobularkid/-NA-Simfphys-Megapack",
 		"other":["",""],
-		"date":"February 7, 2018"
+		"date":"February 1, 2018"
 	},
 	{
-		"title": "Experience Portfolio",
-		"languages": ["HTML"],
+		"title": "Portfolio",
+		"languages": ["HTML","JQuery","Javascript"],
 		"role":["Web Development"],
-		"description":"Basic Description",
+		"description":"The purpose of the portfolio was to get my skills and past experience out to possible employers. ",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills":["Increased Viewership"," Potentially created partnerships / business deals."," Potentially created partnerships / business deals."],
 		"github":"https://github.com/noobularkid/noobularkid.github.io",
 		"other":["",""],
-		"date":"February 7, 2018"
+		"date":"2015 - Current"
 	},
 	{
 		"title": "Pastebin Post",
@@ -45,73 +45,62 @@ var projects = [
 		"skills": ["Challenged myself to create new things","Shows another technique to possibly increase productivity within a team.","Another place to post scripts."],
 		"github":"",
 		"other":["Pastebin","https://pastebin.com/u/Noobular"],
-		"date":"February 7, 2018"
-	},
-	{
-		"title": "Web page generator",
-		"languages": ["C#"],
-		"role":["Software Development"],
-		"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
-		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
-		"skills": ["The ability to create structured files in the programming language \"LUA\". ","More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
-		"github":"",
-		"other":["",""],
-		"date":"February 7, 2018"
+		"date":"March 30th, 2015 - 2017"
 	},
 	{
 		"title": "Mini Text Adventure Game",
-		"languages": ["Javascript"],
+		"languages": ["HTML","Javascript","JQuery","Bootstrap"],
 		"role":["Web Development"],
-		"description":"Class Requirement: Game Design and Programming, The playable version, is the website link below.",
+		"description":"Text adventure game, using HTML / CSS / JavaScript / JQuery where you can level up, attack different creatures, obtain randomized items and gold, travel, and finally complete quest.",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
 		"skills": ["Created a new experience for me, creating a web browser based game.","It made me think creatively in ways to take user input, versus a normal text adventure game."],
 		"github":"",
 		"other":["",""],
-		"date":"February 7, 2018"
+		"date":"February 8, 2017"
 	},
 	{
-		"title": "HTML File Creator",
+		"title": "Website Generator",
 		"languages": ["C#"],
 		"role":["Software Development"],
 		"description":"",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
-		"skills": [],
+		"skills": ["Allowed me to have a purpose for C# in a project.","It allowed me to created a new faster way to create new pages, without needing to look for the framework CDNs."],
 		"github":"",
 		"other":["",""],
-		"date":"February 7, 2018"
+		"date":"Unknown Creation Date"
 	},
 	{
 		"title": "Garbage",
-		"languages": ["Game Maker Language"],
+		"languages": ["Game Maker Language", "Joke"],
 		"role":["Game Development"],
-		"description":"",
+		"description":"\"Garbage\" is a game where you're in a lab and you've some mistakes in your calculations and you created infinitely spawning creatures that are... ever so sadly trying to kill you, It's your job to clean your mess up and destroy them by throwing an infinite number of potions that will kill them. ",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
-		"skills": [],
+		"skills": ["Gave me a new experience, for the first time working with a team on the same game.","It made me think creatively in ways to take user input, versus a normal text adventure game.","It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of people."],
 		"github":"",
 		"other":["",""],
-		"date":"February 7, 2018"
+		"date":"June, 2017"
 	},
 	{
 		"title": "Zool",
 		"languages": ["Game Maker Language"],
 		"role":["Game Development"],
-		"description":"",
+		"description":"Zool is a game and a character where you gain points by killing enemies and collecting sweets to defend the candy world. ",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
-		"skills": [],
+		"skills": ["It made me create a new type of game, I hadn't in the past. (Platformer)"],
 		"github":"",
 		"other":["",""],
-		"date":"February 7, 2018"
+		"date":"June, 2017"
 	},
 	{
 		"title": "Drunken Puppy Rescue - Winter Ops",
-		"languages": ["Game Maker Language"],
+		"languages": ["Game Maker Language", "Joke"],
 		"role":["Game Development"],
-		"description":"",
+		"description":"You've got to collect puppies, while angry men chase you trying to steal your alcohol, but you can also beat them with your alcohol to collect more without being damaged. ",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
-		"skills": [],
+		"skills": ["It made me think creatively in ways to create shooting mechanics","It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of absent people."],
 		"github":"",
 		"other":["",""],
-		"date":"February 7, 2018"
+		"date":"June, 2017"
 	}
 ]
 

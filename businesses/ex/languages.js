@@ -1,17 +1,19 @@
 var languages = [
 	"HTML",
 	"Javascript",
-	"Jquery",
+	"JQuery",
+	"Bootstrap",
+	"MySQL",
+	"PHP",
 	"C++",
 	"C#",
 	"Lua",
 	".Net",
-	"MySQL",
 	"Python",
 	"NodeJS",
-	"PHP",
 	"Basic",
-	"Game Maker Language"
+	"Game Maker Language",
+	"Joke"
 ]
 
 var roles =[
