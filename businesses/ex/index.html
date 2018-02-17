@@ -194,25 +194,25 @@
 
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a>
+      <li id="tab_projects" class="nav-item active">
+        <a class="nav-link" onclick="GenerateProjects('All')">Projects <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Job Experience</a>
+      <li id="tab_jobs" class="nav-item">
+        <a class="nav-link" onclick="Generatejobs('All')">Job Experience</a>
       </li>
-      <li class="nav-item">
+      <li id="tab_skills" class="nav-item">
         <a class="nav-link" href="#">Skills</a>
       </li>
-      <li class="nav-item">
+      <li id="tab_hackathons" class="nav-item">
         <a class="nav-link" href="#">Hackathons</a>
       </li>
-      <li class="nav-item">
+      <li id="tab_languages" class="nav-item">
         <a class="nav-link" href="#">Indepth With Languages</a>
       </li>
-      <li class="nav-item">
+      <li id="tab_ideologies" class="nav-item">
         <a class="nav-link" href="#">Ideologies</a>
       </li>
-      <li class="nav-item">
+      <li id="tab_contact" class="nav-item">
         <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
@@ -268,8 +268,10 @@ function closeNav() {
 $('[data-toggle="tooltip"]').tooltip(); 
 $('#menutoggle').tooltip('show')
 </script>
-<script src="projects2.js"></script>
-<script src="languages.js"></script>
+
+<script src="jobexperience/jobexperience.js"></script>
+<script src="projects/projects2.js"></script>
+<script src="projects/languages.js"></script>
 </html>
 
 

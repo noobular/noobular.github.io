@@ -101,10 +101,29 @@ var projects = [
 		"github":"",
 		"other":["",""],
 		"date":"June, 2017"
+	},
+	{
+		"title": "Drunken Puppy Rescue - Winter Ops",
+		"languages": ["Game Maker Language", "Joke"],
+		"role":["Game Development"],
+		"description":"You've got to collect puppies, while angry men chase you trying to steal your alcohol, but you can also beat them with your alcohol to collect more without being damaged. ",
+		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
+		"skills": ["It made me think creatively in ways to create shooting mechanics","It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of absent people."],
+		"github":"",
+		"other":["",""],
+		"date":"June, 2017"
 	}
 ]
 
 function GenerateProjects(language){
+	$('#tab_projects').addClass('active');
+	$('#tab_skills').removeClass('active');
+	$('#tab_hackathons').removeClass('active');
+	$('#tab_ideologies').removeClass('active');
+	$('#tab_contact').removeClass('active');
+	$('#tab_languages').removeClass('active');
+	$('#tab_jobs').removeClass('active');
+
 	if(language !== "All"){
 		$("#projectlist").empty()
 		console.log($('#projectlist'))
@@ -147,7 +166,7 @@ function GenerateProjects(language){
 		document.getElementById("projectlist").appendChild(cont)
 	}
 
-	document.getElementById("category").innerHTML = language + " Projects" 
+	document.getElementById("category").innerHTML = language + " projects" 
 
 }
 
