@@ -32,7 +32,7 @@ var projects = [
 		"languages": ["HTML","JQuery","Javascript"],
 		"role":["Web Development"],
 		"description":"The purpose of the portfolio was to get my skills and past experience out to possible employers. ",
-		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
+		"images": ["img/projects/website/jumbotron.png"],
 		"skills":["Increased Viewership"," Potentially created partnerships / business deals."," Potentially created partnerships / business deals."],
 		"github":"https://github.com/noobularkid/noobularkid.github.io",
 		"other":["",""],
@@ -44,7 +44,7 @@ var projects = [
 		"languages": ["Misc"],
 		"role":[""],
 		"description":"description",
-		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
+		"images": ["img/projects/pastebin/paste.png"],
 		"skills": ["Challenged myself to create new things","Shows another technique to possibly increase productivity within a team.","Another place to post scripts."],
 		"github":"",
 		"other":["Pastebin","https://pastebin.com/u/Noobular"],
@@ -56,7 +56,7 @@ var projects = [
 		"languages": ["HTML","Javascript","JQuery","Bootstrap"],
 		"role":["Web Development"],
 		"description":"Text adventure game, using HTML / CSS / JavaScript / JQuery where you can level up, attack different creatures, obtain randomized items and gold, travel, and finally complete quest.",
-		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
+		"images": ["img/projects/mtag/inventory.png","img/projects/mtag/name.png","img/projects/mtag/stats.png"],
 		"skills": ["Created a new experience for me, creating a web browser based game.","It made me think creatively in ways to take user input, versus a normal text adventure game."],
 		"github":"",
 		"other":["",""],
@@ -67,8 +67,8 @@ var projects = [
 		"title": "Website Generator",
 		"languages": ["C#"],
 		"role":["Software Development"],
-		"description":"",
-		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
+		"description":"A tool allowing for the automated creation of website files, with ability to add certain frameworks with a toggle switch.",
+		"images": ["img/projects/htmlfilecreator/blank.png","img/projects/htmlfilecreator/filled.png"],
 		"skills": ["Allowed me to have a purpose for C# in a project.","It allowed me to created a new faster way to create new pages, without needing to look for the framework CDNs."],
 		"github":"",
 		"other":["",""],
@@ -104,7 +104,7 @@ var projects = [
 		"languages": ["Game Maker Language", "Joke"],
 		"role":["Game Development"],
 		"description":"You've got to collect puppies, while angry men chase you trying to steal your alcohol, but you can also beat them with your alcohol to collect more without being damaged. ",
-		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
+		"images": ["img/projects/drunkwinter/alcohol.png","img/projects/drunkwinter/lepo.png","img/projects/drunkwinter/mono.png"],
 		"skills": ["It made me think creatively in ways to create shooting mechanics","It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of absent people."],
 		"github":"",
 		"other":["",""],
@@ -216,6 +216,10 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 					carouselcontrolnextimg = document.createElement("span")
 
 			cardbody2 = document.createElement("div")
+				descriptiontext = document.createElement("span")
+				descriptiontext.innerHTML = "<b>Description</b>"
+				cardbody2.appendChild(descriptiontext)
+
 				cardtext = document.createElement("p")
 				listcontainer = document.createElement("ul")
 				cardbody3 = document.createElement("div")

@@ -156,7 +156,7 @@ function CreateProjectCardh(index,title,position,role,description,images,skills,
 
 	cardheader.innerHTML = title
 	cardtitle.innerHTML = position[0]
-	cardsubtitle.innerHTML = "<b>Hackathon Type:</b>" + "<br>" + role.join(", ")
+	cardsubtitle.innerHTML = "<b>Hackathon Goal:</b>" + "<br>" + role.join(", ")
 	cardtext.innerHTML = description
 	cardfooter.innerHTML = date
 

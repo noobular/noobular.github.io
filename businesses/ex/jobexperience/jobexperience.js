@@ -53,7 +53,7 @@ function Generatejobs(language){
 	}else{
 		$("#projectlist").empty()
 		$(jobs).each(function(index){
-			CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)
+			CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)
 		})		
 	}
 
@@ -62,13 +62,13 @@ function Generatejobs(language){
 			if (language == "Web Development" || language == "Game Development" || language == "Software Development" || language == "Server Development"){
 				$(jobs[index].role).each(function(i){
 					if(jobs[index].role[i] == language){
-						CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+						CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
 					}
 				})
 			}else{
 				$(jobs[index].position).each(function(i){
 					if(jobs[index].position[i] == language){
-						CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+						CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
 					}
 				})
 			} // end of is role?
@@ -93,9 +93,9 @@ function Generatejobs(language){
 
 }
 
-// CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+// CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
 
-function CreateProjectCard(index,title,position,role,description,images,skills,github,other,date){
+function CreateProjectCardjob(index,title,position,role,description,images,skills,github,other,date){
 	carouselid = "carousel"+index;
 
 	// Element Creation
@@ -115,6 +115,10 @@ function CreateProjectCard(index,title,position,role,description,images,skills,g
 					carouselcontrolnextimg = document.createElement("span")
 
 			cardbody2 = document.createElement("div")
+				descriptiontext = document.createElement("span")
+				descriptiontext.innerHTML = "<b>Description</b>"
+				cardbody2.appendChild(descriptiontext)
+
 				cardtext = document.createElement("p")
 				listcontainer = document.createElement("ul")
 				cardbody3 = document.createElement("div")
@@ -148,7 +152,7 @@ function CreateProjectCard(index,title,position,role,description,images,skills,g
 	// Element Text Change
 
 	cardheader.innerHTML = title
-	cardtitle.innerHTML = ""
+	cardtitle.innerHTML = "Job Position;  Type of work"
 	cardsubtitle.innerHTML = position.join(", ") + "<br>" + role.join(", ")
 	cardtext.innerHTML = description
 	cardfooter.innerHTML = date
