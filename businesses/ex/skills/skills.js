@@ -12,63 +12,55 @@
 		"other":["",""],       // [0] = name shown; [1] = link; 
 	},
 */
+var DevelopmentMode = false;
 var count;
-var jobs = [
+var skills = [
 	{
-		"title": "Red apple",
-		"position" : ["Dish Washer"],
-		"role":["Physical Labour"],
-		"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
+		"title": "MHacks 8",
+		"position" : ["No Place"],
+		"role":["Type: Create something awesome!"],
+		"description":"Create whatever you want within the given timespan which was 36 hours, with many mentors to help the hackers if they are having any issues.",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
-		"skills":["More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
-		"github":"https://github.com/noobularkid/-NA-Simfphys-Megapack",
+		"skills":[],
+		"github":"",
 		"other":["",""],
-		"date":"February 1, 2018"
-	},
-	{
-		"title": "The Henry Ford, Green Field Village",
-		"position" : ["Historical Presenter / Farmer"],
-		"role":["Physical Labour"],
-		"description":"The job was pretty simple, inform the visitors that come to the village about my specific location and the historical importance of it, along with taking care of the farm as a whole.",
-		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
-		"skills":["More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
-		"github":"https://github.com/noobularkid/-NA-Simfphys-Megapack",
-		"other":["",""],
-		"date":"February 1, 2018"
+		"date":"October 7-9, 2016"
 	}
 ]
 
-function Generatejobs(language){
+function Generateskills(language){
 	$('#tab_projects').removeClass('active');
-	$('#tab_skills').removeClass('active');
 	$('#tab_hackathons').removeClass('active');
+	$('#tab_jobs').removeClass('active');
 	$('#tab_ideologies').removeClass('active');
 	$('#tab_contact').removeClass('active');
 	$('#tab_languages').removeClass('active');
-	$('#tab_jobs').addClass('active');
+	$('#tab_skills').addClass('active');
+	original = language;
+	language = language.toLowerCase()
 
-	if(language !== "All"){
+	if(language !== "all"){
 		$("#projectlist").empty()
 		console.log($('#projectlist'))
 	}else{
 		$("#projectlist").empty()
-		$(jobs).each(function(index){
-			CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)
+		$(skills).each(function(index){
+			CreateProjectCardskills(index,skills[index].title,skills[index].position,skills[index].role,skills[index].description,skills[index].images,skills[index].skills,skills[index].github,skills[index].other,skills[index].date)
 		})		
 	}
 
-	$(jobs).each(function(index){
-		if (language !== "All"){
-			if (language == "Web Development" || language == "Game Development" || language == "Software Development" || language == "Server Development"){
-				$(jobs[index].role).each(function(i){
-					if(jobs[index].role[i] == language){
-						CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+	$(skills).each(function(index){
+		if (language !== "all"){
+			if (language == "web development" || language == "game development" || language == "software development" || language == "server development"){
+				$(skills[index].role).each(function(i){
+					if(skills[index].role[i] == language){
+						CreateProjectCardskills(index,skills[index].title,skills[index].position,skills[index].role,skills[index].description,skills[index].images,skills[index].skills,skills[index].github,skills[index].other,skills[index].date)	
 					}
 				})
 			}else{
-				$(jobs[index].position).each(function(i){
-					if(jobs[index].position[i] == language){
-						CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+				$(skills[index].position).each(function(i){
+					if(skills[index].position[i] == language){
+						CreateProjectCardskills(index,skills[index].title,skills[index].position,skills[index].role,skills[index].description,skills[index].images,skills[index].skills,skills[index].github,skills[index].other,skills[index].date)	
 					}
 				})
 			} // end of is role?
@@ -76,26 +68,26 @@ function Generatejobs(language){
 	});
 
 	if(document.getElementById("projectlist").innerHTML == ""){
-		console.log("InnerHTML = '' ")
+		if(DeveleopmentMode == true){console.log("InnerHTML = '' ")}
 		cont = document.createElement("div")
 		$(cont).addClass("container col-12")
 
 		alert = document.createElement("div");
 		$(alert).addClass("alert alert-dismissible alert-info");
 		alert.style = "text-align:center; font-size:36px; font-weight:bold; "
-		alert.innerHTML = "No jobs were found..."
+		alert.innerHTML = "No skills were found..."
 
 		cont.appendChild(alert)
 		document.getElementById("projectlist").appendChild(cont)
 	}
 
-	document.getElementById("category").innerHTML = language + " jobs" 
+	document.getElementById("category").innerHTML = original + " skills" 
 
 }
 
-// CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+// CreateProjectCardskills(index,skills[index].title,skills[index].position,skills[index].role,skills[index].description,skills[index].images,skills[index].skills,skills[index].github,skills[index].other,skills[index].date)	
 
-function CreateProjectCard(index,title,position,role,description,images,skills,github,other,date){
+function CreateProjectCardskills(index,title,position,role,description,images,skills,github,other,date){
 	carouselid = "carousel"+index;
 
 	// Element Creation
@@ -198,7 +190,7 @@ function CreateProjectCard(index,title,position,role,description,images,skills,g
 		imgs = [];
 
 		$(images).each(function(index){ 
-			console.log("IRAN " + index )
+			if(DeveleopmentMode == true){console.log("IRAN " + index )}
 			items[index] = document.createElement("div") // Carouselitems
 			imgs[index] = document.createElement("img")  // carouselimgs
 
@@ -220,7 +212,7 @@ function CreateProjectCard(index,title,position,role,description,images,skills,g
 
 		skill = []
 		$(skills).each(function(index){ 
-			console.log("IRAN " + index )
+			if(DevelopmentMode == true){console.log("IRAN " + index )}
 			skill[index] = document.createElement("a")  // skill text
 
 			$(skill[index]).addClass("list-group-item")

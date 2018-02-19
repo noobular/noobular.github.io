@@ -12,6 +12,7 @@
 		"other":["",""],       // [0] = name shown; [1] = link; 
 	},
 */
+var DevelopmentMode = false;
 var count;
 var projects = [
 	{
@@ -23,7 +24,8 @@ var projects = [
 		"skills":["More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
 		"github":"https://github.com/noobularkid/-NA-Simfphys-Megapack",
 		"other":["",""],
-		"date":"February 1, 2018"
+		"date":"February 1, 2018",
+		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
 		"title": "Portfolio",
@@ -34,7 +36,8 @@ var projects = [
 		"skills":["Increased Viewership"," Potentially created partnerships / business deals."," Potentially created partnerships / business deals."],
 		"github":"https://github.com/noobularkid/noobularkid.github.io",
 		"other":["",""],
-		"date":"2015 - Current"
+		"date":"2015 - Current",
+		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
 		"title": "Pastebin Post",
@@ -45,7 +48,8 @@ var projects = [
 		"skills": ["Challenged myself to create new things","Shows another technique to possibly increase productivity within a team.","Another place to post scripts."],
 		"github":"",
 		"other":["Pastebin","https://pastebin.com/u/Noobular"],
-		"date":"March 30th, 2015 - 2017"
+		"date":"March 30th, 2015 - 2017",
+		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
 		"title": "Mini Text Adventure Game",
@@ -56,7 +60,8 @@ var projects = [
 		"skills": ["Created a new experience for me, creating a web browser based game.","It made me think creatively in ways to take user input, versus a normal text adventure game."],
 		"github":"",
 		"other":["",""],
-		"date":"February 8, 2017"
+		"date":"February 8, 2017",
+		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
 		"title": "Website Generator",
@@ -67,7 +72,8 @@ var projects = [
 		"skills": ["Allowed me to have a purpose for C# in a project.","It allowed me to created a new faster way to create new pages, without needing to look for the framework CDNs."],
 		"github":"",
 		"other":["",""],
-		"date":"Unknown Creation Date"
+		"date":"Unknown Creation Date",
+		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
 		"title": "Garbage",
@@ -78,7 +84,8 @@ var projects = [
 		"skills": ["Gave me a new experience, for the first time working with a team on the same game.","It made me think creatively in ways to take user input, versus a normal text adventure game.","It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of people."],
 		"github":"",
 		"other":["",""],
-		"date":"June, 2017"
+		"date":"June, 2017",
+		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
 		"title": "Zool",
@@ -89,7 +96,8 @@ var projects = [
 		"skills": ["It made me create a new type of game, I hadn't in the past. (Platformer)"],
 		"github":"",
 		"other":["",""],
-		"date":"June, 2017"
+		"date":"June, 2017",
+		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
 		"title": "Drunken Puppy Rescue - Winter Ops",
@@ -100,7 +108,8 @@ var projects = [
 		"skills": ["It made me think creatively in ways to create shooting mechanics","It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of absent people."],
 		"github":"",
 		"other":["",""],
-		"date":"June, 2017"
+		"date":"June, 2017",
+		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
 		"title": "Drunken Puppy Rescue - Winter Ops",
@@ -111,7 +120,20 @@ var projects = [
 		"skills": ["It made me think creatively in ways to create shooting mechanics","It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of absent people."],
 		"github":"",
 		"other":["",""],
-		"date":"June, 2017"
+		"date":"June, 2017",
+		"badge":["","",""] // print text, type, tooltip text
+	},
+	{
+		"title": "Livecode",
+		"languages": ["Livecode"],
+		"role":["App Development"],
+		"description":"random test",
+		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
+		"skills":["More hands on work with Livecode and App development."],
+		"github":"https://github.com/noobularkid/-NA-Simfphys-Megapack",
+		"other":["",""],
+		"date":"February 1, 2018",
+		"badge":["","",""] // print text, type, tooltip text
 	}
 ]
 
@@ -123,10 +145,12 @@ function GenerateProjects(language){
 	$('#tab_contact').removeClass('active');
 	$('#tab_languages').removeClass('active');
 	$('#tab_jobs').removeClass('active');
+	original = language;
+	language = language.toLowerCase()
 
-	if(language !== "All"){
+	if(language !== "all"){
 		$("#projectlist").empty()
-		console.log($('#projectlist'))
+		if(DevelopmentMode==true){console.log($('#projectlist'))}
 	}else{
 		$("#projectlist").empty()
 		$(projects).each(function(index){
@@ -135,16 +159,16 @@ function GenerateProjects(language){
 	}
 
 	$(projects).each(function(index){
-		if (language !== "All"){
-			if (language == "Web Development" || language == "Game Development" || language == "Software Development" || language == "Server Development"){
+		if (language !== "all"){
+			if (language == "web development" || language == "game development" || language == "software development" || language == "server development" || language == "app development"){
 				$(projects[index].role).each(function(i){
-					if(projects[index].role[i] == language){
+					if(projects[index].role[i].toLowerCase() == language){
 						CreateProjectCard(index,projects[index].title,projects[index].languages,projects[index].role,projects[index].description,projects[index].images,projects[index].skills,projects[index].github,projects[index].other,projects[index].date)	
 					}
 				})
 			}else{
 				$(projects[index].languages).each(function(i){
-					if(projects[index].languages[i] == language){
+					if(projects[index].languages[i].toLowerCase() == language){
 						CreateProjectCard(index,projects[index].title,projects[index].languages,projects[index].role,projects[index].description,projects[index].images,projects[index].skills,projects[index].github,projects[index].other,projects[index].date)	
 					}
 				})
@@ -153,7 +177,7 @@ function GenerateProjects(language){
 	});
 
 	if(document.getElementById("projectlist").innerHTML == ""){
-		console.log("InnerHTML = '' ")
+		if(DevelopmentMode==true){console.log("InnerHTML = '' ")}
 		cont = document.createElement("div")
 		$(cont).addClass("container col-12")
 
@@ -166,7 +190,7 @@ function GenerateProjects(language){
 		document.getElementById("projectlist").appendChild(cont)
 	}
 
-	document.getElementById("category").innerHTML = language + " projects" 
+	document.getElementById("category").innerHTML = original + " projects" 
 
 }
 
@@ -269,13 +293,14 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 		cardbody3.appendChild(othere)
 	}
 
+
 	// Automated Element Creation
 		//Carousel Item / Image element Creation
 		items = [];
 		imgs = [];
 
 		$(images).each(function(index){ 
-			console.log("IRAN " + index )
+			if(DevelopmentMode==true){console.log("IRAN " + index )}
 			items[index] = document.createElement("div") // Carouselitems
 			imgs[index] = document.createElement("img")  // carouselimgs
 
@@ -297,12 +322,12 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 
 		skill = []
 		$(skills).each(function(index){ 
-			console.log("IRAN " + index )
+			if(DevelopmentMode==true){console.log("IRAN " + index )}
 			skill[index] = document.createElement("a")  // skill text
 
 			$(skill[index]).addClass("list-group-item")
 
-			skill[index].innerHTML = skills[index]
+			skill[index].innerHTML = "<b>Benefit " + (index + 1) + "</b><br>" + skills[index]
 
 			listcontainer.appendChild(skill[index])
 		});
@@ -314,7 +339,9 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 		card.appendChild(carousel)
 		card.appendChild(cardbody2)
 		card.appendChild(listcontainer)
-		card.appendChild(cardbody3)
+		if(cardbody3.innerHTML !== ""){
+			card.appendChild(cardbody3)
+		}
 		card.appendChild(cardfooter)
 
 	document.getElementById("projectlist").appendChild(container)
