@@ -12,52 +12,78 @@
 		"other":["",""],       // [0] = name shown; [1] = link; 
 	},
 */
+var DevelopmentMode = false;
 var count;
-var jobs = [
+var languageskills = [
 	{
-		"title": "Red apple",
-		"position" : ["Dish Washer"],
-		"role":["Software Development"],
-		"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
+		"title": "HTML",
+		"position" : [""],
+		"role":[""],
+		"description":"HTML on it's own isn't much, but tagged in with CSS and other Frameworks it can create truely beautiful websites and games. I've personally used it on this portfolio website and all other business related sites I've created.",
 		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
-		"skills":["More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
-		"github":"https://github.com/noobularkid/-NA-Simfphys-Megapack",
+		"skills":[],
+		"github":"",
 		"other":["",""],
-		"date":"February 1, 2018"
+		"date":""
+	},
+	{
+		"title": "JavaScript",
+		"position" : [""],
+		"role":[""],
+		"description":"JavaScript is a beautiful language that runs within your web browser allowing more sophisticated logic within your website. I've used JavaScript within my Mini Text Adventure Game to allow more functionality and smarter functionality compared to no functionality other then moving pages.",
+		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
+		"skills":[["JavaScript Comments Video","http://www.screencast.com/t/uqNlTE1kd"],["JavaScript Code Challenge Video","http://www.screencast.com/t/iN43KsmHkv"]],
+		"github":"",
+		"other":["",""],
+		"date":""
+	},
+	{
+		"title": "GameMakerLanguage",
+		"position" : [""],
+		"role":[""],
+		"description":"GameMakerLanguage or GML is very similar to how JavaScript works in terms of syntax which allows new programmers to ease into using it for the start of designing games. I've used GML in the creation of some of my personal games like \"Garbage\" and \"Drunken Puppy Rescue - Winter Ops\" within gamemaker 8.1 to create many things and functionality like healthbars rotating objects that will allow for a more realistic feel to the player.",
+		"images": ["https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200","https://picsum.photos/300/200"],
+		"skills":[["GML Collisions Video","http://www.screencast.com/t/Nx83iB6gkXj2"],["GML Movement Video","http://www.screencast.com/t/khwHPtF4"],["GML Parenting Video","http://www.screencast.com/t/eeMOov6F"],["GML Sprite Animation Video","http://www.screencast.com/t/LkbJAGBx"]],
+		"github":"",
+		"other":["",""],
+		"date":""
 	}
 ]
 
-function Generatejobs(language){
+function Generatelanguages(language){
 	$('#tab_projects').removeClass('active');
-	$('#tab_skills').removeClass('active');
 	$('#tab_hackathons').removeClass('active');
+	$('#tab_jobs').removeClass('active');
 	$('#tab_ideologies').removeClass('active');
 	$('#tab_contact').removeClass('active');
-	$('#tab_languages').removeClass('active');
-	$('#tab_jobs').addClass('active');
+	$('#tab_skills').removeClass('active');
+	$('#tab_languages').addClass('active');
+	EditJumbotron("Indepth with Languages","This section is just a brief description of each language and it's possible perks.")
+	original = language;
+	language = language.toLowerCase()
 
-	if(language !== "All"){
+	if(language !== "all"){
 		$("#projectlist").empty()
 		console.log($('#projectlist'))
 	}else{
 		$("#projectlist").empty()
-		$(jobs).each(function(index){
-			CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)
+		$(languageskills).each(function(index){
+			CreateProjectCardindepthlanguages(index,languageskills[index].title,languageskills[index].position,languageskills[index].role,languageskills[index].description,languageskills[index].images,languageskills[index].skills,languageskills[index].github,languageskills[index].other,languageskills[index].date)
 		})		
 	}
 
-	$(jobs).each(function(index){
-		if (language !== "All"){
-			if (language == "Web Development" || language == "Game Development" || language == "Software Development" || language == "Server Development"){
-				$(jobs[index].role).each(function(i){
-					if(jobs[index].role[i] == language){
-						CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+	$(languageskills).each(function(index){
+		if (language !== "all"){
+			if (language == "web development" || language == "game development" || language == "software development" || language == "server development"){
+				$(languageskills[index].role).each(function(i){
+					if(languageskills[index].role[i] == language){
+						CreateProjectCardindepthlanguages(index,languageskills[index].title,languageskills[index].position,languageskills[index].role,languageskills[index].description,languageskills[index].images,languageskills[index].skills,languageskills[index].github,languageskills[index].other,languageskills[index].date)	
 					}
 				})
 			}else{
-				$(jobs[index].position).each(function(i){
-					if(jobs[index].position[i] == language){
-						CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+				$(languageskills[index].position).each(function(i){
+					if(languageskills[index].position[i] == language){
+						CreateProjectCardindepthlanguages(index,languageskills[index].title,languageskills[index].position,languageskills[index].role,languageskills[index].description,languageskills[index].images,languageskills[index].skills,languageskills[index].github,languageskills[index].other,languageskills[index].date)	
 					}
 				})
 			} // end of is role?
@@ -65,26 +91,26 @@ function Generatejobs(language){
 	});
 
 	if(document.getElementById("projectlist").innerHTML == ""){
-		console.log("InnerHTML = '' ")
+		if(DeveleopmentMode == true){console.log("InnerHTML = '' ")}
 		cont = document.createElement("div")
 		$(cont).addClass("container col-12")
 
 		alert = document.createElement("div");
 		$(alert).addClass("alert alert-dismissible alert-info");
 		alert.style = "text-align:center; font-size:36px; font-weight:bold; "
-		alert.innerHTML = "No jobs were found..."
+		alert.innerHTML = "No languageskills were found..."
 
 		cont.appendChild(alert)
 		document.getElementById("projectlist").appendChild(cont)
 	}
 
-	document.getElementById("category").innerHTML = language + " jobs" 
+	document.getElementById("category").innerHTML = original + " languages" 
 
 }
 
-// CreateProjectCard(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+// CreateProjectCardindepthlanguages(index,languageskills[index].title,languageskills[index].position,languageskills[index].role,languageskills[index].description,languageskills[index].images,languageskills[index].skills,languageskills[index].github,languageskills[index].other,languageskills[index].date)	
 
-function CreateProjectCard(index,title,position,role,description,images,skills,github,other,date){
+function CreateProjectCardindepthlanguages(index,title,position,role,description,images,skills,github,other,date){
 	carouselid = "carousel"+index;
 
 	// Element Creation
@@ -104,6 +130,10 @@ function CreateProjectCard(index,title,position,role,description,images,skills,g
 					carouselcontrolnextimg = document.createElement("span")
 
 			cardbody2 = document.createElement("div")
+				descriptiontext = document.createElement("span")
+				descriptiontext.innerHTML = "<b>Description</b>"
+				cardbody2.appendChild(descriptiontext)
+
 				cardtext = document.createElement("p")
 				listcontainer = document.createElement("ul")
 				cardbody3 = document.createElement("div")
@@ -137,8 +167,8 @@ function CreateProjectCard(index,title,position,role,description,images,skills,g
 	// Element Text Change
 
 	cardheader.innerHTML = title
-	cardtitle.innerHTML = "Tags"
-	cardsubtitle.innerHTML = position.join(", ") + "<br>" + role.join(", ")
+	cardtitle.innerHTML = position[0]
+	cardsubtitle.innerHTML = role.join(", ")
 	cardtext.innerHTML = description
 	cardfooter.innerHTML = date
 
@@ -154,6 +184,7 @@ function CreateProjectCard(index,title,position,role,description,images,skills,g
 	// Embeding Elements
 	cardbody.appendChild(cardtitle)
 	cardbody.appendChild(cardsubtitle)
+
 
 	carousel.appendChild(carouselinner)
 	carouselcontrolprev.appendChild(carouselcontrolprevimg)
@@ -187,7 +218,7 @@ function CreateProjectCard(index,title,position,role,description,images,skills,g
 		imgs = [];
 
 		$(images).each(function(index){ 
-			console.log("IRAN " + index )
+			if(DevelopmentMode == true){console.log("IRAN " + index )}
 			items[index] = document.createElement("div") // Carouselitems
 			imgs[index] = document.createElement("img")  // carouselimgs
 
@@ -209,26 +240,29 @@ function CreateProjectCard(index,title,position,role,description,images,skills,g
 
 		skill = []
 		$(skills).each(function(index){ 
-			console.log("IRAN " + index )
+			if(DevelopmentMode == true){console.log("IRAN " + index )}
+
 			skill[index] = document.createElement("a")  // skill text
-
+			$(skill[index]).attr("target","_blank")
 			$(skill[index]).addClass("list-group-item")
-
-			skill[index].innerHTML = skills[index]
-
+			skill[index].innerHTML = skills[index][0]
+			$(skill[index]).attr("href",skills[index][1])
 			listcontainer.appendChild(skill[index])
 		});
 
 	//Actual Main Object Appending
 	container.appendChild(card)
 		card.appendChild(cardheader)
-		card.appendChild(cardbody)
+		if(cardtitle.length > 0 || cardsubtitle.length > 0){
+			card.appendChild(cardbody)
+		}
 		card.appendChild(carousel)
 		card.appendChild(cardbody2)
 		card.appendChild(listcontainer)
-		card.appendChild(cardbody3)
+		if(cardbody3.innerHTML !== ""){
+			card.appendChild(cardbody3)
+		}
 		card.appendChild(cardfooter)
-
 	document.getElementById("projectlist").appendChild(container)
 	count++;
 }

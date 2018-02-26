@@ -47,6 +47,7 @@ function Generatehackathons(language){
 	$('#tab_contact').removeClass('active');
 	$('#tab_languages').removeClass('active');
 	$('#tab_hackathons').addClass('active');
+	EditJumbotron("Hackathons","This is displaying all the hackathons I've been to and or placed in.")
 	original = language;
 	language = language.toLowerCase()
 

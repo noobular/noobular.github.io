@@ -201,7 +201,7 @@
         <a class="nav-link" onclick="Generatejobs('All')"><i class="fas fa-briefcase" style="font-size:14px;">&nbsp;</i>Job Experience</a>
       </li>
       <li id="tab_skills" class="nav-item">
-        <a class="nav-link" onclick=""><i class="fas fa-chart-bar" style="font-size:14px;">&nbsp;</i>Skills</a>
+        <a class="nav-link" onclick="GenerateSkills('All')"><i class="fas fa-chart-bar" style="font-size:14px;">&nbsp;</i>Skills</a>
       </li>
       <li id="tab_hackathons" class="nav-item">
         <a class="nav-link" onclick="Generatehackathons('All')"><i class="fab fa-earlybirds" style="font-size:14px;">&nbsp;</i>Hackathons</a>
@@ -232,10 +232,13 @@
 
 <div id="main" class="container col-12 content">
   <div class="jumbotron" style="margin-top:74px; margin-bottom: 25px;">
-    <h1 class="display-3">Hello, world!</h1>
-    <p class="lead">This is a indepth look at my programming background / projects I've created.</p>
-    <hr class="my-4">
-    <p>Here is my resume using a couple different formats to make sure everyone can see it.</p>
+    <div id="jumbotron">
+      <h1 class="display-3">Hello, world!</h1>
+      <p class="lead">This is a indepth look at my programming background / projects I've created.</p>
+    </div>
+      <hr class="my-4">
+      <p>Here is my resume using a couple different formats to make sure everyone can see it.</p>
+
     <p class="lead">
       <a class="btn btn-primary btn-lg" target="_blank" href="https://docs.google.com/document/d/1l69iJdJAG4k8u19XkRy_A5ZbhpSjRuyZCcazsLGCm8g/edit?usp=sharing" role="button">Resume (Google Doc)</a>
       <a class="btn btn-primary btn-lg" target="_blank" href="https://docs.google.com/document/d/1l69iJdJAG4k8u19XkRy_A5ZbhpSjRuyZCcazsLGCm8g/edit?usp=sharing" role="button">Resume (PDF)</a>
@@ -271,7 +274,10 @@ function closeNav() {
 $('[data-toggle="tooltip"]').tooltip(); 
 $('#menutoggle').tooltip('show')
 </script>
+
+<script src="extras/extracommands.js"></script>
 <script src="skills/skills.js"></script>
+<script src="indepthlanguages/indepthlanguages.js"></script>
 <script src="hackathons/hackathons.js"></script>
 <script src="jobexperience/jobexperience.js"></script>
 <script src="projects/projects2.js"></script>

@@ -46,6 +46,7 @@ function Generatejobs(language){
 	$('#tab_contact').removeClass('active');
 	$('#tab_languages').removeClass('active');
 	$('#tab_jobs').addClass('active');
+	EditJumbotron("Job Experience","All of my job experience, including non-programming positions.")
 
 	if(language !== "All"){
 		$("#projectlist").empty()

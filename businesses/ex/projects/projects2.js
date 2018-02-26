@@ -145,6 +145,7 @@ function GenerateProjects(language){
 	$('#tab_contact').removeClass('active');
 	$('#tab_languages').removeClass('active');
 	$('#tab_jobs').removeClass('active');
+	EditJumbotron("Projects","All of my past projects I've worked on for classes and hobby projects.")
 	original = language;
 	language = language.toLowerCase()
 
