@@ -115,6 +115,11 @@
       display: block;
     }
 
+    .cover {
+      width: 100%;
+      object-fit: cover;
+    }
+    
     @media screen and (max-height: 450px) {
       .sidenav {
         padding-top: 15px; 
@@ -180,9 +185,14 @@
         font-size: 18px;
       }
     }
-
-
-
+    .carouselimg:hover{
+      z-index:99;
+      width:100%;
+      height:100%;
+      padding:0px;
+      margin:0px;
+      float:right;
+    }
   </style>
 </head>
 
@@ -262,26 +272,24 @@
 </div>
 
 </body>
-<script>
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
+<!-- JSON Data Importing -->
+<script src="data/json/data_projects.js"></script>  <!-- Past Projects List-->
+<script src="data/json/data_languages.js"></script> <!-- Explanation of languages List-->
+<script src="data/json/data_jobs.js"></script>      <!-- Job Experience List-->
+<script src="data/json/data_skills.js"></script>    <!-- Language, Framework, and tool grading. -->
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-$('[data-toggle="tooltip"]').tooltip(); 
-$('#menutoggle').tooltip('show')
-</script>
+<!-- Command Importing -->
+<script src="page/extras/functions.js"></script> <!-- Additional Commands used by other scripts.-->
 
-<script src="extras/extracommands.js"></script>
-<script src="skills/skills.js"></script>
-<script src="indepthlanguages/indepthlanguages.js"></script>
-<script src="hackathons/hackathons.js"></script>
-<script src="jobexperience/jobexperience.js"></script>
-<script src="projects/projects2.js"></script>
-<script src="projects/languages.js"></script>
+<!-- Function Importing -->
+<script src="page/skills.js"></script>                     <!-- Skill Functions-->
+<script src="page/indepthlanguages.js"></script> <!-- Language Explanation Functions-->
+<script src="page/hackathons.js"></script>             <!-- Hackathon Functions-->
+<script src="page/jobexperience.js"></script>       <!-- Job Functions-->
+<script src="page/projects.js"></script>                <!-- Project Functions-->
+<script src="page/extras/sidenav.js"></script>                <!-- Sidebar Navigation -->
+
 </html>
 
 

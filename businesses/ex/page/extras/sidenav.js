@@ -8,6 +8,7 @@ var languages = [
 	"C++",
 	"C#",
 	"Lua",
+	"Livecode",
 	".Net",
 	"Python",
 	"NodeJS",
@@ -21,7 +22,8 @@ var roles =[
 	"Web Development",
 	"Game Development",
 	"Software Development",
-	"Server Development"
+	"Server Development",
+	"App Development"
 ]
 
 var element=[], elementa=[];
