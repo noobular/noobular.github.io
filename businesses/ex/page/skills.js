@@ -6,7 +6,7 @@ function GenerateSkills(language){
 	$('#tab_contact').removeClass('active');
 	$('#tab_languages').removeClass('active');
 	$('#tab_skills').addClass('active');
-	EditJumbotron("Skills","This is self grading of Languages, frameworks, tools, and operating systems and positioned from most to least interest.")
+	EditJumbotron("Skills","This is self grading of Languages, frameworks, tools, and operating systems and positioned from most to least personal interest.")
 	original = language;
 	language = language.toLowerCase()
 	$("#projectlist").empty()
