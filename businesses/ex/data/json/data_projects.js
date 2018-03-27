@@ -159,7 +159,7 @@ var projects = [
 		"role":["Web Development","Server Development","Database Development"],
 		"description":"A Steam trading website that was under development for multiple months, to create a great transaction experience for players.",
 		"images": ["resources/img/placeholder.jpg"],
-		"skills":["Experience working with PHP to create a good user experience.", "Started using MySQL to make working with accounts much easier keeping essential data stored for later access.],
+		"skills":["Experience working with PHP to create a good user experience.", "Started using MySQL to make working with accounts much easier keeping essential data stored for later access."],
 		"github":"",
 		"other":[],
 		"date":"June 5, 2017",
