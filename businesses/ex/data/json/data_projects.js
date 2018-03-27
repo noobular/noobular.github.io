@@ -149,7 +149,7 @@ var projects = [
 		"images": ["resources/img/placeholder.jpg"],
 		"skills":["Modification Experience","Experience reading other peoples code and modifying it, to further the game."],
 		"github":"",
-		"other":[],
+		"other":[["",""]],
 		"date":"June 5, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	},
@@ -161,7 +161,7 @@ var projects = [
 		"images": ["resources/img/placeholder.jpg"],
 		"skills":["Experience working with PHP to create a good user experience.", "Started using MySQL to make working with accounts much easier keeping essential data stored for later access."],
 		"github":"",
-		"other":[],
+		"other":[["",""]],
 		"date":"June 5, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	}
