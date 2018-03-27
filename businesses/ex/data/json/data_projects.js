@@ -114,7 +114,7 @@ var projects = [
 		"skills":["More hands on work with Livecode and App development."],
 		"github":"",
 		"other":[["Github","https://github.com/noobularkid/Sheep-Herder"]],
-		"date":"February 1, 2018",
+		"date":"December 21, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
@@ -126,7 +126,7 @@ var projects = [
 		"skills":["More experience with GMStudio 1.4","Gave me an insight of the process of creating something with defined outcome."],
 		"github":"",
 		"other":[["Github","https://github.com/noobularkid/Snake-Remake"]],
-		"date":"February 1, 2018",
+		"date":"September 19, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
@@ -138,7 +138,19 @@ var projects = [
 		"skills":["Python Experience","Used to learn the basics of IDLE","Learned GPIOZero for LEDs and Buttons with the Raspberry Pi", "3D Modeling Work"],
 		"github":"",
 		"other":[["Github","https://github.com/noobularkid/RockPaperScissors"]],
-		"date":"February 1, 2018",
+		"date":"March 14, 2018",
+		"badge":["","",""] // print text, type, tooltip text
+	},
+	{
+		"title": "Wasteland Kings Modifications",
+		"languages": ["GameMakerLanguage"],
+		"role":["Game Development"],
+		"description":"Wasteland kings, A top-down shoot'em up where you can level-up and kill enemies. I've revamped the sprites and added a weapon, while teammates added more weapons and characters.",
+		"images": ["resources/img/placeholder.jpg"],
+		"skills":["Modification Experience","Experience reading other peoples code and modifying it, to further the game."],
+		"github":"",
+		"other":[],
+		"date":"June 5, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	}
 ]
