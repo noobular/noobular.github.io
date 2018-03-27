@@ -5,6 +5,7 @@ var languages = [
 	"Bootstrap",
 	"MySQL",
 	"PHP",
+	"Apache",
 	"C++",
 	"C#",
 	"Lua",
@@ -24,7 +25,8 @@ var roles =[
 	"Game Development",
 	"Software Development",
 	"Server Development",
-	"App Development"
+	"App Development",
+	"Database Development"
 ]
 
 var element=[], elementa=[];
