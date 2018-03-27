@@ -134,11 +134,13 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 	cardbody.appendChild(cardsubtitle)
 
 	carousel.appendChild(carouselinner)
-	carouselcontrolprev.appendChild(carouselcontrolprevimg)
-	carouselcontrolnext.appendChild(carouselcontrolnextimg)
-	carousel.appendChild(carouselcontrolprev)
-	carousel.appendChild(carouselcontrolnext)
-
+	if(images.length > 1){
+		carouselcontrolprev.appendChild(carouselcontrolprevimg)
+		carouselcontrolnext.appendChild(carouselcontrolnextimg)
+		carousel.appendChild(carouselcontrolprev)
+		carousel.appendChild(carouselcontrolnext)
+	}
+	
 	cardbody2.appendChild(cardtext)
 	if (github !== ""){
 		githube = document.createElement("a")
@@ -150,13 +152,15 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 
 	}
 
-	if(other[0] !== ""){
-		othere = document.createElement("a")
-		$(othere).addClass("card-link")
-		othere.innerHTML = other[0]
-		$(othere).attr("href",other[1])
-		$(othere).attr("target","_blank")
-		cardbody3.appendChild(othere)
+	if(other[0] !==""){
+		for(i=0;i<other.length;i++){
+			othere = document.createElement("a")
+			$(othere).addClass("card-link")
+			othere.innerHTML = "<b>" + other[i][0] + "</b>";
+			$(othere).attr("href",other[i][1])
+			$(othere).attr("target","_blank")
+			cardbody3.appendChild(othere)
+		}
 	}
 
 	// Automated Element Creation

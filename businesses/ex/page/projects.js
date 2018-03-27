@@ -70,6 +70,7 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 				cardsubtitle = document.createElement("h6")
 
 			carousel = document.createElement("div")
+			$(carousel).attr("style","padding:0px")
 				carouselinner = document.createElement("div")
 				
 				carouselcontrolprev = document.createElement("a")
@@ -80,11 +81,13 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 			cardbody2 = document.createElement("div")
 				descriptiontext = document.createElement("span")
 				descriptiontext.innerHTML = "<b>Description</b>"
+				$(descriptiontext).addClass("nopadding")
 				cardbody2.appendChild(descriptiontext)
 
 				cardtext = document.createElement("p")
 				listcontainer = document.createElement("ul")
 				cardbody3 = document.createElement("div")
+				$(cardbody3).attr("style","padding:0px;margin:0px;")
 				cardfooter = document.createElement("div") 
 
 	// Element Class Change
@@ -100,7 +103,7 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 	$(carouselcontrolnext).addClass("carousel-control-next")
 	$(carouselcontrolprevimg).addClass("carousel-control-prev-icon")
 	$(carouselcontrolnextimg).addClass("carousel-control-next-icon")
-	$(cardbody2).addClass("card-body")
+	$(cardbody2).addClass("card-body nopadding")
 	$(cardtext).addClass("card-text")
 	$(listcontainer).addClass("list-group list-group-flush")
 	$(cardfooter).addClass("card-footer text-muted")
@@ -152,29 +155,24 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 	cardbody.appendChild(cardsubtitle)
 
 	carousel.appendChild(carouselinner)
-	carouselcontrolprev.appendChild(carouselcontrolprevimg)
-	carouselcontrolnext.appendChild(carouselcontrolnextimg)
-	carousel.appendChild(carouselcontrolprev)
-	carousel.appendChild(carouselcontrolnext)
-
-	cardbody2.appendChild(cardtext)
-	if (github !== ""){
-		githube = document.createElement("a")
-		$(githube).addClass("card-link")
-		githube.innerHTML = "<b>Github Link</b>"
-		$(githube).attr("href",github)
-		$(githube).attr("target","_blank")
-		cardbody3.appendChild(githube)
-
+	if(images.length > 1){
+		carouselcontrolprev.appendChild(carouselcontrolprevimg)
+		carouselcontrolnext.appendChild(carouselcontrolnextimg)
+		carousel.appendChild(carouselcontrolprev)
+		carousel.appendChild(carouselcontrolnext)
 	}
 
-	if(other[0] !== ""){
-		othere = document.createElement("a")
-		$(othere).addClass("card-link")
-		othere.innerHTML = "<b>" + other[0] + "</b>";
-		$(othere).attr("href",other[1])
-		$(othere).attr("target","_blank")
-		cardbody3.appendChild(othere)
+	cardbody2.appendChild(cardtext)
+
+	if(other[0] !==""){
+		for(i=0;i<other.length;i++){
+			othere = document.createElement("a")
+			$(othere).addClass("card-link")
+			othere.innerHTML = "<b>" + other[i][0] + "</b>";
+			$(othere).attr("href",other[i][1])
+			$(othere).attr("target","_blank")
+			cardbody3.appendChild(othere)
+		}
 	}
 
 
@@ -193,16 +191,11 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 			}else{
 				$(items[index]).addClass("carousel-item")
 			}
-
 			//$(imgs[index]).attr("onmouseover","this.height='100%'")
 			//$(imgs[index]).attr("onmouseout" ,"this.width='200px'; this.height='200px'")
-
 			$(imgs[index]).addClass("carouselimg cover") //effectfront
-
 			$(imgs[index]).attr("src",images[index])
-
 			$(imgs[index]).attr("alt","img"+carouselid+index)
-
 			items[index].appendChild(imgs[index]);
 			carouselinner.appendChild(items[index])
 		});
@@ -211,11 +204,8 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 		$(skills).each(function(index){ 
 			if(DevelopmentMode==true){console.log("IRAN " + index )}
 			skill[index] = document.createElement("a")  // skill text
-
-			$(skill[index]).addClass("list-group-item")
-
+			$(skill[index]).addClass("list-group-item nopadding")
 			skill[index].innerHTML = "<b>Benefit " + (index + 1) + "</b><br>" + skills[index]
-
 			listcontainer.appendChild(skill[index])
 		});
 
