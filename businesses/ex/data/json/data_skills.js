@@ -19,7 +19,7 @@ var data_skills = [
 var data_frameworks = [
 	{"title": "Bootstrap 3",     "grade":["10"]},
 	{"title": "Bootstrap 4",     "grade":["10"]},
-	{"title": "Font Awesome",    "grade":["10"]},
+	{"title": "FontAwesome",     "grade":["10"]},
 	{"title": "Devicon",     	 "grade":["10"]},
 ]
 
@@ -32,15 +32,15 @@ var data_tools = [
 ]
 
 var data_os = [
-	{"title": "DOS",     "grade":["0"]},
-	{"title": "Windows 3.0",     "grade":["0"]},
-	{"title": "Windows 3.1",     "grade":["0"]},
+	{"title": "DOS",     		"grade":["0"]},
+	{"title": "Windows 3.0",    "grade":["0"]},
+	{"title": "Windows 3.1",    "grade":["0"]},
 	{"title": "Windows XP",     "grade":["8"]},
-	{"title": "Windows Vista",     "grade":["0"]},
-	{"title": "Windows 7",     "grade":["10"]},
-	{"title": "Windows 8(.1)",     "grade":["7"]},
+	{"title": "Windows Vista",  "grade":["0"]},
+	{"title": "Windows 7",     	"grade":["10"]},
+	{"title": "Windows 8(.1)",  "grade":["7"]},
 	{"title": "Windows 10",     "grade":["8"]},
-	{"title": "Ubuntu GNOME",     "grade":["7"]},
-	{"title": "Ubuntu",     "grade":["7"]},
-	{"title": "Rasbian",     "grade":["7"]},
+	{"title": "Ubuntu GNOME",   "grade":["7"]},
+	{"title": "Ubuntu",     	"grade":["7"]},
+	{"title": "Rasbian",     	"grade":["7"]},
 ]
