@@ -18,7 +18,7 @@ var hackathons = [
 		"images": ["resources/img/hackathons/gedex/code.PNG"],
 		"skills":["Working with Agile scrum.","Working with a team to end up with a finished product.","This gave a hands on experience with an Arduino Circuit Playground board."],
 		"github":"",
-		"other":["",""],
+		"other":[["PowerPoint Presentation","https://docs.google.com/presentation/d/1Wf-jUUct74xYXK1C85Dd7bj0Ob36sgMDYBu3_fndf8s/edit?usp=sharing"],["Project Files","https://github.com/noobularkid/Car-Temperature-Alarm"]],
 		"date":"April 17/18, 2017"
 	}
 ]
