@@ -1,4 +1,4 @@
-var ideologies = [
+var ethics = [
 	{
 		"title": "Feedback & Evaluation",
 		"position" : [""],
@@ -16,7 +16,7 @@ var ideologies = [
 		"role":[""],
 		"description":"Copyright and Creative Commons was created to protect creators and also protect rights holders from having their creations stolen, and directly used to generate revenue.",
 		"images": ["resources/img/ideologies/copyright.png"],
-		"skills":[],
+		"skills":[["Copyright Wiki","https://en.wikipedia.org/wiki/Copyright"],["Creative Commons Wiki","https://en.wikipedia.org/wiki/Creative_Commons"]],
 		"github":"copyright",
 		"other":["",""],
 		"date":""

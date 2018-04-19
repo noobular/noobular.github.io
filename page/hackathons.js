@@ -19,7 +19,7 @@ function Generatehackathons(language){
 	$('#tab_projects').removeClass('active');
 	$('#tab_skills').removeClass('active');
 	$('#tab_jobs').removeClass('active');
-	$('#tab_ideologies').removeClass('active');
+	$('#tab_ethics').removeClass('active');
 	$('#tab_contact').removeClass('active');
 	$('#tab_languages').removeClass('active');
 	$('#tab_hackathons').addClass('active');

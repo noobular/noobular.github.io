@@ -15,15 +15,15 @@
 var DevelopmentMode = false;
 var count;
 
-function Generateideologies(language){
+function Generateethics(language){
 	$('#tab_projects').removeClass('active');
 	$('#tab_hackathons').removeClass('active');
 	$('#tab_jobs').removeClass('active');
 	$('#tab_languages').removeClass('active');
 	$('#tab_contact').removeClass('active');
 	$('#tab_skills').removeClass('active');
-	$('#tab_ideologies').addClass('active');
-	EditJumbotron("Ideologies","These are a bunch of different topics that I believe should be abided by.")
+	$('#tab_ethics').addClass('active');
+	EditJumbotron("ethics","These are a bunch of different topics that I believe should be abided by.")
 	original = language;
 	language = language.toLowerCase()
 
@@ -32,23 +32,23 @@ function Generateideologies(language){
 		console.log($('#projectlist'))
 	}else{
 		$("#projectlist").empty()
-		$(ideologies).each(function(index){
-			CreateProjectCardIdeologies(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)
+		$(ethics).each(function(index){
+			CreateProjectCardethics(index,ethics[index].title,ethics[index].position,ethics[index].role,ethics[index].description,ethics[index].images,ethics[index].skills,ethics[index].github,ethics[index].other,ethics[index].date)
 		})		
 	}
 
-	$(ideologies).each(function(index){
+	$(ethics).each(function(index){
 		if (language !== "all"){
 			if (language == "web development" || language == "game development" || language == "software development" || language == "server development"){
-				$(ideologies[index].role).each(function(i){
-					if(ideologies[index].role[i] == language){
-						CreateProjectCardIdeologies(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)	
+				$(ethics[index].role).each(function(i){
+					if(ethics[index].role[i] == language){
+						CreateProjectCardethics(index,ethics[index].title,ethics[index].position,ethics[index].role,ethics[index].description,ethics[index].images,ethics[index].skills,ethics[index].github,ethics[index].other,ethics[index].date)	
 					}
 				})
 			}else{
-				$(ideologies[index].position).each(function(i){
-					if(ideologies[index].position[i] == language){
-						CreateProjectCardIdeologies(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)	
+				$(ethics[index].position).each(function(i){
+					if(ethics[index].position[i] == language){
+						CreateProjectCardethics(index,ethics[index].title,ethics[index].position,ethics[index].role,ethics[index].description,ethics[index].images,ethics[index].skills,ethics[index].github,ethics[index].other,ethics[index].date)	
 					}
 				})
 			} // end of is role?
@@ -63,19 +63,19 @@ function Generateideologies(language){
 		alert = document.createElement("div");
 		$(alert).addClass("alert alert-dismissible alert-info");
 		alert.style = "text-align:center; font-size:36px; font-weight:bold; "
-		alert.innerHTML = "No ideologies were found..."
+		alert.innerHTML = "No ethics were found..."
 
 		cont.appendChild(alert)
 		document.getElementById("projectlist").appendChild(cont)
 	}
 
-	document.getElementById("category").innerHTML = original + " ideologies" 
+	document.getElementById("category").innerHTML = original + " ethics" 
 
 }
 
-// CreateProjectCardindepthlanguages(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)	
+// CreateProjectCardindepthlanguages(index,ethics[index].title,ethics[index].position,ethics[index].role,ethics[index].description,ethics[index].images,ethics[index].skills,ethics[index].github,ethics[index].other,ethics[index].date)	
 
-function CreateProjectCardIdeologies(index,title,position,role,description,images,skills,github,other,date){
+function CreateProjectCardethics(index,title,position,role,description,images,skills,github,other,date){
 	carouselid = "carousel"+index;
 
 	// Element Creation

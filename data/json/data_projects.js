@@ -51,7 +51,7 @@ var projects = [
 		"role":["Web Development"],
 		"description":"The purpose of the portfolio was to get my skills and past experience out to possible employers. ",
 		"images": ["resources/img/placeholder.jpg"],
-		"skills":["Increased Viewership","Learned to populate an interface using JSON Data.","Potentially created partnerships / business deals."],
+		"skills":["Increased Viewership","Automatic card population from a JSON file","Upgraded from Bootstrap 3 to Bootstrap 4"],
 		"github":"",
 		"other":[["Github","https://github.com/noobularkid/noobularkid.github.io"],["Old Portfolio Design","old/index.html"]],
 		"date":"2015 - Current",
@@ -150,7 +150,7 @@ var projects = [
 		"skills":["Modification Experience","Experience reading other peoples code and modifying it, to further the game."],
 		"github":"",
 		"other":[["",""]],
-		"date":"June 5, 2017",
+		"date":"May 7, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
@@ -175,6 +175,18 @@ var projects = [
 		"github":"",
 		"other":[["Github","https://github.com/noobularkid/RPi-Server-Client-Communication"]],
 		"date":"March 10, 2018",
+		"badge":["","",""] // print text, type, tooltip text
+	},
+	{
+		"title": "Car Temperature Alarm",
+		"languages": ["C++"],
+		"role":["Software Development"],
+		"description":"This Arduino based product, is placed in your vehicle and connected to your windows to protect against animal/child headstroke.",
+		"images": ["resources/img/projects/gedex/code.PNG"],
+		"skills":["Experience working with a Circuit Playground Arduino","Product Creation Prospective"],
+		"github":"",
+		"other":[["Github","https://github.com/noobularkid/Car-Temperature-Alarm"]],
+		"date":"April 17, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	}
 ]

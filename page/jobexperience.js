@@ -4,7 +4,7 @@ function Generatejobs(language){
 	$('#tab_projects').removeClass('active');
 	$('#tab_skills').removeClass('active');
 	$('#tab_hackathons').removeClass('active');
-	$('#tab_ideologies').removeClass('active');
+	$('#tab_ethics').removeClass('active');
 	$('#tab_contact').removeClass('active');
 	$('#tab_languages').removeClass('active');
 	$('#tab_jobs').addClass('active');
@@ -190,7 +190,7 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 			items[index].appendChild(imgs[index]);
 			carouselinner.appendChild(items[index])
 		});
-		
+
 		skill = []
 		$(skills).each(function(index){ 
 			console.log("IRAN " + index )
