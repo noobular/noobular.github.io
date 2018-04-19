@@ -200,13 +200,13 @@ function CreateProjectCardh(index,title,position,role,description,images,skills,
 			$(imgs[index]).attr("src",images[index])
 			$(imgs[index]).attr("alt","img"+carouselid+index)
 
+			items[index].appendChild(imgs[index]);
+			carouselinner.appendChild(items[index])
 			if(imgs[index].naturalHeight < 200){
 				$(imgs[index]).addClass("carouselimg cover fullscaleimg") //effectfront
 			}else{
 				$(imgs[index]).addClass("carouselimg cover scaleimg") //effectfront
 			}
-			items[index].appendChild(imgs[index]);
-			carouselinner.appendChild(items[index])
 		});
 
 		skill = []
