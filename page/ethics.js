@@ -23,7 +23,7 @@ function Generateethics(language){
 	$('#tab_contact').removeClass('active');
 	$('#tab_skills').removeClass('active');
 	$('#tab_ethics').addClass('active');
-	EditJumbotron("ethics","These are a bunch of different topics that I believe should be abided by.")
+	EditJumbotron("Ethics","These are a bunch of different topics that I believe should be abided by.")
 	original = language;
 	language = language.toLowerCase()
 
