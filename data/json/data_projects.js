@@ -188,5 +188,17 @@ var projects = [
 		"other":[["Github","https://github.com/noobularkid/Car-Temperature-Alarm"]],
 		"date":"April 17, 2017",
 		"badge":["","",""] // print text, type, tooltip text
+	},
+	{
+		"title": "Unreal Engine 4: VR Development",
+		"languages": ["C++"],
+		"role":["Game Development"],
+		"description":"This would be my first attempt at developing anything with VR, testing the waters.",
+		"images": ["resources/img/placeholder.jpg"],
+		"skills":["Experience working with a Circuit Playground Arduino","Product Creation Prospective"],
+		"github":"",
+		"other":[["Github","https://github.com/noobularkid/MyProject"]],
+		"date":"April 17, 2018",
+		"badge":["","",""] // print text, type, tooltip text
 	}
 ]
