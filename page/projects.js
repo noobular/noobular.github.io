@@ -181,7 +181,6 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 		//Carousel Item / Image element Creation
 		items = [];
 		imgs = [];
-//onmouseover="this.width='someWidth'; this.height='someHeight'" onmouseout="this.width='originalWidth'; this.height='originalHeight'
 
 		$(images).each(function(index){ 
 			if(DevelopmentMode==true){console.log("IRAN " + index )}
@@ -192,18 +191,11 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 			}else{
 				$(items[index]).addClass("carousel-item")
 			}
-			//$(imgs[index]).attr("onmouseover","this.height='100%'")
-			//$(imgs[index]).attr("onmouseout" ,"this.width='200px'; this.height='200px'")
+			$(imgs[index]).addClass("carouselimg cover scaleimg") //effectfront
 			$(imgs[index]).attr("src",images[index])
 			$(imgs[index]).attr("alt","img"+carouselid+index)
-
 			items[index].appendChild(imgs[index]);
 			carouselinner.appendChild(items[index])
-			if(imgs[index].naturalHeight < 200){
-				$(imgs[index]).addClass("carouselimg cover fullscaleimg") //effectfront
-			}else{
-				$(imgs[index]).addClass("carouselimg cover scaleimg") //effectfront
-			}
 		});
 
 		skill = []

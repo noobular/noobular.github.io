@@ -177,18 +177,11 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 			}else{
 				$(items[index]).addClass("carousel-item")
 			}
-			//$(imgs[index]).attr("onmouseover","this.height='100%'")
-			//$(imgs[index]).attr("onmouseout" ,"this.width='200px'; this.height='200px'")
+			$(imgs[index]).addClass("carouselimg cover scaleimg") //effectfront
 			$(imgs[index]).attr("src",images[index])
 			$(imgs[index]).attr("alt","img"+carouselid+index)
-
 			items[index].appendChild(imgs[index]);
 			carouselinner.appendChild(items[index])
-			if(imgs[index].naturalHeight < 200){
-				$(imgs[index]).addClass("carouselimg cover fullscaleimg") //effectfront
-			}else{
-				$(imgs[index]).addClass("carouselimg cover scaleimg") //effectfront
-			}
 		});
 
 		skill = []
