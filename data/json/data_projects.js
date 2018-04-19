@@ -109,7 +109,7 @@ var projects = [
 		"title": "Sheepherder",
 		"languages": ["Livecode"],
 		"role":["App Development"],
-		"description":"random test",
+		"description":"Sheepherder is a game where you move sheep into a pen, It was the first Livecode game I've created.",
 		"images": ["resources/img/projects/sheepherder/sheepherder1.png"],
 		"skills":["More hands on work with Livecode and App development."],
 		"github":"",
