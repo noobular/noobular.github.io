@@ -134,7 +134,7 @@ var projects = [
 		"languages": ["Python","3D Printing"],
 		"role":["Game Development"],
 		"description":"A virtual creation of Rock, Paper, Scissors using python, and an added modification (hammer) to make for a more positive experience.",
-		"images": ["resources/img/projects/RockPaperScissors/rps1.png"],
+		"images": ["resources/img/projects/rockpaperscissors/rps1.png"],
 		"skills":["Python Experience","Used to learn the basics of IDLE","Learned GPIOZero for LEDs and Buttons with the Raspberry Pi", "3D Modeling Work"],
 		"github":"",
 		"other":[["Github","https://github.com/noobularkid/RockPaperScissors"]],
