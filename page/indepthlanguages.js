@@ -152,10 +152,13 @@ function CreateProjectCardindepthlanguages(index,title,position,role,description
 
 
 	carousel.appendChild(carouselinner)
-	carouselcontrolprev.appendChild(carouselcontrolprevimg)
-	carouselcontrolnext.appendChild(carouselcontrolnextimg)
-	carousel.appendChild(carouselcontrolprev)
-	carousel.appendChild(carouselcontrolnext)
+	if(images.length > 1){
+		carouselcontrolprev.appendChild(carouselcontrolprevimg)
+		carouselcontrolnext.appendChild(carouselcontrolnextimg)
+		carousel.appendChild(carouselcontrolprev)
+		carousel.appendChild(carouselcontrolnext)
+	}
+
 
 	cardbody2.appendChild(cardtext)
 	if (github !== ""){
@@ -168,13 +171,15 @@ function CreateProjectCardindepthlanguages(index,title,position,role,description
 
 	}
 
-	if(other[0] !== ""){
-		othere = document.createElement("a")
-		$(othere).addClass("card-link")
-		othere.innerHTML = other[0]
-		$(othere).attr("href",other[1])
-		$(othere).attr("target","_blank")
-		cardbody3.appendChild(othere)
+	if(other[0] !==""){
+		for(i=0;i<other.length;i++){
+			othere = document.createElement("a")
+			$(othere).addClass("card-link")
+			othere.innerHTML = "<b>" + other[i][0] + "</b>";
+			$(othere).attr("href",other[i][1])
+			$(othere).attr("target","_blank")
+			cardbody3.appendChild(othere)
+		}
 	}
 
 	// Automated Element Creation
@@ -193,7 +198,7 @@ function CreateProjectCardindepthlanguages(index,title,position,role,description
 				$(items[index]).addClass("carousel-item")
 			}
 			
-			$(imgs[index]).addClass("carouselimg")
+			$(imgs[index]).addClass("carouselimg definedimg")
 
 			$(imgs[index]).attr("src",images[index])
 

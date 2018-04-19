@@ -1,37 +1,54 @@
+/*
+	EXAMPLE PROJECT
+
+	{
+		"title": "",
+		"position": [""],
+		"role":[""],
+		"description":"",
+		"images":[],
+		"skills":[],
+		"github":"",
+		"other":["",""],       // [0] = name shown; [1] = link; 
+	},
+*/
+var DevelopmentMode = false;
 var count;
 
-function Generatejobs(language){
+function Generateideologies(language){
 	$('#tab_projects').removeClass('active');
-	$('#tab_skills').removeClass('active');
 	$('#tab_hackathons').removeClass('active');
-	$('#tab_ideologies').removeClass('active');
-	$('#tab_contact').removeClass('active');
+	$('#tab_jobs').removeClass('active');
 	$('#tab_languages').removeClass('active');
-	$('#tab_jobs').addClass('active');
-	EditJumbotron("Job Experience","All of my job experience, including non-programming positions.")
+	$('#tab_contact').removeClass('active');
+	$('#tab_skills').removeClass('active');
+	$('#tab_ideologies').addClass('active');
+	EditJumbotron("Ideologies","These are a bunch of different topics that I believe should be abided by.")
+	original = language;
+	language = language.toLowerCase()
 
-	if(language !== "All"){
+	if(language !== "all"){
 		$("#projectlist").empty()
 		console.log($('#projectlist'))
 	}else{
 		$("#projectlist").empty()
-		$(jobs).each(function(index){
-			CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)
+		$(ideologies).each(function(index){
+			CreateProjectCardIdeologies(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)
 		})		
 	}
 
-	$(jobs).each(function(index){
-		if (language !== "All"){
-			if (language == "Web Development" || language == "Game Development" || language == "Software Development" || language == "Server Development"){
-				$(jobs[index].role).each(function(i){
-					if(jobs[index].role[i] == language){
-						CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+	$(ideologies).each(function(index){
+		if (language !== "all"){
+			if (language == "web development" || language == "game development" || language == "software development" || language == "server development"){
+				$(ideologies[index].role).each(function(i){
+					if(ideologies[index].role[i] == language){
+						CreateProjectCardIdeologies(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)	
 					}
 				})
 			}else{
-				$(jobs[index].position).each(function(i){
-					if(jobs[index].position[i] == language){
-						CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+				$(ideologies[index].position).each(function(i){
+					if(ideologies[index].position[i] == language){
+						CreateProjectCardIdeologies(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)	
 					}
 				})
 			} // end of is role?
@@ -39,26 +56,26 @@ function Generatejobs(language){
 	});
 
 	if(document.getElementById("projectlist").innerHTML == ""){
-		console.log("InnerHTML = '' ")
+		if(DeveleopmentMode == true){console.log("InnerHTML = '' ")}
 		cont = document.createElement("div")
 		$(cont).addClass("container col-12")
 
 		alert = document.createElement("div");
 		$(alert).addClass("alert alert-dismissible alert-info");
 		alert.style = "text-align:center; font-size:36px; font-weight:bold; "
-		alert.innerHTML = "No jobs were found..."
+		alert.innerHTML = "No ideologies were found..."
 
 		cont.appendChild(alert)
 		document.getElementById("projectlist").appendChild(cont)
 	}
 
-	document.getElementById("category").innerHTML = language + " jobs" 
+	document.getElementById("category").innerHTML = original + " ideologies" 
 
 }
 
-// CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
+// CreateProjectCardindepthlanguages(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)	
 
-function CreateProjectCardjob(index,title,position,role,description,images,skills,github,other,date){
+function CreateProjectCardIdeologies(index,title,position,role,description,images,skills,github,other,date){
 	carouselid = "carousel"+index;
 
 	// Element Creation
@@ -115,8 +132,8 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 	// Element Text Change
 
 	cardheader.innerHTML = title
-	cardtitle.innerHTML = "Job Position;  Type of work"
-	cardsubtitle.innerHTML = position.join(", ") + "<br>" + role.join(", ")
+	cardtitle.innerHTML = position[0]
+	cardsubtitle.innerHTML = role.join(", ")
 	cardtext.innerHTML = description
 	cardfooter.innerHTML = date
 
@@ -133,6 +150,7 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 	cardbody.appendChild(cardtitle)
 	cardbody.appendChild(cardsubtitle)
 
+
 	carousel.appendChild(carouselinner)
 	if(images.length > 1){
 		carouselcontrolprev.appendChild(carouselcontrolprevimg)
@@ -140,16 +158,18 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 		carousel.appendChild(carouselcontrolprev)
 		carousel.appendChild(carouselcontrolnext)
 	}
-	
+
 	cardbody2.appendChild(cardtext)
 	if (github !== ""){
 		githube = document.createElement("a")
-		$(githube).addClass("card-link")
-		githube.innerHTML = "Github Link"
-		$(githube).attr("href",github)
+		$(githube).addClass("btn btn-primary btn-sm")
+		githube.innerHTML = "More information"
+		$(githube).attr("data-target","#"+github)
+		$(githube).attr("data-toggle","modal")
+		$(githube).attr("role","button")
 		$(githube).attr("target","_blank")
-		cardbody3.appendChild(githube)
-
+		$(githube).attr("style","color:white;")
+		cardfooter.appendChild(githube)
 	}
 
 	if(other[0] !==""){
@@ -169,7 +189,7 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 		imgs = [];
 
 		$(images).each(function(index){ 
-			console.log("IRAN " + index )
+			if(DevelopmentMode == true){console.log("IRAN " + index )}
 			items[index] = document.createElement("div") // Carouselitems
 			imgs[index] = document.createElement("img")  // carouselimgs
 
@@ -179,7 +199,7 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 				$(items[index]).addClass("carousel-item")
 			}
 			
-			$(imgs[index]).addClass("carouselimg")
+			$(imgs[index]).addClass("carouselimg definedimg")
 
 			$(imgs[index]).attr("src",images[index])
 
@@ -191,20 +211,22 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 
 		skill = []
 		$(skills).each(function(index){ 
-			console.log("IRAN " + index )
+			if(DevelopmentMode == true){console.log("IRAN " + index )}
+
 			skill[index] = document.createElement("a")  // skill text
-
+			$(skill[index]).attr("target","_blank")
 			$(skill[index]).addClass("list-group-item")
-
-			skill[index].innerHTML = "<b>Skill increase " + (index + 1) + "</b><br>" + skills[index]
-
+			skill[index].innerHTML = skills[index][0]
+			$(skill[index]).attr("href",skills[index][1])
 			listcontainer.appendChild(skill[index])
 		});
 
 	//Actual Main Object Appending
 	container.appendChild(card)
 		card.appendChild(cardheader)
-		card.appendChild(cardbody)
+		if(cardtitle.length > 0 || cardsubtitle.length > 0){
+			card.appendChild(cardbody)
+		}
 		card.appendChild(carousel)
 		card.appendChild(cardbody2)
 		card.appendChild(listcontainer)
@@ -212,7 +234,6 @@ function CreateProjectCardjob(index,title,position,role,description,images,skill
 			card.appendChild(cardbody3)
 		}
 		card.appendChild(cardfooter)
-
 	document.getElementById("projectlist").appendChild(container)
 	count++;
 }

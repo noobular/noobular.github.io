@@ -91,7 +91,7 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 				cardfooter = document.createElement("div") 
 
 	// Element Class Change
-	$(container).addClass("col-sm-12 col-md-3 col-xs-12")
+	$(container).addClass("col-xs-12 col-sm-12 col-md-4 col-lg-3")
 	$(card).addClass("card mb-3")
 	$(cardheader).addClass("card-header")
 	$(cardbody).addClass("card-body")
@@ -142,6 +142,7 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 
 	// Attribute Changes
 	$(carousel).attr("data-ride","carousel")
+	$(carousel).attr("data-interval","false")
 	$(carouselcontrolnext).attr("data-slide","next")
 	$(carouselcontrolprev).attr("data-slide","prev")
 	$(carouselcontrolnext).attr("href","#"+carouselid)
@@ -193,9 +194,14 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 			}
 			//$(imgs[index]).attr("onmouseover","this.height='100%'")
 			//$(imgs[index]).attr("onmouseout" ,"this.width='200px'; this.height='200px'")
-			$(imgs[index]).addClass("carouselimg cover") //effectfront
 			$(imgs[index]).attr("src",images[index])
 			$(imgs[index]).attr("alt","img"+carouselid+index)
+
+			if(imgs[index].naturalHeight < 200){
+				$(imgs[index]).addClass("carouselimg cover fullscaleimg") //effectfront
+			}else{
+				$(imgs[index]).addClass("carouselimg cover scaleimg") //effectfront
+			}
 			items[index].appendChild(imgs[index]);
 			carouselinner.appendChild(items[index])
 		});

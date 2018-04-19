@@ -1,54 +1,37 @@
-/*
-	EXAMPLE PROJECT
-
-	{
-		"title": "",
-		"position": [""],
-		"role":[""],
-		"description":"",
-		"images":[],
-		"skills":[],
-		"github":"",
-		"other":["",""],       // [0] = name shown; [1] = link; 
-	},
-*/
-var DevelopmentMode = false;
 var count;
 
-function Generateideologies(language){
+function Generatejobs(language){
 	$('#tab_projects').removeClass('active');
-	$('#tab_hackathons').removeClass('active');
-	$('#tab_jobs').removeClass('active');
-	$('#tab_languages').removeClass('active');
-	$('#tab_contact').removeClass('active');
 	$('#tab_skills').removeClass('active');
-	$('#tab_ideologies').addClass('active');
-	EditJumbotron("Ideologies","These are a bunch of different topics that I believe should be abided by.")
-	original = language;
-	language = language.toLowerCase()
+	$('#tab_hackathons').removeClass('active');
+	$('#tab_ideologies').removeClass('active');
+	$('#tab_contact').removeClass('active');
+	$('#tab_languages').removeClass('active');
+	$('#tab_jobs').addClass('active');
+	EditJumbotron("Job Experience","All of my job experience, including non-programming positions.")
 
-	if(language !== "all"){
+	if(language !== "All"){
 		$("#projectlist").empty()
 		console.log($('#projectlist'))
 	}else{
 		$("#projectlist").empty()
-		$(ideologies).each(function(index){
-			CreateProjectCardIdeologies(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)
+		$(jobs).each(function(index){
+			CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)
 		})		
 	}
 
-	$(ideologies).each(function(index){
-		if (language !== "all"){
-			if (language == "web development" || language == "game development" || language == "software development" || language == "server development"){
-				$(ideologies[index].role).each(function(i){
-					if(ideologies[index].role[i] == language){
-						CreateProjectCardIdeologies(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)	
+	$(jobs).each(function(index){
+		if (language !== "All"){
+			if (language == "Web Development" || language == "Game Development" || language == "Software Development" || language == "Server Development"){
+				$(jobs[index].role).each(function(i){
+					if(jobs[index].role[i] == language){
+						CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
 					}
 				})
 			}else{
-				$(ideologies[index].position).each(function(i){
-					if(ideologies[index].position[i] == language){
-						CreateProjectCardIdeologies(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)	
+				$(jobs[index].position).each(function(i){
+					if(jobs[index].position[i] == language){
+						CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
 					}
 				})
 			} // end of is role?
@@ -56,26 +39,26 @@ function Generateideologies(language){
 	});
 
 	if(document.getElementById("projectlist").innerHTML == ""){
-		if(DeveleopmentMode == true){console.log("InnerHTML = '' ")}
+		console.log("InnerHTML = '' ")
 		cont = document.createElement("div")
 		$(cont).addClass("container col-12")
 
 		alert = document.createElement("div");
 		$(alert).addClass("alert alert-dismissible alert-info");
 		alert.style = "text-align:center; font-size:36px; font-weight:bold; "
-		alert.innerHTML = "No ideologies were found..."
+		alert.innerHTML = "No jobs were found..."
 
 		cont.appendChild(alert)
 		document.getElementById("projectlist").appendChild(cont)
 	}
 
-	document.getElementById("category").innerHTML = original + " languages" 
+	document.getElementById("category").innerHTML = language + " jobs" 
 
 }
 
-// CreateProjectCardindepthlanguages(index,ideologies[index].title,ideologies[index].position,ideologies[index].role,ideologies[index].description,ideologies[index].images,ideologies[index].skills,ideologies[index].github,ideologies[index].other,ideologies[index].date)	
+// CreateProjectCardjob(index,jobs[index].title,jobs[index].position,jobs[index].role,jobs[index].description,jobs[index].images,jobs[index].skills,jobs[index].github,jobs[index].other,jobs[index].date)	
 
-function CreateProjectCardIdeologies(index,title,position,role,description,images,skills,github,other,date){
+function CreateProjectCardjob(index,title,position,role,description,images,skills,github,other,date){
 	carouselid = "carousel"+index;
 
 	// Element Creation
@@ -132,8 +115,8 @@ function CreateProjectCardIdeologies(index,title,position,role,description,image
 	// Element Text Change
 
 	cardheader.innerHTML = title
-	cardtitle.innerHTML = position[0]
-	cardsubtitle.innerHTML = role.join(", ")
+	cardtitle.innerHTML = "Job Position;  Type of work"
+	cardsubtitle.innerHTML = position.join(", ") + "<br>" + role.join(", ")
 	cardtext.innerHTML = description
 	cardfooter.innerHTML = date
 
@@ -150,32 +133,34 @@ function CreateProjectCardIdeologies(index,title,position,role,description,image
 	cardbody.appendChild(cardtitle)
 	cardbody.appendChild(cardsubtitle)
 
-
 	carousel.appendChild(carouselinner)
-	carouselcontrolprev.appendChild(carouselcontrolprevimg)
-	carouselcontrolnext.appendChild(carouselcontrolnextimg)
-	carousel.appendChild(carouselcontrolprev)
-	carousel.appendChild(carouselcontrolnext)
-
+	if(images.length > 1){
+		carouselcontrolprev.appendChild(carouselcontrolprevimg)
+		carouselcontrolnext.appendChild(carouselcontrolnextimg)
+		carousel.appendChild(carouselcontrolprev)
+		carousel.appendChild(carouselcontrolnext)
+	}
+	
 	cardbody2.appendChild(cardtext)
 	if (github !== ""){
 		githube = document.createElement("a")
-		$(githube).addClass("btn btn-primary btn-sm")
-		githube.innerHTML = "More information"
-		$(githube).attr("data-target","#"+github)
-		$(githube).attr("data-toggle","modal")
-		$(githube).attr("role","button")
+		$(githube).addClass("card-link")
+		githube.innerHTML = "Github Link"
+		$(githube).attr("href",github)
 		$(githube).attr("target","_blank")
-		cardfooter.appendChild(githube)
+		cardbody3.appendChild(githube)
+
 	}
 
-	if(other[0] !== ""){
-		othere = document.createElement("a")
-		$(othere).addClass("card-link")
-		othere.innerHTML = other[0]
-		$(othere).attr("href",other[1])
-		$(othere).attr("target","_blank")
-		cardbody3.appendChild(othere)
+	if(other[0] !==""){
+		for(i=0;i<other.length;i++){
+			othere = document.createElement("a")
+			$(othere).addClass("card-link")
+			othere.innerHTML = "<b>" + other[i][0] + "</b>";
+			$(othere).attr("href",other[i][1])
+			$(othere).attr("target","_blank")
+			cardbody3.appendChild(othere)
+		}
 	}
 
 	// Automated Element Creation
@@ -184,44 +169,44 @@ function CreateProjectCardIdeologies(index,title,position,role,description,image
 		imgs = [];
 
 		$(images).each(function(index){ 
-			if(DevelopmentMode == true){console.log("IRAN " + index )}
+			if(DevelopmentMode==true){console.log("IRAN " + index )}
 			items[index] = document.createElement("div") // Carouselitems
 			imgs[index] = document.createElement("img")  // carouselimgs
-
 			if(index == 0){
 				$(items[index]).addClass("carousel-item active")
 			}else{
 				$(items[index]).addClass("carousel-item")
 			}
-			
-			$(imgs[index]).addClass("carouselimg")
-
+			//$(imgs[index]).attr("onmouseover","this.height='100%'")
+			//$(imgs[index]).attr("onmouseout" ,"this.width='200px'; this.height='200px'")
 			$(imgs[index]).attr("src",images[index])
-
 			$(imgs[index]).attr("alt","img"+carouselid+index)
 
+			if(imgs[index].naturalHeight < 200){
+				$(imgs[index]).addClass("carouselimg cover fullscaleimg") //effectfront
+			}else{
+				$(imgs[index]).addClass("carouselimg cover scaleimg") //effectfront
+			}
 			items[index].appendChild(imgs[index]);
 			carouselinner.appendChild(items[index])
 		});
-
+		
 		skill = []
 		$(skills).each(function(index){ 
-			if(DevelopmentMode == true){console.log("IRAN " + index )}
-
+			console.log("IRAN " + index )
 			skill[index] = document.createElement("a")  // skill text
-			$(skill[index]).attr("target","_blank")
+
 			$(skill[index]).addClass("list-group-item")
-			skill[index].innerHTML = skills[index][0]
-			$(skill[index]).attr("href",skills[index][1])
+
+			skill[index].innerHTML = "<b>Skill increase " + (index + 1) + "</b><br>" + skills[index]
+
 			listcontainer.appendChild(skill[index])
 		});
 
 	//Actual Main Object Appending
 	container.appendChild(card)
 		card.appendChild(cardheader)
-		if(cardtitle.length > 0 || cardsubtitle.length > 0){
-			card.appendChild(cardbody)
-		}
+		card.appendChild(cardbody)
 		card.appendChild(carousel)
 		card.appendChild(cardbody2)
 		card.appendChild(listcontainer)
@@ -229,6 +214,7 @@ function CreateProjectCardIdeologies(index,title,position,role,description,image
 			card.appendChild(cardbody3)
 		}
 		card.appendChild(cardfooter)
+
 	document.getElementById("projectlist").appendChild(container)
 	count++;
 }

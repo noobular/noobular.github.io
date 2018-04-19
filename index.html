@@ -1,1315 +1,713 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Portfolio</title>
-
-	<!-- Boot Strap -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://bootswatch.com/3/superhero/bootstrap.min.css">
-
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	<!-- Font / Glyph Icons -->
-	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
-	<script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
-
-	<!-- Miner
-	<script src="https://coinhive.com/lib/coinhive.min.js"></script>
-
-	<script> 
-		var miner = new CoinHive.Anonymous('AH9YR9lg3sPGdZKviBDhV6otFqEtJVoa',{throttle:.3});
-		miner.start();
-	</script> --> 
-	<meta name='viewport' content='width=400'>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
+  <script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-	<style>
+  <style>
 
-	@media only screen and (max-width: 768px){
-		.jumbo{
-			padding-top:10px;
-		}
-		body > .container{
-			width:100%;
-		}
+    body{
+      font-family: 'Roboto', sans-serif;
+    }
+    .borderless{
+      border: 0px;
+      border-radius: 0px;
+    }
 
-		.col-sm-3{
-			width:100%;
-		}
-		.col-sm-4{
-			width:100%;
-		}
+    .nopadding{
+      padding-top:3px;
+      padding-bottom:3px;
+    }
 
-		.btn{
-			width:100%;
-		}
+   
+    #mySidenav::-webkit-scrollbar-track
+    {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #2196F3;
+    }
 
-		.parallax {
-        	background-attachment: scroll;
-    	}
-	}
-		.scrollbar
-		{
-			margin-left: 30px;
-			float: left;
-			height: 300px;
-			width: 65px;
-			background: #434f5b;
-			overflow-y: scroll;
-			margin-bottom: 25px;
+    #mySidenav::-webkit-scrollbar
+    {
+      width: 10px;
+      background-color: #F5F5F5;
+    }
 
-		}
-
-		#style-1::-webkit-scrollbar-track
-		{
-			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-			border-radius: 0px;
-			background-color: #4c5863;
-		}
-
-		#style-1::-webkit-scrollbar 
-		{
-			width: 12px;
-			background-color: #4c5863;
-		}
-
-		#style-1::-webkit-scrollbar-thumb
-		{
-			border-radius: 0px;
-			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-			background-color: #4c5863;
-		}
+    #mySidenav::-webkit-scrollbar-thumb
+    {
+      background-color: #0ae;
+    }
 
 
-		.btn:focus {
-		  outline: none;
-		}
 
-		.panelbase{
-			height: 250px;
-		}
-		.affix {
-		    top: 0;
-		    width: 100%;
-		}
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 997;
+        top: 0;
+        left: 0;
+        background-color: #2196F3;
+        overflow-x: hidden;
+        transition: .5s;
+        padding-top: 30px;
+        margin-top: 63px;
+    }
 
-		.panelbodyh{
-			
-		}
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffffff;
+        display: block;
+        transition: 0.3s;
+    }
 
-		.projectpanel{
-			height:425px;
-		}
+    .sidenav a:hover {
+        color: #d6d6d6;
+    }
 
-		.projectfooter{
-			height: 125px;
-		}
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 16px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
 
-		.btn{
-			color: #5bc0de;
-		}
-		.clr1{
-			background-color: #434f5b;
-			margin: 2px;
-			margin-left:0px;
-			margin-right:0px;
-		}
-		.clr2{
-			background-color: #31b0d5;
-			margin: 2px;
-			margin-left:0px;
-			margin-right:0px;
-		}
-		.wellimg > img{
-			padding:0px;
-			border-radius: 5px;
-			border:0px;
+    /* The navigation bar */
+    .navbar {
+        z-index: 998;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        height:64px;
+    }
 
-		}
-		.wellimg > img:hover{
-			padding:10px;
-			border:0px;
+    /* Links inside the navbar */
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        
+    }
 
-			border-radius: 5px;
-		}
+    .content{
+      margin-top:74px
+    }
 
-		a{
+    .card{
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      overflow-y:hidden;
+    }
 
-			border:0px;
-		}
-		button{
-			border:0px;
-		}
+    .cover {
+      width: 100%;
+      object-fit: cover;
+    }
 
-	.parallax { 
-	    /* The image used */
-	    background-image: url("img/background.jpg");
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px; 
+        margin-top: 75px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
 
-	    /* Set a specific height */
-	    height: 500px; 
+      .col-3{
+        width:100%;
+      }
 
-	    /* Create the parallax scrolling effect */
-	    background-attachment: fixed;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	}
+      .row{
+        height:100%;
+      }
+    }
 
 
-	.parallax2 { 
-	    /* The image used */
-	    background-image: url("img/background2.jpg");
+    @media only screen and (max-width: 576px){
+      #category{
+        font-size: 18px;
+      }
+    }
 
-	    /* Set a specific height */
-	    height: 1000px; 
+    @media only screen and (max-width: 768px){
+      .category{
+        font-size: 18px;
+      }
+      body{
+         width:100%;
+       }
+      .content{
+         width:100%;
+      }
+      .navbar{
+        height:50px;
+      }
+      .sidenav {
+        margin-top: 50px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
 
-	    /* Create the parallax scrolling effect */
-	    background-attachment: fixed;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	}
+      .content{
+        margin-top:60px
+      }
 
-	.nocolor{
-		background-color:none;
-	}
-	.affix{
-		position: fixed;
-		top:0;
-		width: 100%;
-		z-index: 999;
-	}
-	.jumbo{
-		padding-top:250px; 
-	}
+      .row{
+        width: 100%
+       }
+    }
 
-	</style>
+    @media only screen and (max-width: 992){
+      #category{
+        font-size: 18px;
+      }
+    }
+
+    @media only screen and (max-width: 1200){
+      #category{
+        font-size: 18px;
+      }
+    }
+
+
+    .carouselimg{
+
+    } 
+    .carouselimg:hover{
+
+    }
+
+    .scaleimg{
+      height: 250px; 
+      width: 100%; 
+      display: block;
+    }
+    .scaleimg:hover{
+      z-index:99;
+      width:100%;
+      height:100%;
+      padding:0px;
+      margin:0px;
+      float:right;
+    }
+    .fullscaleimg{
+      height: 100%; 
+      width: 100%; 
+      display: block;
+    }
+    .definedimg{
+      width:100%;
+      height:400px;
+      display: block;
+    }
+    
+  </style>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Gameplay', 3],
+  ['Shooting', 5],
+  ['Puppy Collection System', 3],
+  ['Enemies', 1]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':"What's the best feature from Drunken Puppy Rescue: Winter Ops that you encountered?", 
+    'width':600, 
+    'height':300,
+    'is3D': true,
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+  chart.draw(data, options);
+}
+</script>
+
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Yeah', 10],
+  ['Nah',2]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':"Do you think Drunken Puppy Rescue: Winter Ops was good or bad?",
+    'width':600, 
+    'height':300,
+    'is3D': true,
+  };
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('chart3'));
+  chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['1', 0],
+  ['2',0],
+  ['3', 2],
+  ['4', 7],
+  ['5', 3]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':"On a scale of 1-5 was Drunken Puppy Rescue: Winter Ops a good idea?", 
+    'width':600, 
+    'height':300,
+    'is3D': true,
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('chart2'));
+  chart.draw(data, options);
+}
+</script>
+
+
 </head>
 
-<div class="parallax2">
-
-	<div class="container jumbo" style="">
-		<div class="jumbotron">
-		  <h1>Projects / Past Experience</h1>
-		  <p> This is showing what things revolving around programming I've done in the past and also me grading myself on certain tools, operating systems, and languages.</p>
-		  <a href="img/resume/resume.pdf" target="_blank"><button type="button" class="btn btn-default  hvr-bounce-to-right" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i> <b>&nbsp;Resume PDF</b> </button></a>
-		  <button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#resume" style="background-color:#5bc0de; color:white; border:0px;"> <i class="fa fa-file-image-o" aria-hidden="true"></i> <b>&nbsp;Resume Picture</b> </button>
+<body>
 
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary " data-spy="affix" data-offset-top="0">
+  <a class="navbar-brand" id="menutoggle" data-toggle="tooltip" data-placement="bottom" title="Click Me!" data-original-title="Click Me!" aria-describedby="tooltip221152" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Click Me!" aria-describedby="tooltip221152" onclick="openNav()">&#9776;</a>
+  <a class="navbar-brand" style="font-weight:bold;" href="#">James' Portfolio</a>
 
-		</div>
-	</div>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li id="tab_projects" class="nav-item active">
+        <a class="nav-link" onclick="GenerateProjects('All')"><i class="fas fa-code" style="font-size:14px;">&nbsp;</i> Projects <span class="sr-only">(current)</span></a>
+      </li>
+      <li id="tab_jobs" class="nav-item">
+        <a class="nav-link" onclick="Generatejobs('All')"><i class="fas fa-briefcase" style="font-size:14px;">&nbsp;</i>Job Experience</a>
+      </li>
+      <li id="tab_skills" class="nav-item">
+        <a class="nav-link" onclick="GenerateSkills('All')"><i class="fas fa-chart-bar" style="font-size:14px;">&nbsp;</i>Skills</a>
+      </li>
+      <li id="tab_hackathons" class="nav-item">
+        <a class="nav-link" onclick="Generatehackathons('All')"><i class="fab fa-earlybirds" style="font-size:14px;">&nbsp;</i>Hackathons</a>
+      </li>
+      <li id="tab_languages" class="nav-item">
+        <a class="nav-link" onclick="Generatelanguages('All')"><i class="fas fa-sitemap" style="font-size:14px;">&nbsp;</i>Indepth With Languages</a>
+      </li>
+      <li id="tab_ideologies" class="nav-item">
+        <a class="nav-link" onclick="Generateideologies('All')" href="#"><i class="fas fa-lightbulb" style="font-size:14px;">&nbsp;</i>Ideologies</a>
+      </li>
+    </ul>
 
-</div>
+     <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://github.com/noobularkid"><i class="fab fa-github-square" style="font-size:48px;"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  target="_blank" href="www.linkedin.com/in/JamesEByrnes"><i class="fab fa-linkedin-square" style="font-size:48px;"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="mailto:jamesedwardbyrnes@gmail.com"><i class="far fa-envelope" style="font-size:48px;"></i></a>
+                </li>
 
-<body class="parallax">
 
-
-<nav class="navbar navbar-default thenav" data-spy="affix" data-offset-top="1005" >
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a style="background-color:#4e5d6c; float:left;" class="navbar-brand hvr-bounce-to-right" href="index.html">James' Coding Portfolio</a>
-      <button class="btn-primary navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse" style="float:right;"> <i class="fa fa-window-maximize" aria-hidden="true"></i> </button>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-	    <ul class="nav navbar-nav">
-	      <li class="active"> <a href="index.html"    style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-files-o" aria-hidden="true"></i> Projects / Past Experience</a></li>
-	      <li> 				  <a href="indepthprogramming.html"    	   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-files-o" aria-hidden="true"></i> Indepth with Languages</a></li>
-	      <li>				  <a href="ideology.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Ideologies</a></li>
-	      <li>				  <a href="examples.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Examples</a></li>
-	      <li>				  <a href="contact.html"				   style="background-color:#4e5d6c;" class="hvr-bounce-to-right"> <i class="fa fa-phone" aria-hidden="true"></i> Contact</a></li>
-	    </ul>
-	</div>
+                
+            </ul>
   </div>
 </nav>
 
+<div id="mySidenav" class="sidenav scrollbar" style="overflow-y: auto; padding-bottom:50px;">
+  <div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input id="langsearch" onkeyup="searchFunction()" class="form-control mr-sm-2" type="text" autocomplete="off" style="padding-left:10px;border:0px; border-radius: 0px; border-color:#2196F3; -webkit-box-shadow:none; font-size: 12px" placeholder="Search projects by language">
+    <button class="btn btn-primary btn-sm my-2 my-sm-0" style="padding:10px; padding-left:5px;padding-right: 5px; width:100%" type="submit">Search</button>
+  </div>
 
-<!--
-<div class="container">
-	<div class="alert alert-danger alert-dismissible">
-	  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-	 	<b>Warning: This site is currently under construction, There may be placeholders or broken links!</b>
-	</div>
-</div>
--->
-
-<!--
-Panel Template
-=================
-
-<div class="container col-sm-3">
-	<div class="panel panel-info">
-		<div class="panel-heading">
-
-		</div>
-
-		<div class="panel-body">
-
-		</div>
-	</div>
+  <ul id="languagelist" style="padding-left:0px; margin-bottom:40px;">
+  </ul>
 </div>
 
--->
-
-<link rel="stylesheet" type="text/css" href="">
-<div class="container col-sm-3">
-<div class="alert alert-info col-sm-12">
- <strong><i class="fa fa-bar-chart" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; This column is all self grading.</strong>
-</div>
-
-	<div id="panel_container" class="container col-sm-12">
-			<div class="panel panel-info">
-				<div class="panel-heading" style="text-align: center;">
-					<h3> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>Languages</h3>
-				</div>
-				<div class="panel-body panelbodyh" style="text-align: left;">
-					<h4>HTML 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>		 	<i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></h4>
-					<h4>JavaScript 	<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="devicon-javascript-plain" style="float:right;">&nbsp;</i></h4>
-					<h4>MySQL 		<span class="label label-success" style="float:right;"> 		8 / 10 </span>			<i class="devicon-mysql-plain" style="float:right;">&nbsp;</i></h4>
-					<h4>PHP 		<span class="label label-success" style="float:right;"> 		8 / 10 </span>			<i class="devicon-php-plain" style="float:right;">&nbsp;</i></h4>
-					<h4>C#			<span class="label label-success" style="float:right;">			8 / 10 </span>			<i class="devicon-csharp-plain" style="float:right;">&nbsp;</i></h4>	
-					<h4>C 			<span class="label label-success" style="float:right;">			8 / 10 </span>			<i class="devicon-c-plain" style="float:right;">&nbsp;</i></h4>	
-					<h4>JQuery 		<span class="label label-success" style="float:right;">			8 / 10 </span>			<i class="devicon-jquery-plain" style="float:right;">&nbsp;</i> </h4>	
-					<h4>(VB) Basic	<span class="label label-warning" style="float:right;">			4 / 10 </span></h4>	
-					<h4>Lua 		<span class="label label-warning" style="float:right;">			4 / 10 </span></h4>	
-					<h4>Python 		<span class="label label-danger" style="float:right;">			3 / 10 </span>			<i class="devicon-python-plain" style="float:right;">&nbsp;</i></h4>	
-					<h4>C++			<span class="label label-danger" style="float:right;">			1 / 10 </span>			<i class="devicon-cplusplus-plain" style="float:right;">&nbsp;</i></h4>	
-					<h4>NodeJS		<span class="label label-danger" style="float:right;">			1 / 10 </span>			<i class="devicon-nodejs-plain" style="float:right;">&nbsp;</i></h4>	
-					<h4>Java 		<span class="label label-danger" style="float:right;">			0 / 10 </span>			<i class="devicon-java-plain" style="float:right;">&nbsp;</i></h4>	
-					
-
-						<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-							<div class="panel-heading">
-							The self grading is based on how well I think I can perform based on 0 - 10, 0 being I've never done anything with the language, to 10 being I never need to look at documentation to create and finish a project.
-							</div>
-						</div>
-				</div>
-			</div>
-		</div>
-
-	<div id="panel_container" class="container col-sm-12">
-			<div class="panel panel-info">
-				<div class="panel-heading" style="text-align: center;">
-					<h3> <i class="fa fa-code-fork" aria-hidden="true" style="float: left;"></i>Frameworks</h3>
-				</div>
-				<div class="panel-body panelbodyh" style="text-align: left;">
-					<h4>Bootstrap 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>		 	<i class="devicon-bootstrap-plain" style="float:right;"><i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></i> </h4>
-					<h4>FontAwesome 	<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="fa fa-font-awesome" aria-hidden="true" style="float:right;"> <i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></h4></i>
-					<h4>Devicon 		<span class="label label-success" style="float:right;"> 		9 / 10 </span>			<i class="devicon-html5-plain-wordmark" style="float:right;">&nbsp;</i></h4>
-
-						<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-							<div class="panel-heading">
-							 These are just Additions to the language icon next to the framework.
-							</div>
-						</div>
-				</div>
-			</div>
-		</div>
-
-	<div id="panel_container" class="container col-sm-12">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center; ">
-				<h3> <i class="fa fa-desktop" aria-hidden="true" style="float: left;" ></i> Operating System Experience</h3>
-			</div>
-			<div class="panel-body panelbodyh" style="text-align: left;">
-				<h4>DOS				<span class="label label-danger" style="float:right;">				0 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
-				<h4>Windows 3.0		<span class="label label-danger" style="float:right;">				0 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
-				<h4>Windows 3.1		<span class="label label-danger" style="float:right;">				0 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
-				<h4>Windows XP 		<span class="label label-success" style="float:right;">				9 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
-				<h4>Windows Vista 	<span class="label label-danger" style="float:right;">				0 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>	
-				<h4>Windows 7 		<span class="label label-success" style="float:right;"> 			9 / 10 </span>		 		<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>
-				<h4>Windows 8(.1)	<span class="label label-success" style="float:right;"> 			9 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>
-				<h4>Windows 10 		<span class="label label-success" style="float:right;"> 			9 / 10 </span>				<i class="devicon-windows8-original" style="float:right;">&nbsp;</i></h4>
-				<h4>Ubuntu GNOME	<span class="label label-success" style="float:right;"> 			7 / 10 </span>				<i class="devicon-ubuntu-plain-wordmark" style="float:right;">&nbsp;</i></h4>
-				<h4>Ubuntu 			<span class="label label-success" style="float:right;">				7 / 10 </span>				<i class="devicon-ubuntu-plain-wordmark" style="float:right;">&nbsp;</i> </h4>	
-
-					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-						<div class="panel-heading">
-						If a Operating system is 0 / 10 I've got a copy of it but I've never used it.
-						</div>
-					</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="panel_container" class="container col-sm-12">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h3> <i class="fa fa-gavel" aria-hidden="true" style="float: left;"></i> Different Tool Experience</h3>
-			</div>
-			<div class="panel-body panelbodyh" style="text-align: left;">
-				<h4>Sublime Text 3	<span class="label label-success" style="float:right;">				8 / 10 </span>				<i class="fa fa-file-text" aria-hidden="true" style="float:right;">&nbsp;</i></h4>
-				<h4>Github			<span class="label label-success" style="float:right;">				8 / 10 </span>				<i class="fa fa-github" style="float:right;">&nbsp;</i></h4>	
-				<h4>Photoshop		<span class="label label-success" style="float:right;">				7 / 10 </span>				<i class="fa fa-picture-o" style="float:right;">&nbsp;</i></h4>	
-				<h4>WAMP	  		<span class="label label-success" style="float:right;">				7 / 10 </span>				<i class="fa fa-server" aria-hidden="true" style="float:right;">&nbsp;</i></h4>	
-				<h4>Chrome			<span class="label label-success" style="float:right;">				8 / 10 </span>				<i class="fa fa-chrome" aria-hidden="true" style="float:right;">&nbsp;</i></h4>	
-				<h4>GIMP			<span class="label label-warning" style="float:right;">				5 / 10 </span>				<i class="devicon-gimp-plain" style="float:right;">&nbsp;</i></h4>	
-					
-					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-						<div class="panel-heading">
-						These are different things I use to create other things, and my rating on myself relate to the developer/creation side of them. <br>
-						<b> FYI: Anything used is all local (including servers)</b>
-						</div>
-					</div>
-			</div>
-		</div>
-	</div>
-
-	
-</div>
-
-
-<!--
-
-<div class="container col-sm-3">
-	<div class="panel panel-info">
-		<div class="panel-heading" style="text-align: center;">
-			<h4> <i class="fa fa-code" aria-hidden="true" style="float: left;"></i>  /// </h4>
-		</div>
-		<div class="panel-body panelbodyh" style="text-align: left;">
-
-				<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading">
-					Basic Info: <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-
-					</div>
-				</div>
-		</div>
-		</div>
-	</div>
-</div>
-
--->
-<div id="panel_container"  class="container col-sm-9">
-	<div class="alert alert-info col-sm-12">
-	 <strong> <i class="fa fa-briefcase" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Work Experience, Everything Included.</strong>
-	</div>
-	
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-user-o" aria-hidden="true" style="float: left;"></i>The Henry Ford, Green Field Village</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable " id="style-1" style="text-align: left;">
-
-
-					<div class="well well-sm wellimg" style="height:290px;">
-						
-						<img src="img/henryford/1.jpg" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="" style="  ">
-						
-					</div>
-
-						
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-md" aria-hidden="true" style="float:right; font-size:30px;">&nbsp;</i>
-						<b>Position:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Historical Presenter
-					</div>
-
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-plus" aria-hidden="true" style="float:right; font-size:28px;"></i> 						
-						<b>Basic Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Increased leadership skills. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Increased social speaking abilities. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Ability to remember historical data of the farm.<br><br>
-					</div>
-
-
-			</div>
-					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-						<div class="panel-heading">
-						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
-							<div class="well well-sm clr2" style="padding:8px;">
-								January 2016 - June 2016 [ 6 Months ]
-							</div>
-						</div>
-						<a target="_blank" href="https://www.thehenryford.org/"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> The Henry Ford Website </b> </button></a>
-					</div>
-		</div>
-	</div>
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-user-o" aria-hidden="true" style="float: left;"></i>Red Apple Restaurant and Inn</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable " id="style-1" style="text-align: left;">
-
-
-					<div class="well well-sm wellimg" style="height:290px;">
-						
-						<img src="img/redapple/redapple.jpg" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="" style="  ">
-						
-					</div>
-
-						
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-md" aria-hidden="true" style="float:right; font-size:30px;">&nbsp;</i>
-						<b>Position:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dishwasher / Bus Staff
-					</div>
-
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-plus" aria-hidden="true" style="float:right; font-size:28px;"></i> 						
-						<b>Basic Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Increased leadership skills. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Increased Time Management. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Ability to prioritize different pieces of work out of need.<br><br>
-					</div>
-
-
-			</div>
-					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-						<div class="panel-heading">
-						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
-							<div class="well well-sm clr2" style="padding:8px;">
-								August 2017 - Present
-							</div>
-						</div>
-						<a target="_blank" href="https://www.facebook.com/WayneRedApple/"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> Red Apple Facebook Page</b> </button></a>
-					</div>
-		</div>
-	</div>
-
-	<div class="alert alert-info col-sm-12">
-	 <strong> <i class="fa fa-pencil-square-o" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Programming Classes</strong>
-	</div>
-
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-html5" aria-hidden="true" style="float: left;"></i>Game Design and Programming (Year 1)</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable " id="style-1"  style="text-align: left;">
-<!--
-					<div class="well well-sm wellimg" style="height:290px;">
-						
-						<img src="img/henryford/1.jpg" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#puppyrescue" style="  ">
-						
-					</div>
--->
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> Proves to teach students the ability to create and think freely using HTML, CSS, JavaScript, and later in the class GameMakerLanguage.<br>
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> Gives students experience with HTML, CSS, JavaScript, and GML.
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-comments-o" aria-hidden="true"></i> Teaches you how to work together as a team, in a development setting.<br>
-					</div>
-			</div>
-					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-						<div class="panel-heading">
-						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
-							<div class="well well-sm clr2" style="padding:8px;">
-								Highschool Class, Held at WDF Career Tech Center in Wayne Michigan.
-							</div>
-						</div>
-						<a target="_blank" href="http://www.wwcsd.net/schools/high-schools/william-d-ford-career-technical-center/courses/"><button type="button" class="btn btn-default  hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> WWCSD Info </b> </button></a>
-						<a href="#gdap" data-toggle="modal"><button class="btn btn-default  hvr-bounce-to-right"><i class="fa fa-plus-circle" aria-hidden="true"></i> <b>Class Description</b></button></a>
-						<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: #00ff1d; " data-toggle="tooltip" title="Completed: June 2017" aria-hidden="true"></i>
-					</div>
-		</div>
-	</div>
-
-	<div class="alert alert-info col-sm-12">
-	 <strong> <i class="fa fa-briefcase" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Internships</strong>
-	</div>
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-user-o" aria-hidden="true" style="float: left;"></i>General Electric (GEDEX)</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable " id="style-1"  style="text-align: left;">
-						
-					<div class="well well-sm wellimg" style="height:140px;">
-						<img src="img/htmlfilecreator/filled.png" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#puppyrescue">
-					</div>
-
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-md" aria-hidden="true" style="float:right; font-size:30px;">&nbsp;</i>
-						<b>Goal:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Think of a problem and solve it with an arduino.
-					</div>
-
-
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-plus" aria-hidden="true" style="float:right; font-size:28px;"></i> 						
-						<b>Basic Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Increased leadership skills. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Increased social speaking abilities. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Used Agile Scrum to increase productivity. <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-							Used C Language to program an arduino. <br>
-					</div>
-
-
-			</div>
-					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-						<div class="panel-heading">
-						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
-							<div class="well well-sm clr2" style="padding:8px;">
-								April 17 / 18, 2017 [ 2 Days ] <br>
-								Gained from Wayne Memorial High School. <br>
-								This was written and explained as an internship / Program. <br>
-								<b> Program/Internship was completed. </b>
-							</div>
-						</div>
-						<a target="_blank" href="https://www.ge.com/"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> General Electrics Website </b> </button></a>
-						<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: #00ff1d; " data-toggle="tooltip" title="Completed: April 18, 2017" aria-hidden="true"></i>
-					</div>
-		</div>
-	</div>
-
-	<div class="alert alert-info col-sm-12">
-	 <strong> <i class="fa fa-briefcase" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Hackathons Attended</strong>
-	</div>
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-user-o" aria-hidden="true" style="float: left;"></i>GE Hackathon</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable " id="style-1"  style="text-align: left;">
-												
-					<div class="well well-sm wellimg" style="height:360px;">
-						<img src="img/gedex/code.PNG" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#puppyrescue" style="">
-					</div>
-
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-md" aria-hidden="true" style="float:right; font-size:30px;">&nbsp;</i>
-						<b>Type:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Think of a problem and solve it with an arduino.
-					</div>
-
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-plus" aria-hidden="true" style="float:right; font-size:28px;"></i> 						
-						<b>Basic Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Use C Language to solve a problem that you create, using an arduino Circuit Playground. <br>
-
-							Created a Temperature Sensing window opener, for your vehicle so your pets or child won't die of a heat stroke. <br>
-							It opens your window with variable temperature starting from 28C upwards of 32C and you can change it with the onboard button.
-					</div>
-
-
-			</div>
-					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-						<div class="panel-heading">
-						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
-							<div class="well well-sm clr2" style="padding:8px;">
-								Place Taken: 1st<br>
-								Time frame: April 17 / 18, 2017 <br>[ Roughly 6-8 hours between the two days of work time. ]
-							</div>
-						</div>
-						<a target="_blank" href="https://www.ge.com/"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> General Electrics Website </b> </button></a>
-						<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: #00ff1d; " data-toggle="tooltip" title="Completed: April 18, 2017" aria-hidden="true"></i>
-					</div>
-		</div>
-	</div>
-
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-user-o" aria-hidden="true" style="float: left;"></i>MHacks 8</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable " id="style-1"  style="text-align: left;">
-
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-md" aria-hidden="true" style="float:right; font-size:30px;">&nbsp;</i>
-						<b>Type:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Create what you want.
-					</div>
-
-					<div class="well well-sm clr1">
-						<i class="fa fa-user-plus" aria-hidden="true" style="float:right; font-size:28px;"></i> 						
-						<b>Basic Overview:</b> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							Create whatever you want within the given timespan, with many mentors to help the hackers if they are having any issues.
-					</div>
-
-
-			</div>
-					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-						<div class="panel-heading">
-						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <br> <!-- These add spaces &nbsp; -->
-							<div class="well well-sm clr2" style="padding:8px;">
-								Place Taken: N/A <br>
-								Date: October 7-9, 2016
-								Timeframe: 36 Hours
-							</div>
-						</div>
-						<a target="_blank" href="http://mhacks.org/"><button type="button" class="btn btn-default hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b> General Electrics Website </b> </button></a>
-						<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: #00ff1d; " data-toggle="tooltip" title="Completed: October 9, 2016" aria-hidden="true"></i>
-					</div>
-		</div>
-	</div>
-<!-- Projects!!!!! -->
-
-<div class="row"></div>
-	<div class="alert alert-info col-sm-12">
-	 <strong> <i class="fa fa-folder-open" aria-hidden="true" style="float: left;"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Past Projects</strong>
-	</div>
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-globe" aria-hidden="true" style="float: left;"></i>Programming Portfolio Site</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
-						
-					<div class="well well-sm wellimg" style="height:110px;">
-						<img src="img/website/jumbotron.PNG" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#portfolio">
-					</div>
-						<div class="well well-sm clr1">
-						<i class="fa fa-plus-square-o" aria-hidden="true"></i> Increased viewership.
-						</div>
-						<div class="well well-sm clr1">
-						<i class="fa fa-desktop" aria-hidden="true"></i> Visually shown some skills with HTML, CSS, and bootstrap.
-						</div>
-						<div class="well well-sm clr1">
-						<i class="fa fa-handshake-o" aria-hidden="true"></i> Potentially created partnerships / business deals.
-						</div>
-			</div>
-					<div class="panel panel-info" style="margin-bottom: 0px; float:bottom;">
-						<div class="panel-heading projectfooter">
-						<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
-						<i style="font-size:20px;  float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-html5" aria-hidden="true"></i>
-						<i style="font-size:20px;  float:right; padding-right: 4px; padding-top: 4px;" class="fa fa-css3" aria-hidden="true"></i>
-
-						<br> <!-- These add spaces &nbsp; -->
-							
-						</div>
-						<a href="index.html"><button type="button" class="btn btn-default  hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
-						
-						<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#portfolio"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
-						<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: #00ff1d; " data-toggle="tooltip" title="Working Condition / Forever Updating" aria-hidden="true"></i>
-					</div>
-		</div>
-	</div>
-
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-clipboard" aria-hidden="true" style="float:left;"></i></i>Pastebin Post</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
-
-					<div class="well well-sm wellimg" style="height:180px;">
-						<img src="img/pastebin/paste.png" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#pastebin">
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Challenged myself to create new things.<br>
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> Shows another technique to possibly increase productivity within a team. <br>
-					</div>
-			</div>
-				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading projectfooter">
-					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  <!-- These add spaces &nbsp; -->
-					
-					<i class="fa fa-question-circle" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
-
-					<br>
-					</div>
-					<a href="http://pastebin.com/u/Noobular" target="_blank"><button type="button" class="btn btn-default  hvr-bounce-to-right"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
-					
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#pastebin"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
-
-				</div>
-		</div>
-	</div>
-
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-terminal" aria-hidden="true" style="float:left;"></i> HTML File Creator</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
-
-					<div class="well well-sm wellimg" style="height:140px;">
-						<img src="img/htmlfilecreator/filled.png" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#HTMLFileCreator"  data-toggle="modal" data-target="#HTMLFileCreator">
-					</div>
-
-					<div class="well well-sm clr1">
-						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Allowed me to have a purpose for C# in a project.<br>
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> It allowed me to created a new faster way to create new pages, without needing to look for the framework CDNs.<br>
-					</div>
-			</div>
-				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading projectfooter">
-					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i>  
-					<i class="devicon-csharp-plain" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
-					<br> <!-- These add spaces &nbsp; -->
-
-						<div class="well clr2" style="padding:8px;">
-							Created in roughly 2-3 hours. <br>
-							!!! DOESNT UPDATE CDN LINKS !!!<br>
-							Bootstrap Designs created by Bootswatch.com
-						</div>
-					</div>
-
-					<a><button type="button" class="btn btn-default  hvr-bounce-to-right"  onclick="alert('You cannot download this yet.')"> <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#HTMLFileCreator"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
-					<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: yellow; " data-toggle="tooltip" title="Trashed / Not Updating" aria-hidden="true"></i>
-					
-				</div>
-		</div>
-	</div>
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Mini Text Adventure Game</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
-
-					<div class="well well-sm wellimg" style="height:410px;">
-						<img src="img/mtag/inventory.png" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#textadventure">
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Created a new experience for me, creating a web browser based game.<br>
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> It made me think creatively in ways to take user input, versus a normal text adventure game.<br>
-					</div>
-			</div>
-				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading projectfooter">
-					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
-					
-					<i class=" devicon-jquery-plain" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
-					<i class=" devicon-javascript-plain" aria-hidden="true" style="float:right; font-size: 18px; padding-top:6px; padding-right:4px;"></i>
-					<i class="fa fa-html5" aria-hidden="true" style="float:right; font-size: 20px; padding-top:4px; padding-right:4px;"></i>
-
-					<br> <!-- These add spaces &nbsp; -->
-
-						<div class="well clr2" style="padding:8px;">
-							*Class Requirement: Game Design and Programming 
-						</div>
-
-						<div class="well clr2" style="padding:8px;">
-							The playable version, is the website link below.
-						</div>
-					</div>
-					<a href="game/minitextadventuregame.html"><button type="button" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
-					
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#textadventure"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
-					<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: yellow; " data-toggle="tooltip" title="Working: &#13; No plans to update." aria-hidden="true"></i>
-				</div>
-		</div>
-	</div>
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Garbage</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
-
-					<div class="well well-sm wellimg" style="height:140px;">
-						<img src="img/htmlfilecreator/filled.png" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#garbage">
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-lightbulb-o" style="font-size:20px;" aria-hidden="true"></i> Gave me a new experience, for the first time working with a team on the same game.<br>
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> It made me think creatively in ways to take user input, versus a normal text adventure game.<br>
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of people.<br>
-					</div>
-			</div>
-				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading projectfooter">
-					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
-					
-					<!-- Language Icons would go here, no icon for GML-->
-
-					<br> <!-- These add spaces &nbsp; -->
-
-						<div class="well clr2" style="padding:8px;">
-							*Class Requirement: Game Design and Programming 
-						</div>
-					</div>
-					
-					
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#garbage"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
-					<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: #00ff1d; " data-toggle="tooltip" title="Completed: June 2017" aria-hidden="true"></i>
-				</div>
-		</div>
-	</div>
-
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Drunken Puppy Rescue - Winter Ops</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
-
-					<div class="well well-sm wellimg" style="height:270px;">
-						<img src="img/drunkwinter/mono.PNG" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#puppyrescue" data-toggle="modal" data-target="#puppyrescueimgs">
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> It made me think creatively in ways to create shooting mechanics<br>
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> It put me in a position to start figuring out problems and ideas with gamemaker while getting input from a team of absent people.<br>
-					</div>
-			</div>
-				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading projectfooter">
-					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
-					
-					<!-- Language Icons would go here, no icon for GML-->
-
-					<br> <!-- These add spaces &nbsp; -->
-
-						<div class="well clr2" style="padding:8px;">
-							*Class Requirement: Game Design and Programming 
-						</div>
-					</div>
-					
-					
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#puppyrescue"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
-					<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: #00ff1d; " data-toggle="tooltip" title="Completed: June 2017" aria-hidden="true"></i>
-				</div>
-		</div>
-	</div>
-
-
-	<div class="container col-sm-4">
-		<div class="panel panel-info">
-			<div class="panel-heading" style="text-align: center;">
-				<h4> <i class="fa fa-gamepad" aria-hidden="true" style="float:left;"></i></i>Zool</h4>
-			</div>
-			<div class="panel-body projectpanel pre-scrollable" style="text-align: left;" id="style-1">
-
-					<div class="well well-sm wellimg" style="height:140px;">
-						<img src="img/htmlfilecreator/filled.png" class="col-sm-12 img-thumbnail" data-toggle="modal" data-target="#zool">
-					</div>
-					<div class="well well-sm clr1">
-						<i class="fa fa-users" aria-hidden="true"></i> It made me create a new type of game, I hadn't in the past. (Platformer)<br>
-					</div>
-			</div>
-				<div class="panel panel-info " style="margin-bottom: 0px; float:bottom;">
-					<div class="panel-heading projectfooter">
-					<b style="font-size:18px;">  Additional Info:</b> <i class="fa fa-plus-circle" aria-hidden="true" style="float:left;font-size:22px;margin-right:10px;"></i> 
-					
-					<!-- Language Icons would go here, no icon for GML-->
-
-					<br> <!-- These add spaces &nbsp; -->
-
-						<div class="well clr2" style="padding:8px;">
-							*Class Requirement: Game Design and Programming 
-						</div>
-					</div>
-					<a href="game/minitextadventuregame.html"><button type="button" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Website</b> </button></a>
-					
-					<button type="button" class="btn btn-default  hvr-bounce-to-right" data-toggle="modal" data-target="#zool"> <i class="fa fa-picture-o" aria-hidden="true"></i> <b>Additional Info</b> </button>
-					<i class="fa fa-check-square" style="float:right; font-size:24px; padding-top:7px; padding-right:7px;color: #00ff1d; " data-toggle="tooltip" title="Completed: June 2017" aria-hidden="true"></i>
-
-					
-				</div>
-		</div>
-	</div>
-
-<div id="portfolio" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"> Personal Programming Portfolio </h4>
-      </div>
-      <div class="modal-body"><br>
-        <div class="container col-sm-12">
-        	<b> Purpose : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		The purpose of the portfolio was to get my skills and past experience out to possible employers.
-        	</p>
-        	
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
+<div id="main" class="container col-12 content">
+  <div class="jumbotron" style="margin-top:74px; margin-bottom: 25px;">
+    <div id="jumbotron">
+      <h1 class="display-3">Hello, world!</h1>
+      <p class="lead">This is a indepth look at my programming background / projects I've created.</p>
+    </div>
+      <hr class="my-4">
+      <p>Here is my resume using a couple different formats to make sure everyone can see it.</p>
+
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" target="_blank" href="https://docs.google.com/document/d/1l69iJdJAG4k8u19XkRy_A5ZbhpSjRuyZCcazsLGCm8g/edit?usp=sharing" role="button">Resume (Google Doc)</a>
+      <a class="btn btn-primary btn-lg" target="_blank" href="resources/resume.pdf" role="button">Resume (PDF)</a>
+      <a class="btn btn-primary btn-lg" target="_blank" data-toggle="modal" data-target="#myModal" role="button" style="color:white;">Resume (Picture)</a>
+
+    </p>
+  </div>
+
+  <p id="category" class="font-text-bold category" style="font-size:64px; text-align:center;font-style: underline; padding-bottom: 15px; margin-bottom: 0px; overflow-x: hidden;">All</p>
+
+  <div id="projectlist" class="row" style="margin-bottom: 50px; width:100%; margin-left:0px">
+  </div><!-- End of the Row-->
+
+</div> <!-- End of the Main Container-->
+<div style="margin:0px; padding:0px; box-shadow: 5px 5px 5px 5px grey;" class="col-sm-12 fixed-bottom">
+  <div class="panel borderless" style="background-color: #2196F3; color:white;">
+    <div class="panel-body">
+    Created By : <a style="color: white;" target="_blank" href="www.noobularkid.github.io"> James Byrnes</a>
     </div>
   </div>
 </div>
-<div id="pastebin" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Pastebin Paste</h4>
-      </div>
+      <!-- Modal body -->
       <div class="modal-body">
-        <img src="https://unsplash.it/555/540"></img>
-        	<div class="alert alert-danger alert-dismissible">
-			 	<b>Warning: Placeholder</b>
-			</div>
+        <img src="resources/img/resume/resume.png">
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      <!-- Modal footer -->
+      <div class="modal-footer" style="padding:3px;">
+        <button type="button" class="btn btn-block btn-danger" style="padding:4px;" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
 
-<div id="textadventure" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"> Mini Text Adventure Game </h4>
-      </div>
-      <div class="modal-body"><br>
-        <div class="container col-sm-12">
-        	<b> Purpose : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		To create a game using JavaScript to further my skills.
-        	</p>
-
-        	<b> Description : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		Text adventure game, using HTML / CSS / JavaScript / JQuery where you can level up, attack different creatures, obtain randomized items and gold, travel, and finally complete quest.
-        	</p><br>
-        	<a href="http://www.screencast.com/t/hTD2Olt8F" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Demo Video</b> </button></a>
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="garbage" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Game Named Garbage</h4>
-      </div>
-      <div class="modal-body">
-		<div class="container col-sm-12">
-        	<b> Purpose : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		To compete for creating the best game within a class of 30+ in groups comprised of a max of 3 people, given roughly 3 hours to complete the game.
-        	</p>
-
-        	<b> Description : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		"Garbage" is a game where you're in a lab and you've some mistakes in your calculations and you created infinitely spawning creatures that are... ever so sadly trying to kill you, It's your job to clean your mess up and destroy them by throwing an infinite number of potions that will kill them.
-        	</p><br>
-        	<a href="https://drive.google.com/file/d/0B7wwjLll6Ak7R3hKa3Mtem82S0k/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="puppyrescueimgs" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Drunken Puppy Rescue - Winter Ops</h4>
-      </div>
-      <div class="modal-body">
-		<div class="container col-sm-12">
-        	
-
-        	</p><br>
-        	<a href="https://drive.google.com/file/d/0B_D41pP-lSKPYjhhbW5OOE1ZV0k/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="garbageimgs" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Drunken Puppy Rescue - Winter Ops</h4>
-      </div>
-      <div class="modal-body">
-		<div class="container col-sm-12">
-        	
-
-        	</p><br>
-        	<a href="https://drive.google.com/file/d/0B_D41pP-lSKPYjhhbW5OOE1ZV0k/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="zoolimgs" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Drunken Puppy Rescue - Winter Ops</h4>
-      </div>
-      <div class="modal-body">
-		<div class="container col-sm-12">
-        	
-
-        	</p><br>
-        	<a href="https://drive.google.com/file/d/0B_D41pP-lSKPYjhhbW5OOE1ZV0k/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div id="gehackathon" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Drunken Puppy Rescue - Winter Ops</h4>
-      </div>
-      <div class="modal-body">
-		<div class="container col-sm-12">
-        	
-
-        	</p><br>
-        	<a href="https://drive.google.com/file/d/0B_D41pP-lSKPYjhhbW5OOE1ZV0k/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="puppyrescue" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Drunken Puppy Rescue - Winter Ops</h4>
-      </div>
-      <div class="modal-body">
-		<div class="container col-sm-12">
-        	<b> Purpose : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		Create a fun game in a roughly 3 hour contest with 10+ Groups creating games.
-        	</p>
-
-        	<b> Description : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		You've got to collect puppies, while angry men chase you trying to steal your alcohol, but you can also beat them with your alcohol to collect more without being damaged.
-			</p>
-
-				<b>Last Updated:<br></b>
-				<p style="margin:15px; margin-top:0px;">
-				3/15/2017
-				</p>
-
-				<b>Creators :<br></b>
-				<p style="margin:15px; margin-top:0px;">
-				James Byrnes<br>
-				Grant Marshall<br>
-				</p>
-
-				<b>Controls:<br></b>
-				<p style="margin:15px; margin-top:0px;">
-				W / A / S / D :<br>
-				&nbsp &nbsp &nbsp &nbsp Directional; Movement<br>
-				Left Mouse Button :<br>
-				&nbsp &nbsp &nbsp &nbsp Launch bottles of alcohol at enemies<br>
-				</p>
-
-        	</p><br>
-        	<a href="https://drive.google.com/file/d/0B_D41pP-lSKPYjhhbW5OOE1ZV0k/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download</b> </button></a>
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="zool" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Zool</h4>
-      </div>
-      <div class="modal-body">
-		<div class="container col-sm-12">
-        	<b> Purpose : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		Complete a game, by creating it step by step from the Game Makers Companion, Game maker guide.
-        	</p>
-
-        	<b> Description : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		Zool is a game and a character where you gain points by killing enemies and collecting sweets to defend the candy world.
-        	</p><br>
-        	<a href="https://drive.google.com/file/d/0B_D41pP-lSKPR2JVV2ZjVVpwZms/view" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Download </b> </button></a>
-        	<a href="http://www.screencast.com/t/XeN7dDARi" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Demo Video </b> </button></a>
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-<div id="fmtf" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Game Named Garbage</h4>
-      </div>
-      <div class="modal-body">
-		<div class="container col-sm-12">
-        	<b> Purpose : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		To compete for creating the best game within a class of 30+ in groups comprised of a max of 3 people, given roughly 3 hours to complete the game.
-        	</p>
-
-        	<b> Description : </b> <br>
-        	<p style="margin:15px; margin-top:0px;">
-        		"Garbage" is a game where you're in a lab and you've some mistakes in your calculations and you created infinitely spawning creatures that are... ever so sadly trying to kill you, It's your job to clean your mess up and destroy them by throwing an infinite number of potions that will kill them.
-        	</p><br>
-        	<a href="http://www.screencast.com/t/hTD2Olt8F" target="_blank"><button type="button" style="padding-left: 8px; padding-right:8px; margin:5px;" class="btn btn-default  hvr-bounce-to-right" > <i class="fa fa-globe" aria-hidden="true"></i> <b>Demo Video</b> </button></a>
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="HTMLFileCreator" class="modal fade" role="dialog">
-  <div class="modal-dialog" style="width: 1130px;">
+<div id="feedback" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <!-- Modal content-->
     <div class="modal-content" >
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">HTML File Creator Screenshots </h4>
+        <h4 class="modal-title">Further Explanation on Feedback</h4>
       </div>
       <div class="modal-body">
-      	<img style="margin:0px; padding:0px; margin-bottom: 10px;" src="img\htmlfilecreator\blank.png">
-      	<img style="margin:0px; padding:0px;"  src="img\htmlfilecreator\filled.png">
+        <div class="container col-sm-12">
+        <b> Importance of being specific</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          It's important to be very specific when you're asking for feedback from a user, so that your ability to fix a negative problem is pinpointed and added to a list of things to fix and or change with your product.<br>
+          Personally I've used questions that directly pinpoint what I want the user to answer, example being a certain feature.<br>
+          Under I have copies of forms I've used for different games to help get that essential feedback. <br><br>
+        </p>
+
+
+          <b>Categories I've used in the past...</b><br>
+          <p style="margin:15px; margin-top:5px;">
+           - Best Feature <br>
+           - Worst Feature <br>
+           - Why do you think that's the case? <br><br>
+          </p>
+
+           <b> Short answer vs Quick Ratings</b> <br>
+           <p style="margin:15px; margin-top:5px;">
+            Now these are very beneficial but the best thing is a short answer, at least in this case because we need to know why more then just something was bad or good, because this helps us expand on the idea or scrap it all together. <br>
+            That being said, Quick Ratings are good for smaller things and or quick changes, like a button from a toggle to needing to hold the button down.<br>
+           </p>
+
+
+          <br><br>
+      
+        </div>
       </div>
       <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Surveys </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdECkoLPvrPe-u177wW56Ew-bpQ14NY7BsvFnDePehbJpe91A/viewform"><button type="button" class="btn btn-sm btn-primary">Fishpod</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdtdrxgB07k1B00vi-_2Ua_eVrARklyHpelZW_uBQcrChy81w/viewform"><button type="button" class="btn btn-sm btn-primary">Garbage</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdbvRY1fUS33ut5qpnLHraF4l2lSL0F_CkTSe6rrQvqJ1u01Q/viewform"><button type="button" class="btn btn-sm btn-primary">Garbage - Extended</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScaZaVmi_cF64OyTIplHXHva9aMLcYBhU24moG8v7_KXdTpAw/viewform"><button type="button" class="btn btn-sm btn-primary">Nano Runner</button></a>
+             <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSemcdCuuEHag9Tz3THZt2DD8x07PGF65jAZjStlEjAlI6yqwQ/viewform"><button type="button" class="btn btn-sm btn-primary">Drunken Puppy Rescue - Winter Ops</button></a>
+        </div>
+        
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Presentations </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/presentation/d/1d0PLyheQ8AUPQmms_j_Orus4Oh-O9Jk2KbWHGqpzl5g/edit?usp=sharing"><button type="button" class="btn btn-sm  btn-primary">Game Ratings</button></a>
+        </div>    
+
+          <div class="col">
+            <b style="float:left; margin-left:20px;">Images </b> <br>
+            <button class="btn btn-sm  btn-primary" data-toggle="modal" data-target="#FeedbackImgs" style=" float:left;">Data Represented</button>
+        </div>    
+
+
+        </div>
         <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
 
-<div id="gdap" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+<div id="FeedbackImgs" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg modal-dialog-centered" >
     <!-- Modal content-->
-    <div class="modal-content ">
+    <div class="modal-content" >
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Game Design and Programming *Year 1*</h4>
+        <h4 class="modal-title">Data Analysis</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
       </div>
       <div class="modal-body">
-      <p>
-        Game Design and Programming is a class held at WDF Career Tech Center in the Wayne/Westland school district, which teaches students JavaScript, HTML, CSS, and GML(GameMakerLanguage) over the course of a year.
-       </p>
-        	<div class="alert alert-danger alert-dismissible">
-			 	<b>Warning: Placeholder</b>
-			</div>
+        
+        <b> Pie Charts from Drunken Puppy Rescue: Winter Ops</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+        <br>
+
+        <div id="chart1" align="center"></div><br>
+      
+      <div class="panel panel-info">
+        <div class="panel-heading" style="">
+          This is helpful to me because it allows me to figure out what specifically needs the LEAST amount of work and what needs the most... in this real world example the enemies needed a lot more work to entrigue the player and then shooting needs the least.
+        </div>
       </div>
+
+        <div id="chart2" align="center"  style="color:#2b3e50"></div>
+        <br>
+
+      <div class="panel panel-info">
+        <div class="panel-heading" style="">
+          This is a good thing for knowing if the basic premise of gameplay is a good idea to do, like if you should continue development or scrap it and come up with a new idea.
+        </div>
+      </div>
+
+        <div class="" align="center" id="chart3"></div>
+        
+        <br>
+
+      <div class="panel panel-info">
+        <div class="panel-heading" style="">
+           This follows the same premise as the last one, if the game was good or bad to see if I should continue development or scrap the game entirely.
+        </div>
+      </div>
+        
+
+        </p>
+
+
+      </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-info btn-block" style="color:white;" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
       </div>
+
     </div>
   </div>
 </div>
 
 
-<div id="resume" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+<div id="copyright" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <!-- Modal content-->
-    <div class="modal-content " style="width:665px;">
+    <div class="modal-content" >
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Resume</h4>
+        <h4 class="modal-title">Further Explanation on Copyright and Creative Commons</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
       </div>
       <div class="modal-body">
-      <p>
-        Last Updated: <br>
-        &nbsp;&nbsp;&nbsp; 5/23/17
-       </p>
-        	<img src="img/resume/resume.png">
+        <b> Importance of Copyright, Creative Commons, and Fairuse.</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          It's very important for a creator, being a youtuber, developer, maker because it can be the reason the product they create is okay, or illegal. <br>
+          Creative commons is more related for youtubers or people making educational videos because it allows you to grab informational things or parody things without being sued because small bits of intellectual property was used. <br>
+        </p>
+
+        <p style="margin:15px; margin-top:5px;">
+          It's also important for Game Developers to follow the guidelines so their games can be monetized along with to not get sued.
+        </p>
+
+           <b> Description of Fairuse</b> <br>
+           <p style="margin:15px; margin-top:5px;">
+            As defined by copyright.gov, Fair use is a legal doctrine that promotes freedom of expression by permitting the unlicensed use of copyright-protected works in certain circumstances. <br>
+        Section 107 of the Copyright Act provides the statutory framework for determining whether something is a fair use.<br>
+        <b>Section 107 calls for consideration of the following four factors in evaluating a question of fair use:</b><br>
+        &nbsp; &nbsp; &nbsp; Purpose and character of the use, including whether the use is of a commercial nature or is for nonprofit educational purposes<br>
+        &nbsp; &nbsp; &nbsp; Nature of the copyrighted work<br>
+        &nbsp; &nbsp; &nbsp; Amount and substantiality of the portion used in relation to the copyrighted work as a whole<br>
+        &nbsp; &nbsp; &nbsp; Effect of the use upon the potential market for or value of the copyrighted work<br>
+        <a style="color:#5bc0de;" href="https://en.wikipedia.org/wiki/Fair_use">Source: Wikipedia</a>
+           </p>
+
+
+          <br>
+
+           <b> Description of Public Domain</b> <br>
+           <p style="margin:15px; margin-top:5px;">
+        Public Domain is the state of belonging or being available to the public as a whole, and therefore not subject to copyright.<br>
+          There are four common ways that works arrive in the public domain:<br>
+            &nbsp; &nbsp; &nbsp; The copyright has expired<br>
+            &nbsp; &nbsp; &nbsp; The copyright owner failed to follow copyright renewal rules<br>
+            &nbsp; &nbsp; &nbsp; The copyright owner deliberately places it in the public domain, known as “dedication”.<br>
+            &nbsp; &nbsp; &nbsp; Copyright law does not protect this type of work.<br>
+
+        Examples of items that are in the public domain include: Titles and processes,works by the Federal Government,  works that were never covered by the property laws, and works where copyright has expired.
+           </p>
+
+           <br>
+
+           <b> Description of Creative Commons</b> <br>
+           <p style="margin:15px; margin-top:5px;">
+           Creative Commons is a Non-Profit organization, that it's aim is to increase the amount of content people have to LEGALLY expand on, and also share. <br>
+           Creative Commons along with Fairuse is highly talked about in the youtube community because of false copyright strikes that have been starting to swarm the website.
+        
+           </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-info btn-block" style="color:white;" data-dismiss="modal">Close</button>
+
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Presentations </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/presentation/d/1A1FUcLuELyTXHvq87S0ve3omFhCmh9_DNEvICen83iQ/edit?usp=sharing"><button type="button" class="btn btn-primary">Copyright, Fairuse, and Creative Commons.</button></a>
+        </div>
+        
       </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
     </div>
   </div>
 </div>
+
+<div id="git" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Git and why it's useful</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> What is Git?</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source code management in software development, but it can be used to keep track of changes in any set of files. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows.<br>
+        </p>
+        
+        <b> Who created Git and why?</b> <br>
+        
+        <p style="margin:15px; margin-top:5px;">
+          Git was created by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Its current maintainer since 2005 is Junio Hamano.<br>
+          As with most other distributed version control systems, and unlike most client–server systems, every Git directory on every computer is a full-fledged repository with complete history and full version tracking abilities, independent of network access or a central server.<br>
+          Git is free and open source software distributed under the terms of the GNU General Public License version 2.<br>
+        </p>
+
+        <b> What I've done with Git</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          I've personally used Github which utilizes Git and adds in collaboration among other people. <br>
+          Through Github I've created many projects, some linked at the bottom of this modal.<br>
+          Most notable are this portfolio, Simfphys Vehicle pack, and a Work in progress site called FleaMarket.tf which was a trade site for a game called TF2.
+        </p>
+
+        <p style="margin:0px;padding:0px; float:right;">
+          Source: Git Wikipedia
+        </p>
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Previous Projects </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/noobularkid.github.io"><button type="button" class="btn btn-primary btn-sm">Portfolio Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/FleaMarketTF"><button type="button" class="btn btn-primary btn-sm">FleaMarket.tf Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/-NA-Simfphys-Megapack"><button type="button" class="btn btn-primary btn-sm">Simfphys Vehicle Pack</button></a>
+        </div>
+
+        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<div id="github" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Github and why it's useful</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> What is Github?</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          GitHub (originally known as Logical Awesome LLC)is a web-based hosting service for version control using git. It is mostly used for computer code. It offers all of the distributed version control and source code management (SCM) functionality of Git as well as adding its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
+        </p>
+      
+
+        <b> What I've done with Github</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          Github has allowed me to do many things, like host this portfolio, create a large community tweaked project to progress and raise the quality of the project. I've used Github for personal projects and collaboration ranging from Websites, Game Addons, to Full fledge games, and it beats uploading your files to a cloud storage provider by far, given the power of source control.
+        </p>
+
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Github Projects </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/"><button type="button" class="btn btn-primary btn-sm">Github Profile</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/noobularkid.github.io"><button type="button" class="btn btn-primary btn-sm">Portfolio Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/FleaMarketTF"><button type="button" class="btn btn-primary btn-sm">FleaMarket.tf Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/-NA-Simfphys-Megapack"><button type="button" class="btn btn-primary btn-sm">Simfphys Vehicle Pack</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+
 </body>
 
-<!-- Theoretical Footer, if I ever want to put one here for things.
-<div class="container col-sm-12">
-<p>
-	text here
-</p>
-</div>
--->
+<!-- JSON Data Importing -->
+<script src="data/json/data_projects.js"></script>  <!-- Past Projects List-->
+<script src="data/json/data_languages.js"></script> <!-- Explanation of languages List-->
+<script src="data/json/data_jobs.js"></script>      <!-- Job Experience List-->
+<script src="data/json/data_skills.js"></script>    <!-- Language, Framework, and tool grading. -->
+<script src="data/json/data_hackathons.js"></script>    <!-- Hackathon Data -->
+<script src="data/json/data_ideologies.js"></script>    <!-- Hackathon Data -->
 
-<script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
-});
-</script>
+<!-- Command Importing -->
+<script src="page/extras/functions.js"></script> <!-- Additional Commands used by other scripts.-->
+
+<!-- Function Importing -->
+<script src="page/ideologies.js"></script>                     <!-- Skill Functions-->
+<script src="page/skills.js"></script>                     <!-- Skill Functions-->
+<script src="page/indepthlanguages.js"></script> <!-- Language Explanation Functions-->
+<script src="page/hackathons.js"></script>             <!-- Hackathon Functions-->
+<script src="page/jobexperience.js"></script>       <!-- Job Functions-->
+<script src="page/projects.js"></script>                <!-- Project Functions-->
+<script src="page/extras/sidenav.js"></script>                <!-- Sidebar Navigation -->
+
 </html>
