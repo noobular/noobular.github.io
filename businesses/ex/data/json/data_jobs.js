@@ -7,8 +7,8 @@ var jobs = [
 		"images": ["resources/img/placeholder.jpg"],
 		"skills":["More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
 		"github":"",
-		"other":[["",""]],
-		"date":"February 1, 2018"
+		"other":[["Red Apple Facebook Page","https://www.facebook.com/WayneRedApple/"]],
+		"date":"August 2017"
 	},
 	{
 		"title": "The Henry Ford, Green Field Village",
@@ -19,6 +19,6 @@ var jobs = [
 		"skills":["More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
 		"github":"",
 		"other":[["Village Website","https://www.thehenryford.org/visit/greenfield-village/"]],
-		"date":"February 1, 2018"
+		"date":"January 2016 - June 2016"
 	}
 ]

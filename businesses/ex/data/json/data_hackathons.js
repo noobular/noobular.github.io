@@ -19,6 +19,6 @@ var hackathons = [
 		"skills":["Working with Agile scrum.","Working with a team to end up with a finished product.","This gave a hands on experience with an Arduino Circuit Playground board."],
 		"github":"",
 		"other":["",""],
-		"date":"April 16/17, 2017"
+		"date":"April 17/18, 2017"
 	}
 ]

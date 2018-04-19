@@ -31,5 +31,16 @@ var languageskills = [
 		"github":"",
 		"other":["",""],
 		"date":""
+	},
+	{
+		"title": "Git / Github",
+		"position" : [""],
+		"role":[""],
+		"description":"Git in simple terms, is a version control system. You can use this system to figure out what changes have been made to files at what time and date and what version it was if you're in need to do a roll back because something broke. Github has been great for large and small projects I've worked on over the last couple years. Github brings together",
+		"images": ["resources/img/placeholder.jpg"],
+		"skills":[["",""]],
+		"github":"",
+		"other":["",""],
+		"date":""
 	}
 ]
