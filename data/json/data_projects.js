@@ -161,7 +161,7 @@ var projects = [
 		"images": ["resources/img/placeholder.jpg"],
 		"skills":["Experience working with PHP to create a good user experience.", "Started using MySQL to make working with accounts much easier keeping essential data stored for later access."],
 		"github":"",
-		"other":[["",""]],
+		"other":[["OpenID Login Demo","https://drive.google.com/open?id=1yqP1riX3d18q8SmyXVaWTZrrNxPm0KjI"]],
 		"date":"June 5, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	},
