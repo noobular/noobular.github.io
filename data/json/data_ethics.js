@@ -42,5 +42,16 @@ var ethics = [
 		"github":"github",
 		"other":["",""],
 		"date":""
+	},
+	{
+		"title": "Project Planning",
+		"position" : [""],
+		"role":[""],
+		"description":"This is the project planning for the Big project class requirement the year 2's had in the William D. Ford Technical Center.",
+		"images": ["resources/img/ideologies/github.png"],
+		"skills":[["Github Demo Video","https://www.youtube.com/watch?v=maTGSED9H1E"],["MTAG Collaboration","https://github.com/noobularkid/Mini-Text-Adventure/blob/master/minitextadventuregame.html"],['Portfolio Github','https://github.com/noobularkid/noobularkid.github.io'],['Large Community Addon Pack','https://github.com/noobularkid/-NA-Simfphys-Megapack']],
+		"github":"wdf",
+		"other":["",""],
+		"date":""
 	}
 ]
