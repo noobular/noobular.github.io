@@ -221,7 +221,7 @@ var projects = [
 		"images": ["resources/img/placeholder.jpg"],
 		"skills":["3D Modeling Experience","Multiple 3D Modeling Programs Experiences."],
 		"github":"",
-		"other":[["Raspberry Pi Zero","https://www.tinkercad.com/things/5nnJVElX8uX-raspberry-pi-zero-case-"]],
+		"other":[["Raspberry Pi Zero","https://www.tinkercad.com/things/5nnJVElX8uX-raspberry-pi-zero-case-"],["Rock Paper Scissors Button Holders","https://www.tinkercad.com/things/3EyvH1r51tC-fabulous-bombul-turing"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
 	}
