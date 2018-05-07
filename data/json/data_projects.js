@@ -219,7 +219,7 @@ var projects = [
 		"role":["3D Printing"],
 		"description":"Over the course of the year, I've created multiple 3D models for Pi cases.",
 		"images": ["resources/img/placeholder.jpg"],
-		"skills":["3D Modeling Experience","Multiple 3D Modeling Programs Experiences.],
+		"skills":["3D Modeling Experience","Multiple 3D Modeling Programs Experiences."],
 		"github":"",
 		"other":[["Raspberry Pi Zero","https://www.tinkercad.com/things/5nnJVElX8uX-raspberry-pi-zero-case-"]],
 		"date":"April 17, 2018",
