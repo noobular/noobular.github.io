@@ -200,5 +200,29 @@ var projects = [
 		"other":[["Github","https://github.com/noobularkid/MyProject"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
+	},
+	{
+		"title": "RGB Squid Project",
+		"languages": ["Python"],
+		"role":["Software Development"],
+		"description":"This gave me an opportunity to integrate LEDs into a Raspberry Pi or Arduino.",
+		"images": ["resources/img/placeholder.jpg"],
+		"skills":["Extra experience soldering","GPIO Experience"],
+		"github":"",
+		"other":[["Github","https://github.com/noobularkid/LED-Testing"]],
+		"date":"April 17, 2018",
+		"badge":["","",""] // print text, type, tooltip text
+	},
+	{
+		"title": "3D Modeling Experience",
+		"languages": ["GCode"],
+		"role":["3D Printing"],
+		"description":"Over the course of the year, I've created multiple 3D models for Pi cases.",
+		"images": ["resources/img/placeholder.jpg"],
+		"skills":["3D Modeling Experience","Multiple 3D Modeling Programs Experiences.],
+		"github":"",
+		"other":[["Raspberry Pi Zero","https://www.tinkercad.com/things/5nnJVElX8uX-raspberry-pi-zero-case-"]],
+		"date":"April 17, 2018",
+		"badge":["","",""] // print text, type, tooltip text
 	}
 ]
