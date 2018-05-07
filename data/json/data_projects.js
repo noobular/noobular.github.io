@@ -197,7 +197,7 @@ var projects = [
 		"images": ["resources/img/placeholder.jpg"],
 		"skills":["Experience working with a Circuit Playground Arduino","Product Creation Prospective"],
 		"github":"",
-		"other":[["Github","https://github.com/noobularkid/MyProject"],["VR Demo Video","https://drive.google.com/open?id=1WuIZMHsZU6s9vMWDv__Shfz2b3hFckTQ"],
+		"other":[["Github","https://github.com/noobularkid/MyProject"],["VR Demo Video","https://drive.google.com/open?id=1WuIZMHsZU6s9vMWDv__Shfz2b3hFckTQ"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
 	},
