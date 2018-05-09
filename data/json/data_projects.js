@@ -144,7 +144,7 @@ var projects = [
 		"images": ["resources/img/projects/rockpaperscissors/rps1.png"],
 		"skills":["Python Experience","Used to learn the basics of IDLE","Learned GPIOZero for LEDs and Buttons with the Raspberry Pi", "3D Modeling Work"],
 		"github":"rockpaperscissors",
-		"other":[["Github","https://github.com/noobularkid/RockPaperScissors"]],
+		"other":[["Github","https://github.com/noobularkid/RockPaperScissors"],["Video Demo","https://drive.google.com/file/d/1MEftNxtiAgVi0bXUpAfb3DWdqYlM7dyX/view"]],
 		"date":"March 14, 2018",
 		"badge":["","",""] // print text, type, tooltip text
 	},
