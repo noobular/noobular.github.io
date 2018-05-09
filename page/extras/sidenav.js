@@ -10,6 +10,7 @@ var languages = [
 	"C#",
 	"Lua",
 	"Livecode",
+	"GCode",
 	".Net",
 	"Python",
 	"NodeJS",
@@ -26,7 +27,8 @@ var roles =[
 	"Software Development",
 	"Server Development",
 	"App Development",
-	"Database Development"
+	"Database Development",
+	"3D Modeling"
 ]
 
 var element=[], elementa=[];
@@ -39,6 +41,7 @@ function createSections(language){
 			elementa[index].innerHTML = roles[index]
 			elementa[index].setAttribute("onclick","GenerateProjects('"+roles[index]+"')")
 			elementa[index].style ="font-size:18px;"
+
 
 			element[index].appendChild(elementa[index])
 			document.getElementById("languagelist").appendChild(element[index])

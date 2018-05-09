@@ -53,5 +53,16 @@ var ethics = [
 		"github":"wdf",
 		"other":["",""],
 		"date":""
+	},
+	{
+		"title": "Pi, Linux, Sense Hat",
+		"position" : [""],
+		"role":[""],
+		"description":"What can you really get out of a Free operating system, a $35 computer, and a $40 module.",
+		"images": ["resources/img/ideologies/projectplanning.png"],
+		"skills":[["",""]],
+		"github":"pilinuxsensehat",
+		"other":["",""],
+		"date":""
 	}
 ]

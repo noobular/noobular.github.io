@@ -156,6 +156,7 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 	cardbody.appendChild(cardsubtitle)
 
 	carousel.appendChild(carouselinner)
+	//only add caruosel spin buttons if greater than one image
 	if(images.length > 1){
 		carouselcontrolprev.appendChild(carouselcontrolprevimg)
 		carouselcontrolnext.appendChild(carouselcontrolnextimg)
@@ -164,6 +165,19 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 	}
 
 	cardbody2.appendChild(cardtext)
+
+
+	if (github !== ""){
+		githube = document.createElement("a")
+		$(githube).addClass("btn btn-primary btn-sm")
+		githube.innerHTML = "More information"
+		$(githube).attr("data-target","#"+github)
+		$(githube).attr("data-toggle","modal")
+		$(githube).attr("role","button")
+		$(githube).attr("target","_blank")
+		$(githube).attr("style","color:white; float:right;")
+		cardfooter.appendChild(githube)
+	}
 
 	if(other[0] !==""){
 		for(i=0;i<other.length;i++){
@@ -186,12 +200,13 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 			if(DevelopmentMode==true){console.log("IRAN " + index )}
 			items[index] = document.createElement("div") // Carouselitems
 			imgs[index] = document.createElement("img")  // carouselimgs
+			$(imgs[index]).addClass("carouselimg cover grow ") //effectfront
 			if(index == 0){
 				$(items[index]).addClass("carousel-item active")
 			}else{
 				$(items[index]).addClass("carousel-item")
 			}
-			$(imgs[index]).addClass("carouselimg cover scaleimg") //effectfront
+			
 			$(imgs[index]).attr("src",images[index])
 			$(imgs[index]).attr("alt","img"+carouselid+index)
 			items[index].appendChild(imgs[index]);
@@ -220,6 +235,7 @@ function CreateProjectCard(index,title,languages,role,description,images,skills,
 
 		card.appendChild(cardfooter)
 
+	$(container).attr("id",title.replace(/\s+/g, ''))
 	document.getElementById("projectlist").appendChild(container)
 	count++;
 }

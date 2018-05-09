@@ -1,9 +1,16 @@
 /*
-////// Projects that need to be added... ///////
-	Snake Remake / GameMaker Studio 1.4
-	RPS / Python
-	Sheep Herder / Livecode
-	FleaMarketTF / PHP, JS, JQuery, Bootstrap 3
+{
+		"title": "",          		// Title of project
+		"languages": ["",""], 		// Different programming Languages
+		"role":[""],          		// Type of development (Server, Web, Game ect.)
+		"description":"",     		// Brief description of the project.
+		"images": ["",""],    		// Images to be used in the carousel
+		"skills": ["",""],    		// Different skills/things gained from doing this project.
+		"github":"",         	   	// Modal reference ID 
+		"other":[["",""],["",""]], 	// Links
+		"date":"February 8, 2017",  // Date Completed 
+		"badge":["","",""] 			// Not Implemented (Will be visual progress meter of the project)
+	}
 
 */
 
@@ -124,7 +131,7 @@ var projects = [
 		"description":"Basic recreation of snake, made with Game Maker Studio 1.4 with a timespan of three school days (Totaling 9 hours). My main struggle was figuring out the body part system.",
 		"images": ["resources/img/projects/snake/snake1.png"],
 		"skills":["More experience with GMStudio 1.4","Gave me an insight of the process of creating something with defined outcome."],
-		"github":"",
+		"github":"8bitclassic",
 		"other":[["Github","https://github.com/noobularkid/Snake-Remake"]],
 		"date":"September 19, 2017",
 		"badge":["","",""] // print text, type, tooltip text
@@ -136,7 +143,7 @@ var projects = [
 		"description":"A virtual creation of Rock, Paper, Scissors using python, and an added modification (hammer) to make for a more positive experience.",
 		"images": ["resources/img/projects/rockpaperscissors/rps1.png"],
 		"skills":["Python Experience","Used to learn the basics of IDLE","Learned GPIOZero for LEDs and Buttons with the Raspberry Pi", "3D Modeling Work"],
-		"github":"",
+		"github":"rockpaperscissors",
 		"other":[["Github","https://github.com/noobularkid/RockPaperScissors"]],
 		"date":"March 14, 2018",
 		"badge":["","",""] // print text, type, tooltip text
@@ -206,22 +213,34 @@ var projects = [
 		"languages": ["Python"],
 		"role":["Software Development"],
 		"description":"This gave me an opportunity to integrate LEDs into a Raspberry Pi or Arduino.",
-		"images": ["resources/img/placeholder.jpg"],
+		"images": ["resources/img/projects/rgbsquid/rgbsquid.png"],
 		"skills":["Extra experience soldering","GPIO Experience"],
-		"github":"",
+		"github":"rgbsquid",
 		"other":[["Github","https://github.com/noobularkid/LED-Testing"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
 	},
 	{
-		"title": "3D Modeling Experience",
+		"title": "Button Holders / Controller",
 		"languages": ["GCode"],
-		"role":["3D Printing"],
-		"description":"Over the course of the year, I've created multiple 3D models for Pi cases. I used TinkerCad to create these.",
-		"images": ["resources/img/placeholder.jpg"],
+		"role":["3D Modeling"],
+		"description":"This goes with the Rock, Paper, Scissors Project/program and it essentially was modeled to hold three buttons that would connect to the raspberry pi and to be integrated with the game. This was created with TinkerCad",
+		"images": ["resources/img/projects/3dmodelingexperience/rpsmodel.png","resources/img/projects/3dmodelingexperience/rpspic.png"],
 		"skills":["3D Modeling Experience","Multiple 3D Modeling Programs Experiences."],
-		"github":"",
-		"other":[["Raspberry Pi Zero","https://www.tinkercad.com/things/5nnJVElX8uX-raspberry-pi-zero-case-"],["Rock Paper Scissors Button Holders","https://www.tinkercad.com/things/3EyvH1r51tC-fabulous-bombul-turing"]],
+		"github":"3dmodelingexperience",
+		"other":[["Rock Paper Scissors Button Holders","https://www.tinkercad.com/things/3EyvH1r51tC-fabulous-bombul-turing"]],
+		"date":"April 17, 2018",
+		"badge":["","",""] // print text, type, tooltip text
+	},
+	{
+		"title": "Raspberry Pi Zero Case",
+		"languages": ["GCode"],
+		"role":["3D Modeling"],
+		"description":"This was created as a first experience to using any 3D Modeling software within the William D. Ford Technical Center Class. it was nearly perfect and fit near perfect on the first print and test of this model. This was created with TinkerCad",
+		"images": ["resources/img/projects/3dmodelingexperience/picasemodel.png"],
+		"skills":["3D Modeling Experience","Multiple 3D Modeling Programs Experiences."],
+		"github":"3dmodelingexperience",
+		"other":[["Rock Paper Scissors Button Holders","https://www.tinkercad.com/things/3EyvH1r51tC-fabulous-bombul-turing"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
 	}
