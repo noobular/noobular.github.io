@@ -22,7 +22,7 @@ function GenerateProjects(language){
 
 	$(projects).each(function(index){
 		if (language !== "all"){
-			if (language == "web development" || language == "game development" || language == "software development" || language == "server development" || language == "app development"){
+			if (language == "web development" || language == "game development" || language == "software development" || language == "server development" || language == "app development" || language == "3d modeling"){
 				$(projects[index].role).each(function(i){
 					if(projects[index].role[i].toLowerCase() == language){
 						CreateProjectCard(index,projects[index].title,projects[index].languages,projects[index].role,projects[index].description,projects[index].images,projects[index].skills,projects[index].github,projects[index].other)	
