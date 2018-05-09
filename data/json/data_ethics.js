@@ -36,7 +36,7 @@ var ethics = [
 		"title": "Github",
 		"position" : [""],
 		"role":[""],
-		"description":"Github is the combination of using Git and bringing project management to a wider span of people. Github has been great for games, websites, servers, either large or small projects I've worked on over the last couple years. My MTAG and Portfilio are big examples of how Github can come into play for developers, you can add collaborators onto a repository (the folders) and then allow someone to contribute to that by adding or fixing problems within that code, then they can request that its changed, if accepted it can be added to the public 'master' version. Using github can greatly increase your efficency while creating a project with a group of people. less time sending files, More time coding.",
+		"description":"Github is a project management platform, that utilizes Git version control, to offer a superior project creation platform.",
 		"images": ["resources/img/ideologies/github.png"],
 		"skills":[["Github Demo Video","https://www.youtube.com/watch?v=maTGSED9H1E"],["MTAG Collaboration","https://github.com/noobularkid/Mini-Text-Adventure/blob/master/minitextadventuregame.html"],['Portfolio Github','https://github.com/noobularkid/noobularkid.github.io'],['Large Community Addon Pack','https://github.com/noobularkid/-NA-Simfphys-Megapack']],
 		"github":"github",
