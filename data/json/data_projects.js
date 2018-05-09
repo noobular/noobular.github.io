@@ -132,7 +132,7 @@ var projects = [
 		"images": ["resources/img/projects/snake/snake1.png"],
 		"skills":["More experience with GMStudio 1.4","Gave me an insight of the process of creating something with defined outcome."],
 		"github":"8bitclassic",
-		"other":[["Github","https://github.com/noobularkid/Snake-Remake"]],
+		"other":[["Github","https://github.com/noobularkid/Snake-Remake"],["Download","https://drive.google.com/file/d/0B_D41pP-lSKPWmRFRlZVbVdPTDA/view?usp=sharing"]],
 		"date":"September 19, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	},
