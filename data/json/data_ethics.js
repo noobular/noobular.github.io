@@ -60,7 +60,7 @@ var ethics = [
 		"role":[""],
 		"description":"What can you really get out of a Free operating system, a $35 computer, and a $40 module.",
 		"images": ["resources/img/ideologies/pi.png"],
-		"skills":[["Raspberry Pi Flash Cards #1","https://quizlet.com/231460385/raspberry-pi-quizlet-flash-cards/"],["Raspberry Pi Flash Cards #2","https://quizlet.com/232124140/raspberry-pi-software-cards-flash-cards/"],["Raspberry Pi/Python Flashcards","https://quizlet.com/264455223/unit-1-flash-cards/"]],
+		"skills":[["Raspberry Pi Flash Cards #1","https://quizlet.com/231460385/raspberry-pi-quizlet-flash-cards/"],["Raspberry Pi Flash Cards #2","https://quizlet.com/232124140/raspberry-pi-software-cards-flash-cards/"],["Raspberry Pi/Python Flashcards","https://quizlet.com/264455223/unit-1-flash-cards/"],["SenseHat Resources","https://pythonhosted.org/sense-hat/"]],
 		"github":"pilinuxsensehat",
 		"other":["",""],
 		"date":""
