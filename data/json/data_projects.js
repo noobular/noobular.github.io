@@ -228,7 +228,7 @@ var projects = [
 		"images": ["resources/img/projects/3dmodelingexperience/rpsmodel.png","resources/img/projects/3dmodelingexperience/rpspic.png"],
 		"skills":["3D Modeling Experience","Multiple 3D Modeling Programs Experiences."],
 		"github":"3dmodelingexperience",
-		"other":[["Rock Paper Scissors Button Holders","https://www.tinkercad.com/things/3EyvH1r51tC-fabulous-bombul-turing"]],
+		"other":[["TinkerCad Model","https://www.tinkercad.com/things/3EyvH1r51tC-fabulous-bombul-turing"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
 	},
@@ -240,7 +240,7 @@ var projects = [
 		"images": ["resources/img/projects/3dmodelingexperience/picasemodel.png"],
 		"skills":["3D Modeling Experience","Multiple 3D Modeling Programs Experiences."],
 		"github":"3dmodelingexperience",
-		"other":[["Rock Paper Scissors Button Holders","https://www.tinkercad.com/things/3EyvH1r51tC-fabulous-bombul-turing"],["Video of Case","https://drive.google.com/open?id=1t7jP4puo1DxohcfeBDe0DpYtpghJwEsu"]],
+		"other":[["TinkerCad Model","https://www.tinkercad.com/things/5nnJVElX8uX-raspberry-pi-zero-case-"],["Video of Case","https://drive.google.com/open?id=1t7jP4puo1DxohcfeBDe0DpYtpghJwEsu"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
 	}
