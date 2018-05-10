@@ -237,7 +237,7 @@ var projects = [
 		"languages": ["GCode"],
 		"role":["3D Modeling"],
 		"description":"This was created as a first experience to using any 3D Modeling software within the William D. Ford Technical Center Class. it was nearly perfect and fit near perfect on the first print and test of this model. This was created with TinkerCad",
-		"images": ["resources/img/projects/3dmodelingexperience/picasemodel.png"],
+		"images": ["resources/img/projects/3dmodelingexperience/picasemodel.png","resources/img/projects/3dmodelingexperience/pipic.png"],
 		"skills":["3D Modeling Experience","Multiple 3D Modeling Programs Experiences."],
 		"github":"3dmodelingexperience",
 		"other":[["TinkerCad Model","https://www.tinkercad.com/things/5nnJVElX8uX-raspberry-pi-zero-case-"],["Video of Case","https://drive.google.com/open?id=1t7jP4puo1DxohcfeBDe0DpYtpghJwEsu"]],
