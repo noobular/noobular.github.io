@@ -84,7 +84,7 @@ var projects = [
 		"images": ["resources/img/projects/snake/snake1.png"],
 		"skills":["More experience with GMStudio 1.4","Gave me an insight of the process of creating something with defined outcome."],
 		"github":"8bitclassic",
-		"other":[["Github","https://github.com/noobularkid/Snake-Remake"],["Download","https://drive.google.com/file/d/0B_D41pP-lSKPWmRFRlZVbVdPTDA/view?usp=sharing"],["Video Demo","https://drive.google.com/file/d/1UQr2NTAPnEn9tXBmdi1kDv-OU8Ju8wk-/view?usp=sharing"]],
+		"other":[["Original DL","https://drive.google.com/file/d/0B_D41pP-lSKPWmRFRlZVbVdPTDA/view?usp=sharing"],["Modded DL","https://drive.google.com/open?id=1ON-RS9ZUZRC510J-aHtYYBS0FwEAJn58"],["Original Demo","https://drive.google.com/file/d/1UQr2NTAPnEn9tXBmdi1kDv-OU8Ju8wk-/view?usp=sharing"],["Modded Demo","https://drive.google.com/open?id=10Zi9MaMeYBD_61AMWq5TSQ_7oEd097CA"]],
 		"date":"September 19, 2017",
 		"badge":["","",""] // print text, type, tooltip text
 	},
@@ -203,7 +203,7 @@ var projects = [
 		"description":"This would be my first attempt at developing anything with VR, testing the waters.",
 		"images": ["resources/img/placeholder.jpg"],
 		"skills":["Experience working with a Circuit Playground Arduino","Product Creation Prospective"],
-		"github":"",
+		"github":"vrdev",
 		"other":[["Github","https://github.com/noobularkid/MyProject"],["VR Demo Video","https://drive.google.com/open?id=1WuIZMHsZU6s9vMWDv__Shfz2b3hFckTQ"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
@@ -251,8 +251,8 @@ var projects = [
 		"description":"Game created with a 3 hour timelimit for a class competition, move around with wasd, and click and shoot at the enemies approaching. This project was created with Game Maker Studio 2",
 		"images": ["resources/img/projects/umd1/img1.png","resources/img/projects/umd1/img2.png","resources/img/projects/umd1/img3.png"],
 		"skills":["Experience working in hastily Environment","Experience with Game Maker Studio 2"],
-		"github":"3dmodelingexperience",
-		"other":[["",""]],
+		"github":"umd1",
+		"other":[["Download","https://drive.google.com/open?id=18nZ4vDRqNx6xkSl0EJX7Sc7jY3lImj0i"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
 	},
@@ -261,10 +261,10 @@ var projects = [
 		"languages": ["GML"],
 		"role":["Game Development"],
 		"description":"Game created with a 3 hour timelimit for a class competition, Click the D button with your mouse to fire bullets at your enemies and protect your towers! Created in Game Maker 8.1",
-		"images": ["resources/img/projects/umd2/img1.png","resources/img/projects/umd2/img2.png","resources/img/projects/umd2/img3.png"],
+		"images": ["resources/img/projects/umd3/img1.png","resources/img/projects/umd3/img2.png","resources/img/projects/umd3/img3.png"],
 		"skills":["Experience working in hastily Environment","Experience with Game Maker 8.1"],
-		"github":"3dmodelingexperience",
-		"other":[["",""]],
+		"github":"umd3",
+		"other":[["Original DL","https://drive.google.com/open?id=1lRrSBDQlqwC6DK-Kh82-oju0H6bVAvfv"],["Modded DL","https://drive.google.com/open?id=1c8oZjqauAzwDqyXogLzxGpAA6La4yr8N"]],
 		"date":"April 17, 2018",
 		"badge":["","",""] // print text, type, tooltip text
 	}

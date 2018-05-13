@@ -49,7 +49,7 @@ var ethics = [
 		"role":[""],
 		"description":"This is the project planning for the Big project class requirement the year 2's had in the William D. Ford Technical Center.",
 		"images": ["resources/img/ideologies/projectplanning.png"],
-		"skills":[["",""]],
+		"skills":[],
 		"github":"wdf",
 		"other":["",""],
 		"date":""
@@ -62,6 +62,17 @@ var ethics = [
 		"images": ["resources/img/ideologies/pi.png"],
 		"skills":[["Raspberry Pi Flash Cards #1","https://quizlet.com/231460385/raspberry-pi-quizlet-flash-cards/"],["Raspberry Pi Flash Cards #2","https://quizlet.com/232124140/raspberry-pi-software-cards-flash-cards/"],["Raspberry Pi/Python Flashcards","https://quizlet.com/264455223/unit-1-flash-cards/"],["SenseHat Resources","https://pythonhosted.org/sense-hat/"]],
 		"github":"pilinuxsensehat",
+		"other":["",""],
+		"date":""
+	},
+	{
+		"title": "New Tech Awareness",
+		"position" : [""],
+		"role":[""],
+		"description":"It's very important to stay up to date with new technology, it may save you time or money.",
+		"images": ["resources/img/ideologies/newtechawareness/3.png"],
+		"skills":[],
+		"github":"newtechawareness",
 		"other":["",""],
 		"date":""
 	}
