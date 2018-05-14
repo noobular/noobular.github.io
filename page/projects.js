@@ -244,4 +244,4 @@ currentSearch = document.getElementById("langsearch").innerHTML
 
 
 GenerateProjects("All");
-EditJumbotron("Hello, world!","This is a indepth look at my programming background / projects I've created.")
+EditJumbotron("Hello, world!","This is a indepth look at my programming background / projects I've created. <iframe src='https://drive.google.com/file/d/1NshWPpHD6kHkNIuDvOKLSoXYgIq3-Lip/preview' style='float:right;' width='320' height='200' allowfullscreen></iframe>")
