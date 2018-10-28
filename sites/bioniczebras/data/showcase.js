@@ -4,8 +4,6 @@
 // Remove comma if its the last index!!!
 
 var images = [
-    {"name":"buildseason2018.jpg","header":"Build Season 2018","caption":"We had a great time building this year!"},
-    {"name":"bs2.jpg","header":"Bsrftghjsrthsrth","caption":"We had a great time builadgadar!"},
-    {"name":"bs3.jpg","header":"Buiupiopyiopyiopyiop","caption":"We had aadgalding this year!"}
+    {"name":"buildseason2018.jpg","header":"Build Season 2018","caption":"We had a great time building this year!"}
     //Remove comma on the last index!
 ]
