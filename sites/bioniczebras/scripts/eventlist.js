@@ -8,8 +8,8 @@ function listEvents(){
         $(element).addClass("nav-item");
         $(badge).addClass("badge badge-primary")
 
-        element.style = "margin-left:10px;"
-        badge.style ="float:left;"
+        element.style = "margin-left:10px; margin-right:0px; padding-right:0px;"
+        badge.style ="float:right;"
         eventname.style="float:left;"
 
         eventname.innerHTML = events[index].name;

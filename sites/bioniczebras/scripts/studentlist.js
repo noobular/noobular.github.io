@@ -9,9 +9,9 @@ function listStudents(){
         $(element).addClass("nav-item");
         $(badge).addClass("badge badge-primary")
 
-        element.style = "margin-left:10px;"
+        element.style = "margin-left:10px; margin-right:0px; padding-right:0px;"
         badge.style ="float:right;"
-        studentname.style="float:left;"
+        studentname.style=""
 
         studentname.innerHTML = students[index].name;
         badge.innerHTML = students[index].role;
