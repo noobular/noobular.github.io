@@ -8,6 +8,13 @@
 </div>
 */
 
+// Checks to see if there is more than a single image, if not remove the carousel controls.
+if(images.length==1){
+    $('#carouselcontrols1').remove();
+    $('#carouselcontrols2').remove();
+}
+
+// Go through each index in the images json array, do this function based on the data.
 $(images).each(function(index){
     var item = document.createElement('div');
     if(index == 0){

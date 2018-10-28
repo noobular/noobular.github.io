@@ -18,12 +18,16 @@
 	<script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
 
 
-	<style>
+	<script src="scripts/jquery.waituntilexists.js"></script>
 
+
+	<style>
+	/* Set image size to the max possible for the carousel area*/
 	.carousel-inner img {
       width: 100%;
       height: 100%;
   	}
+
  	/* Parallax / Navbar Related*/
 	.parallax { 
 	    /* The image used */
@@ -98,7 +102,7 @@
 					</ul>
 				</nav>
 			</div>
-	
+	<br>
 		<div class="col-12">
 			<nav class="navbar bg-light"> <!-- Creates the panel for the data to go into-->
 				<ul id="mentorlist" class="navbar-nav"> <!-- "Unordered list" list them in order using the script.-->
@@ -108,7 +112,7 @@
 				</ul>
 			</nav>
 		</div>
-
+		<br>
 		<div class="col-12">
 			<nav class="navbar bg-light"> <!-- Creates the panel for the data to go into-->
 				<ul id="studentlist" class="navbar-nav col-12"> <!-- "Unordered list" list them in order using the script.-->
@@ -132,29 +136,21 @@
 		<br>
 
 		<div id="demo" class="carousel slide" data-ride="carousel">
-
-				<!-- Indicators -->
-				<ul class="carousel-indicators">
-				  <li data-target="#demo" data-slide-to="0" class="active"></li>
-				  <li data-target="#demo" data-slide-to="1"></li>
-				  <li data-target="#demo" data-slide-to="2"></li>
-				</ul>
-			  
 				<!-- The slideshow -->
 				<div id="imageCarousel" class="carousel-inner">
 			
 				</div>
 			  
 				<!-- Left and right controls -->
-				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<a id="carouselcontrols1" class="carousel-control-prev" href="#demo" data-slide="prev">
 				  <span class="carousel-control-prev-icon"></span>
 				</a>
-				<a class="carousel-control-next" href="#demo" data-slide="next">
+				<a id="carouselcontrols2" class="carousel-control-next" href="#demo" data-slide="next">
 				  <span class="carousel-control-next-icon"></span>
 				</a>
 			  
-			  </div>
-	</div>
+		</div>
+	</div> <!--end of center column-->
 
 	<div class="col-3" > <!-- Column 1, 3 out of 12 grid places-->
 		<div class="card">
@@ -164,7 +160,7 @@
 				</div>
 		</div>
 		<br>
-		<a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/FRCTeam313?ref_src=twsrc%5Etfw">Tweets by FRCTeam313</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<a style="border-radius: 0px;" class="twitter-timeline" data-chrome="" data-height="600" data-theme="light" href="https://twitter.com/FRCTeam313?ref_src=twsrc%5Etfw">Tweets by FRCTeam313</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
 </div>
 
@@ -179,5 +175,11 @@
 	<script src="scripts/studentlist.js"></script>
 	<script src="scripts/eventlist.js"></script>
 	<script src="scripts/carousel.js"></script>
+
+	
+	<script>
+		// remove border radius from twitter embed
+		setTimeout(function() {$("#twitter-widget-0").contents().find(".timeline-Widget").css("border-radius", "0")}, 750);
+	</script>
 
 </html>

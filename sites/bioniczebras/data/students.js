@@ -10,7 +10,7 @@ var students = [
     {"name":"Natalie Decker","role":"Business Captain / Safety"},
     {"name":"Hank Garret","role":"Build Captain"},
     {"name":"Mykala Smith","role":"Executive Advisor"},
-    {"name":"Samantha Pagereski","role":"None"},
-    {"name":"Timothy King","role":"None"}
+    {"name":"Samantha Pagereski","role":"Member"},
+    {"name":"Timothy King","role":"Member"}
     //Remove comma on the last index!
 ]
