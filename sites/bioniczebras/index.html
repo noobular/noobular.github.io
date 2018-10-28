@@ -22,21 +22,16 @@
 	<!-- Font Awesome Icons-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
-			
-	.row{
-		padding-right:15px;	
-	}
-
 	@media screen and (max-width: 992px) {
-
-		.row{
-			padding-right:0px;
-			padding-left:15px;
-		}
-
 		#topNavbar{
 			font-size:14px;
+		}
+		#jumbotron{
+			padding-top:10px;
+			height:110px;
 		}
 		#eventlist{
 			font-size: 14px;
@@ -50,7 +45,9 @@
 			font-size: 14px;
 		}
 
+
 	}
+
 	h4{
 		margin-bottom:0px;
 	}
@@ -64,7 +61,6 @@
       width: 100%;
       height: 100%;
   	}
-
  	/* Parallax / Navbar Related*/
 	.parallax { 
 	    /* The image used */
@@ -133,8 +129,8 @@
 
 
 
-	  <div class="jumbotron jumbotron-fluid" style="padding-top:30px;">
-		<div class="container" style="height:40px;">
+	  <div id="jumbotron" class="jumbotron jumbotron-fluid">
+		<div  class="container" style="height:40px;">
 		  <h1>Welcome!</h1> 
 		  <p>Welcome to the official website of FIRST Robotics Competition Team 313: The Bionic Zebras!</p> 
 		</div>
@@ -144,7 +140,7 @@
 	<div class="col-12 col-sm-12 col-md-12 col-lg-3"> <!-- Column one, 3 out of 12 grid places-->
 		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 				<nav class="navbar bg-light" data-toggle="collapse" href="#eventlist"> <!-- Creates the panel for the data to go into-->
-					<h4>Event List</h4> <i class="fas fa-bars" style="color:black; float:right; font-size: 24px;margin-bottom:5px;"></i>
+					<h4>Event List</h4> <i class="fas fa-bars rosters" style="color:black; float:right; font-size: 24px;margin-bottom:5px;"></i>
 					<ul id="eventlist" class="navbar-nav col-12 collapse in" style="margin-right:0px;padding-right:0px;"> <!-- "Unordered list" list them in order using the script.-->
 					</ul>
 				</nav>
@@ -153,7 +149,7 @@
 	<br> <!-- Break the line between the cards-->
 		<div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
 			<nav class="navbar bg-light" data-toggle="collapse" href="#mentorlist"> <!-- Creates the panel for the data to go into-->
-				<h4>Mentor Roster</h4> <i class="fas fa-bars" style="color:black; float:right; font-size: 24px; margin-bottom:5px;"></i>
+				<h4>Mentor Roster</h4> <i class="fas fa-bars rosters" style="color:black; float:right; font-size: 24px; margin-bottom:5px;"></i>
 				<ul id="mentorlist" class="navbar-nav col-12 collapse in"> <!-- "Unordered list" list them in order using the script.-->	
 				</ul>
 			</nav>
@@ -162,7 +158,7 @@
 
 	<div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
 			<nav class="navbar bg-light" data-toggle="collapse" href="#studentlist"> <!-- Creates the panel for the data to go into-->
-				<h4>Student Roster</h4>	<i class="fas fa-bars" style="color:black; float:right; font-size: 24px; margin-bottom:5px;"></i>
+				<h4>Student Roster</h4>	<i class="fas fa-bars rosters" style="color:black; float:right; font-size: 24px; margin-bottom:5px;"></i>
 				<ul id="studentlist" class="navbar-nav col-12 collapse in"> <!-- "Unordered list" list them in order using the script.--></ul>
 			</nav>
 	</div>
@@ -170,7 +166,7 @@
 </div>
 	<br> <!-- Break the line between the cards-->
 
-	<div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- Column two, 6(total 9) out of 12 grid places-->
+	<div class="col-12 col-sm-12 col-md-12 col-lg-6" style="padding-right:0px;"> <!-- Column two, 6(total 9) out of 12 grid places-->
 	
 		<div class="card" style="border-width: 0px;">
 				<div class="card-header bg-dark" style="color:white; font-size:18px;" data-toggle="collapse" href="#whatisfirst">What is FIRST? <i class="fas fa-bars" style="color:white; float:right; font-size: 24px; margin-bottom:5px;"></i></div> 
@@ -209,7 +205,7 @@
 		</div>
 	</div> <!--end of center column-->
 
-	<div class="col-12 col-sm-12 col-md-12 col-lg-3" > <!-- Column three, 3(total 12) out of 12 grid places-->
+	<div class="col-12 col-sm-12 col-md-12 col-lg-3"  style="padding-right:0px;"> <!-- Column three, 3(total 12) out of 12 grid places-->
 		<div class="card">
 				<div class="card-body">
 						<h4 class="card-title">Our mission</h4>
@@ -237,13 +233,16 @@
 	<script>
 		// remove border radius from twitter embed, there's no other way of fixing this specifically bc twitter dev sucks.
 		setTimeout(function() {$("#twitter-widget-0").contents().find(".timeline-Widget").css("border-radius", "0")}, 750);
+
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			// this is if its a mobile device
+			// Mobile device
 		}else{
-			//desktop(probably)
+			// Desktop Device
 			$("#studentlist").collapse('show');
 			$("#mentorlist").collapse('show');
 			$("#eventlist").collapse('show');
+
+			$(".rosters").remove();
 		}
 	</script>
 
