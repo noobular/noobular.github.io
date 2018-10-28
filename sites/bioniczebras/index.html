@@ -36,7 +36,8 @@
 	    background-image: url("images/background/background2.jpg");
 
 	    /* Set a specific height */
-	    height: 500px; 
+	    height: 100%; 
+		width:100%;
 
 	    /* Create the parallax scrolling effect */
 	    background-attachment: fixed;
@@ -56,39 +57,49 @@
 
 <body class="parallax">
 
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="height:20px;">
-		<!-- Brand/logo -->
-		<img src="favicon.png">
-		<a class="navbar-brand" href="#" style="margin-left:10px; margin-right:35px;">The Bionic Zebras</a>
-		
-		<!-- Links -->
-		<ul class="navbar-nav">
-			<li class="active nav-item">
-				<a href="index.html"     		class="hvr-shutter-out-vertical nav-link"> <i class="fa fa-files-o" aria-hidden="true"></i> About</a>
-			  </li>
-			  <li class="nav-item">
-				<a href="resources.html"    	class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-files-o" aria-hidden="true"></i> Resources</a>
-			  </li>
-			  <li class="nav-item">
-				<a href="media.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-film" aria-hidden="true"></i> Media</a></li>
-			  </li>
-			  <li class="nav-item">
-				<a href="sponsors.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-handshake-o" aria-hidden="true"></i> Sponsors</a></li>
-			  </li>
-			  <li class="nav-item">
-				<a href="announcements.html"	class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-bullhorn" aria-hidden="true"></i> Announcements</a></li>
-			  </li>
-			  <li class="nav-item">
-				<a href="contact.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a></li>
-			  </li>
-			  <li class="nav-item">
-				<a href="meetings.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-users" aria-hidden="true"></i> Meeting Times</a></li>
-			  </li>
-		</ul>
-	  </nav>
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<!-- Brand logo / Name-->
+			<img src="favicon.png">
+			<a  class="navbar-brand" href="#" style="margin-left:10px; margin-right:35px;">The Bionic Zebras</a>
 
-	  <div class="jumbotron jumbotron-fluid">
-		<div class="container">
+			<!-- Toggles the navbar for mobile devices.-->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<!-- included elements on the navbar-->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav mr-auto">
+					<li class="active nav-item">
+							<a href="index.html"     		class="hvr-shutter-out-vertical nav-link"> <i class="fa fa-files-o" aria-hidden="true"></i> About</a>
+						  </li>
+						  <li class="nav-item">
+							<a href="resources.html"    	class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-files-o" aria-hidden="true"></i> Resources</a>
+						  </li>
+						  <li class="nav-item">
+							<a href="media.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-film" aria-hidden="true"></i> Media</a></li>
+						  </li>
+						  <li class="nav-item">
+							<a href="sponsors.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-handshake-o" aria-hidden="true"></i> Sponsors</a></li>
+						  </li>
+						  <li class="nav-item">
+							<a href="announcements.html"	class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-bullhorn" aria-hidden="true"></i> Announcements</a></li>
+						  </li>
+						  <li class="nav-item">
+							<a href="contact.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a></li>
+						  </li>
+						  <li class="nav-item">
+							<a href="meetings.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-users" aria-hidden="true"></i> Meeting Times</a></li>
+						  </li>
+					</ul>
+
+			</div>
+		</nav>
+
+
+
+	  <div class="jumbotron jumbotron-fluid" style="padding-top:30px;">
+		<div class="container" style="height:40px;">
 		  <h1>Welcome!</h1> 
 		  <p>Welcome to the official website of FIRST Robotics Competition Team 313: The Bionic Zebras!</p> 
 		</div>
@@ -192,7 +203,7 @@
 
 	
 	<script>
-		// remove border radius from twitter embed
+		// remove border radius from twitter embed, there's no other way of fixing this specifically bc twitter dev sucks.
 		setTimeout(function() {$("#twitter-widget-0").contents().find(".timeline-Widget").css("border-radius", "0")}, 750);
 	</script>
 
