@@ -51,6 +51,9 @@
 		}
 
 	}
+	h4{
+		margin-bottom:0px;
+	}
 
 
 	/* Set image size to the max possible for the carousel area*/
@@ -234,6 +237,14 @@
 	<script>
 		// remove border radius from twitter embed, there's no other way of fixing this specifically bc twitter dev sucks.
 		setTimeout(function() {$("#twitter-widget-0").contents().find(".timeline-Widget").css("border-radius", "0")}, 750);
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			// this is if its a mobile device
+		}else{
+			//desktop(probably)
+			$("#studentlist").collapse('show');
+			$("#mentorlist").collapse('show');
+			$("#eventlist").collapse('show');
+		}
 	</script>
 
 </html>
