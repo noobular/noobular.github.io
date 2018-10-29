@@ -28,8 +28,12 @@
 	@media screen and (max-width: 992px) {
 		#topNavbar{
 			font-size:14px;
+			padding-top:5px;
+			padding-bottom:5px;
 		}
+
 		#jumbotron{
+			margin-top:85px;
 			padding-top:10px;
 			height:110px;
 		}
@@ -48,6 +52,10 @@
 
 	}
 
+
+	#jumbotron{
+			margin-top:85px;
+	}
 	h4{
 		margin-bottom:0px;
 	}
@@ -78,7 +86,7 @@
 	}
 	.affix{ /*For the Navbar to be affixed to the top of the page*/
 		position: fixed;
-		top:0;
+		top:0px;
 		width: 100%;
 		z-index: 999;
 	}
@@ -88,7 +96,7 @@
 
 <body class="parallax">
 
-	  <nav id="topNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <nav id="topNavbar" class="navbar navbar-inverse navbar-expand-lg navbar-dark bg-dark affix" data-spy="affix" >
 			<!-- Brand logo / Name-->
 			<img src="favicon.png">
 			<a  class="navbar-brand" href="#" style="margin-left:10px; margin-right:35px;">The Bionic Zebras</a>
@@ -138,7 +146,7 @@
 
 <div class="row">
 	<div class="col-12 col-sm-12 col-md-12 col-lg-3"> <!-- Column one, 3 out of 12 grid places-->
-		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px;">
 				<nav class="navbar bg-light" data-toggle="collapse" href="#eventlist"> <!-- Creates the panel for the data to go into-->
 					<h4>Event List</h4> <i class="fas fa-bars rosters" style="color:black; float:right; font-size: 24px;margin-bottom:5px;"></i>
 					<ul id="eventlist" class="navbar-nav col-12 collapse in" style="margin-right:0px;padding-right:0px;"> <!-- "Unordered list" list them in order using the script.-->
@@ -146,25 +154,24 @@
 				</nav>
 		</div>
 
-	<br> <!-- Break the line between the cards-->
-		<div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+	
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 " style="margin-bottom:5px;">
 			<nav class="navbar bg-light" data-toggle="collapse" href="#mentorlist"> <!-- Creates the panel for the data to go into-->
 				<h4>Mentor Roster</h4> <i class="fas fa-bars rosters" style="color:black; float:right; font-size: 24px; margin-bottom:5px;"></i>
 				<ul id="mentorlist" class="navbar-nav col-12 collapse in"> <!-- "Unordered list" list them in order using the script.-->	
 				</ul>
 			</nav>
 		</div>
-	<br> <!-- Break the line between the cards-->
 
-	<div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12 " style="margin-bottom:5px;">
 			<nav class="navbar bg-light" data-toggle="collapse" href="#studentlist"> <!-- Creates the panel for the data to go into-->
 				<h4>Student Roster</h4>	<i class="fas fa-bars rosters" style="color:black; float:right; font-size: 24px; margin-bottom:5px;"></i>
 				<ul id="studentlist" class="navbar-nav col-12 collapse in"> <!-- "Unordered list" list them in order using the script.--></ul>
 			</nav>
 	</div>
-	<br>
+
 </div>
-	<br> <!-- Break the line between the cards-->
 
 	<div class="col-12 col-sm-12 col-md-12 col-lg-6" style="padding-right:0px;"> <!-- Column two, 6(total 9) out of 12 grid places-->
 	
@@ -186,9 +193,7 @@
 				</div> 
 		</div>
 
-		<br>
-
-		<div id="demo" class="carousel slide" data-ride="carousel">
+		<div id="demo" class="carousel slide" data-ride="carousel" style="margin-top:5px;">
 				<!-- The slideshow -->
 				<div id="imageCarousel" class="carousel-inner">
 			
