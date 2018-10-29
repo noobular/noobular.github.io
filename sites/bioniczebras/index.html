@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>The Bionic Zebras</title> <!--Browser Tab Title-->
 	<link rel="shortcut icon" href="https://noobular.github.io/sites/bioniczebras/favicon.ico"> <!-- Browser Tab Icon (Not working?)-->
 
@@ -21,9 +21,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
 	<!-- Font Awesome Icons-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 
 	.subtext{
@@ -83,6 +80,7 @@
 			padding-top:12.5px;
 			height:110px;
 			margin-bottom:10px;
+			width:100%;
 		}
 		#eventlist{
 			font-size: 14px;
@@ -103,7 +101,7 @@
 
 <body class="parallax">
 
-	  <nav id="topNavbar" class="navbar fixed-top navbar-inverse navbar-expand-lg navbar-dark bg-dark" data-toggle="affix">
+	  <nav id="topNavbar" class="navbar fixed-top navbar-inverse navbar-expand-lg navbar-dark bg-dark">
 			<!-- Brand logo / Name-->
 			<img style="padding:0px; margin:0px; height:49px;width:48px;"src="images/zebrahead.png">
 			<a  class="navbar-brand" href="#" style="margin-left:10px; margin-right:35px;">The Bionic Zebras</a>
@@ -144,14 +142,14 @@
 
 
 
-	  <div id="jumbotron" class="jumbotron jumbotron-fluid">
+	  <div id="jumbotron" class="jumbotron jumbotron-fluid " style=" padding-right:0px;">
 		<div  class="container" style="height:40px;">
 		  <h1>Welcome!</h1> 
 		  <p class="subtext">Welcome to the official website of FIRST Robotics Competition Team 313: The Bionic Zebras!</p> 
 		</div>
 	  </div>
 
-<div class="row">
+<div class="row" style="margin:0px; padding:0px;">
 	<div class="col-12 col-sm-12 col-md-12 col-lg-3"> <!-- Column one, 3 out of 12 grid places-->
 		<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px;">
 				<nav class="navbar bg-light" data-toggle="collapse" href="#eventlist"> <!-- Creates the panel for the data to go into-->
@@ -180,7 +178,7 @@
 
 </div>
 
-	<div class="col-12 col-sm-12 col-md-12 col-lg-6" style="padding:20px; padding-top:0px;"> <!-- Column two, 6(total 9) out of 12 grid places-->
+	<div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- Column two, 6(total 9) out of 12 grid places-->
 	
 		<div class="card" style="border-width: 0px;">
 				<div class="card-header bg-dark" style="color:white; font-size:18px;" data-toggle="collapse" href="#whatisfirst">What is FIRST? <i class="fas fa-bars" style="color:white; float:right; font-size: 24px; margin-bottom:5px;"></i></div> 
@@ -217,7 +215,7 @@
 		</div>
 	</div> <!--end of center column-->
 
-	<div class="col-12 col-sm-12 col-md-12 col-lg-3"  style="padding:20px; padding-top:0px; padding-bottom:0px;"> <!-- Column three, 3(total 12) out of 12 grid places-->
+	<div class="col-12 col-sm-12 col-md-12 col-lg-3"> <!-- Column three, 3(total 12) out of 12 grid places-->
 		<div class="card">
 				<div class="card-body">
 						<h4 class="card-title" style="color:black;">Our mission</h4>
