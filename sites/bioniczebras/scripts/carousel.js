@@ -31,6 +31,7 @@ $(images).each(function(index){
     $(caption).addClass('carousel-caption');
 
     var captionh3 = document.createElement('h3');
+    captionh3.style = "color:white; font-size:18px;"
     captionh3.innerHTML = images[index].header;
 
     var captionp = document.createElement('p');
