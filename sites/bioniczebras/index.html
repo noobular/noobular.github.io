@@ -107,7 +107,7 @@
 	  <nav id="topNavbar" class="navbar fixed-top navbar-inverse navbar-expand-lg navbar-dark bg-dark">
 			<!-- Brand logo / Name-->
 			<img style="padding:0px; margin:0px; height:49px;width:48px;"src="images/zebrahead.png">
-			<a  class="navbar-brand" href="#" style="margin-left:10px; margin-right:35px;">The Bionic Zebras</a>
+			<a  class="navbar-brand" href="index.html" style="margin-left:10px; margin-right:35px;">The Bionic Zebras</a>
 
 			<!-- Toggles the navbar for mobile devices.-->
 			<button style="border:0px;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -117,7 +117,7 @@
 			<!-- included elements on the navbar-->
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			  	<ul class="navbar-nav mr-auto">
-					<li class="active nav-item" style="margin-right:10px;">
+					<li class="nav-item" style="margin-right:10px;">
 						<a href="index.html"     		class="hvr-shutter-out-vertical nav-link"> <i class="fas fa-address-book"></i> About</a>
 					</li>
 					<li class="nav-item" style="margin-right:10px;">
@@ -232,15 +232,17 @@
 
 	<!-- Importing Data / Mentors,Students,Events & Scripts that auto populate the page-->
 	<!-- Data -->
-	<script src="data/mentors.js"></script>
-	<script src="data/students.js"></script>
-	<script src="data/events.js"></script>
-	<script src="data/showcase.js"></script>
+	<script src="data/mentors.js"></script>  <!-- Required for ALL pages-->
+	<script src="data/students.js"></script> <!-- Required for ALL pages-->
+	<script src="data/events.js"></script>   <!-- Required for ALL pages-->
+	<script src="data/showcase.js"></script> <!-- Required for Home / Media pages-->
+	<script src="data/announcements.js"></script> <!-- Required for Home / Media pages-->
+
 	<!--Population Scripts-->
-	<script src="scripts/mentorlist.js"></script>
-	<script src="scripts/studentlist.js"></script>
-	<script src="scripts/eventlist.js"></script>
-	<script src="scripts/carousel.js"></script>
+	<script src="scripts/mentorlist.js"></script>  	<!-- Required for ALL pages-->
+	<script src="scripts/studentlist.js"></script> 	<!-- Required for ALL pages-->
+	<script src="scripts/eventlist.js"></script>   	<!-- Required for ALL pages-->
+	<script src="scripts/carousel.js"></script>	   	<!-- Required for Home / Media pages-->
 
 	
 	<script>
