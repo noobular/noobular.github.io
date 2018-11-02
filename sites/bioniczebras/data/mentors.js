@@ -1,12 +1,16 @@
+// Template
+// {"name":""},
+// REMOVE COMMA ON THE LAST INDEX!
 var mentors = [
-    {"name":"Josh Barnett"},
-    {"name":"Karl Heinrich"}, 
-    {"name":"Donnie Castaldini"},
-    {"name":"Scott Simons"},
-    {"name":"Mykala Smith"},  
-    {"name":"Josh Johnson"},  
-    {"name":"Eric Cleereman"},  
-    {"name":"Mitch Castaldini"},    
-    {"name":"Naaman Chaudry"}
-                  
+    {"name":"Josh B."},
+    {"name":"Karl H."}, 
+    {"name":"Donnie C."},
+    {"name":"Scott S."},
+    {"name":"Mykala S."},  
+    {"name":"Josh J."},  
+    {"name":"Eric C."},  
+    {"name":"Mitch C."},    
+    {"name":"Naaman C."}     
+    // REMOVE COMMA ON THE LAST INDEX!         
 ]
+
