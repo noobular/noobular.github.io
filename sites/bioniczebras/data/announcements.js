@@ -9,6 +9,7 @@
 REMOVE COMMA ON THE LAST INDEX!
 */
 
+
 var announcements = [
     {
         "announcement":"No current announcements",
