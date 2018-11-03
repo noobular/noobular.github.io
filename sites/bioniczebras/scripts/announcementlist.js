@@ -5,7 +5,7 @@ function listAnnouncements(){
         var element = document.createElement("li");
         $(element).addClass("nav-item");
         element.style = "margin-left:10px;"
-        element.innerHTML = announcements[index].name;
+        element.innerHTML = announcements[index].annoucement;
         $("#announcementlist").append(element);
     })
 }
