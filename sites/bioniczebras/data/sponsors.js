@@ -1,5 +1,12 @@
 // Template
-// {"company_name":"","url":""},
+/*
+{
+    "company_name":"",
+    "image_name":"",
+    "url":"",
+    "theme":"light"
+}
+*/
 // REMOVE COMMA ON THE LAST INDEX!
 var sponsors = [
 
@@ -13,6 +20,12 @@ var sponsors = [
         "company_name":"dermatology specialists of canton",
         "image_name":"dermatology.png",
         "url":"https://www.denso.com/global/en/",
+        "theme":"light"
+    },
+    {
+        "company_name":"Wayne-Westland Community School District",
+        "image_name":"wwcsd.png",
+        "url":"http://www.wwcsd.net/",
         "theme":"light"
     }
     // REMOVE COMMA ON THE LAST INDEX!         

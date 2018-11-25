@@ -23,9 +23,9 @@ function listSponsors(){
         
         $(card_body).addClass("card-body");
 
-        //card.style = "height:68px;";
+        //card.style = "height:70px;";
         body.style = "margin-bottom:10px;";
-        image.style="width:100%";
+        image.style="width:100%;";
 
 
         a.setAttribute("href",sponsors[index].url);
