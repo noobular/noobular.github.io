@@ -21,7 +21,22 @@
     border-radius: 0px !important;
 }
 
+.skillList{
+    position: relative;
+    bottom:0px !important;
+}
 
+.__react_modal_image__modal_container{
+    z-index: 1000 !important;
+}
+
+
+.modalImage{
+    transition: .5s ease;
+}
+.modalImage:hover {
+        opacity: 0.8;
+}
 
 .highlight-card{
     margin-top:20px;
@@ -29,7 +44,7 @@
 
 
 .project-card-container{
-    padding:5px !important;
+    padding:15px !important;
  }
 
  .project-card{

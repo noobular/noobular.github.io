@@ -22,6 +22,7 @@
     "react-dom": "^16.12.0",
     "react-image-lightbox": "^5.1.1",
     "react-materialize": "^3.5.7",
+    "react-modal-image": "^2.5.0",
     "react-native-vector-icons": "^6.6.0",
     "react-parallax": "^3.0.0-rc2",
     "react-router": "^5.1.2",

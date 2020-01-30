@@ -10,7 +10,6 @@ import ProjectCatalog from './pages/ProjectCatalog';
 import Experience from './pages/Experience';
 
 //Components
-import Head from './components/universal/Head';
 import Navbar from './components/universal/Navbar';
 import Jumbotron from './components/universal/Jumbotron';
 
@@ -28,7 +27,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Head/>
         <Jumbotron/>
         <Navbar/>
         <Route path="/" exact strict component={Highlights}/>

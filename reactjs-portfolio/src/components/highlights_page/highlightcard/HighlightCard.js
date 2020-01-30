@@ -1,29 +1,41 @@
 import React from 'react'
 import uuidv4 from 'uuid/v4'
+import ModalImage from "react-modal-image";
+
 export default function HighlightCard(props) {
     return (<>
 
-        <div class="highlight-card card col-12 shadow-sm "> {/* BOOT STRAP CARD*/}
-            <div class="row">
-                    <img class="card-img col-12 col-xl-6 na"  src={props.imageSrc[0]} alt={uuidv4()}/>
+        <div className="highlight-card card col-12 shadow-sm "> {/* BOOT STRAP CARD*/}
+            <div className="row">
+                    {/* <img className="card-img col-12 col-xl-6 na"  src={props.imageSrc[0]} alt={uuidv4()}/> */}
+                    <div className="card-img col-12 col-xl-6 na">
+                        <ModalImage 
+                            className="card-img col-12 col-xl-6 na modalImage"
+                            style={{backgroundColor:'black'}}
+                            small={props.imageSrc[0]}
+                            large={props.imageSrc[0]}
+                            hideDownload={true}
+                            hideZoom={false}
+                            alt={props.title}
+                        />
+                    </div>
+                    <div className="card-body col-12 col-xl-6 na" >
+                            <div className="row na" style={{marginBottom:63}}>
 
-                    <div class="card-body col-12 col-xl-6 na" >
-                            <div class="row na" style={{marginBottom:63}}>
-
-                                <div class="col-12 col-xl-6">
+                                <div className="col-12 col-xl-6">
                                     <div style={{margin:20}}>
-                                        <h4 class="card-title">{props.title}</h4>
-                                        <p class="card-text">{props.description}</p>
+                                        <h4 className="card-title">{props.title}</h4>
+                                        <p className="card-text">{props.description}</p>
                                     </div>
                                 </div>
 
-                                <div class="col-12 col-xl-6 text-right" style={{marginBottom:63}}>
+                                <div className="col-12 col-xl-6 text-right" style={{marginBottom:63}}>
                                     <div style={{margin:20}}>
-                                        <ul class="list-group list-group-flush">
-                                            <h4>Skills</h4>
+                                        <ul className="list-group list-group-flush">
+                                            <h4>Implemented / Learned</h4>
                                             {/* places each skill into the group*/}
                                             {props.skills.map((skill,index) => {
-                                                return <li class="list-group-item"><div>{skill}</div></li>
+                                                return <li className="list-group-item"><div>{skill}</div></li>
                                             })}
                                         </ul>
                                     </div>
@@ -31,7 +43,7 @@ export default function HighlightCard(props) {
                             
                             </div>
                             
-                            <div class="card-footer primary">
+                            <div className="card-footer primary">
                                 {props.links.map((link,index) => {
                                     if(link[1] !== ""){
                                         console.log(link)
