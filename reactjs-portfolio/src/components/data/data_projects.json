@@ -19,7 +19,7 @@
 	"imageSrc": ["/images/projects/game_development/mini-text-adventure/combat.png","/images/projects/game_development/mini-text-adventure/shop.png"],
 	"skills": ["Created a new experience for me, creating a web browser based game.","It made me think creatively in ways to take user input, versus a normal text adventure game."],
 	"links":[
-		["Live Version","/games/mtag.html"]
+		["Live Version","/games/minitextadventuregame.html"]
 	],
 	"date":"February 8, 2017"
 },
