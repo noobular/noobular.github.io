@@ -40,6 +40,7 @@ export default function ProjectCard(props) {
                 })}
                     
                 {props.languages.map((language,index) =>{
+                    if(index > 4){return false};
                     let classna = "devicon-" + language +"-plain text-white"
                     return (<i className={classna.toLowerCase()} key={uuidv4()} style={{marginRight:10}}/>)
                 })}

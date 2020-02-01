@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
 
         <nav className="navbar navbar-expand-md navbar-dark primary sticky-top shadow ">
-            <Link to={""}  className="navbar-brand"><img className="navbar-brand-img" src={logo} alt="logo"/></Link>
+            <Link to={""}  className="navbar-brand" style={{marginLeft:10}}><img className="navbar-brand-img" src={logo} alt="logo"/></Link>
             <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -20,7 +20,7 @@ export default function Navbar() {
                     <div className="navbar-nav ml-auto">
                         <a href="http://www.github.com/noobular" target="_BLANK" rel="noopener noreferrer" className="nav-item nav-link text-black hvr-grow-shadow"><i className="fab fa-github"/></a>
                         <a href="https://www.Linkedin.com/in/jamesebyrnes/" target="_BLANK"  rel="noopener noreferrer" className="nav-item nav-link text-black hvr-grow-shadow"><i className="fab fa-linkedin"/></a>
-                        <a href="https:/google.com/" target="_BLANK" rel="noopener noreferrer" className="nav-item nav-link text-black hvr-grow-shadow"><i className="far fa-envelope"/></a>
+                        <a  href="mailto:JamesEdwardByrnes@gmail.com"         target="_top"    rel="noopener noreferrer" className="nav-item nav-link text-black hvr-grow-shadow"><i className="far fa-envelope"/></a>
                     </div>
             </div>
         </nav>

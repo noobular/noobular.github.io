@@ -3,3 +3,62 @@
     height:540px; 
     background-color: transparent;
 }
+
+#Jumbotron{
+    margin-top:75px !important;
+    height:540px !important;
+}
+
+.jumbo_name{
+    font-size:64px;
+}
+.jumbotron-text{
+    font-size:16px !important;
+}
+
+@media screen and (max-width: 500px) {
+
+    .jumbo_name{
+        font-size:48px !important;
+    }
+    .jumbotron-text{
+        font-size:16px !important;
+    }
+}
+
+
+@media screen and (max-width: 440px) {
+    .jumbo_description{
+        font-size:16px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .jumbo_description{
+        font-size:12px !important;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    .jumbo_name{
+        font-size:36px !important;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .jumbo_description{
+        font-size:12px !important;
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .jumbo_name{
+        font-size:30px !important;
+    }
+    .jumbo_description{
+        font-size:10px !important;
+    }
+}
+
