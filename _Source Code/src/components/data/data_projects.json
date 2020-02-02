@@ -16,7 +16,7 @@
 	"description":"Text adventure game, using HTML / CSS / JavaScript / JQuery where you can level up, attack different creatures, obtain randomized items and gold, travel, and finally complete quest. Warning: There's a lot of systems that haven't been finished in this.",
 	"categories":["Web Development"],
 	"languages": ["HTML","Javascript","JQuery","Bootstrap"],
-	"imageSrc": ["/images/projects/game_development/mini-text-adventure/combat.png","/images/projects/game_development/mini-text-adventure/shop.png"],
+	"imageSrc": ["/images/projects/game_development/mini-text-adventure/combat.PNG","/images/projects/game_development/mini-text-adventure/shop.png"],
 	"skills": ["Created a new experience for me, creating a web browser based game.","It made me think creatively in ways to take user input, versus a normal text adventure game."],
 	"links":[
 		["Live Version","/games/minitextadventuregame.html"]
@@ -63,7 +63,7 @@
 	"description":"This Arduino based product, which based on the temperature inside a vehicle, controlls the windows or air conditioner to protect against heatstroke in animals or small children. This won first place at the 2017 GEDEX Hackathon",
 	"categories":["Software Development"],
 	"languages": ["C++"],
-	"imageSrc": ["/images/projects/iot_development/gedex/code.png"],
+	"imageSrc": ["/images/projects/iot_development/gedex/code.PNG"],
 	"skills":["Experience working with a Circuit Playground Arduino","Product Creation Experience"],
 	"links":[
 		["Github","https://github.com/noobularkid/Car-Temperature-Alarm"],
