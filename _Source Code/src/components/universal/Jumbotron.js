@@ -25,7 +25,7 @@ export default function Jumbotron() {
 
                                 <h5 className="d-flex justify-content-center" style={{fontSize:36,marginTop:50}}>Resume</h5>
                                 <div className="d-flex justify-content-center">
-                                    <a href="/pdf/resume.pdf" target="_BLANK"  rel="noopener noreferrer" className="btn btn-outline-danger btn-lg jumbotron-text" style={{margin:10}}><i class="far fa-file-pdf"></i> PDF</a>
+                                    <a href="/pdf/Resume.pdf" target="_BLANK"  rel="noopener noreferrer" className="btn btn-outline-danger btn-lg jumbotron-text" style={{margin:10}}><i class="far fa-file-pdf"></i> PDF</a>
                                     <a href="https://docs.google.com/document/d/1l69iJdJAG4k8u19XkRy_A5ZbhpSjRuyZCcazsLGCm8g/edit?usp=sharing" target="_BLANK"  rel="noopener noreferrer" className="btn btn-outline-danger btn-lg jumbotron-text" style={{margin:10}}><i class="fab fa-google-drive"></i> Google Doc</a>
                                 </div>
                             </div>
