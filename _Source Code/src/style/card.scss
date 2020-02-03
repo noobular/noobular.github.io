@@ -44,7 +44,7 @@
 
 
 .project-card-container{
-    padding:15px !important;
+    padding:10px;
  }
 
  @media screen and (min-width: 3000px) {
@@ -59,4 +59,16 @@
         //height:800px !important;
         min-height:800px !important;
      }
+  }
+
+  @media screen and (max-width: 500px) {
+    .card-row{
+        margin:5px !important;
+     }
+
+     .project-card-container{
+         padding:0px;
+         margin-bottom:15px;
+     }
+
   }

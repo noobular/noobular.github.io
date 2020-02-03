@@ -9,7 +9,7 @@ export default function CatalogSection(props) {
     });
     return (
         <>  
-            <div className="row" style={{margin:15, marginTop:5}}>
+            <div className="row card-row" style={{margin:15, marginTop:5}}>
                 {projects}
             </div>
         </>

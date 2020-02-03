@@ -11,27 +11,29 @@
     .navbar{
       padding-top:0px !important;
     }
-    .collapse{
-      background: red;
-    }
   }
 
 .nav-item{
   color:white !important;
   margin-right:10px;
+  border:1px;
+}
+
+.navbar{
+  z-index:2 !important;
 }
 
 .navbar-collapse{
   width:100% !important;
-  z-index:998;
   padding-left:30px !important;
 }
-.navbar{
-    padding:0px !important;
-    z-index:998;
-    height:64px;
-}
 
+.navbar-toggler{
+  margin:8px;
+}
+.navbar{
+  padding:0px;
+}
 .collapse{
   width:100% !important;
 }

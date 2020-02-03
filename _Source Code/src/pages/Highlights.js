@@ -4,9 +4,9 @@ import React from 'react'
 import HighlightSection from '../components/highlights_page/HighlightSection'
 
 export default function Highlights() {
-    return (
+    return (//
         <>
-            <div class="row" style={{margin:15, marginTop:5}}>
+            <div class="row card-row" style={{margin:15, marginTop:5}}>
               <HighlightSection/>
             </div>
         </>
