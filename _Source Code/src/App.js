@@ -6,8 +6,8 @@ import Route from 'react-router-dom/Route';
 
 //Page Imports
 import Highlights from './pages/Highlights';
-import ProjectCatalog from './pages/ProjectCatalog';
-import Experience from './pages/Experience';
+import Projects from './pages/Projects';
+import Experiences from './pages/Experiences';
 
 //Components
 import Navbar from './components/universal/Navbar';
@@ -31,8 +31,8 @@ function App() {
         <Navbar/>
         <Route path="/" exact strict component={Highlights}/>
         <Route path="/highlights" exact strict component={Highlights}/>
-        <Route path="/projectcatalog" exact strict component={ProjectCatalog}/>
-        <Route path="/experience" exact strict component={Experience}/>
+        <Route path="/projects" exact strict component={Projects}/>
+        <Route path="/experiences" exact strict component={Experiences}/>
       </div>
   </Router>
   );

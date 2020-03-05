@@ -8,7 +8,7 @@ export default function Jumbotron() {
 
         <Parallax
             blur={20}
-            bgImage={require('../img/parallax.png')}
+            bgImage={require('./resources/parallax.png')}
             bgImageAlt={uuidv4()}
             strength={500}
         >   

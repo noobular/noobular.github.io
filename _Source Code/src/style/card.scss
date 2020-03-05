@@ -1,5 +1,5 @@
 .card{
-    border:0;
+    border:0px;
 }
 
 .card-body{
@@ -13,10 +13,11 @@
 }
 
 .card-footer{
+    height:56px;
     position: absolute;
     bottom: 0;
     width:100%;
-
+    padding:10px !important;
     border:0px !important;
     border-radius: 0px !important;
 }
@@ -40,12 +41,28 @@
 
 .highlight-card{
     margin-top:20px;
+    border-radius: 0px;
 }
-
 
 .project-card-container{
     padding:10px;
  }
+
+ .TechTree{
+     border: 0px !important;
+     position: relative;
+     bottom:0;
+     margin-bottom:30px;
+ }
+
+ .title-description{
+     min-height:30% !important;
+ }
+
+
+.experience-card{
+    margin-top:20px;
+}
 
  @media screen and (min-width: 3000px) {
     .project-card{
@@ -63,7 +80,8 @@
 
   @media screen and (max-width: 500px) {
     .card-row{
-        margin:5px !important;
+        margin:15px !important;
+        margin-top:0px !important;
      }
 
      .project-card-container{
