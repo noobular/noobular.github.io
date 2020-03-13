@@ -32,9 +32,9 @@ export default function ExperienceCard(props) {
                                     <div className="TechTree" style={{margin:20}}>
                                         <h4 className="card-title">Technologies</h4>
                                         {props.technologies.map((technology,index) => {
-                                                return <li className="list-group-item " style={{border:0}}>
+                                                return <li className="list-group-item " key={uuidv4()} style={{border:0}}>
                                                             <div>
-                                                                <i style={{fontSize:20, marginRight:10}} class={"align-middle far fa-dot-circle"}/>
+                                                                <i style={{fontSize:20, marginRight:10}} className={"align-middle far fa-dot-circle"}/>
                                                                 {"   " + technology}
                                                             </div>
                                                         </li>
@@ -51,7 +51,7 @@ export default function ExperienceCard(props) {
                                             <h4>Implemented</h4>
                                             {/* places each skill into the group*/}
                                             {props.integrated.map((integrate,index) => {
-                                                return <li className="list-group-item"><div>{integrate}</div></li>
+                                                return <li className="list-group-item"  key={uuidv4()} ><div>{integrate}</div></li>
                                             })}
                                         </ul>
                                     </div>
@@ -62,7 +62,6 @@ export default function ExperienceCard(props) {
                             <div className="card-footer primary">
                                 {props.links.map((link,index) => {
                                     if(link[1] !== undefined){
-                                        console.log(link)
                                         return(<a style={{marginRight:4,float:'right'}} className="btn btn-light  float-right hvr-grow-shadow text-black" target="_blank" rel="noopener noreferrer" key={uuidv4()} href={link[1]}>{link[0]}</a>)
                                     }
                                     return null; 

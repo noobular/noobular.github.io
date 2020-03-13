@@ -32,9 +32,9 @@ export default function HighlightCard(props) {
                                         <h4 className="card-title">Technologies</h4>
                                         <div className="row">
                                             {props.technologies.map((technology,index) => {
-                                                    return <li className="list-group-item col-6" style={{border:0, paddingRight:0}}>
+                                                    return <li className="list-group-item col-6" key={uuidv4()} style={{border:0, paddingRight:0}}>
                                                                 <div>
-                                                                    <i style={{fontSize:20, marginRight:10}} class={"align-middle far fa-dot-circle"}/>
+                                                                    <i style={{fontSize:20, marginRight:10}} className={"align-middle far fa-dot-circle"}/>
                                                                     {"   " + technology}
                                                                 </div>
                                                             </li>
@@ -49,7 +49,7 @@ export default function HighlightCard(props) {
                                             <h4>Implemented / Learned</h4>
                                             {/* places each skill into the group*/}
                                             {props.skills.map((skill,index) => {
-                                                return <li className="list-group-item"><div>{skill}</div></li>
+                                                return <li className="list-group-item" key={uuidv4()} ><div>{skill}</div></li>
                                             })}
                                         </ul>
                                     </div>
@@ -60,7 +60,6 @@ export default function HighlightCard(props) {
                             <div className="card-footer primary">
                                 {props.links.map((link,index) => {
                                     if(link[1] !== ""){
-                                        console.log(link)
                                         return(<a style={{marginRight:4,float:'right'}} className="btn btn-light  float-right hvr-grow-shadow text-black" target="_blank" rel="noopener noreferrer" key={uuidv4()} href={link[1]}>{link[0]}</a>)
                                     }
                                     return null; 

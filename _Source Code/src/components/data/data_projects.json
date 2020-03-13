@@ -40,7 +40,7 @@
 	"title": "Raspberry Pi Connectivity",
 	"description":"Allows for two pi's to connect to each links, and send commands back and forth.",
 	"catagories":["Software Development","Server Development"],
-	"technologies": ["Python"],
+	"technologies": ["Python", "Sockets"],
 	"imageSrc": ["/images/projects/iot_development/rpi_communication/code.png"],
 	"skills":["Experience working with Sockets","Raspberry Pi work!","Experience creating a server from the ground up."],
 	"links":[["Github","https://github.com/noobularkid/RPi-Server-Client-Communication"]],
@@ -50,7 +50,7 @@
 	"title": "Website Generator",
 	"description":"A tool allowing for the automated creation of website files, with ability to add certain frameworks with a toggle switch.",
 	"categories":["Software Development"],
-	"technologies": ["C#"],
+	"technologies": ["C#",".NET"],
 	"imageSrc": ["/images/projects/software_development/htmlfilecreator/filled.png","/images/projects/htmlfilecreator/filled.png"],
 	"skills": ["Allowed me to have a purpose for C# in a project.","It allowed me to created a new faster way to create new pages, without needing to look for the framework CDNs."],
 	"links":[
@@ -62,7 +62,7 @@
 	"title": "Car Temperature Alarm",
 	"description":"This Arduino based product, which based on the temperature inside a vehicle, controlls the windows or air conditioner to protect against heatstroke in animals or small children. This won first place at the 2017 GEDEX Hackathon",
 	"categories":["Software Development"],
-	"technologies": ["C++"],
+	"technologies": ["C++", "Arduino"],
 	"imageSrc": ["/images/projects/iot_development/gedex/code.PNG"],
 	"skills":["Experience working with a Circuit Playground Arduino","Product Creation Experience"],
 	"links":[

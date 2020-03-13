@@ -18,7 +18,7 @@ export default function Navbar() {
                         <Link to={"/experiences"} className="nav-item nav-link hvr-grow-shadow">Experience</Link>
                     </div>
                     <div className="navbar-nav ml-auto hide-on-sm" data-target=".navbar-collapse" data-toggle="collapse">
-                        <div class="container">
+                        <div className="container">
                             <a href="http://www.github.com/noobular" target="_BLANK" rel="noopener noreferrer" className="nav-item nav-link text-black hvr-grow-shadow"><i className="fab fa-github"/></a>
                             <a href="https://www.Linkedin.com/in/jamesebyrnes/" target="_BLANK"  rel="noopener noreferrer" className="nav-item nav-link text-black hvr-grow-shadow"><i className="fab fa-linkedin"/></a>
                             <a  href="mailto:JamesEdwardByrnes@gmail.com"         target="_top"    rel="noopener noreferrer" className="nav-item nav-link text-black hvr-grow-shadow"><i className="far fa-envelope"/></a>

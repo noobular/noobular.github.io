@@ -19,8 +19,8 @@ export default function ProjectCard(props) {
             />
 
             <div className="card-body" style={{marginBottom:64}}>
+            <h4>Project Description</h4>
                 <p className="card-text">
-                    <h4><u>Project Description</u></h4>
                     {props.description}
                 </p>
                 <div className="skillList text-right">
@@ -28,10 +28,26 @@ export default function ProjectCard(props) {
                             <h4 style={{marginRight:20}}>Implemented / Learned</h4>
                             {/* places each skill into the group*/}
                             {props.skills.map((skill,index) => {
-                                return <li className="list-group-item" style={{paddingLeft:0}} key={uuidv4()}><div>{skill}</div></li>
+                                return <li className="list-group-item" key={uuidv4()}  style={{paddingLeft:0}}><div>{skill}</div></li>
                             })}
                         </ul>
                 </div>
+                <div className="TechTree" style={{margin:20}}>
+                    <h4 className="card-title">Technologies</h4>
+                        {props.technologies.map((technology,index) => {
+                            if(index < 4){
+                                return <li className="list-group-item " key={uuidv4()} style={{border:0}}>
+                                            <div>
+                                                <i style={{fontSize:20, marginRight:10}} className={"align-middle far fa-dot-circle"}/>
+                                                {"   " + technology}
+                                            </div>
+                                        </li>
+                            }
+
+                            return null
+                        })}
+                </div>
+
             </div>
             <div className="card-footer solidred">
 
@@ -42,9 +58,9 @@ export default function ProjectCard(props) {
                     return null;
                 })}
                     
-                {props.languages.map((language,index) =>{
+                {props.technologies.map((technology,index) =>{
                     if(index > 3){return false};
-                    let classna = "devicon-" + language +"-plain text-white"
+                    let classna = "devicon-" + technology +"-plain text-white"
                     return (<i className={classna.toLowerCase()} key={uuidv4()} style={{marginRight:10}}/>)
                 })}
             </div>
