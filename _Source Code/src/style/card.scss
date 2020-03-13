@@ -64,21 +64,23 @@
     margin-top:20px;
 }
 
- @media screen and (min-width: 3000px) {
+@media screen and (max-width: 4200px) {
     .project-card{
-        //height:800px !important;
-        min-height:1000px !important;
+        min-height:1220px !important;
      }
   }
 
-  @media screen and (max-width: 2999px) {
+  @media screen and (max-width: 2500px) {
     .project-card{
-        //height:800px !important;
         min-height:1050px !important;
      }
   }
 
   @media screen and (max-width: 500px) {
+     .project-card{
+        //height:800px !important;
+        min-height:100px !important;
+     }
     .card-row{
         margin:15px !important;
         margin-top:0px !important;
@@ -88,5 +90,6 @@
          padding:0px;
          margin-bottom:15px;
      }
+
 
   }
