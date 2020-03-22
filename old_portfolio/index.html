@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
+  <script src="https://use.fontawesome.com/8a9d8d3eec.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <style>
+
+    body{
+      font-family: 'Roboto', sans-serif;
+    }
+    .borderless{
+      border: 0px;
+      border-radius: 0px;
+    }
+
+    .nopadding{
+      padding-top:3px;
+      padding-bottom:3px;
+    }
+
+   
+    #mySidenav::-webkit-scrollbar-track
+    {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #2196F3;
+    }
+
+    #mySidenav::-webkit-scrollbar
+    {
+      width: 10px;
+      background-color: #F5F5F5;
+    }
+
+    #mySidenav::-webkit-scrollbar-thumb
+    {
+      background-color: #0ae;
+    }
+
+    .card-header{
+      background-color:#2196F3;
+      color:white;
+    }
+
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 997;
+        top: 0;
+        left: 0;
+        background-color: #2196F3;
+        overflow-x: hidden;
+        transition: .5s;
+        padding-top: 30px;
+        margin-top: 63px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffffff;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #d6d6d6;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 16px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    /* The navigation bar */
+    .navbar {
+        z-index: 998;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        height:64px;
+    }
+
+    /* Links inside the navbar */
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        
+    }
+
+    .content{
+      margin-top:74px
+    }
+
+    .card{
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      overflow-y:hidden;
+    }
+
+    .cover {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px; 
+        margin-top: 75px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
+
+      .col-3{
+        width:100%;
+      }
+
+      .row{
+        height:100%;
+      }
+    }
+
+
+    @media only screen and (max-width: 576px){
+      #category{
+        font-size: 18px;
+      }
+    }
+
+    @media only screen and (max-width: 768px){
+      .category{
+        font-size: 18px;
+      }
+      body{
+         width:100%;
+       }
+      .content{
+         width:100%;
+      }
+      .navbar{
+        height:50px;
+      }
+      .sidenav {
+        margin-top: 50px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
+
+      .content{
+        margin-top:60px
+      }
+
+      .row{
+        width: 100%
+       }
+    }
+
+    @media only screen and (max-width: 992){
+      #category{
+        font-size: 18px;
+      }
+    }
+
+    @media only screen and (max-width: 1200){
+      #category{
+        font-size: 18px;
+      }
+    }
+
+
+    .carouselimg{
+
+    } 
+    .carouselimg:hover{
+
+    }
+    .grow { 
+      transition: height ease-in-out;
+      height: 250px; 
+      width: 100%; 
+      display: block;
+    }
+    .grow:hover { 
+
+      height:100%;
+      padding:0px;
+      margin:0px;
+    }
+
+    .scaleimg{
+      height: 250px; 
+      width: 100%; 
+      display: block;
+    }
+    .scaleimg:hover{
+      z-index:99;
+      width:100%;
+      height:100%;
+      padding:0px;
+      margin:0px;
+      float:right;
+    }
+    .fullscaleimg{
+      height: 100%; 
+      width: 100%; 
+      display: block;
+    }
+    .definedimg{
+      width:100%;
+      height:400px;
+      display: block;
+    }
+    
+  </style>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Gameplay', 3],
+  ['Shooting', 5],
+  ['Puppy Collection System', 3],
+  ['Enemies', 1]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':"What's the best feature from Drunken Puppy Rescue: Winter Ops that you encountered?", 
+    'width':600, 
+    'height':300,
+    'is3D': true,
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+  chart.draw(data, options);
+}
+</script>
+
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Yeah', 10],
+  ['Nah',2]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':"Do you think Drunken Puppy Rescue: Winter Ops was good or bad?",
+    'width':600, 
+    'height':300,
+    'is3D': true,
+  };
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('chart3'));
+  chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['1', 0],
+  ['2',0],
+  ['3', 2],
+  ['4', 7],
+  ['5', 3]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':"On a scale of 1-5 was Drunken Puppy Rescue: Winter Ops a good idea?", 
+    'width':600, 
+    'height':300,
+    'is3D': true,
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('chart2'));
+  chart.draw(data, options);
+}
+</script>
+
+
+
+<script type="text/javascript">
+//FEEDBACK FOR 8 BIT RECREATION
+
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Scale', 'Hours per Day'],
+  ['Powerup Apples', 26],
+  ['Extra Apples',9],
+  ['Oranges', 1],
+  ['Lemons', 3],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':"What mod from my list would you like to see?", 
+    'width':600, 
+    'height':300,
+    'is3D': true,
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('8bitchart1'));
+  chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+//FEEDBACK FOR 8 BIT RECREATION
+
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Key', 'Value'],
+  ['It doesn\'t run', 0],
+  ['It runs very poorly',3],
+  ['It runs pretty good.', 9],
+  ['It runs perfect', 27],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':"How well does the game run?", 
+    'width':600, 
+    'height':300,
+    'is3D': true,
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('8bitchart2'));
+  chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+//FEEDBACK FOR 8 BIT RECREATION
+
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Key', 'Value'],
+  ['They looked terrible', 2],
+  ['They looked bad',5],
+  ['They looked okay', 18],
+  ['They looked perfect', 14],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':"How did the sprites look?", 
+    'width':600, 
+    'height':300,
+    'is3D': true,
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('8bitchart3'));
+  chart.draw(data, options);
+}
+</script>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary " data-spy="affix" data-offset-top="0">
+  <a class="navbar-brand" id="menutoggle" data-toggle="tooltip" data-placement="bottom" title="Click Me!" data-original-title="Click Me!" aria-describedby="tooltip221152" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Click Me!" aria-describedby="tooltip221152" onclick="openNav()">&#9776;</a>
+  <a class="navbar-brand" style="font-weight:bold;" href="#" onclick="EditJumbotron('Hello, world!','This is a indepth look at my programming background / projects I\'ve created. <iframe src=\'https://drive.google.com/file/d/1NshWPpHD6kHkNIuDvOKLSoXYgIq3-Lip/preview\' style=\'float:right;\' width=\'320\' height=\'200\' allowfullscreen></iframe>')">James' Portfolio</a>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li id="tab_projects" class="nav-item active">
+        <a class="nav-link" onclick="GenerateProjects('All')"><i class="fas fa-code" style="font-size:14px;">&nbsp;</i> Projects <span class="sr-only">(current)</span></a>
+      </li>
+      <li id="tab_skills" class="nav-item">
+        <a class="nav-link" onclick="GenerateSkills('All')"><i class="fas fa-chart-bar" style="font-size:14px;">&nbsp;</i>Skills</a>
+      </li>
+      <li id="tab_jobs" class="nav-item">
+        <a class="nav-link" onclick="Generatejobs('All')"><i class="fas fa-briefcase" style="font-size:14px;">&nbsp;</i>Job Experience</a>
+      </li>
+      <li id="tab_hackathons" class="nav-item">
+        <a class="nav-link" onclick="Generatehackathons('All')"><i class="fab fa-earlybirds" style="font-size:14px;">&nbsp;</i>Hackathons</a>
+      </li>
+      <li id="tab_languages" class="nav-item">
+        <a class="nav-link" onclick="Generatelanguages('All')"><i class="fas fa-sitemap" style="font-size:14px;">&nbsp;</i>Indepth With Languages</a>
+      </li>
+      <li id="tab_ethics" class="nav-item">
+        <a class="nav-link" onclick="Generateethics('All')" href="#"><i class="fas fa-balance-scale" style="font-size: 14px;">&nbsp;</i>Ethics</a>
+      </li>
+    </ul>
+
+     <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="resources/resume.pdf" style="font-size:48px"><i class="far fa-address-book"></i></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://github.com/noobular" style="font-size:48px;"><i class="fab fa-github-square"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  target="_blank" href="https://linkedin.com/in/JamesEByrnes" style="font-size:48px;"><i class="fab fa-linkedin-square"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="mailto:jamesedwardbyrnes@gmail.com" style="font-size:48px;"><i class="far fa-envelope"></i></a>
+                </li>
+
+
+                
+            </ul>
+  </div>
+</nav>
+
+<div id="mySidenav" class="sidenav scrollbar" style="overflow-y: auto; padding-bottom:50px;">
+  <div>
+    <a  id="DontClose" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input id="langsearch" onkeyup="searchFunction()" class="form-control mr-sm-2" type="text" autocomplete="off" style="padding-left:10px;border:0px; border-radius: 0px; border-color:#2196F3; -webkit-box-shadow:none; font-size: 12px" placeholder="Search projects by language">
+    <button  id="DontClose" class="btn btn-primary btn-sm my-2 my-sm-0" style="padding:10px; padding-left:5px;padding-right: 5px; width:100%" type="submit">Search</button>
+  </div>
+
+  <ul id="languagelist" style="padding-left:0px; margin-bottom:40px;">
+  </ul>
+</div>
+
+<div id="main" class="container col-12 content">
+  <div class="jumbotron" style="margin-top:74px; margin-bottom: 25px;">
+    <div id="jumbotron">
+      <div class="row">
+        <div class="col-6">
+          <h1 class="display-3">Hello, world!</h1>
+          <p class="lead">This is a indepth look at my programming background / projects I've created.</p>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-6">
+          <hr class="my-4">
+          <p>Here is my resume using a couple different formats to make sure everyone can see it.</p>
+        </div>
+    </div>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" target="_blank" href="https://docs.google.com/document/d/1l69iJdJAG4k8u19XkRy_A5ZbhpSjRuyZCcazsLGCm8g/edit?usp=sharing" role="button">Resume (Google Doc)</a>
+      <a class="btn btn-primary btn-lg" target="_blank" href="resources/resume.pdf" role="button">Resume (PDF)</a>
+      <a class="btn btn-primary btn-lg" target="_blank" data-toggle="modal" data-target="#myModal" role="button" style="color:white;">Resume (Picture)</a>
+
+    </p>
+  </div>
+
+  <p id="category" class="font-text-bold category" style="font-size:64px; text-align:center;font-style: underline; padding-bottom: 15px; margin-bottom: 0px; overflow-x: hidden;">All</p>
+
+  <div id="projectlist" class="row" style="margin-bottom: 50px; width:100%; margin-left:0px">
+  </div><!-- End of the Row-->
+
+</div> <!-- End of the Main Container-->
+<div style="margin:0px; padding:0px; box-shadow: 5px 5px 5px 5px grey;" class="col-sm-12 fixed-bottom">
+  <div class="panel borderless" style="background-color: #2196F3; color:white;">
+    <div class="panel-body">
+    Created By : <a style="color: white;" target="_blank" href="www.noobularkid.github.io"> James Byrnes</a>
+    </div>
+  </div>
+</div>
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+        <img src="resources/img/resume/resume.png">
+
+      <!-- Modal footer -->
+      <div class="modal-footer" style="padding:3px;">
+        <button type="button" class="btn btn-block btn-danger" style="padding:4px;" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<div id="feedback" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+      	<h4 class="modal-title">Further Explanation on Feedback</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="container col-sm-12">
+        <b> Importance of being specific</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          It's important to be very specific when you're asking for feedback from a user, so that your ability to fix a negative problem is pinpointed and added to a list of things to fix and or change with your product.<br>
+          Personally I've used questions that directly pinpoint what I want the user to answer, example being a certain feature.<br>
+          Under I have copies of forms I've used for different games to help get that essential feedback. <br><br>
+        </p>
+
+
+          <b>Categories I've used in the past...</b><br>
+          <p style="margin:15px; margin-top:5px;">
+           - Best Feature <br>
+           - Worst Feature <br>
+           - Why do you think that's the case? <br><br>
+          </p>
+
+           <b> Short answer vs Quick Ratings</b> <br>
+           <p style="margin:15px; margin-top:5px;">
+            Now these are very beneficial but the best thing is a short answer, at least in this case because we need to know why more then just something was bad or good, because this helps us expand on the idea or scrap it all together. <br>
+            That being said, Quick Ratings are good for smaller things and or quick changes, like a button from a toggle to needing to hold the button down.<br>
+           </p>
+
+
+          <br><br>
+      
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Surveys </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdECkoLPvrPe-u177wW56Ew-bpQ14NY7BsvFnDePehbJpe91A/viewform"><button type="button" class="btn btn-sm btn-primary">Fishpod</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdtdrxgB07k1B00vi-_2Ua_eVrARklyHpelZW_uBQcrChy81w/viewform"><button type="button" class="btn btn-sm btn-primary">Garbage</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdbvRY1fUS33ut5qpnLHraF4l2lSL0F_CkTSe6rrQvqJ1u01Q/viewform"><button type="button" class="btn btn-sm btn-primary">Garbage - Extended</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScaZaVmi_cF64OyTIplHXHva9aMLcYBhU24moG8v7_KXdTpAw/viewform"><button type="button" class="btn btn-sm btn-primary">Nano Runner</button></a>
+             <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSemcdCuuEHag9Tz3THZt2DD8x07PGF65jAZjStlEjAlI6yqwQ/viewform"><button type="button" class="btn btn-sm btn-primary">Drunken Puppy Rescue - Winter Ops</button></a>
+        </div>
+        
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Presentations </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/presentation/d/1d0PLyheQ8AUPQmms_j_Orus4Oh-O9Jk2KbWHGqpzl5g/edit?usp=sharing"><button type="button" class="btn btn-sm  btn-primary">Game Ratings</button></a>
+        </div>    
+
+          <div class="col">
+            <b style="float:left; margin-left:20px;">Images </b> <br>
+            <button class="btn btn-sm  btn-primary" data-toggle="modal" data-target="#FeedbackImgs" style=" float:left;">Data Represented</button>
+        </div>    
+
+
+        </div>
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<div id="FeedbackImgs" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg modal-dialog-centered" >
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Data Analysis</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <b> Pie Charts from Drunken Puppy Rescue: Winter Ops</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+        <br>
+
+        <div id="chart1" align="center"></div><br>
+      
+      <div class="panel panel-info">
+        <div class="panel-heading" style="">
+          This is helpful to me because it allows me to figure out what specifically needs the LEAST amount of work and what needs the most... in this real world example the enemies needed a lot more work to entrigue the player and then shooting needs the least.
+        </div>
+      </div>
+
+        <div id="chart2" align="center"  style="color:#2b3e50"></div>
+        <br>
+
+      <div class="panel panel-info">
+        <div class="panel-heading" style="">
+          This is a good thing for knowing if the basic premise of gameplay is a good idea to do, like if you should continue development or scrap it and come up with a new idea.
+        </div>
+      </div>
+
+        <div class="" align="center" id="chart3"></div>
+        
+        <br>
+
+      <div class="panel panel-info">
+        <div class="panel-heading" style="">
+           This follows the same premise as the last one, if the game was good or bad to see if I should continue development or scrap the game entirely.
+        </div>
+      </div>
+        
+
+        </p>
+
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<div id="copyright" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Further Explanation on Copyright and Creative Commons</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> Importance of Copyright, Creative Commons, and Fairuse.</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          It's very important for a creator, being a youtuber, developer, maker because it can be the reason the product they create is okay, or illegal. <br>
+          Creative commons is more related for youtubers or people making educational videos because it allows you to grab informational things or parody things without being sued because small bits of intellectual property was used. <br>
+        </p>
+
+        <p style="margin:15px; margin-top:5px;">
+          It's also important for Game Developers to follow the guidelines so their games can be monetized along with to not get sued.
+        </p>
+
+           <b> Description of Fairuse</b> <br>
+           <p style="margin:15px; margin-top:5px;">
+            As defined by copyright.gov, Fair use is a legal doctrine that promotes freedom of expression by permitting the unlicensed use of copyright-protected works in certain circumstances. <br>
+        Section 107 of the Copyright Act provides the statutory framework for determining whether something is a fair use.<br>
+        <b>Section 107 calls for consideration of the following four factors in evaluating a question of fair use:</b><br>
+        &nbsp; &nbsp; &nbsp; Purpose and character of the use, including whether the use is of a commercial nature or is for nonprofit educational purposes<br>
+        &nbsp; &nbsp; &nbsp; Nature of the copyrighted work<br>
+        &nbsp; &nbsp; &nbsp; Amount and substantiality of the portion used in relation to the copyrighted work as a whole<br>
+        &nbsp; &nbsp; &nbsp; Effect of the use upon the potential market for or value of the copyrighted work<br>
+        <a style="color:#5bc0de;" href="https://en.wikipedia.org/wiki/Fair_use">Source: Wikipedia</a>
+           </p>
+
+
+          <br>
+
+           <b> Description of Public Domain</b> <br>
+           <p style="margin:15px; margin-top:5px;">
+        Public Domain is the state of belonging or being available to the public as a whole, and therefore not subject to copyright.<br>
+          There are four common ways that works arrive in the public domain:<br>
+            &nbsp; &nbsp; &nbsp; The copyright has expired<br>
+            &nbsp; &nbsp; &nbsp; The copyright owner failed to follow copyright renewal rules<br>
+            &nbsp; &nbsp; &nbsp; The copyright owner deliberately places it in the public domain, known as “dedication”.<br>
+            &nbsp; &nbsp; &nbsp; Copyright law does not protect this type of work.<br>
+
+        Examples of items that are in the public domain include: Titles and processes,works by the Federal Government,  works that were never covered by the property laws, and works where copyright has expired.
+           </p>
+
+           <br>
+
+           <b> Description of Creative Commons</b> <br>
+           <p style="margin:15px; margin-top:5px;">
+           Creative Commons is a Non-Profit organization, that it's aim is to increase the amount of content people have to LEGALLY expand on, and also share. <br>
+           Creative Commons along with Fairuse is highly talked about in the youtube community because of false copyright strikes that have been starting to swarm the website.
+        
+           </p>
+      </div>
+      <div class="modal-footer">
+
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Presentations </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/presentation/d/1A1FUcLuELyTXHvq87S0ve3omFhCmh9_DNEvICen83iQ/edit?usp=sharing"><button type="button" class="btn btn-primary">Copyright, Fairuse, and Creative Commons.</button></a>
+        </div>
+        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<div id="git" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Git and why it's useful</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> What is Git?</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source code management in software development, but it can be used to keep track of changes in any set of files. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows.<br>
+        </p>
+        
+        <b> Who created Git and why?</b> <br>
+        
+        <p style="margin:15px; margin-top:5px;">
+          Git was created by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Its current maintainer since 2005 is Junio Hamano.<br>
+          As with most other distributed version control systems, and unlike most client–server systems, every Git directory on every computer is a full-fledged repository with complete history and full version tracking abilities, independent of network access or a central server.<br>
+          Git is free and open source software distributed under the terms of the GNU General Public License version 2.<br>
+        </p>
+
+        <b> What I've done with Git</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          I've personally used Github which utilizes Git and adds in collaboration among other people. <br>
+          Through Github I've created many projects, some linked at the bottom of this modal.<br>
+          Most notable are this portfolio, Simfphys Vehicle pack, and a Work in progress site called FleaMarket.tf which was a trade site for a game called TF2.
+        </p>
+
+        <p style="margin:0px;padding:0px; float:right;">
+          Source: Git Wikipedia
+        </p>
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Previous Projects </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/"><button type="button" class="btn btn-primary btn-sm">Github Profile</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/noobularkid.github.io"><button type="button" class="btn btn-primary btn-sm">Portfolio Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/FleaMarketTF"><button type="button" class="btn btn-primary btn-sm">FleaMarket.tf Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/-NA-Simfphys-Megapack"><button type="button" class="btn btn-primary btn-sm">Simfphys Vehicle Pack</button></a>
+        </div>
+
+        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<div id="github" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Github and why it's useful</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> What is Github?</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          GitHub (originally known as Logical Awesome LLC)is a web-based hosting service for version control using git. It is mostly used for computer code. It offers all of the distributed version control and source code management (SCM) functionality of Git as well as adding its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
+        </p>
+      
+
+        <b> What I've done with Github</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          Github has allowed me to do many things, like host this portfolio, create a large community tweaked project to progress and raise the quality of the project. I've used Github for personal projects and collaboration ranging from Websites, Game Addons, to Full fledge games, and it beats uploading your files to a cloud storage provider by far, given the power of source control to prevent catastrophe in breaking an entire project and pushing it out, without knowing if it's working with other pieces of the project that haven't been tested.
+        </p>
+
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Github Projects </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/"><button type="button" class="btn btn-primary btn-sm">Github Profile</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/noobularkid.github.io"><button type="button" class="btn btn-primary btn-sm">Portfolio Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/FleaMarketTF"><button type="button" class="btn btn-primary btn-sm">FleaMarket.tf Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/-NA-Simfphys-Megapack"><button type="button" class="btn btn-primary btn-sm">Simfphys Vehicle Pack</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+
+<div id="wdf" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Project Planning</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> What was the goal?</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          The goal was to create a planter that would have an integrated cheap system for automatically watering your plants to give you more time to do other activities.
+        </p>
+      
+        <b> Major Milestones</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          The most important milestones would be getting the planter physically built, so woodworking, and drilling out the PVC pipe for the cup holes. <br>
+          The actual planning that went into this was from trello, and then picking out who was doing what work.<br>
+          so in this case I was in charge of building the actual planter, the non-electronic side of it, and then Ryan Hendershot was in charge of Electronics, and Tyler Peterson was in charge of Documentation of everything.<br>
+          Documentation included pictures, and explaining what was happening on trello and discord.<br>
+          The major goals of the project were to finish the planter itself, without electronics. <br>
+          Finish the electronics where they would work if given the correct sensors and other electronic doodads. <br>
+          Finally the fact that everything was kept documented on our work progress similar to an agile scheme.
+
+        </p>
+        
+        <b> Timeline</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          First we had to come up with an idea (Ryan, Tyler, and I). <br>
+          Then we needed to come up with the materials, I had some laying around in my garage and then got a tube from the WDF Construction team.<br>
+          After that we theory crafted in how we would actually do this in terms of code, so would we do this based on sensors or just based on time?<br>
+          Once we knew how we were going to do it(specifically by doing it every number of hours, it would water the plants we were able to start the code for the project.<br>
+          We used multiple things to get in contact and organize the project, a big organizing tool we used was Trello, and then Discord for communication.<br>          
+        </p> 
+        <b> Summary of project significance</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          This is a really cool insight, that you actually can make a fully automated planting system just based on a mini-computer/microcontroller instead of paying hundreads of dollars on business grade equipment.<br>
+          I've learned that if you have the drive to create something, you can really do it while pinching pennies, and have the possibility of it being more useful compared to a large product.<br>
+          I feel this makes me more marketable, because I have the knowledge to complete projects on a very low cost base.
+        </p>
+        
+        <img src="resources/img/ideologies/projectplanning/1.png"></img>
+        <img src="resources/img/ideologies/projectplanning/2.png"></img>
+        <img src="resources/img/ideologies/projectplanning/3.png"></img>
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/"><button type="button" class="btn btn-primary btn-sm">Github Profile</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/noobularkid.github.io"><button type="button" class="btn btn-primary btn-sm">Portfolio Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/FleaMarketTF"><button type="button" class="btn btn-primary btn-sm">FleaMarket.tf Github</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/-NA-Simfphys-Megapack"><button type="button" class="btn btn-primary btn-sm">Simfphys Vehicle Pack</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+
+<div id="8bitclassic" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Retro Remake: Snake</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <b> Project Overview</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          <b>Requirements</b> <br>
+          &nbsp;&nbsp;&nbsp;re-create a 'classic' game from scratch using Game Maker Studio  <br>
+          &nbsp;&nbsp;&nbsp;create a "game page" for others to use to view my work<br>
+          &nbsp;&nbsp;&nbsp;create a game survey which will guide future development & 'how to' demos <br>
+          <b>Timespan</b><br>
+          &nbsp;&nbsp;&nbsp;One Week<br>
+          <b>Inspiration</b><br>
+          &nbsp;&nbsp;&nbsp;The main inspiration of doing this is the ironic complexity of the way you would achieve this within game maker studio 1.4
+        </p>
+
+        <div class="" align="center" id="8bitchart1"></div>
+        This first chart was specifically important to understand the current mindset of the players and see where the project should start heading, this is important for the idea of grasping the players interest in the new product.
+        <div class="" align="center" id="8bitchart2"></div>
+        The second chart is important because it's going to tell you if you need to have optimization as a priority versus other gameplay mechanics.
+        <div class="" align="center" id="8bitchart3"></div>
+        this final chart is important because it tells you if you need to place the priority of this over say, optimization or other gameplay aspects to have the player enjoy the game more visually.
+        
+        <b> Final project</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          The final project came out to be adding additional apples that are added so that you have more option and the gameplay is ran faster, so there's a bit of RNG with how fast you can increase your size.<br>
+          Overall this is noteworthy because I took the suggestions from the original and then attempted to play that into the game, for a more enjoyable experience.<br>
+        </p>
+
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/document/d/1APVcKOMPR4-j70gUXqjj2xwOJBcJaNF0JYfqno196DU/edit?usp=sharing"><button type="button" class="btn btn-primary btn-sm">Game page</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdLizpTZsRVCj9g2jXK2ezAU90an6JE7RXwAM-zXN7k6d9Eqg/viewform"><button type="button" class="btn btn-primary btn-sm">Survey</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/file/d/0B_D41pP-lSKPWmRFRlZVbVdPTDA/view?usp=sharing"><button type="button" class="btn btn-primary btn-sm">Game Executable</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1ON-RS9ZUZRC510J-aHtYYBS0FwEAJn58"><button type="button" class="btn btn-primary btn-sm">Modded Game Executable</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=10Zi9MaMeYBD_61AMWq5TSQ_7oEd097CA"><button type="button" class="btn btn-primary btn-sm">Modded Video</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1qrp3YEj9tv944D_c_eAlcCXOyQcDj7O2"><button type="button" class="btn btn-primary btn-sm">Original Video</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+
+<div id="pilinuxsensehat" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Pi, Linux, Sense hat, Oh my!</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> Research Overview</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          The basic overview begins with the start of my research on raspberry pi's, Linux, and Python. <br>
+          I created flash cards to better associate myself to understand the content, and I've linked them below.<br>
+        </p>
+      
+
+        <b> Making the Pi Functional</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          The process of making the Pi usable is pretty simple, First you start out with at least an 8gb micro sd card, you plug that into an sd card reader either USB or a hub connected to a computer. <br>
+          You can then download the most updated version of Rasbian OS from the Raspberry Pi website.<br>
+          Once you've got that you can download Etcher, a disk imaging software, which will essentially write the os onto the sd card allowing you to boot from it.<br>
+          once that's finished all you need to do is plug it into the pi and give the pi some power, and you're ready to go.
+        </p>
+        
+        <b> Raspberry Pi, and me.</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          I see the Raspberry Pi and all the work I've used it for to be a very useful thing in the future, I believe it could help with theorizing about engineering, Infastructure, be used for cluster setups and more.<br>
+          I think this is a great addition to an I.T. skill set, allowing the use for small things, for a very small price.<br>
+          The resources I used for the Sense Hat, is hosted at https://pythonhosted.org/sense-hat/<br>
+        </p>
+
+        <b> Pi Zero Dongles</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          Even though the Raspberry Pi Zero is very cool and offers such a small footprint in scale and price, the problem starts appearing if you need to see the screen, or plug in USB's<br>
+          from the pictures below you can see that it doesn't have any full size ports. so you're required to purchase Dongles or buy cables that end in micro USB / Micro HDMI. <br>
+          It's very useful to have a bluetooth keyboard/mouse combo for something like this so you're not stuck to it, and the ability to only require one USB port.
+        </p>
+
+        <img src="resources/img/ideologies/pilinux/pizero1.png"></img>
+        <img src="resources/img/ideologies/pilinux/pizero2.png"></img>
+        <br><br>
+        
+        You'll notice that this Requires to be attached either directly onto the Pi using the Pins, this could be a directly plug in, to the pi, or by extension wires.<br>
+        
+
+        <img style="height:60%; width:60%;" src="resources/img/ideologies/pilinux/sensehat.png"></img>
+        <img style="height:60%; width:60%;" src="resources/img/ideologies/pilinux/sensehatcode.png"></img>
+        <img style="height:60%; width:60%;" src="resources/img/ideologies/pilinux/sensehatmessage.png"></img>
+
+
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://pythonhosted.org/sense-hat/"><button type="button" class="btn btn-primary btn-sm">SenseHat Resources</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://www.raspberrypi.org/downloads/"><button type="button" class="btn btn-primary btn-sm">Rasbian OS Download</button></a>
+          <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/sensehat_showmessage"><button type="button" class="btn btn-primary btn-sm">SenseHat Show Message</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+
+<div id="rgbsquid" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">RGB Squid Technology</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> Hardware Used</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          The hardware that was used to create these RGB Squids are... <br>
+          RGB LEDs <br>
+          Resistors <br>
+          Solder <br>
+          Heat Shrink Tubing <br>
+        </p>
+      
+
+        <b> Insights Gained</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          I've gained more insight on how these LED's work, and seeing which require resistors and this really gave me more emphasis on how much having soldering clamps is extremely useful.<br>
+          We used the resistors within this project, so that the LED didn't blow up from being overpowered.<br>
+          We used simple pin connecter wires with female ends, which allowed them to plug directly into the Raspberry Pi's we were using to test them.
+        </p>
+        
+        <b> Experience with RGB LEDs</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          We physically created these squids, but we also had the programming side of making these turn to life. <br>
+          We had used the Monk Squid RGB LED Library to actually power certain lights to give us our full color span. <br>
+          With the power of being able to actually change colors, I was next set on creating a traffic light. <br>
+        </p>
+        
+        <img src="resources/img/projects/rgbsquid/rgbsquid.png"></img>
+        <img src="resources/img/projects/rgbsquid/rgbsquidon.png"></img>
+        <img src="resources/img/projects/rgbsquid/code1.png"></img>
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://github.com/noobularkid/PyTrafficLight"><button type="button" class="btn btn-primary btn-sm">Traffic Light Code</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+
+<div id="3dmodelingexperience" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">3D Modeling Experience</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> Tools Used </b><br>
+        <p style="margin:15px; margin-top:5px;">
+          TinkerCad<br>
+          Blender
+        </p>
+        <div class="row">
+        <div class="col-sm">
+          <b> TinkerCad Pros / Cons</b> <br>
+          <div style="margin:15px; margin-top:5px;">
+            Pros<br>
+            &nbsp;&nbsp;&nbsp;- Simple<br>
+            &nbsp;&nbsp;&nbsp;- Small Learning Curve<br>
+            &nbsp;&nbsp;&nbsp;- Easy to Export to different formats<br>
+            &nbsp;&nbsp;&nbsp;- Avaliable on all platforms.<br>
+            <br>
+            Cons<br>
+            &nbsp;&nbsp;&nbsp;- The fact it's simple can lure people away.<br>
+            &nbsp;&nbsp;&nbsp;- It's a browser Modeling program<br>
+            &nbsp;&nbsp;&nbsp;- 3D Printing Specific<br>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <b> Blender Pros / Cons</b> <br>
+          <div style="margin:15px; margin-top:5px;">
+            Pros<br>
+            &nbsp;&nbsp;&nbsp;- Executable Program<br>
+            &nbsp;&nbsp;&nbsp;- Easy to Export to different formats<br>
+            &nbsp;&nbsp;&nbsp;- Usable for Game modeling <br>
+            <br>
+            Cons<br>
+            &nbsp;&nbsp;&nbsp;- Large Learning Curve<br>
+            &nbsp;&nbsp;&nbsp;- Requires an install<br>
+            &nbsp;&nbsp;&nbsp;- OS Specific<br>
+          </div>
+        </div>
+      </div>
+
+          <b> Takeaways</b> <br>
+          <div style="margin:15px; margin-top:5px;">
+            I think the biggest takeaway about 3D modeling to 3D Printing I've learned is it's not as difficult as it may seem to generate the models that are used, given the progress and or how far technology in 3D printing has gotten. <br> I think this was great for me, since now even if i'm creating a 3D based game, I can create the placeholder objects while 3D modelers can create the offical models.
+          </div>
+        <!--  IMAGES FOR THE MODAL, not used since they are in the carousel.
+        <img src="resources/img/projects/3dmodelingexperience/rpsmodel.png" style='float:left;'></img>
+        <img src="resources/img/projects/3dmodelingexperience/rpspic.png" style='float:right;'></img>
+        <img src="resources/img/projects/3dmodelingexperience/picasemodel.png" style='float:left;'></img>
+        -->
+        <br>This is the image of the half printed full scale model, the printer malfunctioned half way through the 5 1/2 hour print.<br>
+         <img src="resources/img/projects/3dmodelingexperience/rpsprint.png" style='float:left;'></img>
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://www.tinkercad.com/things/5nnJVElX8uX-raspberry-pi-zero-case-"><button type="button" class="btn btn-primary btn-sm">Raspberry Pi Zero Case</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://www.tinkercad.com/things/3EyvH1r51tC-fabulous-bombul-turing"><button type="button" class="btn btn-primary btn-sm">Rock, Paper, Scissors Button Holders</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1t7jP4puo1DxohcfeBDe0DpYtpghJwEsu"><button type="button" class="btn btn-primary btn-sm">Pi Case Video</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+
+<div id="rockpaperscissors" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Rock, Paper, Scissors.</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> What was the goal?</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          The end goal for this project was to understand how to implement both file saving and buttons into the raspberry pi.
+        </p>
+      
+
+        <b> Different Iterations</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          There were three different variations of this game, You have the original file, which is just simply typing into the window what your choice is (Rock, Paper, Scissors).<br>
+          The second generation of this had file saving and loading implemented into it so that you could replay at a future time and keep progress of your wins, assuming the files still exist.<br>
+          The final game was the major, and added in physical buttons, using the GPIO pins on the raspberry pi , which depending on what you pressed would pick an option (R,P,S) and it would keep track of wins, with the same system as before.<br>
+        </p>
+        
+        <b> Testing and Improvements</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          I used IDLE to test and edit my code for the majority of this, with the help of Sublime Text 3 at given points when I wanted some colorful coding.<br>
+          My code originally started very confused, eventually starting to kinda get the hang out it improved. <br>
+          I've integrated physical computing by adding buttons, that would allow the player to actually press a physical button, with physical feedback and those buttons are wired into the pi. <br>
+          This can generate more of a drive to play the game, or a more interesting game, from adding that physical aspect.<br>
+
+        </p>
+
+        <b> Additional Information</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+            I've listed some code blocks below, of the code from different version of the game(s), so that you can see how I accomplished some things within it.
+        </p>
+        
+        <img align="center" src="resources/img/projects/rockpaperscissors/code1.png"></img>
+        <img align="center" src="resources/img/projects/rockpaperscissors/code2.png"></img>
+        <img align="center" src="resources/img/projects/rockpaperscissors/code3.png"></img>
+        
+
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1RoZBoTo8jJW7GG_4bIBlBg0RT4ApeYp_"><button type="button" class="btn btn-primary btn-sm">Rock Paper Scissors (Original)</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=14SCbCDV9JAQ1JilOfDqVyT3FHTaiZveT"><button type="button" class="btn btn-primary btn-sm">Rock Paper Scissors (With File Saving)</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1K7NWpAKt4T9-JYkSwT2PqpwApe7JxQ5l"><button type="button" class="btn btn-primary btn-sm">Rock Paper Scissors (File Saving + Buttons)</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="vrdev" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">Unreal Engine 4: VR Development</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> Game Overview</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          The controls are pretty straight forward, they follow suit with most popular VR Games, so essentially you push the top button on the Vive controller, which will allow you to point and teleport yourself around. <br>
+          <br>
+          Essentially the planning for this game was all based on assignment requirements, so essentially following suit of the given requirements.<br>
+          <br>
+          For what I wanted with goals, was to be able to turn this basic concept of a game into a larger one in the future if I so desired too, I believe I got that with the idea of some kind of VR farming game, all though it could be a bit different and more comical ideas placed in the game.<br>
+          <br>
+          I started with the URE4 VR Template which allows you to move around and have base objects that you can pick up and move around and have physics, I then created a blueprint actor that would act as a planter, so if touched by an acorn would sprout a tree. <br>
+          I created the Acorn, and Planter using the editor shapes.<br>
+        </p>
+        
+        This is the base layout of how you would do something on a collision event in Unreal Engine 4 (and how I achieved the tree growth).<br>
+        <img style="width:100%; height:30%;" src="resources/img/projects/vrdevelopment/1.png"></img>
+        <img align="center" src="resources/img/projects/vrdevelopment/2.png"></img>
+
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1WuIZMHsZU6s9vMWDv__Shfz2b3hFckTQ"><button type="button" class="btn btn-primary btn-sm">Video Demo</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<div id="umd1" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">UMD Game Round 1 - 2018</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> Game Overview</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          <b>Controls <br></b>
+          WASD, Click to shoot<br>
+          <br>
+          <b>Planning<br></b>
+          Use a base setup game that we know, and form something better from it. <br>
+          <br>
+          <b>Goals<br></b>
+          Create a decent game within our 3 hour timespan.<br>
+          <br>
+          <b>Resources/Assets<br></b>
+          Our team had created all the assets and code for our game.<br>
+          <br>
+          
+        </p>
+        
+
+          <img align="center" src="resources/img/projects/umd1/img1.png"></img>
+          <img align="center" src="resources/img/projects/umd1/img2.png"></img>
+          <img align="center" src="resources/img/projects/umd1/img3.png"></img>
+
+
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1RoZBoTo8jJW7GG_4bIBlBg0RT4ApeYp_"><button type="button" class="btn btn-primary btn-sm">Game Page</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=14SCbCDV9JAQ1JilOfDqVyT3FHTaiZveT"><button type="button" class="btn btn-primary btn-sm">Download</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=15zjivUAkHtKtcDb7FmHBaogt_SUOwnOt"><button type="button" class="btn btn-primary btn-sm">Video</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<div id="umd3" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">UMD Game Round 3 - 2018</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> Game Overview</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          <b>Controls <br></b>
+          Click the large D to defend your towers from the Evil Lizardmen coming towards them to protect your data.<br>
+          <br>
+          <b>Planning<br></b>
+           The main planning was simply I would create the game and my teammate would create all the sprites so I could focus my efforts on design, given the three hours. <br>
+          <br>
+          <b>Goals<br></b>
+          Create a great functional game within 3 hours.
+          <br>
+          <b>Resources/Assets<br></b>
+          Our team had created all the assets and code for our game.<br>
+          <br>
+        </p>
+
+        <b> Feedback</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          Over all the feedback was decent, When asking about what mod from a list should I add to the game, I was told overwhelingly that I should add some varying enemies, which eventually I created and their speeds all different and it was all RNG.
+        </p>
+
+          <img align="center" src="resources/img/projects/umd3/img1.png"></img>
+          <img align="center" src="resources/img/projects/umd3/img2.png"></img>
+          <img align="center" src="resources/img/projects/umd3/img3.png"></img>
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1jgHf8KYM7TCOi-xmTWOijCLEf-DTHz-W3MK6mBN4tho"><button type="button" class="btn btn-primary btn-sm">Game Page</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1lRrSBDQlqwC6DK-Kh82-oju0H6bVAvfv"><button type="button" class="btn btn-primary btn-sm">Original Version</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1c8oZjqauAzwDqyXogLzxGpAA6La4yr8N"><button type="button" class="btn btn-primary btn-sm">Modded Version</button></a>
+            <a style="margin:5px; float:left;" target="_blank" href="https://drive.google.com/open?id=1nXbTrm_VHkTn_JFQ8Ly1r8t2FKsiOgAl"><button type="button" class="btn btn-primary btn-sm">Video Demo</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<div id="newtechawareness" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title">New Tech Awareness</h4>
+        <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <b> Description</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          I believe that the research of mine is important, while scowering across Kickstarter and Indiegogo, because it could even generate new ideas of your own on new projects, new things to create and more!. <br>
+          This small robot could encourage or inspire someone to create something on a larger scale, leading to better living for all of us.
+        </p>
+
+        <b> Suggestions for this Kickstarter</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          They never seem to mention what the price is to produce this robot (unless I'm mistaken.). <br>
+          Adding more about the production of this project will help a ton, for someone who's got money and willing to put it in to help, just so they know exactly where their money is going.
+        </p>
+
+
+        <b> Screenshots</b> <br>
+        <p style="margin:15px; margin-top:5px;">
+          These are screenshots of both the kickstarter and the robot itself, it just moves around and picks up trash.
+          <img style="width:80%;height:80%;" src="resources/img/ideologies/newtechawareness/2.png"></img>
+          <img align="center" src="resources/img/ideologies/newtechawareness/1.png"></img>
+          <img align="center" src="resources/img/ideologies/newtechawareness/3.png"></img>
+        </p>
+
+
+      </div>
+      <div class="modal-footer">
+        <div class="col">
+            <b style="float:left; margin-left:20px;">Related Links </b> <br>
+            <a style="margin:5px; float:left;" target="_blank" href="https://www.kickstarter.com/projects/robotmissions/robot-missions-municipal-trials?ref=section_design-tech_featured"><button type="button" class="btn btn-primary btn-sm">Kickstarter Referenced</button></a>
+        </div>        
+      </div>
+      <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+
+<script>
+$(document).click(function(event) {
+  var targetID = event.target.id;
+  switch(targetID){
+    case "DontClose":
+      break;
+    case "menutoggle":
+      break;
+    case "mySidenav":
+      break;
+    case "langsearch":
+      break;
+    case "languagelist":
+      break;
+    default:
+      closeNav()
+  }
+});
+</script>
+<!-- JSON Data Importing -->
+<script src="data/json/data_projects.js"></script>  <!-- Past Projects List-->
+<script src="data/json/data_languages.js"></script> <!-- Explanation of languages List-->
+<script src="data/json/data_jobs.js"></script>      <!-- Job Experience List-->
+<script src="data/json/data_skills.js"></script>    <!-- Language, Framework, and tool grading. -->
+<script src="data/json/data_hackathons.js"></script>    <!-- Hackathon Data -->
+<script src="data/json/data_ethics.js"></script>    <!-- Hackathon Data -->
+
+<!-- Command Importing -->
+<script src="page/extras/functions.js"></script> <!-- Additional Commands used by other scripts.-->
+
+<!-- Function Importing -->
+<script src="page/ethics.js"></script>                     <!-- Skill Functions-->
+<script src="page/skills.js"></script>                     <!-- Skill Functions-->
+<script src="page/indepthlanguages.js"></script> <!-- Language Explanation Functions-->
+<script src="page/hackathons.js"></script>             <!-- Hackathon Functions-->
+<script src="page/jobexperience.js"></script>       <!-- Job Functions-->
+<script src="page/projects.js"></script>                <!-- Project Functions-->
+<script src="page/extras/sidenav.js"></script>                <!-- Sidebar Navigation -->
+
+</html>
