@@ -14,7 +14,7 @@ export default function Jumbotron() {
         >   
 
                         <div id="Jumbotron" className="container">
-                            <div style={{color:"white"}}>
+                            <div id="jumbotron-content" style={{color:"white"}}>
                                 <h1 className="d-flex justify-content-center jumbo_name">James Byrnes</h1>
                                 <p  className="d-flex justify-content-center jumbo_description">Software Developer - NodeJS / ReactJS Developer</p>
                                 <p  className="d-flex justify-content-center">

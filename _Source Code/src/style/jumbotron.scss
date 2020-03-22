@@ -1,12 +1,12 @@
+
 .jumbotron{
     margin-bottom:0px; 
-    height:540px; 
     background-color: transparent;
 }
 
 #Jumbotron{
     margin-top:75px !important;
-    height:540px !important;
+    height:100vh !important;
 }
 
 .jumbo_name{
@@ -15,7 +15,11 @@
 .jumbotron-text{
     font-size:16px !important;
 }
-
+#jumbotron{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 @media screen and (max-width: 500px) {
 
     .jumbo_name{
