@@ -48,6 +48,8 @@ export default function ProjectCard(props) {
                         })}
                 </div>
 
+                <div class="text-black lastUpdateText"><i class="fas fa-history" style={{fontSize:20}}></i> Last Update: {props.date}</div>
+
             </div>
             <div className="card-footer solidred">
 
@@ -57,12 +59,7 @@ export default function ProjectCard(props) {
                     }
                     return null;
                 })}
-                    
-                {props.technologies.map((technology,index) =>{
-                    if(index > 3){return false};
-                    let classna = "devicon-" + technology +"-plain text-white"
-                    return (<i className={classna.toLowerCase()} key={uuidv4()} style={{marginRight:10}}/>)
-                })}
+
             </div>
         </div>
 
