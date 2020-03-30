@@ -37,6 +37,16 @@
 	"date":"June 5, 2017"
 },
 {
+	"title": "Twitter Bot",
+	"description":"Automated twitter bot, to allow for an easy and quick way to spread my portfolio across twitter, via the Tweepy API library",
+	"catagories":["Software Development"],
+	"technologies": ["Python", "Tweepy"],
+	"imageSrc": ["/images/projects/software_development/twitterbot/code.png"],
+	"skills":["Experience with Tweepy.","Reverse engineering twitters bot/spam detection."],
+	"links":[["Github","https://github.com/noobular/Twitter-Bot"]],
+	"date":"March 27, 2020"
+},
+{
 	"title": "Raspberry Pi Connectivity",
 	"description":"Allows for two pi's to connect to each links, and send commands back and forth.",
 	"catagories":["Software Development","Server Development"],
@@ -75,7 +85,7 @@
 	"title": "Retro Remake: Snake",
 	"description":"Basic recreation of snake, made with Game Maker Studio 1.4 with a timespan of three school days (Totaling 9 hours). My main struggle was figuring out the body part system.",
 	"categories":["Game Development"],
-	"technologies": ["GameMakerLanguage"],
+	"technologies": ["GML"],
 	"imageSrc": ["/images/projects/game_development/snake/snake1.png"],
 	"skills":["More experience with GMStudio 1.4","Gave me an insight of the process of creating something with defined outcome, or duplicating a product."],
 	"links":[

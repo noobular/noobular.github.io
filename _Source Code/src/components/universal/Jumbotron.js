@@ -22,6 +22,8 @@ export default function Jumbotron() {
                                     <a href="https://www.github.com/noobular"            target="_BLANK"  rel="noopener noreferrer" className="jumbotron-text  btn btn-outline-danger btn-lg"><i className="fab fa-github"/> Github</a>
                                     <a href="https://www.Linkedin.com/in/jamesebyrnes/"  target="_BLANK"  rel="noopener noreferrer" className="jumbotron-text btn btn-outline-danger btn-lg"><i className="fab fa-linkedin"/> LinkedIn</a>   
                                 </p>
+                                <hr className="my-1"/>
+                                
 
                                 <h5 className="d-flex justify-content-center" style={{fontSize:36,marginTop:50}}>Resume</h5>
                                 <div className="d-flex justify-content-center">

@@ -28,7 +28,7 @@ export default function HighlightCard(props) {
                                         <p className="card-text">{props.description}</p>
                                     </div>
 
-                                    <div className="TechTree" style={{margin:20}}>
+                                    <div className="TechTree" style={{margin:20, marginBottom:60,marginRight:0}}>
                                         <h4 className="card-title">Technologies</h4>
                                         <div className="row">
                                             {props.technologies.map((technology,index) => {
