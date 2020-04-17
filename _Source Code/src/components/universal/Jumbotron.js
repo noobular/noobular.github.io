@@ -24,9 +24,6 @@ export default function Jumbotron() {
                                     <a href="https://www.Linkedin.com/in/jamesebyrnes/"  target="_BLANK"  rel="noopener noreferrer" className="jumbotron-text btn btn-outline-light btn-lg"><i className="icon fab fa-linkedin"/> LinkedIn</a>   
                                 </p>
 
-                                <hr className="my-1"/>
-
-
                                 <h5 className="d-flex justify-content-center" style={{fontSize:36,marginTop:50}}>Resume</h5>
                                 <div className="d-flex justify-content-center">
                                     <a href="/pdf/Resume.pdf" target="_BLANK"  rel="noopener noreferrer" className="btn btn-outline-light btn-lg jumbotron-text" style={{margin:10}}><i className="icon far fa-file-pdf"></i> PDF</a>
