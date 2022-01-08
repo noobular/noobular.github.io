@@ -1,7 +1,7 @@
 [
 {
-	"title": "GangWars Mobile Bot",
-	"description":"Autoplayer / Botting application created with Electron / NodeJS, which allows you to completely bot the game, doing crimes, playing at the casino, and drinking beer for stat increases.",
+	"title": "Browser Game Bot",
+	"description":"Autoplayer / Botting application created with Electron / NodeJS, which allows you to completely bot the game, doing missions, playing at the casino, and using items for stat increases.",
 	"categories":["Software Development"],
 	"technologies": ["NodeJS","Electron","HTML","Materialize"],
 	"imageSrc": ["/images/projects/software_development/gangwarsmobilebot/botactivated.png"],
@@ -13,7 +13,7 @@
 },
 {
 	"title": "Mini Text Adventure Game",
-	"description":"Text adventure game, using HTML / CSS / JavaScript / JQuery where you can level up, attack different creatures, obtain randomized items and gold, travel, and finally complete quest. Warning: There's a lot of systems that haven't been finished in this.",
+	"description":"Text adventure game, using HTML / CSS / JavaScript / JQuery / Bootstrap where you can level up, attack different creatures, obtain randomized items and gold, travel, and finally complete quest. Warning: There's a lot of systems that haven't been finished in this.",
 	"categories":["Web Development"],
 	"technologies": ["HTML","Javascript","JQuery","Bootstrap"],
 	"imageSrc": ["/images/projects/game_development/mini-text-adventure/combat.PNG","/images/projects/game_development/mini-text-adventure/shop.png"],
