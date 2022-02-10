@@ -108,6 +108,19 @@
 	"date":"March 14, 2018"
 },
 {
+	"title": "Portfolio",
+	"description":"The purpose of the portfolio was to get my skills and past experience out to possible employers. ",
+	"categories":["Web Development"],
+	"technologies": ["HTML","JQuery","Javascript"],
+	"imageSrc": ["/images/projects/web_development/portfolio/site.png"],
+	"skills":["Increased Viewership","Automatic card population from a JSON file","Upgraded from Bootstrap 3 to Bootstrap 4"],
+	"links":[
+		["Github","https://github.com/noobularkid/noobularkid.github.io"],
+		["Old Portfolio Design","old/index.html"]
+	],
+	"date":"2015 - Current"
+},
+{
 	"title": "Garry's Mod Addons",
 	"description":"I've created a tool which allows me to automatically create scripts based on a vehicles properties in game, allowing me to convert them to \"Simfphys\" Which is a vehicle modficiation",
 	"categories":["Game Development","Software Development"],
@@ -116,9 +129,22 @@
 	"skills":["More hands on work with LUA and creation automation.","Exposure in the community, gaining a larger audience for future addons."],
 	"links":[
 		["Github","https://github.com/noobularkid/-NA-Simfphys-Megapack"],
-		["Steam Workshop","https://steamcommunity.com/sharedfiles/filedetails/?id=1284761377"]
+		["Steam Workshop","https://steamcommunity.com/id/InfiniteCoin/myworkshopfiles/?appid=4000"]
 	],
 	"date":"February 1, 2018"
+},
+{
+	"title": "Unreal Engine 4: VR Development",
+	"description":"This would be my first attempt at developing anything with VR, testing the waters.",
+	"categories":["Game Development"],
+	"technologies": ["C++"],
+	"imageSrc": ["/images/projects/game_development/vrdevelopment/game.png","/images/projects/vrdevelopment/2.png"],
+	"skills":["Experience working with a Circuit Playground Arduino","Product Creation Prospective"],
+	"links":[
+		["Github","https://github.com/noobularkid/MyProject"],
+		["VR Demo Video","https://drive.google.com/open?id=1WuIZMHsZU6s9vMWDv__Shfz2b3hFckTQ"]
+	],
+	"date":"April 17, 2018"
 },
 {
 	"title": "Zool",
@@ -146,30 +172,41 @@
 	"date":"May 7, 2017"
 },
 {
-	"title": "Unreal Engine 4: VR Development",
-	"description":"This would be my first attempt at developing anything with VR, testing the waters.",
-	"categories":["Game Development"],
-	"technologies": ["C++"],
-	"imageSrc": ["/images/projects/game_development/vrdevelopment/game.png","/images/projects/vrdevelopment/2.png"],
-	"skills":["Experience working with a Circuit Playground Arduino","Product Creation Prospective"],
+	"title": "Sheepherder",
+	"description":"Sheepherder is a game where you move sheep into a pen, It was the first Livecode game I've created.",
+	"categories":["App Development"],
+	"technologies": ["Livecode"],
+	"imageSrc": ["/images/projects/game_development/sheepherder/sheepherder1.png"],
+	"skills":["Hands on experience with App Development", "Touch based movement"],
 	"links":[
-		["Github","https://github.com/noobularkid/MyProject"],
-		["VR Demo Video","https://drive.google.com/open?id=1WuIZMHsZU6s9vMWDv__Shfz2b3hFckTQ"]
+		["Github","https://github.com/noobularkid/Sheep-Herder"]
+	],
+	"date":"December 21, 2017"
+	
+},
+{
+	"title": "UMD Game Jam Round 1",
+	"description":"Game created with a 3 hour timelimit for a class competition, move around with wasd, and click and shoot at the enemies approaching. This project was created with Game Maker Studio 2",
+	"categories":["Game Development"],
+	"technologies": ["GML"],
+	"imageSrc": ["/images/projects/game_development/umd1/game.png","/images/projects/umd1/images2.png","/images/projects/umd1/images3.png"],
+	"skills":["Experience working in hastily Environment","Experience with Game Maker Studio 2"],
+	"links":[
+		["Download","https://drive.google.com/open?id=18nZ4vDRqNx6xkSl0EJX7Sc7jY3lImj0i"]
 	],
 	"date":"April 17, 2018"
 },
 {
-	"title": "Portfolio",
-	"description":"The purpose of the portfolio was to get my skills and past experience out to possible employers. ",
-	"categories":["Web Development"],
-	"technologies": ["HTML","JQuery","Javascript"],
-	"imageSrc": ["/images/projects/web_development/portfolio/site.png"],
-	"skills":["Increased Viewership","Automatic card population from a JSON file","Upgraded from Bootstrap 3 to Bootstrap 4"],
+	"title": "Drunken Puppy Rescue - Winter Ops",
+	"description":"You've got to collect puppies, while angry men chase you trying to steal your alcohol, but you can also beat them with your alcohol to collect more without being damaged. ",
+	"categories":["Game Development"],
+	"technologies": ["Game Maker Language", "Joke"],
+	"imageSrc": ["/images/projects/game_development/drunkwinter/game.png"],
+	"skills": ["A physics based projectile system","tested my ability to produce work efficiently (3 Hour Game Jam)", "Working with AI to attack the player"],
 	"links":[
-		["Github","https://github.com/noobularkid/noobularkid.github.io"],
-		["Old Portfolio Design","old/index.html"]
+		["Github","https://github.com/noobular/Drunken-Puppy-Rescue"]
 	],
-	"date":"2015 - Current"
+	"date":"June, 2017"
 },
 {
 	"title": "Game Name: \"Garbage\"",
@@ -207,42 +244,5 @@
 		["Video of Case","https://drive.google.com/open?id=1t7jP4puo1DxohcfeBDe0DpYtpghJwEsu"]
 	],
 	"date":"April 17, 2018"
-},
-{
-	"title": "UMD Game Jam Round 1",
-	"description":"Game created with a 3 hour timelimit for a class competition, move around with wasd, and click and shoot at the enemies approaching. This project was created with Game Maker Studio 2",
-	"categories":["Game Development"],
-	"technologies": ["GML"],
-	"imageSrc": ["/images/projects/game_development/umd1/game.png","/images/projects/umd1/images2.png","/images/projects/umd1/images3.png"],
-	"skills":["Experience working in hastily Environment","Experience with Game Maker Studio 2"],
-	"links":[
-		["Download","https://drive.google.com/open?id=18nZ4vDRqNx6xkSl0EJX7Sc7jY3lImj0i"]
-	],
-	"date":"April 17, 2018"
-},
-{
-	"title": "Drunken Puppy Rescue - Winter Ops",
-	"description":"You've got to collect puppies, while angry men chase you trying to steal your alcohol, but you can also beat them with your alcohol to collect more without being damaged. ",
-	"categories":["Game Development"],
-	"technologies": ["Game Maker Language", "Joke"],
-	"imageSrc": ["/images/projects/game_development/drunkwinter/game.png"],
-	"skills": ["A physics based projectile system","tested my ability to produce work efficiently (3 Hour Game Jam)", "Working with AI to attack the player"],
-	"links":[
-		["Github","https://github.com/noobular/Drunken-Puppy-Rescue"]
-	],
-	"date":"June, 2017"
-},
-{
-	"title": "Sheepherder",
-	"description":"Sheepherder is a game where you move sheep into a pen, It was the first Livecode game I've created.",
-	"categories":["App Development"],
-	"technologies": ["Livecode"],
-	"imageSrc": ["/images/projects/game_development/sheepherder/sheepherder1.png"],
-	"skills":["Hands on experience with App Development", "Touch based movement"],
-	"links":[
-		["Github","https://github.com/noobularkid/Sheep-Herder"]
-	],
-	"date":"December 21, 2017"
-	
 }
 ]
