@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Bionic Zebras</title> <!--Browser Tab Title-->
+	<link rel="shortcut icon" href="https://noobular.github.io/sites/bioniczebras/favicon.ico"> <!-- Browser Tab Icon (Not working?)-->
+
+	<!-- jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	
+	<!-- Bootstrap Stylesheet -->
+	<link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+	
+	<!-- Bootstrap library -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		
+	
+	<!-- Font / Glyph Icons -->
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+	<!-- Hover Animations-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
+	<!-- Font Awesome Icons-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+	<style>
+
+	.subtext{
+		color:#343a40;
+	}
+
+	#jumbotron{
+			margin-top:93px;
+	}
+	h4{
+		margin-bottom:0px;
+	}
+
+	#imagecarousel{
+		text-shadow: 2px 2px black;
+	}
+
+	/* Set image size to the max possible for the carousel area*/
+	.hvr-shutter-out-vertical{
+		background-color:#343a40;
+	}
+	.carousel-inner img {
+      width: 100%;
+      height: 100%;
+  	}
+ 	/* Parallax / Navbar Related*/
+	.parallax { 
+	    /* The image used */
+	    background-image: url("images/background/background2.jpg");
+
+	    /* Set a specific height */
+	    height: 100%; 
+		width:100%;
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	.affix{ /*For the Navbar to be affixed to the top of the page*/
+		position: fixed;
+		top:0px;
+		width: 100%;
+		z-index: 999;
+	}
+
+
+
+	@media screen and (max-width: 992px) {
+		#topNavbar{
+			font-size:14px;
+			padding-right:16px;
+			padding-bottom:5px;
+			padding-top:5px;
+		}
+
+		#jumbotron{
+			margin-top:58px;
+			padding-top:12.5px;
+			height:110px;
+			margin-bottom:10px;
+			width:100%;
+		}
+		#eventlist{
+			font-size: 14px;
+		}
+
+		#mentorlist{
+			font-size: 14px;
+		}
+
+		#studentlist{
+			font-size: 14px;
+		}
+
+
+	}
+	</style>
+</head>
+
+<body class="parallax">
+
+	  <nav id="topNavbar" class="navbar fixed-top navbar-inverse navbar-expand-lg navbar-dark bg-dark">
+			<!-- Brand logo / Name-->
+			<img style="padding:0px; margin:0px; height:49px;width:48px;"src="images/zebrahead.png">
+			<a  class="navbar-brand" href="index.html" style="margin-left:10px; margin-right:35px;">The Bionic Zebras</a>
+
+			<!-- Toggles the navbar for mobile devices.-->
+			<button style="border:0px;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<!-- included elements on the navbar-->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  	<ul class="navbar-nav mr-auto">
+					<li class="nav-item" style="margin-right:10px;">
+						<a href="about.html"     		class="hvr-shutter-out-vertical nav-link"> <i class="fas fa-address-book"></i> About</a>
+					</li>
+					<li class="nav-item" style="margin-right:10px;">
+						<a href="resources.html"    	class="nav-link hvr-shutter-out-vertical"> <i class="fas fa-folder-open"></i> Resources</a>
+					</li>
+					<li class="nav-item" style="margin-right:10px;">
+						<a href="media.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-film" aria-hidden="true"></i> Media</a></li>
+					</li>
+					<li class="nav-item" style="margin-right:10px;">
+						<a href="sponsors.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fas fa-handshake"></i> Sponsors</a></li>
+					</li>
+					<li class="active nav-item" style="margin-right:10px;">
+						<a href="announcements.html"	class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-bullhorn" aria-hidden="true"></i> Announcements</a></li>
+					</li>
+					<li class="nav-item" style="margin-right:10px;">
+						<a href="contact.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a></li>
+					</li>
+					<li class="nav-item" style="margin-right:10px;">
+						<a href="meetings.html"			class="nav-link hvr-shutter-out-vertical"> <i class="fa fa-users" aria-hidden="true"></i> Meeting Times</a></li>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+
+
+
+	  <div id="jumbotron" class="jumbotron jumbotron-fluid " style=" padding-right:0px;">
+		<div  class="container" style="height:40px;">
+		  <h1>Annoucements!</h1> 
+		  <p class="subtext"> </p> 
+		</div>
+	  </div>
+
+	<div class="row" style="margin:0px; padding:0px;">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-3"> <!-- Column one, 3 out of 12 grid places-->
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px;">
+					<nav class="navbar bg-light" data-toggle="collapse" href="#eventlist"> <!-- Creates the panel for the data to go into-->
+						<h4>Event List</h4> <i class="fas fa-bars rosters" style="color:black; float:right; font-size: 24px;margin-bottom:5px;"></i>
+						<ul id="eventlist" class="navbar-nav col-12 collapse in subtext" style="margin-right:0px;padding-right:0px;"> <!-- "Unordered list" list them in order using the script.-->
+						</ul>
+					</nav>
+			</div>
+
+		
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 " style="margin-bottom:5px;">
+				<nav class="navbar bg-light" data-toggle="collapse" href="#mentorlist"> <!-- Creates the panel for the data to go into-->
+					<h4>Mentor Roster</h4> <i class="fas fa-bars rosters" style="color:black; float:right; font-size: 24px; margin-bottom:5px;"></i>
+					<ul id="mentorlist" class="navbar-nav col-12 collapse in subtext"> <!-- "Unordered list" list them in order using the script.-->	
+					</ul>
+				</nav>
+			</div>
+
+
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 " style="margin-bottom:5px;">
+				<nav class="navbar bg-light" data-toggle="collapse" href="#studentlist"> <!-- Creates the panel for the data to go into-->
+					<h4>Student Roster</h4>	<i class="fas fa-bars rosters" style="color:black; float:right; font-size: 24px; margin-bottom:5px;"></i>
+					<ul id="studentlist" class="navbar-nav col-12 collapse in subtext"> <!-- "Unordered list" list them in order using the script.--></ul>
+				</nav>
+		</div>
+
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- Column two, 6(total 9) out of 12 grid places-->
+		<!-- Add Center elements here!!!-->
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 " style="margin-bottom:5px;">
+				<nav class="navbar bg-light" href="#announcementlist"> <!-- Creates the panel for the data to go into-->
+				<ul id="announcementlist" class="navbar-nav col-12 subtext"> <!-- "Unordered list" list them in order using the script.--></ul>
+			</nav>
+		</div>
+		
+	</div> <!--end of center column-->
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-3"> <!-- Column three, 3(total 12) out of 12 grid places-->
+		<div class="card">
+				<div class="card-body">
+						<h4 class="card-title" style="color:black;">Our mission</h4>
+						<p class="subtext">Our mission is to provide students educational opportunities to learn and engage in science, technology, engineering, and mathematics (STEM) through the FIRST Robotics program. We encourage and inspire students to follow a career path focusing on these subjects we find vital to their success in a changing world. Over the years, we have received awards for our accomplishments and we aspire to become a major contender at the FRC International Competition.</p>
+				</div>
+		</div>
+		<br>
+		<a style="border-radius: 0px;" class="twitter-timeline" data-chrome="" data-height="600" data-theme="light" href="https://twitter.com/FRCTeam313?ref_src=twsrc%5Etfw">Tweets by FRCTeam313</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>
+
+	<!-- Importing Data / Mentors,Students,Events & Scripts that auto populate the page-->
+	<!-- Data -->
+	<script src="data/mentors.js"></script>
+	<script src="data/students.js"></script>
+	<script src="data/events.js"></script>
+	<script src="data/showcase.js"></script>
+	<script src="data/announcements.js"></script>
+	<!--Population Scripts-->
+	<script src="scripts/mentorlist.js"></script>
+	<script src="scripts/studentlist.js"></script>
+	<script src="scripts/announcementlist.js"></script>
+	<script src="scripts/eventlist.js"></script>
+	<script src="scripts/carousel.js"></script>
+
+	
+	<script>
+		// remove border radius from twitter embed, there's no other way of fixing this specifically bc twitter dev sucks.
+		setTimeout(function() {$("#twitter-widget-0").contents().find(".timeline-Widget").css("border-radius", "0")}, 750);
+
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			// Mobile device
+		}else{
+			// Desktop Device
+			$("#studentlist").collapse('show');
+			$("#mentorlist").collapse('show');
+			$("#eventlist").collapse('show');
+
+			$(".rosters").remove();
+		}
+	</script>
+
+</html>
