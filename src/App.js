@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {HashRouter as Router} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 //import "../node_modules/jquery/dist/jquery.min.js";
 //import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
