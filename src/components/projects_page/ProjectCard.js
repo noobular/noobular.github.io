@@ -1,10 +1,10 @@
 import React from 'react'
-import uuidv4 from 'uuid/v4'
+
 import ModalImage from "react-modal-image";
 
 export default function ProjectCard(props) {
     return (
-<div className="project-card-container col-sm-12 col-md-6 col-lg-4 col-xl-3" alt={uuidv4()}>
+<div className="project-card-container col-sm-12 col-md-6 col-lg-4 col-xl-3" alt={crypto.randomUUID()}>
         <div className="project-card card na shadow p-4 mb-4">
             <h4 className="card-header solidred text-white">{props.title}</h4>
 
@@ -28,7 +28,7 @@ export default function ProjectCard(props) {
                             <h4 style={{marginRight:20}}>Implemented / Learned</h4>
                             {/* places each skill into the group*/}
                             {props.skills.map((skill,index) => {
-                                return <li className="list-group-item" key={uuidv4()}  style={{paddingLeft:0}}><div>{skill}</div></li>
+                                return <li className="list-group-item" key={crypto.randomUUID()}  style={{paddingLeft:0}}><div>{skill}</div></li>
                             })}
                         </ul>
                 </div>
@@ -36,7 +36,7 @@ export default function ProjectCard(props) {
                     <h4 className="card-title">Technologies</h4>
                         {props.technologies.map((technology,index) => {
                             if(index < 4){
-                                return <li className="list-group-item " key={uuidv4()} style={{border:0}}>
+                                return <li className="list-group-item " key={crypto.randomUUID()} style={{border:0}}>
                                             <div>
                                                 <i style={{fontSize:20, marginRight:10}} className={"align-middle far fa-dot-circle"}/>
                                                 {"   " + technology}
@@ -55,7 +55,7 @@ export default function ProjectCard(props) {
 
                 {props.links.map((link,index) => {
                     if(link[1] !== ""){
-                        return(<a key={uuidv4()} style={{marginRight:5,float:'right'}} className="btn btn-light waves-effect waves-light" target="_blank" rel="noopener noreferrer" href={link[1]}>{link[0]}</a>)
+                        return(<a key={crypto.randomUUID()} style={{marginRight:5,float:'right'}} className="btn btn-light waves-effect waves-light" target="_blank" rel="noopener noreferrer" href={link[1]}>{link[0]}</a>)
                     }
                     return null;
                 })}

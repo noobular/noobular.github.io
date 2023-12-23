@@ -1,5 +1,4 @@
 import React from 'react';
-import uuidv4 from 'uuid/v4'
 import { Parallax } from 'react-parallax';
 
 export default function Jumbotron() {
@@ -9,7 +8,7 @@ export default function Jumbotron() {
         <Parallax
             blur={20}
             bgImage={require('./resources/parallax.png')}
-            bgImageAlt={uuidv4()}
+            bgImageAlt={crypto.randomUUID()}
             strength={500}
         >   
 
@@ -30,6 +29,11 @@ export default function Jumbotron() {
                                     <a href="https://docs.google.com/document/d/15u3Bp8UwBhOdA5eKVRJly6UAHOkO_wW6W9Br2MRMjW0/edit?usp=sharing" target="_BLANK"  rel="noopener noreferrer" className="btn btn-outline-light btn-lg jumbotron-text" style={{margin:10}}><i className="icon fab fa-google-drive"></i> Google Doc</a>
                                 </div>
                             </div>
+                            
+                        </div>
+                        
+                        <div className="d-flex justify-content-center">
+                            <a className="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
                         </div>
         </Parallax>
         </> 

@@ -5,7 +5,10 @@
 	"categories":["Software Development"],
 	"technologies": ["NodeJS","Electron","HTML","Materialize"],
 	"imageSrc": ["/images/projects/software_development/gangwarsmobilebot/botactivated.png"],
-	"skills": ["Electron for the use of a desktop application while using NodeJS as the main language","Fetch for HTTP Request, allowing for more efficient development"],
+	"skills": [
+		"Electron for the use of a desktop application while using NodeJS as the main language",
+		"Fetch for HTTP Request, allowing for more efficient development"
+		],
 	"links":[
 		["Github","https://github.com/noobular/GWMobile-Bot"]
 	],
